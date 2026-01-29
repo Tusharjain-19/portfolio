@@ -1,7 +1,11 @@
 import { PORTFOLIO } from '@/data/portfolio';
 
-export default function StructuredData() {
-  const jsonLd = {
+interface StructuredDataProps {
+  data?: Record<string, unknown>;
+}
+
+export default function StructuredData({ data }: StructuredDataProps) {
+  const defaultPersonData = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": PORTFOLIO.profile.name,
@@ -19,10 +23,12 @@ export default function StructuredData() {
     "knowsAbout": PORTFOLIO.skills
   };
 
+  const finalData = data || defaultPersonData;
+
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(finalData) }}
     />
   );
 }

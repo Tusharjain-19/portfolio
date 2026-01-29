@@ -32,8 +32,19 @@ export const metadata: Metadata = {
     default: "Tushar Jain | Engineering Portfolio & MVP Builder",
     template: "%s | Tushar Jain"
   },
-  description: "Portfolio of Tushar Jain, an Engineering Student at BMSCE building real MVPs in Web & Embedded Systems.",
-  keywords: ["Tushar Jain", "Portfolio", "BMSCE", "Engineering Student", "MVP Builder", "Next.js", "Embedded Systems", "ESP32", "Fullstack Developer"],
+  description: "Portfolio of Tushar Jain, an Engineering Student at BMSCE building real MVPs in Web & Embedded Systems. Specialist in wearable health tech and autonomous maritime systems.",
+  keywords: [
+    "Tushar Jain", 
+    "embedded systems developer", 
+    "wearable health tech engineer", 
+    "hardware portfolio",
+    "BMSCE portfolio",
+    "MVP builder",
+    "PulsePredict AI",
+    "Dual-UUV System",
+    "Next.js developer India",
+    "IoT engineer portfolio"
+  ],
   authors: [{ name: "Tushar Jain" }],
   creator: "Tushar Jain",
   formatDetection: {
