@@ -1,26 +1,188 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================
+   PROFESSIONAL THEME SYSTEM
+   Clean, minimal, recruiter-safe
+   ============================ */
+
+/* Dark theme (Night) - DEFAULT */
+:root,
+.dark {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-tertiary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #525252;
+  --border-color: #262626;
+  --accent: #ffffff;
+  
+  /* Subtle gradient - professional dark */
+  --hero-gradient: linear-gradient(
+    180deg,
+    #0a0a0a 0%,
+    #0f0f0f 50%,
+    #141414 100%
+  );
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Light theme (Day) */
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffffff; /* Pure white as requested */
+  --bg-tertiary: #fafafa;
+  --text-primary: #000000; /* Pure black */
+  --text-secondary: #404040;
+  --text-muted: #737373;
+  --border-color: #e5e5e5;
+  --accent: #000000;
+
+  /* Specific Navbar vars to prevent inversion of nav logic if needed */
+  /* But the user likely means keep the current STYLING of the nav */
+  
+  /* Subtle gradient - clean full white */
+  --hero-gradient: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 100%
+  );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ============================
+   BODY STYLES
+   ============================ */
+body {
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+/* Selection */
+.dark ::selection {
+  background-color: #333;
+  color: #fff;
+}
+.light ::selection {
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+/* ============================
+   HERO BACKGROUND - SUBTLE
+   ============================ */
+
+/* Clean gradient base */
+.sky-layer {
+  position: absolute;
+  inset: 0;
+  background: var(--hero-gradient);
+  z-index: 0;
+  transition: background 0.3s ease-out;
+}
+
+/* ============================
+   SUN INDICATOR - Minimal
+   ============================ */
+.sun-container {
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.light .sun-container {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.dark .sun-container {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* ============================
+   MOON INDICATOR - Minimal
+   ============================ */
+.moon-container {
+  position: absolute;
+  top: 12%;
+  right: 8%;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.dark .moon-container {
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+.light .moon-container {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* ============================
+   STARS - Very subtle dots
+   ============================ */
+.stars-layer {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(1px 1px at 100px 50px, rgba(255,255,255,0.15), transparent),
+    radial-gradient(1px 1px at 200px 100px, rgba(255,255,255,0.1), transparent),
+    radial-gradient(1px 1px at 300px 70px, rgba(255,255,255,0.12), transparent),
+    radial-gradient(1px 1px at 400px 120px, rgba(255,255,255,0.08), transparent),
+    radial-gradient(1px 1px at 500px 40px, rgba(255,255,255,0.1), transparent);
+  background-repeat: repeat;
+  background-size: 600px 200px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.dark .stars-layer {
+  opacity: 0.4;
+}
+
+.light .stars-layer {
+  opacity: 0;
+}
+
+/* ============================
+   REDUCED MOTION
+   ============================ */
+@media (prefers-reduced-motion: reduce) {
+  .sky-layer,
+  .sun-container,
+  .moon-container,
+  .stars-layer,
+  body {
+    transition: none !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================
+   UTILITIES
+   ============================ */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
