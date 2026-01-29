@@ -14,6 +14,8 @@ import "./globals.css";
 import Preloader from "@/components/Preloader";
 import Grain from "@/components/Grain";
 
+import StructuredData from "@/components/StructuredData";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,11 +27,69 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tushar Jain Portfolio",
-  description: "Portfolio of Tushar Jain, an Engineering Student building real MVPs.",
+  metadataBase: new URL('https://tusharjain.in'),
+  title: {
+    default: "Tushar Jain | Engineering Portfolio & MVP Builder",
+    template: "%s | Tushar Jain"
+  },
+  description: "Portfolio of Tushar Jain, an Engineering Student at BMSCE building real MVPs in Web & Embedded Systems.",
+  keywords: ["Tushar Jain", "Portfolio", "BMSCE", "Engineering Student", "MVP Builder", "Next.js", "Embedded Systems", "ESP32", "Fullstack Developer"],
+  authors: [{ name: "Tushar Jain" }],
+  creator: "Tushar Jain",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "Tushar Jain | Engineering Portfolio",
+    description: "Building real-world MVPs across Web and Embedded Systems.",
+    url: 'https://tusharjain.in',
+    siteName: 'Tushar Jain Portfolio',
+    images: [
+      {
+        url: '/pic2.jpeg', // Using current profile pic as default OG image
+        width: 800,
+        height: 600,
+        alt: 'Tushar Jain Portfolio Preview',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Tushar Jain | Engineering Portfolio",
+    description: "Engineering student building real software and hardware MVPs.",
+    images: ['/pic2.jpeg'],
+  },
   verification: {
     google: "ymbVHAYENYHPBoHYqGZGjpqKBCY3_fOdkr3Wn4YNigU",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+export const viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5, // A11y: allow zooming
 };
 
 export default function RootLayout({
@@ -46,6 +106,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-200`}
       >
         <ThemeProvider>
+          <StructuredData />
           <SoundProvider>
               <Preloader />
               <SmoothScroll />
