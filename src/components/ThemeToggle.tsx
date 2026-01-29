@@ -20,7 +20,7 @@ export default function ThemeToggle() {
   const xSpring = useSpring(x, springConfig);
   const ySpring = useSpring(y, springConfig);
   
-  const ropeBaseLength = 120;
+  const [ropeBaseLength, setRopeBaseLength] = useState(120);
 
   // Create path for the chain with stretching logic
   const path = useTransform([xSpring, ySpring], ([lx, ly]: number[]) => {
@@ -30,6 +30,11 @@ export default function ThemeToggle() {
   
   useEffect(() => {
     setMounted(true);
+    // Responsive chain length
+    const handleResize = () => setRopeBaseLength(window.innerWidth < 768 ? 80 : 120);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handleDragEnd = () => {
@@ -47,7 +52,7 @@ export default function ThemeToggle() {
   if (!mounted) return null;
 
   return (
-    <div className="fixed top-0 right-12 md:right-24 z-50 flex flex-col items-center">
+    <div className="fixed top-0 right-6 md:right-24 z-50 flex flex-col items-center">
       {/* Chain Container */}
       <div className="relative w-0.5 h-[500px] pointer-events-none flex justify-center">
          
@@ -56,20 +61,12 @@ export default function ThemeToggle() {
             isDark ? 'bg-neutral-800 border-neutral-700' : 'bg-neutral-200 border-neutral-300'
         }`} />
 
-         {/* SVG Twisted Rope */}
         <svg 
             className="absolute top-0 left-1/2 -translate-x-1/2 overflow-visible pointer-events-none"
             width="200"
             height="500"
             viewBox="-100 0 200 500"
         >
-            <defs>
-                {/* Filter for rope texture shadow */}
-                <filter id="ropeTexture" x="-50%" y="-50%" width="200%" height="200%">
-                    <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" result="noise"/>
-                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" xChannelSelector="R" yChannelSelector="G"/>
-                </filter>
-            </defs>
             <g>
                 {/* Rope Shadow (Depth) */}
                 <motion.path 

@@ -19,11 +19,11 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-6 pointer-events-none">
-      <div className="w-full max-w-5xl bg-[#0a0a0a]/80 backdrop-blur-xl border border-neutral-800 rounded-full px-6 h-16 flex items-center justify-between pointer-events-auto shadow-2xl shadow-black/5 transition-all duration-300 hover:shadow-black/10">
+    <header className="fixed top-3 md:top-6 left-0 right-0 z-50 flex justify-center px-4 md:px-6 pointer-events-none">
+      <div className="w-full max-w-5xl bg-[#0a0a0a]/80 backdrop-blur-xl border border-neutral-800 rounded-full px-4 md:px-6 h-12 md:h-16 flex items-center justify-between pointer-events-auto shadow-2xl shadow-black/5 transition-all duration-300 hover:shadow-black/10">
         
         {/* LOGO */}
-        <Link href="/" className="font-bold text-lg text-white hover:opacity-70 transition-opacity z-50 tracking-tight">
+        <Link href="/" className="font-bold text-base md:text-lg text-white hover:opacity-70 transition-opacity z-50 tracking-tight">
           {PORTFOLIO.profile.name}<span className="text-neutral-500">.</span>
         </Link>
 
@@ -58,13 +58,13 @@ export default function Navbar() {
 
         {/* MOBILE OVERLAY NAV */}
         {isOpen && (
-          <nav className="fixed inset-x-4 top-24 sm:inset-0 sm:top-0 bg-[#0a0a0a] sm:bg-[#0a0a0a]/95 backdrop-blur-3xl rounded-3xl sm:rounded-none border border-neutral-800 sm:border-0 flex flex-col items-center justify-center gap-8 md:hidden z-40 p-8 shadow-2xl">
+          <nav className="fixed inset-x-2 top-20 bg-[#0a0a0a] border border-neutral-800 rounded-3xl flex flex-col items-center justify-center gap-6 md:hidden z-40 p-10 shadow-2xl">
             {NAV_ITEMS.map((item) => (
               <Link 
                 key={item.label} 
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-2xl font-bold text-neutral-400 hover:text-white"
+                className="text-xl font-bold text-neutral-400 hover:text-white"
               >
                 {item.label}
               </Link>
