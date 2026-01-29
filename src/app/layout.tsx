@@ -27,6 +27,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Tushar Jain Portfolio",
   description: "Portfolio of Tushar Jain, an Engineering Student building real MVPs.",
+  verification: {
+    google: "ymbVHAYENYHPBoHYqGZGjpqKBCY3_fOdkr3Wn4YNigU",
+  },
 };
 
 export default function RootLayout({
