@@ -17,6 +17,15 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const [hash, setHash] = useState('');
+
+  React.useEffect(() => {
+    setHash(window.location.hash);
+    const handleHashChange = () => setHash(window.location.hash);
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
 
   return (
     <header className="fixed top-3 md:top-6 left-0 right-0 z-50 flex justify-center px-4 md:px-6 pointer-events-none">
@@ -30,11 +39,21 @@ export default function Navbar() {
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex gap-1">
           {NAV_ITEMS.map((item) => {
-             const isActive = pathname === item.href;
+             const isActive = item.href === '/'
+               ? pathname === '/' && hash === ''
+               : pathname === item.href || pathname + hash === item.href;
+               
              return (
                 <Link 
                   key={item.label} 
                   href={item.href}
+                  onClick={() => {
+                    if (item.href.includes('#')) {
+                      setHash('#' + item.href.split('#')[1]);
+                    } else {
+                      setHash('');
+                    }
+                  }}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                     isActive
                       ? 'bg-white text-[#0a0a0a]' 
