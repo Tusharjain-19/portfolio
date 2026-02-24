@@ -3,10 +3,6 @@
 
 import { useEffect } from 'react';
 import Lenis from 'lenis';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function SmoothScroll() {
   useEffect(() => {
@@ -16,13 +12,7 @@ export default function SmoothScroll() {
 
     // Mobile: Disable Lenis on touch devices for native feel
     const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    if (isTouch) {
-      // On mobile, just ensure ScrollTrigger uses native scroll
-      ScrollTrigger.defaults({
-        scroller: window,
-      });
-      return;
-    }
+    if (isTouch) return;
 
     // Desktop: Initialize Lenis
     const lenis = new Lenis({
@@ -35,20 +25,18 @@ export default function SmoothScroll() {
       touchMultiplier: 2,
     });
 
-    // Sync Lenis with ScrollTrigger
-    lenis.on('scroll', ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-
-    gsap.ticker.lagSmoothing(0);
+    let rafId: number;
+    
+    function raf(time: number) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
+    
+    rafId = requestAnimationFrame(raf);
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove((time) => {
-        lenis.raf(time * 1000);
-      });
+      cancelAnimationFrame(rafId);
     };
   }, []);
 

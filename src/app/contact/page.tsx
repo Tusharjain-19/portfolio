@@ -72,7 +72,7 @@ export default function ContactPage() {
         {/* SECTION 3 - RESUME */}
         <div className="mb-12">
              <a 
-                href="/Tushar Jain (2).pdf"
+                href={PORTFOLIO.profile.resumeLink}
                 download
                 className="inline-flex items-center gap-2 px-8 py-3 bg-[var(--text-primary)] text-[var(--bg-primary)] font-medium rounded hover:opacity-90 transition-opacity"
              >

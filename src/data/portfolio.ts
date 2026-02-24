@@ -59,7 +59,8 @@ export const PORTFOLIO: PortfolioData = {
         "Learned to design systems with ethical constraints as a core architectural requirement.",
         "Studied underwater acoustic communication limitations (bandwidth/latency).",
       ],
-      paperLink: "/resume.pdf", // Placeholder if paper isn't separate, or we can use the resume link if it's there. User said "paper link" but didn't provide specific PDF yet other than resume. Using resume pdf as placeholder or null if preferred. I will use the resume link for now as it's the only asset we have.
+      paperLink: "/Dual-UUVSystemResearch.pdf",
+      researchGateLink: "https://www.researchgate.net/publication/397870338_A_Conceptual_Framework_for_a_Human_Supervised_Dual-UUV_System_Enabling_Autonomous_Maritime_Surveillance",
     },
   ],
   projects: [
@@ -209,6 +210,38 @@ export const PORTFOLIO: PortfolioData = {
       proofLinks: {
         github: "https://github.com/Tusharjain-19/Air-Guitar",
         linkedin: "https://www.linkedin.com/posts/tushar-jain-781149322_arduino-python-gesturecontrol-activity-7408202188344373248-HwjJ"
+      }
+    },
+    {
+      id: "split-payment",
+      slug: "split-payment",
+      title: "Split-Payment System",
+      tagline: "FinTech | Payments | System Design",
+      oneLineSummary: "Built a concept-level split-payment system enabling multi-source transactions (UPI + Card) with failure-safe logic and Razorpay test-mode integration.",
+      ideaOrigin: "I designed and implemented a concept-level split-payment system that enables users to complete a single transaction using multiple payment methods (for example: part via UPI and part via Card).",
+      problemStatement: [
+        "Traditional payment systems process one payment method per transaction.",
+        "Users often want to combine payment sources (e.g., UPI + Card) or use partial balances.",
+        "Retrying failed payments often leads to double deductions or partial success states."
+      ],
+      solutionOverview: [
+        "Multi-source payment flow logic (UPI + Card simulation)",
+        "Razorpay Test Mode integration for payment gateway simulation",
+        "Conditional execution to prevent partial payment capture",
+        "Retry-safe transaction handling logic",
+        "Failure detection and rollback simulation"
+      ],
+      hardestTechnicalChallenge: "Maintaining transaction atomicity across multiple distributed payment sources. Specifically, ensuring no partial charges occur if one source fails, and managing retry logic to prevent duplicate deductions while keeping state integrity.",
+      learnings: [
+        "Distributed transaction management and atomicity",
+        "Handling failure states and rollback simulations in fintech flows",
+        "Integrating payment gateways for complex multi-source logic",
+        "Designing for system reliability and retry-safety"
+      ],
+      techStack: ["JavaScript", "Node.js", "Razorpay (Test Mode)", "REST API"],
+      proofLinks: {
+        github: "https://github.com/Tusharjain-19/split-payment",
+        linkedin: "https://www.linkedin.com/posts/tushar-jain-781149322_payments-fintech-systemdesign-activity-7423281476747845632-hHYt"
       }
     },
   ],

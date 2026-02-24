@@ -122,15 +122,33 @@ export default function ResearchDetail({ research }: { research: ResearchProject
                      <p className="text-[var(--text-muted)] text-sm mb-6 leading-relaxed">
                         Full theoretical analysis, localization math, and communication protocols.
                      </p>
-                     <a 
-                        href="/Tushar Jain (2).pdf"
-                        target="_blank"
-                        className="block w-full text-center py-3 bg-[var(--text-primary)] text-[var(--bg-primary)] font-medium rounded hover:opacity-90 transition-opacity"
-                     >
-                        Download PDF
-                     </a>
-                     <p className="text-center text-xs text-[var(--text-muted)] mt-3 font-mono">
-                        PDF • 5MB
+                     
+                     <div className="space-y-3">
+                        {research.paperLink && (
+                            <a 
+                                href={research.paperLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full text-center py-3 bg-[var(--text-primary)] text-[var(--bg-primary)] font-bold rounded hover:opacity-90 transition-opacity"
+                            >
+                                Download PDF
+                            </a>
+                        )}
+                        
+                        {research.researchGateLink && (
+                            <a 
+                                href={research.researchGateLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block w-full text-center py-3 border border-[var(--border-color)] text-[var(--text-primary)] font-bold rounded hover:bg-[var(--bg-tertiary)] transition-colors"
+                            >
+                                ResearchGate ↗
+                            </a>
+                        )}
+                     </div>
+
+                     <p className="text-center text-xs text-[var(--text-muted)] mt-4 font-mono">
+                        System Architecture & Framework
                      </p>
                 </div>
 

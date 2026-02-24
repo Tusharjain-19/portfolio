@@ -16,23 +16,48 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
       {/* SECTION 1 - HEADER */}
       <header className="p-8 md:p-12 border-b border-[var(--border-color)] bg-[var(--bg-secondary)]">
         <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[var(--text-primary)]">{project.title}</h1>
-            <p className="text-xl text-[var(--text-secondary)] font-light leading-relaxed">{project.oneLineSummary}</p>
+            {project.tagline && (
+                <div className="mb-4 inline-block px-3 py-1 bg-[var(--bg-tertiary)] border border-[var(--border-color)] rounded-full">
+                    <span className="text-[10px] md:text-xs font-mono uppercase tracking-widest text-[var(--text-muted)]">
+                        {project.tagline}
+                    </span>
+                </div>
+            )}
+            <h1 className="text-3xl md:text-6xl font-black mb-6 text-[var(--text-primary)] tracking-tight">{project.title}</h1>
+            <p className="text-xl md:text-2xl text-[var(--text-secondary)] font-light leading-relaxed max-w-2xl">{project.oneLineSummary}</p>
             
-            <div className="flex flex-wrap gap-4 mt-6">
+            <div className="flex flex-wrap gap-4 mt-10">
                  {project.proofLinks?.github && (
-                    <a href={project.proofLinks.github} target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-[var(--text-muted)] border-b border-[var(--border-color)] hover:text-[var(--text-primary)] hover:border-[var(--text-primary)] transition-colors">
-                        GitHub ↗
-                    </a>
-                 )}
-                 {project.proofLinks?.demo && (
-                     <a href={project.proofLinks.demo} target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-[var(--text-muted)] border-b border-[var(--border-color)] hover:text-[var(--text-primary)] hover:border-[var(--text-primary)] transition-colors">
-                        Live Demo ↗
+                    <a 
+                        href={project.proofLinks.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="px-6 py-3 bg-[var(--text-primary)] text-[var(--bg-primary)] font-bold rounded-lg hover:scale-105 transition-all flex items-center gap-2 group"
+                    >
+                        <span>{project.id === 'split-payment' ? 'View Code' : 'GitHub'}</span>
+                        <span className="group-hover:translate-x-1 transition-transform">↗</span>
                     </a>
                  )}
                  {project.proofLinks?.linkedin && (
-                     <a href={project.proofLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-[var(--text-muted)] border-b border-[var(--border-color)] hover:text-[var(--text-primary)] hover:border-[var(--text-primary)] transition-colors">
-                        LinkedIn ↗
+                     <a 
+                        href={project.proofLinks.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="px-6 py-3 border border-[var(--border-color)] text-[var(--text-primary)] font-bold rounded-lg hover:bg-[var(--bg-tertiary)] hover:scale-105 transition-all flex items-center gap-2 group"
+                    >
+                        <span>{project.id === 'split-payment' ? 'Read Post' : 'LinkedIn'}</span>
+                        <span className="group-hover:translate-x-1 transition-transform">↗</span>
+                    </a>
+                 )}
+                 {project.proofLinks?.demo && (
+                     <a 
+                        href={project.proofLinks.demo} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="px-6 py-3 border border-[var(--border-color)] text-[var(--text-primary)] font-bold rounded-lg hover:bg-[var(--bg-tertiary)] hover:scale-105 transition-all flex items-center gap-2 group"
+                    >
+                        <span>Live Demo</span>
+                        <span className="group-hover:translate-x-1 transition-transform">↗</span>
                     </a>
                  )}
             </div>
@@ -98,12 +123,48 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
              </p>
         </section>
 
-         {/* SECTION 6 - DEMO / PROOF */}
+         {/* SECTION 6 - DEMO / PROOF / VISUALS */}
          <section>
-            <h2 className="text-sm font-mono text-[var(--text-muted)] mb-4 uppercase tracking-widest">Demo</h2>
-            <div className="w-full aspect-video bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded flex items-center justify-center text-[var(--text-muted)] font-mono text-sm">
-                [ Demo Video / Screenshots to be added ]
-            </div>
+            <h2 className="text-sm font-mono text-[var(--text-muted)] mb-4 uppercase tracking-widest">
+                {project.id === 'split-payment' ? 'System Architecture' : 'Demo'}
+            </h2>
+            {project.id === 'split-payment' ? (
+                <div className="w-full p-8 md:p-12 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl overflow-hidden relative group">
+                    {/* Visual representation of split payment */}
+                    <div className="flex flex-col items-center justify-center space-y-8 py-10">
+                        <div className="w-32 h-14 border-2 border-[var(--text-primary)] rounded flex items-center justify-center font-bold text-sm bg-[var(--bg-primary)]">
+                            ORCHESTRATOR
+                        </div>
+                        <div className="w-1 h-12 bg-[var(--border-color)] relative">
+                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 border-r-2 border-b-2 border-[var(--border-color)] rotate-45 mt-10"></div>
+                        </div>
+                        <div className="flex gap-12 md:gap-24 relative">
+                            {/* Connector Lines */}
+                            <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-[150%] md:w-[200%] h-12 border-t-2 border-x-2 border-[var(--border-color)] rounded-t-lg -z-10"></div>
+                            
+                            <div className="flex flex-col items-center">
+                                <div className="w-24 h-24 border-2 border-dashed border-[var(--text-muted)] rounded-full flex items-center justify-center text-[10px] font-mono p-2 text-center">
+                                    UPI GATEWAY (Razorpay)
+                                </div>
+                                <span className="mt-4 text-xs font-mono text-[var(--text-muted)]">Partial A</span>
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <div className="w-24 h-24 border-2 border-dashed border-[var(--text-muted)] rounded-full flex items-center justify-center text-[10px] font-mono p-2 text-center">
+                                    CARD GATEWAY (Razorpay)
+                                </div>
+                                <span className="mt-4 text-xs font-mono text-[var(--text-muted)]">Partial B</span>
+                            </div>
+                        </div>
+                        <div className="mt-12 p-4 border border-yellow-700/30 bg-yellow-700/5 rounded text-[10px] font-mono text-yellow-600/80 max-w-md text-center">
+                           ATOMICITY GUARD: Ensures fail-safe rollback if either source fails
+                        </div>
+                    </div>
+                </div>
+            ) : (
+                <div className="w-full aspect-video bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded flex items-center justify-center text-[var(--text-muted)] font-mono text-sm">
+                    [ Demo Video / Screenshots to be added ]
+                </div>
+            )}
          </section>
 
          {/* SECTION 7 - LEARNINGS */}

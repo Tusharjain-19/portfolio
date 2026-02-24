@@ -1,74 +1,68 @@
 'use client';
 
-import React, { useEffect, useState, useRef } from 'react';
-import gsap from 'gsap';
+import React, { useEffect, useState } from 'react';
+import { useAnimate } from 'framer-motion';
 
 export default function Preloader() {
+  const [scope, animate] = useAnimate();
   const [complete, setComplete] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
-  const progressRef = useRef<HTMLDivElement>(null);
-  const words = ["INITIALIZING", "LOADING ASSETS", "CONFIGURING ENVIRONMENT", "READY"];
+  const [text, setText] = useState("INITIALIZING");
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      onComplete: () => setComplete(true)
-    });
+    const words = ["INITIALIZING", "LOADING ASSETS", "CONFIGURING ENVIRONMENT", "READY"];
+    
+    const sequence = async () => {
+      // Prevent scrolling
+      document.body.style.overflow = 'hidden';
 
-    const isMobile = window.innerWidth < 768;
+      // 1. Progress Bar
+      await animate("#progress-bar", { width: "100%" }, { duration: 1.5, ease: "easeInOut" });
+      
+      // 2. Text Fade Out
+      animate("#preloader-text", { opacity: 0, y: -20 }, { duration: 0.5 });
+      
+      // 3. Container Slide Up
+      await animate(scope.current, { y: "-100%" }, { duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.2 });
 
-    // Prevent scrolling during preload
-    document.body.style.overflow = 'hidden';
+      // Cleanup
+      document.body.style.overflow = '';
+      setComplete(true);
+    };
 
-    // Animation Sequence
-    tl.to(progressRef.current, {
-      width: '100%',
-      duration: 1.5,
-      ease: 'power2.inOut',
-    })
-    .to(textRef.current, {
-        opacity: 0,
-        y: -20,
-        duration: 0.5,
-    }, "-=0.2")
-    .to(containerRef.current, {
-      y: '-100%',
-      duration: 1,
-      ease: 'power4.inOut',
-    });
+    sequence();
 
     // Word cycler
     let wordIndex = 0;
     const interval = setInterval(() => {
-        if (textRef.current && wordIndex < words.length) {
-            textRef.current.innerText = words[wordIndex];
+        if (wordIndex < words.length) {
+            setText(words[wordIndex]);
             wordIndex++;
         }
     }, 350);
 
     return () => {
         clearInterval(interval);
-        document.body.style.overflow = ''; // Restore scroll
+        document.body.style.overflow = '';
     };
-  }, []);
+  }, [animate, scope]);
 
   if (complete) return null;
 
   return (
     <div 
-        ref={containerRef}
-        className="fixed inset-0 z-[99999] bg-[#0a0a0a] flex flex-col items-center justify-center pointer-events-none"
+        ref={scope}
+        className="fixed inset-0 z-[99999] bg-[#0a0a0a] flex flex-col items-center justify-center"
     >
         <div className="w-64 md:w-96 space-y-4">
             <div 
-                ref={textRef}
+                id="preloader-text"
                 className="text-white font-mono text-xs md:text-sm tracking-[0.2em] text-center h-5"
             >
-                INITIALIZING...
+                {text}...
             </div>
             <div className="w-full h-[1px] bg-[#333] relative overflow-hidden">
                 <div 
-                    ref={progressRef}
+                    id="progress-bar"
                     className="absolute left-0 top-0 h-full bg-white w-0"
                 />
             </div>

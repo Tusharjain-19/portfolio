@@ -30,6 +30,7 @@ export interface ResearchProject {
   limitationsAndEthics: string; // Crucial for honesty
   learnings: string[];
   paperLink?: string; // Path to PDF
+  researchGateLink?: string;
 }
 
 export interface PortfolioData {
