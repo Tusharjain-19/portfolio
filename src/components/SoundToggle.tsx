@@ -13,7 +13,7 @@ export default function SoundToggle() {
   }, []);
 
   // Use consistent styling during SSR to prevent hydration mismatch
-  const baseClasses = "fixed bottom-6 right-6 z-50 px-4 py-2 rounded-full border backdrop-blur-sm transition-all duration-300 group flex items-center gap-2";
+  const baseClasses = "fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 px-3 sm:px-4 py-2 rounded-full border backdrop-blur-sm transition-all duration-300 group flex items-center gap-1.5 sm:gap-2";
   
   // Default to dark theme styling during SSR
   const themeClasses = mounted

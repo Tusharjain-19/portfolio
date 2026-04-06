@@ -31,7 +31,7 @@ export default function ThemeToggle() {
   useEffect(() => {
     setMounted(true);
     // Responsive chain length
-    const handleResize = () => setRopeBaseLength(window.innerWidth < 768 ? 80 : 120);
+    const handleResize = () => setRopeBaseLength(window.innerWidth < 640 ? 60 : window.innerWidth < 768 ? 80 : 120);
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -52,7 +52,7 @@ export default function ThemeToggle() {
   if (!mounted) return null;
 
   return (
-    <div className="fixed top-0 right-6 md:right-24 z-50 flex flex-col items-center">
+    <div className="hidden sm:flex fixed top-0 right-4 md:right-12 lg:right-20 xl:right-24 z-50 flex-col items-center">
       {/* Chain Container */}
       <div className="relative w-0.5 h-[500px] pointer-events-none flex justify-center">
          

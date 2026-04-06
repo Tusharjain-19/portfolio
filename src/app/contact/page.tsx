@@ -11,49 +11,41 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] selection:bg-neutral-800 flex flex-col">
-      
-      {/* HEADER / NAVIGATION */}
-      <nav className="p-6 md:p-12 flex justify-between items-center max-w-3xl mx-auto w-full">
-         <Link href="/" className="font-bold text-lg hover:text-[var(--text-secondary)] transition-colors">
-            {PORTFOLIO.profile.name}.
-         </Link>
-          <Link href="/" className="text-sm font-mono text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">
-            ← Back Home
-         </Link>
-      </nav>
 
-      <div className="flex-1 flex flex-col justify-center items-center px-6 md:px-12 pb-20 max-w-2xl mx-auto w-full text-center">
+      <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 md:px-10 pb-16 sm:pb-20 pt-6 sm:pt-8 max-w-2xl mx-auto w-full">
         
         {/* PAGE TITLE */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[var(--text-primary)]">Get in touch</h1>
-        
-        {/* SECTION 1 - INTRO */}
-        <p className="text-xl text-[var(--text-secondary)] font-light mb-12 max-w-lg leading-relaxed">
-            I am currently open to internship opportunities and discussions about embedded systems or web engineering.
-        </p>
+        <div className="mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-[var(--text-primary)]">Get in touch</h1>
+          
+          {/* SECTION 1 - INTRO */}
+          <p className="text-base sm:text-xl text-[var(--text-secondary)] font-light max-w-lg leading-relaxed">
+              I am currently open to internship opportunities and discussions about embedded systems or web engineering.
+          </p>
+        </div>
 
         {/* SECTION 2 - CONTACT METHODS */}
-        <div className="w-full space-y-4 mb-12">
+        <div className="w-full space-y-3 sm:space-y-4 mb-8 sm:mb-12">
             
             {/* EMAIL */}
             <a 
                 href={`mailto:${PORTFOLIO.profile.socials.email}`}
-                className="block w-full p-6 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg hover:border-[var(--text-muted)] transition-all group"
+                className="block w-full p-4 sm:p-6 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl hover:border-[var(--text-muted)] transition-all group"
             >
-                <span className="block text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-1 group-hover:text-[var(--text-secondary)]">Email</span>
-                <span className="text-xl md:text-2xl font-mono text-[var(--text-primary)] break-all">{PORTFOLIO.profile.socials.email}</span>
+                <span className="block text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-1.5 group-hover:text-[var(--text-secondary)]">Email</span>
+                <span className="text-base sm:text-xl md:text-2xl font-mono text-[var(--text-primary)] break-all leading-tight">{PORTFOLIO.profile.socials.email}</span>
             </a>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                  {/* LINKEDIN */}
                 <a 
                     href={PORTFOLIO.profile.socials.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full p-6 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg hover:border-[var(--text-muted)] transition-all group"
+                    className="block w-full p-4 sm:p-6 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl hover:border-[var(--text-muted)] transition-all group"
                 >
-                    <span className="block text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-1 group-hover:text-[var(--text-secondary)]">Professional Network</span>
-                    <span className="text-lg font-bold text-[var(--text-primary)]">LinkedIn ↗</span>
+                    <span className="block text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-1.5 group-hover:text-[var(--text-secondary)]">Professional Network</span>
+                    <span className="text-base sm:text-lg font-bold text-[var(--text-primary)]">LinkedIn ↗</span>
                 </a>
 
                 {/* GITHUB */}
@@ -61,22 +53,23 @@ export default function ContactPage() {
                     href={PORTFOLIO.profile.socials.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full p-6 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg hover:border-[var(--text-muted)] transition-all group"
+                    className="block w-full p-4 sm:p-6 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl hover:border-[var(--text-muted)] transition-all group"
                 >
-                    <span className="block text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-1 group-hover:text-[var(--text-secondary)]">Code & Projects</span>
-                    <span className="text-lg font-bold text-[var(--text-primary)]">GitHub ↗</span>
+                    <span className="block text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-1.5 group-hover:text-[var(--text-secondary)]">Code &amp; Projects</span>
+                    <span className="text-base sm:text-lg font-bold text-[var(--text-primary)]">GitHub ↗</span>
                 </a>
             </div>
         </div>
 
         {/* SECTION 3 - RESUME */}
-        <div className="mb-12">
+        <div className="mb-8 sm:mb-12">
              <a 
                 href={PORTFOLIO.profile.resumeLink}
-                download
-                className="inline-flex items-center gap-2 px-8 py-3 bg-[var(--text-primary)] text-[var(--bg-primary)] font-medium rounded hover:opacity-90 transition-opacity"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-[var(--text-primary)] text-[var(--bg-primary)] font-medium rounded-lg hover:opacity-90 transition-opacity text-sm sm:text-base"
              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                 <span>Download Resume (PDF)</span>
              </a>
         </div>

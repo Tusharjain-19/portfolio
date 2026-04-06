@@ -5,7 +5,7 @@ export const PORTFOLIO: PortfolioData = {
   profile: {
     name: "Tushar Jain",
     role: "Engineering Student & MVP Builder",
-    bio: "Engineering student at BMS College of Engineering who builds real MVPs across frontend web apps and embedded systems, focusing on shipping before over-engineering.",
+    bio: "Engineering student at BMS College of Engineering, building real-world projects across frontend, backend, and embedded systems, focused on solving practical problems through simple and usable products.",
     socials: {
       email: "jaint0910@gmail.com",
       linkedin: "https://www.linkedin.com/in/tushar-jain-781149322/",
@@ -64,6 +64,63 @@ export const PORTFOLIO: PortfolioData = {
     },
   ],
   projects: [
+    {
+      id: "jaipur-ride",
+      slug: "jaipur-ride",
+      title: "Jaipur Ride",
+      tagline: "Public Utility / Smart Transport",
+      oneLineSummary: "Centralized platform simplifying public transport navigation in Jaipur.",
+      ideaOrigin: "Observing the fragmentation in how people in Jaipur access metro and bus timings, often relying on scattered WhatsApp rumors or word of mouth.",
+      problemStatement: [
+        "Transport info scattered across Google searches and WhatsApp",
+        "Lack of a single, clean interface for route exploration",
+        "Language and inquiry barriers for new commuters"
+      ],
+      solutionOverview: [
+        "Built a unified platform for routes and timings",
+        "Focused on data accessibility through clean information architecture",
+        "Deployed for real-world access with mobile-first responsiveness"
+      ],
+      hardestTechnicalChallenge: "Designing a data structure that can handle varying transport schedules and route nodes while keeping the frontend lightweight and friction-free for users on the move.",
+      learnings: [
+        "Structuring complex datasets into simple UI",
+        "Real-world user flow design and optimization",
+        "Building for utility over ornamentation"
+      ],
+      techStack: ["React.js", "JavaScript", "HTML & CSS", "Vercel"],
+      proofLinks: {
+        demo: "https://jaipurride.vercel.app/",
+        github: "https://github.com/Tusharjain-19/jaipur-ride",
+      }
+    },
+    {
+      id: "notescsbs",
+      slug: "notescsbs",
+      title: "NotesCSBS",
+      tagline: "Productivity / Resource Hub",
+      oneLineSummary: "Centralized student resource platform built to kill the chaos of scattered study notes.",
+      ideaOrigin: "My personal frustration with chasing notes across WhatsApp groups and broken Google Drive links during exam season.",
+      problemStatement: [
+        "Academic materials fragmented across too many platforms",
+        "Wasted time searching instead of studying",
+        "No structured repository for BSCS student notes"
+      ],
+      solutionOverview: [
+        "Created a single source of truth for resources",
+        "Integrated Supabase for reliable storage and fast access",
+        "Optimized navigation for speed and clarity under pressure"
+      ],
+      hardestTechnicalChallenge: "Managing high-volume document access and structured storage using Supabase while ensuring the UI remains snappy even with heavy content loads.",
+      learnings: [
+        "Directly solving user pain points with software",
+        "Designing from the user's perspective (high stress/low time)",
+        "Integrating third-party storage backends (Supabase)"
+      ],
+      techStack: ["Next.js", "Supabase", "React.js", "JavaScript", "Vercel"],
+      proofLinks: {
+        demo: "https://notescsbs.vercel.app/",
+      }
+    },
     {
       id: "vital-health-tech",
       slug: "vital-health-tech",

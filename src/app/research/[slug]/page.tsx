@@ -81,19 +81,19 @@ export default async function ResearchPage({
   return (
     <main className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] selection:bg-neutral-500/30">
         <StructuredData data={researchData as Record<string, unknown>} />
-        <nav className="p-6 border-b border-[var(--border-color)] flex justify-between items-center sticky top-0 bg-[var(--bg-primary)]/90 backdrop-blur z-40">
-            <Link href="/" className="font-bold text-lg tracking-tight hover:text-[var(--text-secondary)] transition-colors">
+        <nav className="px-4 sm:px-6 py-3 sm:py-4 border-b border-[var(--border-color)] flex justify-between items-center sticky top-0 bg-[var(--bg-primary)]/90 backdrop-blur z-40">
+            <Link href="/" className="font-bold text-sm sm:text-base lg:text-lg tracking-tight hover:text-[var(--text-secondary)] transition-colors">
                 {PORTFOLIO.profile.name}.
             </Link>
             <span className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest hidden md:block">
                 Systems Research
             </span>
-             <Link href="/" className="text-sm font-mono text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">
-               ✕ Close
+            <Link href="/" className="text-xs sm:text-sm font-mono text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-1.5">
+               <span>✕</span><span className="hidden xs:inline">Close</span>
             </Link>
         </nav>
         
-        <div className="px-6 md:px-12 lg:px-24">
+        <div className="px-4 sm:px-6 md:px-10 lg:px-16">
             <ResearchDetail research={research} />
         </div>
     </main>
