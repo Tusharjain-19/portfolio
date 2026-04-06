@@ -2,6 +2,7 @@
 import React from 'react';
 import { ResearchProject } from '@/data/types';
 import Link from 'next/link';
+import { Circle, ArrowUpRight, ArrowLeft } from '@/components/Icons';
 
 export default function ResearchDetail({ research }: { research: ResearchProject }) {
   return (
@@ -89,7 +90,7 @@ export default function ResearchDetail({ research }: { research: ResearchProject
              {/* SECTION 6 - LIMITATIONS & ETHICS */}
              <section className="p-5 sm:p-8 bg-amber-900/5 border border-amber-900/20 rounded-lg">
                 <h2 className="text-xs sm:text-sm font-mono text-amber-600 mb-3 sm:mb-4 uppercase tracking-widest flex items-center gap-2">
-                    ⚠ Limitations &amp; Ethical Considerations
+                    [!] Limitations &amp; Ethical Considerations
                 </h2>
                 <p className="text-[var(--text-secondary)] leading-relaxed text-sm sm:text-base">
                     {research.limitationsAndEthics}
@@ -106,7 +107,7 @@ export default function ResearchDetail({ research }: { research: ResearchProject
                  <ul className="space-y-3 sm:space-y-4">
                     {research.learnings.map((item, idx) => (
                         <li key={idx} className="flex gap-3 sm:gap-4 items-start text-[var(--text-secondary)]">
-                            <span className="text-[var(--text-muted)] mt-1.5 text-xs shrink-0">●</span>
+                            <Circle className="text-[var(--text-muted)] mt-1.5 w-2.5 h-2.5 shrink-0" />
                             <span className="leading-relaxed text-sm sm:text-base">{item}</span>
                         </li>
                     ))}
@@ -144,7 +145,7 @@ export default function ResearchDetail({ research }: { research: ResearchProject
                                 className="flex items-center justify-center gap-2 w-full text-center py-3 border border-[var(--border-color)] text-[var(--text-primary)] font-bold rounded-lg hover:bg-[var(--bg-tertiary)] transition-colors text-sm"
                             >
                                 <span>ResearchGate</span>
-                                <span>↗</span>
+                                <ArrowUpRight className="w-4 h-4" />
                             </a>
                         )}
                      </div>
@@ -154,8 +155,8 @@ export default function ResearchDetail({ research }: { research: ResearchProject
                      </p>
                 </div>
 
-                <Link href="/" className="block text-center text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors text-sm font-mono py-3">
-                    ← Back to Home
+                <Link href="/" className="flex items-center justify-center gap-1.5 text-center text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors text-sm font-mono py-3">
+                    <ArrowLeft className="w-4 h-4" /> Back to Home
                 </Link>
             </div>
         </div>

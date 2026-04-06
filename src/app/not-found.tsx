@@ -1,5 +1,6 @@
 
 import Link from 'next/link';
+import { ArrowLeft } from '@/components/Icons';
 
 export default function NotFound() {
   return (
@@ -8,9 +9,9 @@ export default function NotFound() {
       <p className="text-xl text-[var(--text-muted)] mb-8">Page not found</p>
       <Link 
         href="/" 
-        className="px-6 py-3 bg-[var(--text-primary)] text-[var(--bg-primary)] font-bold rounded hover:opacity-90 transition-opacity"
+        className="flex items-center gap-2 px-6 py-3 bg-[var(--text-primary)] text-[var(--bg-primary)] font-bold rounded hover:opacity-90 transition-opacity w-fit mx-auto"
       >
-        ← Back to Home
+        <ArrowLeft className="w-4 h-4" /> Back to Home
       </Link>
     </main>
   );

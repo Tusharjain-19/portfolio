@@ -22,7 +22,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
     playSound('close');
     setIsVisible(false);
     setTimeout(() => {
-        router.push('/#projects'); 
+        router.push('/projects'); 
     }, 300);
   }, [router, playSound]);
 

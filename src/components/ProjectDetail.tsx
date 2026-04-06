@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ProductProject } from '@/data/types';
 import { PORTFOLIO } from '@/data/portfolio';
+import { ArrowUpRight, ArrowLeft, ArrowRight, Circle } from '@/components/Icons';
 
 export default function ProjectDetail({ project }: { project: ProductProject }) {
   // Find next/prev for navigation
@@ -35,7 +36,7 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                         className="px-4 sm:px-6 py-2.5 sm:py-3 bg-[var(--text-primary)] text-[var(--bg-primary)] font-bold rounded-lg hover:scale-105 transition-all flex items-center gap-2 group text-sm sm:text-base"
                     >
                         <span>{project.id === 'split-payment' ? 'View Code' : 'GitHub'}</span>
-                        <span className="group-hover:translate-x-1 transition-transform">↗</span>
+                        <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </a>
                  )}
                  {project.proofLinks?.linkedin && (
@@ -46,7 +47,7 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                         className="px-4 sm:px-6 py-2.5 sm:py-3 border border-[var(--border-color)] text-[var(--text-primary)] font-bold rounded-lg hover:bg-[var(--bg-tertiary)] hover:scale-105 transition-all flex items-center gap-2 group text-sm sm:text-base"
                     >
                         <span>{project.id === 'split-payment' ? 'Read Post' : 'LinkedIn'}</span>
-                        <span className="group-hover:translate-x-1 transition-transform">↗</span>
+                        <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </a>
                  )}
                  {project.proofLinks?.demo && (
@@ -57,7 +58,7 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                         className="px-4 sm:px-6 py-2.5 sm:py-3 border border-[var(--border-color)] text-[var(--text-primary)] font-bold rounded-lg hover:bg-[var(--bg-tertiary)] hover:scale-105 transition-all flex items-center gap-2 group text-sm sm:text-base"
                     >
                         <span>Live Demo</span>
-                        <span className="group-hover:translate-x-1 transition-transform">↗</span>
+                        <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </a>
                  )}
             </div>
@@ -178,7 +179,7 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
              <ul className="space-y-3 sm:space-y-4">
                  {project.learnings.map((learning, idx) => (
                      <li key={idx} className="flex gap-3 sm:gap-4 items-start text-[var(--text-secondary)]">
-                         <span className="text-blue-500 mt-1.5 text-xs shrink-0">●</span>
+                         <Circle className="text-blue-500 mt-1.5 w-2.5 h-2.5 shrink-0" />
                          <span className="leading-relaxed text-sm sm:text-base">{learning}</span>
                      </li>
                  ))}
@@ -189,14 +190,14 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
          <nav className="flex justify-between pt-8 sm:pt-12 border-t border-[var(--border-color)] gap-4">
              {prevProject ? (
                  <Link href={`/work/${prevProject.slug}`} replace className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors flex flex-col items-start group flex-1 min-w-0">
-                     <span className="text-xs font-mono mb-1 text-[var(--text-muted)] opacity-60 group-hover:opacity-100">← Previous</span>
+                     <span className="flex items-center gap-1.5 text-xs font-mono mb-1 text-[var(--text-muted)] opacity-60 group-hover:opacity-100"><ArrowLeft className="w-3.5 h-3.5" /> Previous</span>
                      <span className="font-bold underline decoration-[var(--border-color)] decoration-2 underline-offset-4 group-hover:decoration-[var(--text-primary)] text-sm sm:text-base truncate max-w-full">{prevProject.title}</span>
                  </Link>
              ) : (<div />)}
 
              {nextProject ? (
                  <Link href={`/work/${nextProject.slug}`} replace className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors flex flex-col items-end group flex-1 min-w-0">
-                      <span className="text-xs font-mono mb-1 text-[var(--text-muted)] opacity-60 group-hover:opacity-100">Next →</span>
+                      <span className="flex items-center gap-1.5 text-xs font-mono mb-1 text-[var(--text-muted)] opacity-60 group-hover:opacity-100">Next <ArrowRight className="w-3.5 h-3.5" /></span>
                       <span className="font-bold underline decoration-[var(--border-color)] decoration-2 underline-offset-4 group-hover:decoration-[var(--text-primary)] text-sm sm:text-base truncate max-w-full">{nextProject.title}</span>
                  </Link>
              ) : (<div />)}

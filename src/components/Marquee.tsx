@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { useTheme } from '@/hooks/useTheme';
 
 interface MarqueeProps {
   items: string[];
@@ -10,9 +9,6 @@ interface MarqueeProps {
 }
 
 export default function Marquee({ items, direction = 'left', speed = 20 }: MarqueeProps) {
-  const { theme } = useTheme();
-  const isDark = theme === 'dark';
-  
   return (
     <div className="w-full overflow-hidden bg-[var(--bg-primary)] border-y border-[var(--border-color)] py-12 relative select-none">
        {/* Gradient masks for smooth edge fade */}
@@ -31,10 +27,7 @@ export default function Marquee({ items, direction = 'left', speed = 20 }: Marqu
                 {items.map((item, idx) => (
                     <span 
                         key={`${item}-${idx}`} 
-                        className="text-4xl md:text-6xl font-black text-transparent stroke-text uppercase tracking-tight whitespace-nowrap opacity-20 hover:opacity-100 transition-opacity duration-300 cursor-default"
-                        style={{ 
-                            WebkitTextStroke: isDark ? '1px rgba(255,255,255,0.5)' : '1px rgba(0,0,0,0.5)', 
-                        }}
+                        className="text-3xl md:text-5xl font-black text-(--text-muted) opacity-60 hover:opacity-100 hover:text-(--text-primary) uppercase tracking-tight whitespace-nowrap transition-all duration-300 cursor-default"
                     >
                     {item}
                     </span>

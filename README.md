@@ -1,103 +1,88 @@
-# 🚀 Tushar Jain | Engineering Portfolio
+# Tushar Jain | Software Engineer
 
-Welcome to my portfolio! I am an Engineering student at **BMS College of Engineering, Bengaluru**, specializing in Computer Science & Business Systems.
+Welcome to the source code of my engineering portfolio. I am a student at **BMS College of Engineering, Bengaluru** (CSBS), focused on building real, working products across frontend, backend, and embedded systems. 
 
-I describe myself as an **MVP Builder**. My philosophy is simple: **Build first, optimize second.** I focus on shipping real software and hardware solutions that solve actual problems, rather than getting lost in theoretical perfection.
+My engineering philosophy is simple: **MVP First**. I prioritize shipping practical solutions over theoretical perfection, and I learn by building.
 
 ---
 
-## 🛠️ Tech Stack
+## 🏗️ Portfolio Architecture
 
-### Web Development
+This repository contains the source code for my personal portfolio, built with a focus on modern web standards, performance, and a luxury minimalist aesthetic.
 
-- **Frameworks**: Next.js 15+, React 19
-- **Languages**: TypeScript, JavaScript, HTML5, CSS3
-- **Styling**: Tailwind CSS 4, Framer Motion (Animations), GSAP
-- **Backend & Database**: Supabase (Auth & Real-time), Google Sheets API
+### Core Technologies
+- **Framework**: Next.js 15+ (App Router), React 19
+- **Styling**: Tailwind CSS v4, custom monochrome design system
+- **Animation**: Framer Motion, Lenis (Smooth Scrolling)
+- **Language**: TypeScript
 - **Deployment**: Vercel
 
-### Embedded Systems & Hardware
+---
 
-- **Microcontrollers**: ESP32, Arduino
-- **Sensors**: MPU6050 (IMU), MAX30102 (Oximetry), NEO-6M (GPS)
-- **Communication**: BLE, I2C, UART, Serial
-- **Languages**: C/C++, Python (Audio Synthesis)
+## 📂 Featured Work
+
+Below is a selection of the core systems and MVPs I have developed:
+
+### 1. Vital Health Tech
+An ESP32-based wearable health monitoring MVP designed for elderly care. Integrates SpO₂, heart rate, motion/fall detection, and GPS into a single wearable prototype using BLE for real-time data transmission.
+- **Tech**: C/C++, ESP32, MAX30102, MPU6050, BLE
+
+### 2. BookMySlot (B2B SaaS)
+A verticalized booking and operations management system for small businesses (restaurants and clinics). Designed to eliminate double-booking and provide real-time synchronization across staff, admin, and customer interfaces.
+- **Tech**: JavaScript, React, Supabase (Real-time DB)
+
+### 3. Namma Ride (Bengaluru)
+A high-accessibility journey planner for the Bengaluru Metro, featuring state-managed multilingual support to aid non-English speaking commuters.
+- **Tech**: HTML, CSS, Vanilla JavaScript
+
+### 4. Dual-UUV Autonomous Surveillance (Research)
+A foundational systems architecture proposal for a two-tier Unmanned Underwater Vehicle system. Focuses on separating passive detection from active interception, tightly coupled with a Human-in-the-Loop ethical oversight protocol.
 
 ---
 
-## 🌟 Featured Projects
+## 🛠️ Technical Competencies
 
-### 🏥 Vital Health Tech (PulsePredict AI)
-
-_ESP32-based wearable health monitoring MVP for elderly care._
-
-- **Problem**: Fragmented health monitoring for the elderly without affordable, all-in-one solutions.
-- **Solution**: Integrated SpO₂, heart rate, motion/fall detection, and GPS into a single wearable prototype using BLE for real-time monitoring.
-- **Tech**: ESP32, C/C++, MAX30102, MPU6050, BLE.
-
-### 🍱 BookMySlot
-
-_B2B SaaS helping small businesses manage operations in real-time._
-
-- **Problem**: Small businesses (restaurants/clinics) rely on manual coordination, leading to confusion and loss of control.
-- **Solution**: A verticalized system (BookMyDine, BookMyClinic) with real-time sync across customer apps, admin panels, and staff apps.
-- **Tech**: JS, Supabase, Vercel, Real-time DB.
-
-### 🎸 Air Guitar
-
-_Gesture-controlled virtual guitar using Karplus-Strong sound synthesis._
-
-- **The Twist**: Uses physical motion (MPU6050) to trigger real-time audio synthesis instead of pre-recorded samples.
-- **Tech**: Python, Arduino, NumPy, Audio Synthesis.
-
-### 🚇 Namma Ride
-
-_Bengaluru Metro journey planner with 3-language support._
-
-- **Focus**: Accessibility and simplicity for first-time or non-English speaking users.
-- **Tech**: Vanilla JS, Multilingual State Management.
+- **Frontend Core**: React.js, Next.js, HTML5, CSS3, JavaScript, Tailwind CSS
+- **Backend & Data**: Node.js, Express.js, REST APIs, MongoDB, Firebase, Supabase
+- **Systems & Hardware**: C++, ESP32, Arduino, I2C/SPI/UART, Hardware Integration (Sensors)
+- **Computer Science**: Data Structures & Algorithms, Object-Oriented Programming
+- **Tooling**: Git, GitHub, VS Code, Vercel
 
 ---
 
-## 🔬 Research & Systems Design
+## ⚙️ Local Development
 
-### **Dual-UUV System for Autonomous Maritime Surveillance**
+To run this portfolio locally on your machine:
 
-_Independent Research (Conceptual + Systems Design)_
-
-- Proposed a split-architecture system separating detection (passive UUV) and response (active UUV).
-- Integrated a strict **Human-in-the-loop** ethical protocol for response authorization.
-- Explored sensor fusion using Extended Kalman Filters (EKF) and underwater acoustic communication.
-
----
-
-## 🚀 Getting Started
-
-To run this portfolio site locally:
-
-1. **Clone the repository**:
+1. **Clone the repository**
    ```bash
    git clone https://github.com/Tusharjain-19/portfolio.git
+   cd portfolio
    ```
-2. **Install dependencies**:
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
-3. **Run the development server**:
+
+3. **Start the development server**
    ```bash
    npm run dev
    ```
-4. **Open your browser**:
-   Navigate to [http://localhost:3000](http://localhost:3000).
+
+4. **View the application**
+   Navigate to `http://localhost:3000` in your browser.
 
 ---
 
-## 📬 Connect with Me
+## 📬 Contact & Links
+
+I am actively seeking internship opportunities and engineering collaborations.
 
 - **Email**: [jaint0910@gmail.com](mailto:jaint0910@gmail.com)
 - **LinkedIn**: [Tushar Jain](https://www.linkedin.com/in/tushar-jain-781149322/)
 - **GitHub**: [@Tusharjain-19](https://github.com/Tusharjain-19)
+- **Live Portfolio**: [tusharjain.com](#) *(Update with actual domain)*
 
----
-
-_Built with ❤️ using Next.js and Tailwind CSS._
+***
+*Designed and built by Tushar Jain.*

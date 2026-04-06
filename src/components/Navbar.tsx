@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const NAV_ITEMS = [
   { label: 'Home', href: '/' },
-  { label: 'Projects', href: '/#projects' },
+  { label: 'Projects', href: '/projects' },
   { label: 'Research', href: '/research/dual-uuv-system' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },

@@ -1,7 +1,7 @@
 
 import React from 'react';
-import Link from 'next/link';
 import { PORTFOLIO } from '@/data/portfolio';
+import { ArrowUpRight } from '@/components/Icons';
 
 export const metadata = {
   title: "Contact | Tushar Jain",
@@ -45,7 +45,7 @@ export default function ContactPage() {
                     className="block w-full p-4 sm:p-6 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl hover:border-[var(--text-muted)] transition-all group"
                 >
                     <span className="block text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-1.5 group-hover:text-[var(--text-secondary)]">Professional Network</span>
-                    <span className="text-base sm:text-lg font-bold text-[var(--text-primary)]">LinkedIn ↗</span>
+                    <span className="flex items-center gap-1.5 text-base sm:text-lg font-bold text-[var(--text-primary)]">LinkedIn <ArrowUpRight className="w-4 h-4" /></span>
                 </a>
 
                 {/* GITHUB */}
@@ -56,7 +56,7 @@ export default function ContactPage() {
                     className="block w-full p-4 sm:p-6 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl hover:border-[var(--text-muted)] transition-all group"
                 >
                     <span className="block text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-1.5 group-hover:text-[var(--text-secondary)]">Code &amp; Projects</span>
-                    <span className="text-base sm:text-lg font-bold text-[var(--text-primary)]">GitHub ↗</span>
+                    <span className="flex items-center gap-1.5 text-base sm:text-lg font-bold text-[var(--text-primary)]">GitHub <ArrowUpRight className="w-4 h-4" /></span>
                 </a>
             </div>
         </div>

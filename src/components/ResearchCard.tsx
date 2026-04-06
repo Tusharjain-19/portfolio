@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { ChevronRight } from '@/components/Icons';
 
 interface ResearchProps {
   title: string;
@@ -31,7 +32,7 @@ export default function ResearchCard({ title, type, role, contributions, technic
             <ul className="space-y-3">
             {contributions.map((item, idx) => (
                 <li key={idx} className="text-[var(--text-secondary)] text-sm flex gap-3">
-                <span className="text-blue-500 mt-1">▹</span>
+                <ChevronRight className="text-blue-500 mt-1 w-4 h-4 shrink-0" />
                 <span className="leading-relaxed">{item}</span>
                 </li>
             ))}

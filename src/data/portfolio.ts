@@ -67,9 +67,9 @@ export const PORTFOLIO: PortfolioData = {
     {
       id: "jaipur-ride",
       slug: "jaipur-ride",
-      title: "Jaipur Ride",
+      title: "Jaipur Ride (Metro)",
       tagline: "Public Utility / Smart Transport",
-      oneLineSummary: "Centralized platform simplifying public transport navigation in Jaipur.",
+      oneLineSummary: "Centralized platform simplifying Jaipur Metro navigation. Soon available on Google Play Store.",
       ideaOrigin: "Observing the fragmentation in how people in Jaipur access metro and bus timings, often relying on scattered WhatsApp rumors or word of mouth.",
       problemStatement: [
         "Transport info scattered across Google searches and WhatsApp",
@@ -156,16 +156,16 @@ export const PORTFOLIO: PortfolioData = {
       slug: "bookmyslot",
       title: "BookMySlot",
       tagline: "Reservation & Operations System",
-      oneLineSummary: "Ultra-low-cost B2B SaaS helping small businesses manage reservations and operations in real-time — without complexity.",
-      ideaOrigin: "I observed how small businesses (restaurants, clinics) still run on paper, WhatsApp, phone calls, and human memory. Waiters shout table numbers, patients wait blindly without slot clarity, and owners have zero real-time visibility. They don't need fancy tech — they need clarity, control, and real-time sync.",
+      oneLineSummary: "Ultra-low-cost B2B SaaS helping small businesses manage reservations and operations in real-time through a simple interface.",
+      ideaOrigin: "I observed how small businesses (restaurants, clinics) still run on paper, WhatsApp, phone calls, and human memory. Waiters shout table numbers, patients wait blindly without slot clarity, and owners have zero real-time visibility. They don't need fancy tech; they need clarity, control, and real-time sync.",
       problemStatement: [
-        "Reservations → double booking and confusion",
-        "Staff sync → admin ≠ staff ≠ front desk",
-        "Customers → no trust, long waits, no confirmation",
-        "Owners → zero visibility, zero control over operations"
+        "Reservations -> double booking and confusion",
+        "Staff sync -> admin ≠ staff ≠ front desk",
+        "Customers -> no trust, long waits, no confirmation",
+        "Owners -> zero visibility, zero control over operations"
       ],
       solutionOverview: [
-        "Built a SYSTEM, not just one app — verticalized for restaurants (BookMyDine) and clinics (BookMyClinic)",
+        "Built a SYSTEM, not just one app, verticalized for restaurants (BookMyDine) and clinics (BookMyClinic)",
         "Web for customers (reservation websites)",
         "Admin panels for owners (full control)",
         "Dedicated staff apps where required (Waiter App for live table/order sync)",
@@ -189,7 +189,7 @@ export const PORTFOLIO: PortfolioData = {
       slug: "namma-ride",
       title: "Namma Ride",
       tagline: "Public Utility / UX",
-      oneLineSummary: "Bengaluru Metro journey planner with clear instructions in 3 languages.",
+      oneLineSummary: "Bengaluru Metro journey planner with clear instructions in 3 languages. Soon available on Google Play Store.",
       ideaOrigin: "Many metro users, especially first-time and non-English speakers, struggle to understand routes and interchanges.",
       problemStatement: [
         "Confusing metro journey planning",
