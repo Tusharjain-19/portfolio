@@ -10,7 +10,7 @@ import { ArrowUpRight } from '@/components/Icons';
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 max-w-7xl mx-auto selection:bg-neutral-700 selection:text-white pb-16 sm:pb-20 font-sans bg-(--bg-primary)">
+    <main className="min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 max-w-7xl mx-auto selection:bg-neutral-700 selection:text-white pb-16 sm:pb-20 font-sans bg-(--bg-primary) overflow-hidden w-full max-w-[100vw]">
 
       {/* SECTION 1: HERO */}
       <ScrollReveal>
@@ -18,12 +18,12 @@ export default function Home() {
       </ScrollReveal>
 
       {/* SECTION 2: SELECTED WORK */}
-      <section id="projects" className="py-14 sm:py-20 border-b border-(--border-color)">
+      <section id="projects" className="py-14 sm:py-20 border-b border-(--border-color) w-full overflow-hidden">
         <ScrollReveal delay={0.2}>
             <h2 className="text-xs sm:text-sm font-mono text-(--text-muted) mb-6 sm:mb-8 uppercase tracking-widest">
                 Selected Work
             </h2>
-            <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 group/list">
+            <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 group/list w-full max-w-full">
                 {PORTFOLIO.projects
                     .filter(project => ['vital-health-tech', 'split-payment', 'namma-ride'].includes(project.id))
                     .sort((a, b) => {
@@ -31,25 +31,25 @@ export default function Home() {
                         return order.indexOf(a.id) - order.indexOf(b.id);
                     })
                     .map((project) => (
-                    <MagneticHover key={project.id} className="group project-card transition-all duration-500 group-hover/list:opacity-40 hover:opacity-100! scale-100 hover:scale-[1.01]! sm:hover:scale-[1.02]!" intensity={4}>
-                        <TiltCard className="cursor-pointer block rounded-xl" intensity={4}>
+                    <MagneticHover key={project.id} className="group project-card transition-all duration-500 group-hover/list:opacity-40 hover:opacity-100! scale-100 hover:scale-[1.01]! sm:hover:scale-[1.02]! w-full" intensity={4}>
+                        <TiltCard className="cursor-pointer block rounded-xl w-full" intensity={4}>
                             <Link 
                                 href={`/work/${project.slug}`} 
-                                className="block h-full w-full bg-(--bg-secondary) p-4 sm:p-6 rounded-xl border border-(--border-color) hover:border-(--text-muted) transition-all hover:shadow-xl"
+                                className="block h-full w-full bg-(--bg-secondary) p-4 sm:p-6 rounded-xl border border-(--border-color) hover:border-(--text-muted) transition-all hover:shadow-xl overflow-hidden"
                                 data-cursor-text="OPEN"
                             >
-                                <article>
-                                    <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
-                                        <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-(--text-primary) group-hover:text-(--accent) transition-colors">
+                                <article className="w-full">
+                                    <div className="flex flex-col sm:flex-row flex-wrap items-start justify-between gap-2 mb-2 w-full">
+                                        <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-(--text-primary) group-hover:text-(--accent) transition-colors break-words text-wrap-balance whitespace-normal self-start max-w-full">
                                             {project.title}
                                         </h3>
                                         {project.tagline && (
-                                            <span className="text-[10px] font-mono text-(--text-muted) border-(--border-color) px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">
+                                            <span className="text-[10px] font-mono text-(--text-muted) border-(--border-color) px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0 mt-1 sm:mt-0 max-w-full truncate">
                                                 {project.tagline.split('|')[0].trim()}
                                             </span>
                                         )}
                                     </div>
-                                    <p className="text-(--text-muted) font-mono text-xs sm:text-sm max-w-2xl leading-relaxed">
+                                    <p className="text-(--text-muted) font-mono text-xs sm:text-sm max-w-2xl leading-relaxed break-words whitespace-normal text-wrap-pretty">
                                         {project.oneLineSummary}
                                     </p>
                                 </article>
@@ -71,27 +71,27 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: RESEARCH */}
-      <section className="py-14 sm:py-20 border-b border-(--border-color)">
+      <section className="py-14 sm:py-20 border-b border-(--border-color) w-full overflow-hidden">
          <ScrollReveal delay={0.1}>
              <h2 className="text-xs sm:text-sm font-mono text-(--text-muted) mb-6 sm:mb-8 uppercase tracking-widest">
                 Research &amp; Systems
             </h2>
-             <div className="flex flex-col gap-6 sm:gap-8 group/research">
+             <div className="flex flex-col gap-6 sm:gap-8 group/research w-full max-w-full">
                 {PORTFOLIO.research.map((item) => (
                     <Link 
                         key={item.id} 
                         href={`/research/${item.slug}`} 
-                        className="group cursor-pointer block transition-all duration-500 group-hover/research:opacity-40 hover:opacity-100!"
+                        className="group cursor-pointer block transition-all duration-500 group-hover/research:opacity-40 hover:opacity-100! w-full"
                     >
-                        <article>
-                            <div className="flex flex-wrap items-start gap-2 sm:gap-3 mb-2">
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-(--text-primary) leading-tight underline decoration-transparent group-hover:decoration-(--text-muted) underline-offset-4 transition-all">
+                        <article className="w-full">
+                            <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2 sm:gap-3 mb-2 w-full">
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-(--text-primary) leading-tight underline decoration-transparent group-hover:decoration-(--text-muted) underline-offset-4 transition-all break-words text-wrap-balance whitespace-normal max-w-full">
                                     {item.title}
                                 </h3>
-                                <span className="text-xs border border-yellow-700 text-yellow-600 px-2 py-0.5 rounded font-mono uppercase shrink-0 mt-0.5">Conceptual</span>
+                                <span className="text-[10px] sm:text-xs border border-yellow-700 text-yellow-600 px-2 py-0.5 rounded font-mono uppercase shrink-0 mt-1 sm:mt-0.5">Conceptual</span>
                             </div>
                         
-                            <p className="text-(--text-muted) font-mono text-xs sm:text-sm max-w-3xl leading-relaxed">
+                            <p className="text-(--text-muted) font-mono text-xs sm:text-sm max-w-3xl leading-relaxed break-words whitespace-normal text-wrap-pretty">
                                 {item.systemArchitectureSummary}
                             </p>
                         </article>

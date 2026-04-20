@@ -135,7 +135,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${montserrat.variable} antialiased bg-(--bg-primary) text-(--text-primary) transition-colors duration-200 font-sans`}
+        className={`${montserrat.variable} antialiased bg-(--bg-primary) text-(--text-primary) transition-colors duration-200 font-sans overflow-x-hidden w-full max-w-[100vw]`}
       >
         <ThemeProvider>
           <StructuredData />
@@ -148,7 +148,7 @@ export default function RootLayout({
                   <ThemeToggle />
                   <SoundToggle />
                   <Navbar />
-                  <div className="pt-16 min-h-screen flex flex-col">
+                  <div className="pt-16 min-h-screen flex flex-col overflow-x-hidden w-full max-w-[100vw]">
                       {children}
                       {modal}
                   </div>
