@@ -129,8 +129,8 @@ export const PORTFOLIO: PortfolioData = {
       slug: "vital-health-tech",
       title: "PulsePredict (Vital Health Tech)",
       tagline: "Co Founder & Tech Lead | Aug 2025 – Jan 2026",
-      oneLineSummary: "Pitched at JIC Accelerator 7.0. A sub-₹2000 wearable health monitoring MVP for elderly care.",
-      ideaOrigin: "Identified a critical gap in India's geriatric care market: fall detection and vitals monitoring devices priced above ₹10,000 excluded the mass market. Conceptualized a sub-₹2000 solution targeting 140M+ elderly Indians.",
+      oneLineSummary: "Pitched at JIC Accelerator 7.0. A sub-INR 6000 wearable health monitoring MVP for elderly care.",
+      ideaOrigin: "Identified a critical gap in India's geriatric care market: fall detection and vitals monitoring devices priced above ₹10,000 excluded the mass market. Conceptualized a sub-INR 6000 solution targeting 140M+ elderly Indians.",
       problemStatement: [
         "Fall detection & vitals monitors priced >₹10,000 exclude mass market",
         "Lack of affordable, continuous monitoring for 140M+ elderly Indians",
