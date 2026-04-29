@@ -68,8 +68,9 @@ export const PORTFOLIO: PortfolioData = {
       id: "jaipur-ride",
       slug: "jaipur-ride",
       title: "Jaipur Ride (Metro)",
+      imageUrl: "/jaipur ride.png",
       tagline: "Public Utility / Smart Transport",
-      oneLineSummary: "Centralized platform simplifying Jaipur Metro navigation. Soon available on Google Play Store.",
+      oneLineSummary: "Centralized platform simplifying Jaipur Metro navigation. Available on Google Play Store with 100+ downloads in 10 days of launch.",
       ideaOrigin: "Observing the fragmentation in how people in Jaipur access metro and bus timings, often relying on scattered WhatsApp rumors or word of mouth.",
       problemStatement: [
         "Transport info scattered across Google searches and WhatsApp",
@@ -91,12 +92,14 @@ export const PORTFOLIO: PortfolioData = {
       proofLinks: {
         demo: "https://jaipurride.vercel.app/",
         github: "https://github.com/Tusharjain-19/jaipur-ride",
+        playStore: "https://play.google.com/store/apps/details?id=co.median.android.nmdabkl"
       }
     },
     {
       id: "notescsbs",
       slug: "notescsbs",
       title: "NotesCSBS",
+      imageUrl: "/notescsbs.png",
       tagline: "Productivity / Resource Hub",
       oneLineSummary: "Centralized student resource platform built to kill the chaos of scattered study notes.",
       ideaOrigin: "My personal frustration with chasing notes across WhatsApp groups and broken Google Drive links during exam season.",
@@ -124,28 +127,28 @@ export const PORTFOLIO: PortfolioData = {
     {
       id: "vital-health-tech",
       slug: "vital-health-tech",
-      title: "Vital Health Tech (PulsePredict AI)",
-      tagline: "Product / Hardware",
-      oneLineSummary: "ESP32-based wearable health monitoring MVP for elderly care.",
-      ideaOrigin: "I noticed elderly health monitoring is fragmented across devices, with no affordable all-in-one solution for continuous tracking.",
+      title: "PulsePredict (Vital Health Tech)",
+      tagline: "Co Founder & Tech Lead | Aug 2025 – Jan 2026",
+      oneLineSummary: "Pitched at JIC Accelerator 7.0. A sub-₹2000 wearable health monitoring MVP for elderly care.",
+      ideaOrigin: "Identified a critical gap in India's geriatric care market: fall detection and vitals monitoring devices priced above ₹10,000 excluded the mass market. Conceptualized a sub-₹2000 solution targeting 140M+ elderly Indians.",
       problemStatement: [
-        "Health data scattered across multiple devices",
-        "No affordable continuous monitoring",
-        "Manual dependency on caretakers for emergencies"
+        "Fall detection & vitals monitors priced >₹10,000 exclude mass market",
+        "Lack of affordable, continuous monitoring for 140M+ elderly Indians",
+        "False positives in existing low-cost fall detection systems"
       ],
       solutionOverview: [
-        "Built an ESP32-based wearable prototype",
-        "Integrated SpO₂, heart rate, motion/fall detection, and GPS",
-        "Implemented BLE communication for real-time data access",
-        "Focused on MVP reliability over cosmetic polish"
+        "Architected an ESP32 + MPU6050 hardware stack for vitals and motion",
+        "Wrote BLE/Serial firmware and built the companion mobile app & public website",
+        "Validated the business model against 3 direct competitors at JIC Accelerator 7.0",
+        "Designed architecture for future integration with ABDM (National Digital Health Mission)"
       ],
-      hardestTechnicalChallenge: "Stabilizing noisy sensor data from MAX30102 while managing BLE stack memory usage alongside active sensor polling on a dual-core microcontroller.",
+      hardestTechnicalChallenge: "Solving critical false-positive challenges in fall detection by fine-tuning motion thresholds through iterative user testing, alongside managing BLE stack memory on the ESP32.",
       learnings: [
-        "MVP-first hardware development exposes real constraints early",
-        "Sensor accuracy matters more than UI polish",
-        "Debugging hardware is very different from software"
+        "Securing feedback from industry experts shapes product roadmap and pricing",
+        "Iterative user testing is vital for hardware threshold tuning",
+        "Designing architecture for national standards (ABDM) ensures scalability"
       ],
-      techStack: ["ESP32", "C/C++", "MAX30102", "MPU6050", "NEO-6M GPS", "BLE", "I2C", "UART"],
+      techStack: ["ESP32", "C/C++", "MPU6050", "BLE", "Mobile App Dev", "System Architecture"],
       proofLinks: {
         demo: "https://pulsepredit-ai.github.io/website/",
         github: "https://github.com/Tusharjain-19",
@@ -155,6 +158,7 @@ export const PORTFOLIO: PortfolioData = {
       id: "bookmyslot",
       slug: "bookmyslot",
       title: "BookMySlot",
+      imageUrl: "/bookmyslot.png",
       tagline: "Reservation & Operations System",
       oneLineSummary: "Ultra-low-cost B2B SaaS helping small businesses manage reservations and operations in real-time through a simple interface.",
       ideaOrigin: "I observed how small businesses (restaurants, clinics) still run on paper, WhatsApp, phone calls, and human memory. Waiters shout table numbers, patients wait blindly without slot clarity, and owners have zero real-time visibility. They don't need fancy tech; they need clarity, control, and real-time sync.",
@@ -188,6 +192,7 @@ export const PORTFOLIO: PortfolioData = {
       id: "namma-ride",
       slug: "namma-ride",
       title: "Namma Ride",
+      imageUrl: "/nammaride.png",
       tagline: "Public Utility / UX",
       oneLineSummary: "Bengaluru Metro journey planner with clear instructions in 3 languages. Soon available on Google Play Store.",
       ideaOrigin: "Many metro users, especially first-time and non-English speakers, struggle to understand routes and interchanges.",

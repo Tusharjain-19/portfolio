@@ -30,25 +30,31 @@ export async function generateMetadata({
   }
 
   return {
-    title: project.title,
-    description: project.oneLineSummary,
+    title: `${project.title} — Built by Tushar Jain`,
+    description: `${project.oneLineSummary} Built by Tushar Jain, BMSCE student. Tech: ${project.techStack.slice(0, 4).join(', ')}.`,
+    keywords: [project.title, `${project.title} maker`, `${project.title} developer`, "Tushar Jain", "BMSCE", ...project.techStack],
+    alternates: {
+      canonical: `https://tusharjain.in/work/${project.slug}`,
+    },
     openGraph: {
-      title: project.title,
+      title: `${project.title} — Tushar Jain`,
       description: project.oneLineSummary,
       type: 'article',
       url: `https://tusharjain.in/work/${project.slug}`,
+      siteName: 'Tushar Jain — Engineering Portfolio',
+      authors: ['Tushar Jain'],
       images: [
         {
-          url: '/pic2.jpeg', // Default project preview image
+          url: '/pic2.jpeg',
           width: 800,
           height: 600,
-          alt: project.title,
+          alt: `${project.title} by Tushar Jain`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: project.title,
+      title: `${project.title} — Tushar Jain`,
       description: project.oneLineSummary,
     },
   };
@@ -80,19 +86,19 @@ export default async function ProjectPage({
   };
 
   return (
-    <main className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
+    <main className="min-h-screen bg-(--bg-primary) text-(--text-primary)">
         <StructuredData data={projectData as Record<string, unknown>} />
         {/* Simple Top Bar for standalone page navigation */}
-        <nav className="px-4 sm:px-6 py-3 sm:py-4 border-b border-[var(--border-color)] flex justify-between items-center sticky top-0 bg-[var(--bg-primary)]/90 backdrop-blur z-40">
-            <Link href="/" className="font-bold text-sm sm:text-base lg:text-lg tracking-tight hover:text-[var(--text-secondary)] transition-colors">
+        <nav className="px-4 sm:px-6 py-3 sm:py-4 border-b border-(--border-color) flex justify-between items-center sticky top-0 bg-(--bg-primary)/90 backdrop-blur z-40">
+            <Link href="/" className="font-bold text-sm sm:text-base lg:text-lg tracking-tight hover:text-(--text-secondary) transition-colors">
                 {PORTFOLIO.profile.name}.
             </Link>
-            <Link href="/" className="text-xs sm:text-sm font-mono text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-1.5">
+            <Link href="/" className="text-xs sm:text-sm font-mono text-(--text-muted) hover:text-(--text-primary) transition-colors flex items-center gap-1.5">
                <span>✕</span><span className="hidden xs:inline">Close</span>
             </Link>
         </nav>
         
-        <div className="max-w-4xl mx-auto sm:border-x border-[var(--border-color)] min-h-screen bg-[var(--bg-primary)]">
+        <div className="max-w-4xl mx-auto sm:border-x border-(--border-color) min-h-screen bg-(--bg-primary)">
             <ProjectDetail project={project} />
         </div>
     </main>

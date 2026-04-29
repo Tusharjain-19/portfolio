@@ -3,30 +3,75 @@ import { PORTFOLIO } from '@/data/portfolio';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://tusharjain.in';
+  const now = new Date();
 
-  // Base routes
-  const routes = ['', '/about', '/contact'].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: route === '' ? 1 : 0.8,
-  }));
+  // ============================================
+  // CORE PAGES — Highest crawl priority
+  // ============================================
+  const coreRoutes: MetadataRoute.Sitemap = [
+    {
+      url: baseUrl,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/projects`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+  ];
 
-  // Project routes
-  const projectRoutes = PORTFOLIO.projects.map((project) => ({
+  // ============================================
+  // PROJECT PAGES — Each project gets indexed
+  // ============================================
+  const projectRoutes: MetadataRoute.Sitemap = PORTFOLIO.projects.map((project) => ({
     url: `${baseUrl}/work/${project.slug}`,
-    lastModified: new Date(),
+    lastModified: now,
     changeFrequency: 'monthly' as const,
-    priority: 0.6,
+    priority: 0.8,
   }));
 
-  // Research routes
-  const researchRoutes = PORTFOLIO.research.map((item) => ({
+  // ============================================
+  // RESEARCH PAGES — Academic content
+  // ============================================
+  const researchRoutes: MetadataRoute.Sitemap = PORTFOLIO.research.map((item) => ({
     url: `${baseUrl}/research/${item.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    lastModified: now,
+    changeFrequency: 'yearly' as const,
+    priority: 0.75,
   }));
 
-  return [...routes, ...projectRoutes, ...researchRoutes];
+  // ============================================
+  // STATIC ASSETS — Resume, Research PDFs
+  // ============================================
+  const assetRoutes: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/resume.pdf`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/Dual-UUVSystemResearch.pdf`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+  ];
+
+  return [...coreRoutes, ...projectRoutes, ...researchRoutes, ...assetRoutes];
 }

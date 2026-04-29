@@ -4,8 +4,24 @@ import { PORTFOLIO } from '@/data/portfolio';
 import { ArrowUpRight } from '@/components/Icons';
 
 export const metadata = {
-  title: "Contact | Tushar Jain",
-  description: "Get in touch for engineering opportunities.",
+  title: "Contact Tushar Jain — Engineering Intern, BMSCE Bengaluru",
+  description: "Get in touch with Tushar Jain for engineering internships, embedded systems projects, web development, or collaboration. BMSCE CSBS student based in Bengaluru, India.",
+  keywords: ["contact Tushar Jain", "Tushar Jain email", "hire Tushar Jain", "engineering intern Bengaluru", "BMSCE intern", "freelance developer India"],
+  alternates: {
+    canonical: 'https://tusharjain.in/contact',
+  },
+  openGraph: {
+    title: "Contact Tushar Jain — BMSCE, Bengaluru",
+    description: "Get in touch for engineering internships, embedded systems, or web development opportunities.",
+    url: 'https://tusharjain.in/contact',
+    type: 'website',
+    siteName: 'Tushar Jain — Engineering Portfolio',
+  },
+  twitter: {
+    card: 'summary' as const,
+    title: "Contact Tushar Jain — BMSCE, Bengaluru",
+    description: "Engineering intern available for web dev, embedded systems & collaboration.",
+  },
 };
 
 export default function ContactPage() {

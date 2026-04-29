@@ -11,10 +11,12 @@ export interface ProductProject {
   hardestTechnicalChallenge: string; // The "meat" of the engineering work
   learnings: string[]; // Bullet points
   techStack: string[];
+  imageUrl?: string;
   proofLinks?: {
     github?: string;
     demo?: string;
     linkedin?: string;
+    playStore?: string;
   };
 }
 

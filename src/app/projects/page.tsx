@@ -4,8 +4,24 @@ import { PORTFOLIO } from '@/data/portfolio';
 import { ArrowLeft, ArrowUpRight } from '@/components/Icons';
 
 export const metadata = {
-  title: "All Projects | Tushar Jain",
-  description: "A complete archive of engineering projects, MVPs, and products.",
+  title: "All Projects by Tushar Jain — Jaipur Ride, Namma Ride, PulsePredict & More",
+  description: "Complete archive of engineering projects by Tushar Jain (BMSCE): Jaipur Ride metro app, Namma Ride journey planner, PulsePredict AI wearable, Split-Payment System, BookMySlot SaaS, Air Guitar & more.",
+  keywords: ["Tushar Jain projects", "Jaipur Ride", "Namma Ride", "PulsePredict AI", "Split Payment System", "BookMySlot", "NotesCSBS", "Air Guitar", "BMSCE projects", "engineering projects India"],
+  alternates: {
+    canonical: 'https://tusharjain.in/projects',
+  },
+  openGraph: {
+    title: "All Projects by Tushar Jain",
+    description: "Jaipur Ride, Namma Ride, PulsePredict AI, Split-Payment System, BookMySlot & more engineering MVPs.",
+    url: 'https://tusharjain.in/projects',
+    type: 'website',
+    siteName: 'Tushar Jain — Engineering Portfolio',
+  },
+  twitter: {
+    card: 'summary' as const,
+    title: "All Projects by Tushar Jain",
+    description: "Jaipur Ride, Namma Ride, PulsePredict AI & more engineering MVPs by a BMSCE student.",
+  },
 };
 
 export default function ProjectsPage() {
@@ -31,7 +47,7 @@ export default function ProjectsPage() {
                     <Link 
                         key={project.id} 
                         href={`/work/${project.slug}`} 
-                        className="group flex flex-col p-5 sm:p-6 bg-(--bg-secondary)/50 rounded-xl border border-(--border-color) hover:border-(--text-muted) transition-all duration-300 group-hover/all:opacity-60 hover:opacity-100! hover:shadow-lg"
+                        className="group flex flex-col p-5 sm:p-6 bg-(--bg-secondary)/50 rounded-xl border border-(--border-color) hover:border-(--text-muted) transition-all duration-300 hover:shadow-lg"
                     >
                         <div className="flex justify-between items-start mb-3 gap-2">
                             <h3 className="text-base sm:text-lg md:text-xl font-bold text-(--text-primary) group-hover:text-(--accent) transition-colors leading-tight">

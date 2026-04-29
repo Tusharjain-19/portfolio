@@ -10,7 +10,7 @@ import { ArrowUpRight } from '@/components/Icons';
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 max-w-7xl mx-auto selection:bg-neutral-700 selection:text-white pb-16 sm:pb-20 font-sans bg-(--bg-primary) overflow-hidden w-full max-w-[100vw]">
+    <main className="min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 max-w-7xl mx-auto selection:bg-neutral-700 selection:text-white pb-16 sm:pb-20 font-sans bg-(--bg-primary) w-full max-w-[100vw]">
 
       {/* SECTION 1: HERO */}
       <ScrollReveal>
@@ -18,7 +18,7 @@ export default function Home() {
       </ScrollReveal>
 
       {/* SECTION 2: SELECTED WORK */}
-      <section id="projects" className="py-14 sm:py-20 border-b border-(--border-color) w-full overflow-hidden">
+      <section id="projects" className="py-14 sm:py-20 border-b border-(--border-color) w-full">
         <ScrollReveal delay={0.2}>
             <h2 className="text-xs sm:text-sm font-mono text-(--text-muted) mb-6 sm:mb-8 uppercase tracking-widest">
                 Selected Work
@@ -31,11 +31,11 @@ export default function Home() {
                         return order.indexOf(a.id) - order.indexOf(b.id);
                     })
                     .map((project) => (
-                    <MagneticHover key={project.id} className="group project-card transition-all duration-500 group-hover/list:opacity-40 hover:opacity-100! scale-100 hover:scale-[1.01]! sm:hover:scale-[1.02]! w-full" intensity={4}>
+                    <MagneticHover key={project.id} className="group project-card transition-all duration-500 scale-100 hover:scale-[1.01]! sm:hover:scale-[1.02]! w-full relative z-10 hover:z-50" intensity={4}>
                         <TiltCard className="cursor-pointer block rounded-xl w-full" intensity={4}>
                             <Link 
                                 href={`/work/${project.slug}`} 
-                                className="block h-full w-full bg-(--bg-secondary) p-4 sm:p-6 rounded-xl border border-(--border-color) hover:border-(--text-muted) transition-all hover:shadow-xl overflow-hidden"
+                                className="block h-full w-full bg-(--bg-secondary) p-4 sm:p-6 rounded-xl border border-(--border-color) hover:border-(--text-muted) transition-all hover:shadow-xl relative z-10 hover:z-20"
                                 data-cursor-text="OPEN"
                             >
                                 <article className="w-full">
@@ -71,7 +71,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: RESEARCH */}
-      <section className="py-14 sm:py-20 border-b border-(--border-color) w-full overflow-hidden">
+      <section className="py-14 sm:py-20 border-b border-(--border-color) w-full">
          <ScrollReveal delay={0.1}>
              <h2 className="text-xs sm:text-sm font-mono text-(--text-muted) mb-6 sm:mb-8 uppercase tracking-widest">
                 Research &amp; Systems
@@ -81,7 +81,7 @@ export default function Home() {
                     <Link 
                         key={item.id} 
                         href={`/research/${item.slug}`} 
-                        className="group cursor-pointer block transition-all duration-500 group-hover/research:opacity-40 hover:opacity-100! w-full"
+                        className="group cursor-pointer block transition-all duration-500 w-full"
                     >
                         <article className="w-full">
                             <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2 sm:gap-3 mb-2 w-full">

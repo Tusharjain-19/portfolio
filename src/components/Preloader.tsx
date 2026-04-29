@@ -16,13 +16,13 @@ export default function Preloader() {
       document.body.style.overflow = 'hidden';
 
       // 1. Progress Bar
-      await animate("#progress-bar", { width: "100%" }, { duration: 1.5, ease: "easeInOut" });
+      await animate("#progress-bar", { width: "100%" }, { duration: 0.1, ease: "easeInOut" });
       
       // 2. Text Fade Out
-      animate("#preloader-text", { opacity: 0, y: -20 }, { duration: 0.5 });
+      animate("#preloader-text", { opacity: 0, y: -20 }, { duration: 0.1 });
       
       // 3. Container Slide Up
-      await animate(scope.current, { y: "-100%" }, { duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.2 });
+      await animate(scope.current, { y: "-100%" }, { duration: 0.3, ease: [0.76, 0, 0.24, 1], delay: 0.05 });
 
       // Cleanup
       document.body.style.overflow = '';

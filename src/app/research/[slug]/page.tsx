@@ -30,25 +30,31 @@ export async function generateMetadata({
   }
 
   return {
-    title: research.title,
-    description: research.systemArchitectureSummary,
+    title: `${research.title} — Research by Tushar Jain`,
+    description: `${research.systemArchitectureSummary} Independent research by Tushar Jain, BMSCE. Areas: ${research.coreTechnicalAreas.slice(0, 3).join(', ')}.`,
+    keywords: [research.title, "Tushar Jain research", "BMSCE research", ...research.coreTechnicalAreas],
+    alternates: {
+      canonical: `https://tusharjain.in/research/${research.slug}`,
+    },
     openGraph: {
-      title: research.title,
+      title: `${research.title} — Tushar Jain`,
       description: research.systemArchitectureSummary,
       type: 'article',
       url: `https://tusharjain.in/research/${research.slug}`,
+      siteName: 'Tushar Jain — Engineering Portfolio',
+      authors: ['Tushar Jain'],
       images: [
         {
           url: '/pic2.jpeg',
           width: 800,
           height: 600,
-          alt: research.title,
+          alt: `${research.title} by Tushar Jain`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: research.title,
+      title: `${research.title} — Tushar Jain`,
       description: research.systemArchitectureSummary,
     },
   };

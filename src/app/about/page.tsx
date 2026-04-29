@@ -5,8 +5,24 @@ import { PORTFOLIO } from '@/data/portfolio';
 import { ChevronRight } from '@/components/Icons';
 
 export const metadata = {
-  title: "About | Tushar Jain",
-  description: "Engineering student building practical, real-world products across frontend, backend, and embedded systems.",
+  title: "About Tushar Jain — BMSCE Engineering Student, Bengaluru",
+  description: "Tushar Jain is an engineering student at BMS College of Engineering (BMSCE), Bengaluru, studying CSBS. Building practical products across frontend, backend, and embedded systems. Creator of Jaipur Ride, Namma Ride, PulsePredict AI & more.",
+  keywords: ["Tushar Jain", "about Tushar Jain", "Tushar Jain BMSCE", "BMS College student", "CSBS student", "engineering student Bengaluru", "Tushar Jain bio", "Tushar Jain skills"],
+  alternates: {
+    canonical: 'https://tusharjain.in/about',
+  },
+  openGraph: {
+    title: "About Tushar Jain — BMSCE, Bengaluru",
+    description: "Engineering student at BMS College of Engineering building real-world products across web and embedded systems.",
+    url: 'https://tusharjain.in/about',
+    type: 'profile',
+    siteName: 'Tushar Jain — Engineering Portfolio',
+  },
+  twitter: {
+    card: 'summary' as const,
+    title: "About Tushar Jain — BMSCE, Bengaluru",
+    description: "Engineering student at BMSCE building Jaipur Ride, Namma Ride, PulsePredict AI & more.",
+  },
 };
 
 export default function AboutPage() {

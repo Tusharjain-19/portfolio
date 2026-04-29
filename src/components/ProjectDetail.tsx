@@ -61,6 +61,17 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                         <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </a>
                  )}
+                 {project.proofLinks?.playStore && (
+                     <a 
+                        href={project.proofLinks.playStore} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="px-4 sm:px-6 py-2.5 sm:py-3 border border-[var(--border-color)] text-[var(--text-primary)] font-bold rounded-lg hover:bg-[var(--bg-tertiary)] hover:scale-105 transition-all flex items-center gap-2 group text-sm sm:text-base"
+                    >
+                        <span>Google Play Store</span>
+                        <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </a>
+                 )}
             </div>
         </div>
       </header>
@@ -166,8 +177,17 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                         </div>
                     </div>
                 </div>
+            ) : project.imageUrl ? (
+                <div className="w-full bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl overflow-hidden shadow-sm">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img 
+                        src={project.imageUrl} 
+                        alt={`${project.title} screenshot`} 
+                        className="w-full h-auto object-cover"
+                    />
+                </div>
             ) : (
-                <div className="w-full aspect-video bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded flex items-center justify-center text-[var(--text-muted)] font-mono text-xs sm:text-sm px-4 text-center">
+                <div className="w-full aspect-video bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl flex items-center justify-center text-[var(--text-muted)] font-mono text-xs sm:text-sm px-4 text-center shadow-sm">
                     [ Demo Video / Screenshots to be added ]
                 </div>
             )}
