@@ -138,7 +138,7 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
          {/* SECTION 6 - DEMO / PROOF / VISUALS */}
          <section>
             <h2 className="text-xs sm:text-sm font-mono text-[var(--text-muted)] mb-3 sm:mb-4 uppercase tracking-widest">
-                {project.id === 'split-payment' ? 'System Architecture' : 'Demo'}
+                {['split-payment', 'vital-health-tech', 'air-guitar', 'indigo-inflight'].includes(project.id) ? 'System Architecture' : 'Demo'}
             </h2>
             {project.id === 'split-payment' ? (
                 <div className="w-full p-5 sm:p-8 md:p-10 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl overflow-hidden">
@@ -175,6 +175,83 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                         <div className="mt-4 sm:mt-8 p-3 sm:p-4 border border-yellow-700/30 bg-yellow-700/5 rounded text-[9px] sm:text-[10px] font-mono text-yellow-600/80 max-w-xs sm:max-w-md text-center">
                            ATOMICITY GUARD: Ensures fail-safe rollback if either source fails
                         </div>
+                    </div>
+                </div>
+            ) : project.id === 'vital-health-tech' ? (
+                <div className="w-full p-5 sm:p-8 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl overflow-hidden">
+                    <div className="flex flex-col items-center justify-center space-y-6 py-6 sm:py-8">
+                        <div className="flex items-center gap-4 sm:gap-8">
+                            <div className="w-16 h-16 sm:w-20 sm:h-20 border border-blue-500/50 bg-blue-500/5 rounded-lg flex flex-col items-center justify-center text-center p-2">
+                                <span className="text-[10px] font-mono text-blue-400">ESP32</span>
+                                <span className="text-[8px] text-[var(--text-muted)]">MCU</span>
+                            </div>
+                            <div className="w-8 h-0.5 bg-[var(--border-color)] relative">
+                                <div className="absolute -top-1.5 -right-1 border-t-4 border-l-4 border-transparent border-l-[var(--border-color)]" />
+                            </div>
+                            <div className="flex flex-col gap-2">
+                                <div className="px-3 py-1.5 border border-[var(--border-color)] rounded text-[9px] font-mono bg-[var(--bg-primary)]">MPU6050 (Motion)</div>
+                                <div className="px-3 py-1.5 border border-[var(--border-color)] rounded text-[9px] font-mono bg-[var(--bg-primary)]">MAX30102 (Pulse)</div>
+                            </div>
+                        </div>
+                        <div className="w-0.5 h-8 bg-dashed border-l border-dashed border-[var(--border-color)]" />
+                        <div className="px-4 py-2 border border-green-500/50 bg-green-500/5 rounded-full text-[10px] font-mono text-green-400">BLE 4.2 / Serial</div>
+                        <div className="w-0.5 h-8 bg-dashed border-l border-dashed border-[var(--border-color)]" />
+                        <div className="w-full max-w-xs p-4 border-2 border-[var(--text-primary)] rounded-xl bg-[var(--bg-primary)] flex items-center justify-center">
+                            <div className="text-center">
+                                <div className="text-xs font-bold">MOBILE DASHBOARD</div>
+                                <div className="text-[8px] text-[var(--text-muted)] uppercase tracking-tighter">Real-time Vitals & Fall Alerts</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ) : project.id === 'air-guitar' ? (
+                <div className="w-full p-5 sm:p-8 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl overflow-hidden">
+                    <div className="flex flex-col items-center justify-center py-6">
+                        <div className="grid grid-cols-3 gap-4 items-center w-full max-w-md">
+                            <div className="flex flex-col items-center gap-2">
+                                <div className="w-12 h-12 border-2 border-amber-500 rounded-full flex items-center justify-center font-bold text-amber-500 text-xs">IMU</div>
+                                <span className="text-[8px] font-mono uppercase text-[var(--text-muted)]">Gestures</span>
+                            </div>
+                            <div className="flex flex-col items-center gap-1">
+                                <div className="w-full h-0.5 bg-[var(--border-color)]" />
+                                <span className="text-[7px] font-mono text-blue-400">SERIAL (115200)</span>
+                            </div>
+                            <div className="flex flex-col items-center gap-2">
+                                <div className="px-3 py-4 border-2 border-[var(--text-primary)] rounded bg-[var(--bg-primary)] text-[10px] font-bold text-center">PYTHON ENGINE</div>
+                                <span className="text-[8px] font-mono uppercase text-[var(--text-muted)]">Karplus-Strong</span>
+                            </div>
+                        </div>
+                        <div className="mt-8 p-4 bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-lg w-full max-w-sm">
+                            <div className="flex justify-between items-end h-12 gap-1">
+                                {[40, 70, 45, 90, 65, 80, 30, 55, 85, 40].map((h, i) => (
+                                    <div key={i} className="flex-1 bg-amber-500/40 rounded-t-sm" style={{ height: `${h}%` }} />
+                                ))}
+                            </div>
+                            <div className="mt-2 text-[8px] font-mono text-center text-amber-500">REAL-TIME WAVEFORM SYNTHESIS</div>
+                        </div>
+                    </div>
+                </div>
+            ) : project.id === 'indigo-inflight' ? (
+                <div className="w-full p-5 sm:p-8 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl overflow-hidden">
+                    <div className="relative flex items-center justify-center py-10">
+                        <div className="w-20 h-20 sm:w-24 sm:h-24 border-4 border-[var(--text-primary)] rounded-2xl bg-[var(--bg-primary)] flex items-center justify-center z-10 shadow-xl">
+                            <div className="text-center">
+                                <div className="text-[10px] font-bold">LOCAL</div>
+                                <div className="text-[10px] font-bold">SERVER</div>
+                            </div>
+                        </div>
+                        
+                        {/* Wireless rings */}
+                        <div className="absolute w-32 h-32 border border-blue-500/20 rounded-full animate-ping" />
+                        <div className="absolute w-48 h-48 border border-blue-500/10 rounded-full" />
+                        
+                        {/* Connected devices */}
+                        <div className="absolute top-0 right-10 p-2 border border-[var(--border-color)] rounded bg-[var(--bg-primary)] text-[8px] font-mono">Device A (Phone)</div>
+                        <div className="absolute bottom-0 left-10 p-2 border border-[var(--border-color)] rounded bg-[var(--bg-primary)] text-[8px] font-mono">Device B (Tablet)</div>
+                        <div className="absolute top-1/2 -left-4 -translate-y-1/2 p-2 border border-[var(--border-color)] rounded bg-[var(--bg-primary)] text-[8px] font-mono rotate-90">Device C</div>
+                    </div>
+                    <div className="mt-4 text-center">
+                        <span className="px-3 py-1 bg-red-500/10 text-red-500 text-[8px] font-mono rounded-full border border-red-500/20">NO INTERNET REQUIRED</span>
                     </div>
                 </div>
             ) : project.imageUrl ? (
