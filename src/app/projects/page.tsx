@@ -47,24 +47,36 @@ export default function ProjectsPage() {
                     <Link 
                         key={project.id} 
                         href={`/work/${project.slug}`} 
-                        className="group flex flex-col p-5 sm:p-6 bg-(--bg-secondary)/50 rounded-xl border border-(--border-color) hover:border-(--text-muted) transition-all duration-300 hover:shadow-lg"
+                        className="group flex flex-col bg-(--bg-secondary)/50 rounded-2xl border border-(--border-color) hover:border-(--text-muted) transition-all duration-300 hover:shadow-xl overflow-hidden"
                     >
-                        <div className="flex justify-between items-start mb-3 gap-2">
-                            <h3 className="text-base sm:text-lg md:text-xl font-bold text-(--text-primary) group-hover:text-(--accent) transition-colors leading-tight">
-                                {project.title}
-                            </h3>
-                            <span className="inline-flex items-center gap-1 text-[10px] font-mono text-(--text-muted) uppercase italic border border-(--border-color) px-2 py-0.5 rounded-full shrink-0">
-                                Details <ArrowUpRight className="w-3 h-3" />
-                            </span>
-                        </div>
-                        {project.tagline && (
-                            <span className="text-[10px] font-mono text-(--text-muted) uppercase tracking-widest mb-3 block">
-                                {project.tagline.split('|')[0].trim()}
-                            </span>
+                        {project.imageUrl && (
+                            <div className="w-full aspect-[16/10] overflow-hidden border-b border-(--border-color)">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img 
+                                    src={project.imageUrl} 
+                                    alt={project.title} 
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                            </div>
                         )}
-                        <p className="text-(--text-secondary) font-light text-sm mt-auto">
-                            {project.oneLineSummary}
-                        </p>
+                        <div className="p-5 sm:p-6 flex flex-col flex-1">
+                            <div className="flex justify-between items-start mb-3 gap-2">
+                                <h3 className="text-base sm:text-lg md:text-xl font-bold text-(--text-primary) group-hover:text-(--accent) transition-colors leading-tight">
+                                    {project.title}
+                                </h3>
+                                <span className="inline-flex items-center gap-1 text-[10px] font-mono text-(--text-muted) uppercase italic border border-(--border-color) px-2 py-0.5 rounded-full shrink-0">
+                                    Details <ArrowUpRight className="w-3 h-3" />
+                                </span>
+                            </div>
+                            {project.tagline && (
+                                <span className="text-[10px] font-mono text-(--text-muted) uppercase tracking-widest mb-3 block">
+                                    {project.tagline.split('|')[0].trim()}
+                                </span>
+                            )}
+                            <p className="text-(--text-secondary) font-light text-sm mt-auto line-clamp-3">
+                                {project.oneLineSummary}
+                            </p>
+                        </div>
                     </Link>
                 ))}
             </div>

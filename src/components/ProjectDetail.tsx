@@ -15,8 +15,8 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
     <article className="min-h-full text-[var(--text-primary)] pb-16 sm:pb-20">
       
       {/* SECTION 1 - HEADER */}
-      <header className="p-5 sm:p-8 md:p-12 border-b border-[var(--border-color)] bg-[var(--bg-secondary)]">
-        <div className="max-w-3xl">
+      <header className="p-5 sm:p-8 md:p-14 border-b border-[var(--border-color)] bg-[var(--bg-secondary)] flex justify-center">
+        <div className="max-w-3xl w-full">
             {project.tagline && (
                 <div className="mb-4 inline-block px-3 py-1 bg-[var(--bg-tertiary)] border border-[var(--border-color)] rounded-full">
                     <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--text-muted)]">
@@ -76,7 +76,7 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
         </div>
       </header>
 
-      <div className="p-5 sm:p-8 md:p-12 max-w-3xl mx-auto space-y-12 sm:space-y-16">
+      <div className="p-5 sm:p-8 md:p-14 max-w-3xl mx-auto space-y-12 sm:space-y-20">
         
         {/* SECTION 2 - IDEA ORIGIN */}
         <section>
