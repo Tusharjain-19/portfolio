@@ -30,7 +30,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${project.title} — Built by Tushar Jain`,
+    title: project.title,
     description: `${project.oneLineSummary} Built by Tushar Jain, BMSCE student. Tech: ${project.techStack.slice(0, 4).join(', ')}.`,
     keywords: [project.title, `${project.title} maker`, `${project.title} developer`, "Tushar Jain", "BMSCE", ...project.techStack],
     alternates: {

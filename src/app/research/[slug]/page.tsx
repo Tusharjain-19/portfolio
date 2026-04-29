@@ -30,7 +30,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${research.title} — Research by Tushar Jain`,
+    title: research.title,
     description: `${research.systemArchitectureSummary} Independent research by Tushar Jain, BMSCE. Areas: ${research.coreTechnicalAreas.slice(0, 3).join(', ')}.`,
     keywords: [research.title, "Tushar Jain research", "BMSCE research", ...research.coreTechnicalAreas],
     alternates: {

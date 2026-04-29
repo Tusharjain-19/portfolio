@@ -23,8 +23,8 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tusharjain.in'),
   title: {
-    default: "Tushar Jain | Engineering Portfolio — BMSCE Student, MVP Builder & Embedded Systems Developer",
-    template: "%s | Tushar Jain — Engineering Portfolio"
+    default: "Tushar Jain",
+    template: "%s / Tushar Jain"
   },
   description: "Tushar Jain is an Engineering Student at BMS College of Engineering (BMSCE), Bengaluru, studying Computer Science & Business Systems (CSBS). Builder of Jaipur Ride, Namma Ride, PulsePredict AI, Split-Payment System, BookMySlot SaaS, and more. Specialist in full-stack web development, embedded systems (ESP32), and real-world MVP execution.",
   keywords: [

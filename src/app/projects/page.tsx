@@ -4,7 +4,7 @@ import { PORTFOLIO } from '@/data/portfolio';
 import { ArrowLeft, ArrowUpRight } from '@/components/Icons';
 
 export const metadata = {
-  title: "All Projects by Tushar Jain — Jaipur Ride, Namma Ride, PulsePredict & More",
+  title: "Projects",
   description: "Complete archive of engineering projects by Tushar Jain (BMSCE): Jaipur Ride metro app, Namma Ride journey planner, PulsePredict AI wearable, Split-Payment System, BookMySlot SaaS, Air Guitar & more.",
   keywords: ["Tushar Jain projects", "Jaipur Ride", "Namma Ride", "PulsePredict AI", "Split Payment System", "BookMySlot", "NotesCSBS", "Air Guitar", "BMSCE projects", "engineering projects India"],
   alternates: {

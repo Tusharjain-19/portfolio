@@ -5,7 +5,7 @@ import { PORTFOLIO } from '@/data/portfolio';
 import { ChevronRight } from '@/components/Icons';
 
 export const metadata = {
-  title: "About Tushar Jain — BMSCE Engineering Student, Bengaluru",
+  title: "About",
   description: "Tushar Jain is an engineering student at BMS College of Engineering (BMSCE), Bengaluru, studying CSBS. Building practical products across frontend, backend, and embedded systems. Creator of Jaipur Ride, Namma Ride, PulsePredict AI & more.",
   keywords: ["Tushar Jain", "about Tushar Jain", "Tushar Jain BMSCE", "BMS College student", "CSBS student", "engineering student Bengaluru", "Tushar Jain bio", "Tushar Jain skills"],
   alternates: {
