@@ -9,6 +9,7 @@ interface SoundContextType {
   isEnabled: boolean;
   toggleSound: () => void;
   playSound: (type: SoundType) => void;
+  playChainSound: (intensity: number) => void;
 }
 
 const SoundContext = createContext<SoundContextType | undefined>(undefined);
@@ -78,24 +79,54 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
 
     switch (type) {
       case 'hover':
-        // Very high, very short, very quiet blip
         playTone(800, 0.005, 0.03); 
         break;
       case 'click':
         playTone(600, 0.01, 0.1);
         break;
       case 'open':
-            // "Swoosh" up
-         playTone(300, 0.05, 0.3);
+        playTone(300, 0.05, 0.3);
         break;
       case 'close':
-         playTone(200, 0.05, 0.15);
+        playTone(200, 0.05, 0.15);
         break;
     }
   }, [isEnabled, playTone]);
 
+  // Metallic chain sound generator based on intensity
+  const playChainSound = useCallback((intensity: number) => {
+    if (!isEnabled) return;
+    if (!audioCtxRef.current) initAudio();
+    const ctx = audioCtxRef.current;
+    if (!ctx || ctx.state === 'suspended') return;
+    
+    // Base frequencies for metallic clink
+    const baseFreqs = [1200, 2400, 3600];
+    const pitchJitter = 0.8 + Math.random() * 0.4; // Random pitch variation
+    
+    const volume = Math.min(0.05, intensity * 0.005); // Map intensity to volume
+    if (volume < 0.001) return;
+
+    baseFreqs.forEach((freq) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        
+        osc.type = 'triangle';
+        osc.frequency.value = freq * pitchJitter;
+        
+        gain.gain.setValueAtTime(0, ctx.currentTime);
+        gain.gain.linearRampToValueAtTime(volume, ctx.currentTime + 0.005);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.05 + Math.random() * 0.05);
+        
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.15);
+    });
+  }, [isEnabled, initAudio]);
+
   return (
-    <SoundContext.Provider value={{ isEnabled, toggleSound, playSound }}>
+    <SoundContext.Provider value={{ isEnabled, toggleSound, playSound, playChainSound }}>
       {children}
     </SoundContext.Provider>
   );

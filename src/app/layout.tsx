@@ -1,6 +1,6 @@
 
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Cursor from "@/components/Cursor";
@@ -15,8 +15,13 @@ import Preloader from "@/components/Preloader";
 import Grain from "@/components/Grain";
 import StructuredData from "@/components/StructuredData";
 
-const montserrat = Montserrat({
-  variable: "--font-primary",
+const playfair = Playfair_Display({
+  variable: "--font-heading",
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
@@ -178,7 +183,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${montserrat.variable} antialiased bg-(--bg-primary) text-(--text-primary) transition-colors duration-200 font-sans overflow-x-hidden w-full max-w-[100vw]`}
+        className={`${playfair.variable} ${inter.variable} antialiased bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500 font-body overflow-x-hidden w-full max-w-[100vw]`}
       >
         <ThemeProvider>
           <StructuredData />
@@ -191,7 +196,7 @@ export default function RootLayout({
                   <ThemeToggle />
                   <SoundToggle />
                   <Navbar />
-                  <div className="pt-16 min-h-screen flex flex-col overflow-x-hidden w-full max-w-[100vw]">
+                  <div className="pt-16 flex flex-col overflow-x-hidden w-full max-w-[100vw]">
                       {children}
                       {modal}
                   </div>

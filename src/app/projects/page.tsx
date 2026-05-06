@@ -5,75 +5,77 @@ import { ArrowLeft, ArrowUpRight } from '@/components/Icons';
 
 export const metadata = {
   title: "Projects",
-  description: "Complete archive of engineering projects by Tushar Jain (BMSCE): Jaipur Ride metro app, Namma Ride journey planner, PulsePredict AI wearable, Split-Payment System, BookMySlot SaaS, Air Guitar & more.",
-  keywords: ["Tushar Jain projects", "Jaipur Ride", "Namma Ride", "PulsePredict AI", "Split Payment System", "BookMySlot", "NotesCSBS", "Air Guitar", "BMSCE projects", "engineering projects India"],
-  alternates: {
-    canonical: 'https://tusharjain.in/projects',
-  },
-  openGraph: {
-    title: "All Projects by Tushar Jain",
-    description: "Jaipur Ride, Namma Ride, PulsePredict AI, Split-Payment System, BookMySlot & more engineering MVPs.",
-    url: 'https://tusharjain.in/projects',
-    type: 'website',
-    siteName: 'Tushar Jain — Engineering Portfolio',
-  },
-  twitter: {
-    card: 'summary' as const,
-    title: "All Projects by Tushar Jain",
-    description: "Jaipur Ride, Namma Ride, PulsePredict AI & more engineering MVPs by a BMSCE student.",
-  },
+  description: "Complete archive of engineering projects by Tushar Jain (BMSCE).",
 };
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-(--bg-primary) text-(--text-primary) selection:bg-neutral-800">
-      <div className="px-4 sm:px-6 md:px-10 lg:px-16 pb-16 sm:pb-20 max-w-7xl mx-auto space-y-10 sm:space-y-14">
+    <main className="theme-jodhpur bg-[var(--bg-primary)] text-[var(--text-primary)] selection:bg-[var(--accent)] selection:text-[var(--bg-primary)] transition-colors duration-500 font-body relative overflow-hidden">
+      
+      {/* Background Ceramic Geometry */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-20"
+           style={{
+             backgroundImage: 'radial-gradient(circle at 2px 2px, var(--border-color) 1px, transparent 0)',
+             backgroundSize: '48px 48px'
+           }}
+      />
+
+      <div className="relative z-10 px-4 sm:px-6 md:px-10 lg:px-16 pb-16 sm:pb-20 max-w-7xl mx-auto space-y-10 sm:space-y-14 pt-24 sm:pt-32">
         
         {/* PAGE TITLE */}
-        <header className="border-b border-(--border-color) pb-8 sm:pb-12 pt-6 sm:pt-8 md:pt-14">
-            <Link href="/" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono text-(--text-muted) hover:text-(--text-primary) transition-colors mb-4">
-                <ArrowLeft className="w-4 h-4" /> Back home
+        <header className="border-b-2 border-[var(--border-color)] pb-8 sm:pb-12 text-center sm:text-left">
+            <Link href="/" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors mb-6 uppercase tracking-widest">
+                <ArrowLeft className="w-4 h-4" /> Return to Home
             </Link>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 sm:mb-4 tracking-tight">All Projects</h1>
-            <p className="text-base sm:text-lg md:text-xl text-(--text-secondary) font-light max-w-2xl">
-                A complete archive of the MVPs, products, and engineering projects I&apos;ve built.
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 tracking-tight font-heading text-[var(--text-primary)]">
+              Engineering Archives
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl text-[var(--text-secondary)] font-light max-w-3xl">
+                A showcase of technical mastery and real-world execution.
             </p>
         </header>
 
         {/* PROJECTS GRID */}
         <section>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 group/all">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 group/all">
                 {PORTFOLIO.projects.map((project) => (
                     <Link 
                         key={project.id} 
                         href={`/work/${project.slug}`} 
-                        className="group flex flex-col bg-(--bg-secondary)/50 rounded-2xl border border-(--border-color) hover:border-(--text-muted) transition-all duration-300 hover:shadow-xl overflow-hidden"
+                        className="group flex flex-col bg-[var(--bg-secondary)]/40 backdrop-blur-md border border-[var(--border-color)] hover:border-[var(--accent)] transition-all duration-500 hover:shadow-2xl overflow-hidden relative"
                     >
+                        {/* Ceramic Border Corner Accents */}
+                        <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[var(--accent)] opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[var(--accent)] opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[var(--accent)] opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[var(--accent)] opacity-0 group-hover:opacity-100 transition-opacity" />
+
                         {project.imageUrl && (
-                            <div className="w-full aspect-[16/10] overflow-hidden border-b border-(--border-color)">
+                            <div className="w-full aspect-[16/10] overflow-hidden border-b border-[var(--border-color)] relative">
+                                <div className="absolute inset-0 bg-[var(--accent)]/10 mix-blend-overlay group-hover:opacity-0 transition-opacity z-10" />
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img 
                                     src={project.imageUrl} 
                                     alt={project.title} 
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter grayscale-[50%] group-hover:grayscale-0"
                                 />
                             </div>
                         )}
-                        <div className="p-5 sm:p-6 flex flex-col flex-1">
-                            <div className="flex justify-between items-start mb-3 gap-2">
-                                <h3 className="text-base sm:text-lg md:text-xl font-bold text-(--text-primary) group-hover:text-(--accent) transition-colors leading-tight">
+                        <div className="p-6 sm:p-8 flex flex-col flex-1 relative z-20 bg-gradient-to-t from-[var(--bg-secondary)] to-transparent">
+                            <div className="flex justify-between items-start mb-4 gap-2">
+                                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-heading text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors leading-tight">
                                     {project.title}
                                 </h3>
-                                <span className="inline-flex items-center gap-1 text-[10px] font-mono text-(--text-muted) uppercase italic border border-(--border-color) px-2 py-0.5 rounded-full shrink-0">
-                                    Details <ArrowUpRight className="w-3 h-3" />
+                                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[var(--border-color)] text-[var(--text-primary)] group-hover:bg-[var(--accent)] group-hover:text-[var(--bg-primary)] transition-colors shrink-0">
+                                    <ArrowUpRight className="w-4 h-4" />
                                 </span>
                             </div>
                             {project.tagline && (
-                                <span className="text-[10px] font-mono text-(--text-muted) uppercase tracking-widest mb-3 block">
+                                <span className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-4 block">
                                     {project.tagline.split('|')[0].trim()}
                                 </span>
                             )}
-                            <p className="text-(--text-secondary) font-light text-sm mt-auto line-clamp-3">
+                            <p className="text-[var(--text-secondary)] font-light text-base mt-auto line-clamp-3 leading-relaxed">
                                 {project.oneLineSummary}
                             </p>
                         </div>
@@ -81,7 +83,6 @@ export default function ProjectsPage() {
                 ))}
             </div>
         </section>
-
       </div>
     </main>
   );

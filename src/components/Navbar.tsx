@@ -1,7 +1,6 @@
-
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { PORTFOLIO } from '@/data/portfolio';
@@ -20,33 +19,33 @@ export default function Navbar() {
   const pathname = usePathname();
   const [hash, setHash] = useState('');
 
-  React.useEffect(() => {
+  useEffect(() => {
     setHash(window.location.hash);
     const handleHashChange = () => setHash(window.location.hash);
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  // Close mobile menu on route change
-  React.useEffect(() => {
+  useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
   return (
     <>
-      <header className="fixed top-3 sm:top-4 md:top-6 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 md:px-6 pointer-events-none">
-        <div className="w-full max-w-5xl bg-[#0a0a0a]/85 backdrop-blur-xl border border-neutral-800 rounded-full px-3 sm:px-4 md:px-6 h-11 sm:h-12 md:h-14 flex items-center justify-between pointer-events-auto shadow-2xl shadow-black/10 transition-all duration-300">
+      <header className="fixed top-2 sm:top-3 md:top-4 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 md:px-6 pointer-events-none">
+        <div className="w-auto inline-flex bg-[var(--bg-primary)]/80 backdrop-blur-xl border border-[var(--border-color)] rounded-full px-5 sm:px-8 md:px-10 h-12 sm:h-14 md:h-[60px] items-center justify-between pointer-events-auto shadow-2xl transition-all duration-500 gap-6 md:gap-12">
           
           {/* LOGO */}
           <Link 
             href="/" 
-            className="font-bold text-sm sm:text-base md:text-lg text-white hover:opacity-70 transition-opacity z-50 tracking-tight shrink-0"
+            className="flex items-center gap-1 font-bold text-sm sm:text-lg md:text-xl text-[var(--text-primary)] hover:opacity-70 transition-opacity z-50 shrink-0"
           >
-            {PORTFOLIO.profile.name}<span className="text-neutral-500">.</span>
+            <span className="font-heading italic font-normal tracking-tight truncate max-w-[100px] sm:max-w-none">tushar jain</span>
+            <span className="font-heading tracking-tighter">.</span>
           </Link>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden md:flex gap-0.5 lg:gap-1">
+          <nav className="hidden md:flex gap-1 lg:gap-2">
             {NAV_ITEMS.map((item) => {
                const isActive = item.href === '/'
                  ? pathname === '/' && hash === ''
@@ -56,17 +55,10 @@ export default function Navbar() {
                   <Link 
                     key={item.label} 
                     href={item.href}
-                    onClick={() => {
-                      if (item.href.includes('#')) {
-                        setHash('#' + item.href.split('#')[1]);
-                      } else {
-                        setHash('');
-                      }
-                    }}
-                    className={`px-3 lg:px-4 py-1.5 lg:py-2 rounded-full text-xs lg:text-sm font-medium transition-all duration-200 ${
+                    className={`px-3 lg:px-4 py-1.5 rounded-full text-[10px] lg:text-xs font-medium uppercase tracking-widest font-mono transition-all duration-300 ${
                       isActive
-                        ? 'bg-white text-[#0a0a0a]' 
-                        : 'text-neutral-400 hover:text-white hover:bg-neutral-800'
+                        ? 'bg-[var(--accent)] text-[var(--bg-primary)]' 
+                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]'
                     }`}
                   >
                     {item.label}
@@ -77,7 +69,7 @@ export default function Navbar() {
 
           {/* MOBILE MENU TOGGLE */}
           <button 
-            className="md:hidden text-neutral-400 hover:text-white z-50 p-2 -mr-1 shrink-0"
+            className="md:hidden text-[var(--text-secondary)] hover:text-[var(--text-primary)] z-50 p-2 -mr-2 shrink-0 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
@@ -90,15 +82,15 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* MOBILE OVERLAY NAV — Full Screen */}
+      {/* MOBILE OVERLAY NAV */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-x-3 top-16 sm:top-18 z-40 bg-[#0a0a0a] border border-neutral-800 rounded-3xl flex flex-col items-center justify-center gap-2 md:hidden p-6 shadow-2xl"
+            transition={{ duration: 0.3 }}
+            className="fixed inset-x-3 top-20 z-40 bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-3xl flex flex-col items-center justify-center gap-4 md:hidden p-8 shadow-2xl"
           >
             {NAV_ITEMS.map((item, i) => {
               const isActive = item.href === '/'
@@ -114,15 +106,11 @@ export default function Navbar() {
                 >
                   <Link 
                     href={item.href}
-                    onClick={() => {
-                      setIsOpen(false);
-                      if (item.href.includes('#')) setHash('#' + item.href.split('#')[1]);
-                      else setHash('');
-                    }}
-                    className={`block w-full text-center py-3 px-6 rounded-xl text-lg font-bold transition-all ${
+                    onClick={() => setIsOpen(false)}
+                    className={`block w-full text-center py-4 px-6 rounded-2xl text-lg font-heading tracking-widest transition-all ${
                       isActive 
-                        ? 'bg-white text-black' 
-                        : 'text-neutral-400 hover:text-white hover:bg-neutral-900'
+                        ? 'bg-[var(--accent)] text-[var(--bg-primary)]' 
+                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]'
                     }`}
                   >
                     {item.label}

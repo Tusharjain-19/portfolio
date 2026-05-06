@@ -85,22 +85,22 @@ export default async function ResearchPage({
   };
 
   return (
-    <main className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] selection:bg-neutral-500/30">
+    <main className="theme-udaipur min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] selection:bg-[var(--accent)] selection:text-[var(--bg-primary)] transition-colors duration-500 font-body relative">
         <StructuredData data={researchData as Record<string, unknown>} />
-        <nav className="px-4 sm:px-6 py-3 sm:py-4 border-b border-[var(--border-color)] flex justify-between items-center sticky top-0 bg-[var(--bg-primary)]/90 backdrop-blur z-40">
-            <Link href="/" className="font-bold text-sm sm:text-base lg:text-lg tracking-tight hover:text-[var(--text-secondary)] transition-colors">
-                {PORTFOLIO.profile.name}.
-            </Link>
-            <span className="text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest hidden md:block">
-                Systems Research
-            </span>
-            <Link href="/" className="text-xs sm:text-sm font-mono text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-1.5">
-               <span>✕</span><span className="hidden xs:inline">Close</span>
-            </Link>
-        </nav>
         
-        <div className="px-4 sm:px-6 md:px-10 lg:px-16">
-            <ResearchDetail research={research} />
+        {/* Dot Grid Background */}
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-20"
+             style={{
+               backgroundImage: 'radial-gradient(circle at 2px 2px, var(--border-color) 1px, transparent 0)',
+               backgroundSize: '48px 48px'
+             }}
+        />
+
+        
+        <div className="px-4 sm:px-6 md:px-10 lg:px-16 relative z-10">
+            <div className="max-w-4xl mx-auto py-12 sm:py-20">
+                <ResearchDetail research={research} />
+            </div>
         </div>
     </main>
   );

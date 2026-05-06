@@ -11,7 +11,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="flex flex-col min-h-screen"
+      className="flex flex-col"
     >
       {children}
     </motion.div>

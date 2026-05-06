@@ -86,19 +86,19 @@ export default async function ProjectPage({
   };
 
   return (
-    <main className="min-h-screen bg-(--bg-primary) text-(--text-primary)">
+    <main className="theme-jodhpur min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] selection:bg-[var(--accent)] selection:text-[var(--bg-primary)] transition-colors duration-500 font-body relative overflow-x-hidden">
         <StructuredData data={projectData as Record<string, unknown>} />
-        {/* Simple Top Bar for standalone page navigation */}
-        <nav className="px-4 sm:px-6 py-3 sm:py-4 border-b border-(--border-color) flex justify-between items-center sticky top-0 bg-(--bg-primary)/90 backdrop-blur z-40">
-            <Link href="/" className="font-bold text-sm sm:text-base lg:text-lg tracking-tight hover:text-(--text-secondary) transition-colors">
-                {PORTFOLIO.profile.name}.
-            </Link>
-            <Link href="/" className="text-xs sm:text-sm font-mono text-(--text-muted) hover:text-(--text-primary) transition-colors flex items-center gap-1.5">
-               <span>✕</span><span className="hidden xs:inline">Close</span>
-            </Link>
-        </nav>
         
-        <div className="max-w-4xl mx-auto sm:border-x border-(--border-color) min-h-screen bg-(--bg-primary)">
+        {/* Background Ceramic Geometry */}
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-20"
+             style={{
+               backgroundImage: 'radial-gradient(circle at 2px 2px, var(--border-color) 1px, transparent 0)',
+               backgroundSize: '48px 48px'
+             }}
+        />
+
+        
+        <div className="max-w-4xl mx-auto sm:border-x border-[var(--border-color)] min-h-screen bg-[var(--bg-primary)] relative z-10 shadow-2xl py-12 sm:py-20 px-4 sm:px-10">
             <ProjectDetail project={project} />
         </div>
     </main>

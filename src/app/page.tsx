@@ -1,147 +1,126 @@
-
 import Hero from '@/components/Hero';
-import { PORTFOLIO } from '@/data/portfolio';
 import Link from 'next/link';
-import ScrollReveal from '@/components/ScrollReveal';
-import Marquee from '@/components/Marquee';
-import TiltCard from '@/components/TiltCard';
-import MagneticHover from '@/components/MagneticHover';
+import { PORTFOLIO } from '@/data/portfolio';
 import { ArrowUpRight } from '@/components/Icons';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 max-w-7xl mx-auto selection:bg-neutral-700 selection:text-white pb-16 sm:pb-20 font-sans bg-(--bg-primary) w-full max-w-[100vw]">
-
-      {/* SECTION 1: HERO */}
-      <ScrollReveal>
-        <Hero />
-      </ScrollReveal>
-
-      {/* SECTION 2: SELECTED WORK */}
-      <section id="projects" className="py-14 sm:py-20 border-b border-(--border-color) w-full">
-        <ScrollReveal delay={0.2}>
-            <h2 className="text-xs sm:text-sm font-mono text-(--text-muted) mb-6 sm:mb-8 uppercase tracking-widest">
-                Selected Work
-            </h2>
-            <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 group/list w-full max-w-full">
-                {PORTFOLIO.projects
-                    .filter(project => ['vital-health-tech', 'split-payment', 'namma-ride'].includes(project.id))
-                    .sort((a, b) => {
-                        const order = ['vital-health-tech', 'split-payment', 'namma-ride'];
-                        return order.indexOf(a.id) - order.indexOf(b.id);
-                    })
-                    .map((project) => (
-                    <MagneticHover key={project.id} className="group project-card transition-all duration-500 scale-100 hover:scale-[1.01]! sm:hover:scale-[1.02]! w-full relative z-10 hover:z-50" intensity={4}>
-                        <TiltCard className="cursor-pointer block rounded-xl w-full" intensity={4}>
-                            <Link 
-                                href={`/work/${project.slug}`} 
-                                className="block h-full w-full bg-(--bg-secondary) p-4 sm:p-6 rounded-xl border border-(--border-color) hover:border-(--text-muted) transition-all hover:shadow-xl relative z-10 hover:z-20"
-                                data-cursor-text="OPEN"
-                            >
-                                <article className="w-full">
-                                    <div className="flex flex-col sm:flex-row flex-wrap items-start justify-between gap-2 mb-2 w-full">
-                                        <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-(--text-primary) group-hover:text-(--accent) transition-colors break-words text-wrap-balance whitespace-normal self-start max-w-full">
-                                            {project.title}
-                                        </h3>
-                                        {project.tagline && (
-                                            <span className="text-[10px] font-mono text-(--text-muted) border-(--border-color) px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0 mt-1 sm:mt-0 max-w-full truncate">
-                                                {project.tagline.split('|')[0].trim()}
-                                            </span>
-                                        )}
-                                    </div>
-                                    <p className="text-(--text-muted) font-mono text-xs sm:text-sm max-w-2xl leading-relaxed break-words whitespace-normal text-wrap-pretty">
-                                        {project.oneLineSummary}
-                                    </p>
-                                </article>
-                            </Link>
-                        </TiltCard>
-                    </MagneticHover>
-                ))}
-            </div>
-
-            <div className="mt-8 sm:mt-12 text-center sm:text-left">
-                <Link 
-                    href="/projects" 
-                    className="inline-flex items-center px-6 sm:px-8 py-3 bg-(--bg-secondary) border border-(--border-color) hover:border-(--text-primary) text-(--text-primary) rounded-full text-sm sm:text-base font-medium transition-all shadow-sm hover:shadow-md"
-                >
-                    View All Projects <ArrowUpRight className="inline-block w-4 h-4 ml-1" />
-                </Link>
-            </div>
-        </ScrollReveal>
-      </section>
-
-      {/* SECTION 3: RESEARCH */}
-      <section className="py-14 sm:py-20 border-b border-(--border-color) w-full">
-         <ScrollReveal delay={0.1}>
-             <h2 className="text-xs sm:text-sm font-mono text-(--text-muted) mb-6 sm:mb-8 uppercase tracking-widest">
-                Research &amp; Systems
-            </h2>
-             <div className="flex flex-col gap-6 sm:gap-8 group/research w-full max-w-full">
-                {PORTFOLIO.research.map((item) => (
-                    <Link 
-                        key={item.id} 
-                        href={`/research/${item.slug}`} 
-                        className="group cursor-pointer block transition-all duration-500 w-full"
-                    >
-                        <article className="w-full">
-                            <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2 sm:gap-3 mb-2 w-full">
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-(--text-primary) leading-tight underline decoration-transparent group-hover:decoration-(--text-muted) underline-offset-4 transition-all break-words text-wrap-balance whitespace-normal max-w-full">
-                                    {item.title}
-                                </h3>
-                                <span className="text-[10px] sm:text-xs border border-yellow-700 text-yellow-600 px-2 py-0.5 rounded font-mono uppercase shrink-0 mt-1 sm:mt-0.5">Conceptual</span>
-                            </div>
-                        
-                            <p className="text-(--text-muted) font-mono text-xs sm:text-sm max-w-3xl leading-relaxed break-words whitespace-normal text-wrap-pretty">
-                                {item.systemArchitectureSummary}
-                            </p>
-                        </article>
-                    </Link>
-                ))}
-            </div>
-        </ScrollReveal>
-      </section>
-
-      {/* MARQUEE SEPARATOR */}
-      <Marquee 
-        items={["React.js", "Next.js", "Tailwind CSS", "Node.js", "Express.js", "REST APIs", "MongoDB", "Firebase", "C++", "JavaScript", "DSA", "ESP32", "Arduino", "Sensors", "Git", "GitHub", "Vercel"]} 
-        speed={100}
+    <main className="theme-jaipur bg-[var(--bg-primary)] text-[var(--text-primary)] overflow-x-hidden selection:bg-[var(--accent)] selection:text-[var(--bg-primary)] transition-colors duration-500 font-body relative">
+      
+      {/* Dot Grid Background */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-20"
+           style={{
+             backgroundImage: 'radial-gradient(circle at 2px 2px, var(--border-color) 1px, transparent 0)',
+             backgroundSize: '48px 48px'
+           }}
       />
 
-      {/* SECTION 4: QUICK ABOUT */}
-      <section className="py-14 sm:py-20 border-b border-(--border-color)">
-        <ScrollReveal>
-            <h2 className="text-xs sm:text-sm font-mono text-(--text-muted) mb-6 sm:mb-8 uppercase tracking-widest">
-                About Me
-            </h2>
-            <div className="max-w-2xl space-y-4 sm:space-y-6 text-base sm:text-lg text-(--text-secondary) leading-relaxed">
-                <p>
-                    I am an engineering student at BMS College of Engineering, Bengaluru (CSBS). I focus on building real, working products across frontend, backend, and embedded systems; not just writing code, but solving <strong>practical problems</strong>.
-                </p>
-                <p>
-                    I believe in <strong>MVP First</strong> execution and learning by building. Most of what I ship comes from real-world frustrations, whether it&apos;s organizing student resources or simplifying public transport access.
-                </p>
-                <Link href="/about" className="inline-flex items-center text-sm font-mono text-(--text-muted) hover:text-(--text-primary) transition-colors border-b border-(--border-color) hover:border-(--text-primary) pb-1">
-                    Read more about my philosophy <ArrowUpRight className="inline-block w-3 h-3 ml-1" />
-                </Link>
-            </div>
-        </ScrollReveal>
-      </section>
+      <Hero />
 
-       {/* SECTION 5: CONTACT CTA */}
-       <section className="py-14 sm:py-20">
-            <ScrollReveal>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-(--text-primary) mb-6 sm:mb-8 leading-tight">
-                    Ready to build?
-                </h2>
-                <Link 
-                    href="/contact"
-                    className="inline-flex items-center text-base sm:text-xl border-b border-(--border-color) pb-1 text-(--text-secondary) hover:text-(--text-primary) hover:border-(--text-primary) transition-all"
+      <div className="relative z-10 px-4 sm:px-6 md:px-10 lg:px-16 max-w-7xl mx-auto space-y-16 sm:space-y-24 pb-12 sm:pb-16">
+        
+        {/* PROJECTS SECTION - Pichwai Layout */}
+        <section id="projects" className="scroll-mt-32">
+           <ScrollReveal className="text-center mb-16 sm:mb-24">
+             <div className="w-16 h-1 bg-[var(--accent)] mx-auto mb-6 opacity-80" />
+             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-heading mb-6 tracking-tight text-[var(--text-primary)]">
+               Engineering Archives
+             </h2>
+             <p className="text-xl sm:text-2xl text-[var(--text-secondary)] font-light max-w-2xl mx-auto">
+               Technical mastery meets real-world utility.
+             </p>
+           </ScrollReveal>
+
+           <div className="space-y-16 sm:space-y-32">
+             {PORTFOLIO.projects.slice(0, 3).map((project, index) => (
+                <ScrollReveal 
+                    key={project.id} 
+                    className={`flex flex-col md:flex-row gap-8 md:gap-16 items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
                 >
-                    Let&apos;s talk engineering. <ArrowUpRight className="inline-block w-4 h-4 sm:w-5 sm:h-5 ml-1.5" />
-                </Link>
-            </ScrollReveal>
-       </section>
+                    <div className="w-full md:w-1/2 relative group perspective-[1000px]">
+                        {/* Layered Shadow frames */}
+                        <div className="absolute inset-0 bg-[var(--accent)]/10 translate-x-4 translate-y-4 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
+                        <div className="absolute inset-0 border border-[var(--accent)]/30 -translate-x-4 -translate-y-4 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
+                        
+                        <Link href={`/work/${project.slug}`} className="block relative z-10 rounded-xl overflow-hidden border-2 border-[var(--border-color)] group-hover:border-[var(--accent)] transition-colors duration-500 transform group-hover:rotate-y-[2deg] group-hover:rotate-x-[2deg]">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img 
+                                src={project.imageUrl} 
+                                alt={project.title} 
+                                className="w-full aspect-[16/10] object-cover filter grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                            />
+                        </Link>
+                    </div>
+                    <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
+                        <div className="inline-block px-4 py-1.5 border border-[var(--border-color)] rounded-full text-xs font-mono uppercase tracking-widest text-[var(--text-muted)]">
+                            {project.tagline.split('|')[0].trim()}
+                        </div>
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors">
+                            <Link href={`/work/${project.slug}`}>{project.title}</Link>
+                        </h3>
+                        <p className="text-lg sm:text-xl text-[var(--text-secondary)] font-light leading-relaxed">
+                            {project.oneLineSummary}
+                        </p>
+                        <Link href={`/work/${project.slug}`} className="inline-flex items-center gap-2 mt-4 text-[var(--accent)] font-medium font-mono uppercase tracking-widest hover:tracking-[0.3em] transition-all duration-300">
+                            Explore Artifact <ArrowUpRight className="w-5 h-5" />
+                        </Link>
+                    </div>
+                </ScrollReveal>
+             ))}
+           </div>
+           
+           <div className="mt-20 text-center">
+               <Link href="/projects" className="inline-block px-10 py-5 bg-[var(--bg-secondary)] border border-[var(--border-color)] text-[var(--text-primary)] font-bold rounded-full hover:bg-[var(--text-primary)] hover:text-[var(--bg-primary)] transition-all duration-500 shadow-xl tracking-wide">
+                   View All Archives
+               </Link>
+           </div>
+        </section>
 
+        {/* RESEARCH SECTION - Udaipur Hint */}
+        <section id="research" className="scroll-mt-32 relative">
+            {/* Udaipur Water Reflection Hint */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--accent)]/5 to-transparent pointer-events-none opacity-50" />
+            
+            <ScrollReveal className="text-center mb-10 sm:mb-16 relative z-10">
+                <div className="w-1 h-12 bg-[var(--accent)] mx-auto mb-6 opacity-80" />
+                <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-heading mb-4 tracking-tight text-[var(--text-primary)]">
+                    Intellectual Pursuits
+                </h2>
+                <p className="text-xl sm:text-2xl text-[var(--text-secondary)] font-light max-w-2xl mx-auto">
+                    Deep dives into conceptual architecture and research.
+                </p>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 relative z-10">
+                {PORTFOLIO.research.slice(0, 2).map((paper) => (
+                    <ScrollReveal key={paper.id} className="group h-full">
+                        <Link 
+                            href={`/research/${paper.slug}`}
+                            className="flex flex-col h-full p-6 sm:p-10 md:p-12 bg-[var(--bg-primary)]/40 backdrop-blur-md border border-[var(--border-color)] hover:border-[var(--accent)] rounded-2xl transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] relative overflow-hidden"
+                        >
+                            {/* Water Ripple Hover Effect */}
+                            <div className="absolute inset-0 bg-[var(--accent)]/5 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-700 ease-in-out pointer-events-none" />
+                            
+                            <div className="text-[10px] sm:text-xs font-mono text-[var(--text-muted)] uppercase tracking-widest mb-4 sm:mb-6 block">
+                                {paper.researchType}
+                            </div>
+                            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-heading text-[var(--text-primary)] mb-4 sm:mb-6 leading-tight group-hover:text-[var(--accent)] transition-colors">
+                                {paper.title}
+                            </h3>
+                            <p className="text-sm sm:text-base text-[var(--text-secondary)] font-light leading-relaxed line-clamp-4 flex-grow">
+                                {paper.problemContext}
+                            </p>
+                            <div className="mt-6 sm:mt-8 flex items-center text-[var(--accent)] font-medium font-mono uppercase tracking-widest text-[10px] sm:text-xs">
+                                Read Abstract <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                            </div>
+                        </Link>
+                    </ScrollReveal>
+                ))}
+            </div>
+        </section>
+
+      </div>
     </main>
   );
 }
