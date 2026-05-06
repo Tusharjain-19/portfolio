@@ -1,21 +1,36 @@
 # Tushar Jain | Software Engineer
 
+[![Next.js](https://img.shields.io/badge/Next.js-15+-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+
 Welcome to the source code of my engineering portfolio. I am a student at **BMS College of Engineering, Bengaluru** (CSBS), focused on building real, working products across frontend, backend, and embedded systems. 
 
 My engineering philosophy is simple: **MVP First**. I prioritize shipping practical solutions over theoretical perfection, and I learn by building.
 
 ---
 
+## 🌐 Live Portfolio
+**[tusharjain.in](https://tusharjain.in)**
+
+---
+
 ## 🏗️ Portfolio Architecture
 
-This repository contains the source code for my personal portfolio, built with a focus on modern web standards, performance, and a luxury minimalist aesthetic.
+This repository contains the source code for my personal portfolio, built with a focus on modern web standards, performance, interactive physics, and a luxury minimalist aesthetic.
 
 ### Core Technologies
 - **Framework**: Next.js 15+ (App Router), React 19
 - **Styling**: Tailwind CSS v4, custom monochrome design system
-- **Animation**: Framer Motion, Lenis (Smooth Scrolling)
+- **Animation & Physics**: Framer Motion, Lenis (Smooth Scrolling), Custom Verlet Integration Physics Engine
 - **Language**: TypeScript
 - **Deployment**: Vercel
+
+### Key Features
+- **Physics-Based Theme Toggle**: A highly interactive, 3D hardware-inspired theme switch powered by a custom Verlet integration physics engine with procedural metallic audio.
+- **Performant Rendering**: Utilizes Next.js App Router for optimal Server-Side Rendering (SSR) and seamless client-side hydration.
+- **Editorial Design Language**: A meticulously crafted monochrome visual style inspired by premium editorial design.
 
 ---
 
@@ -82,7 +97,7 @@ I am actively seeking internship opportunities and engineering collaborations.
 - **Email**: [jaint0910@gmail.com](mailto:jaint0910@gmail.com)
 - **LinkedIn**: [Tushar Jain](https://www.linkedin.com/in/tushar-jain-781149322/)
 - **GitHub**: [@Tusharjain-19](https://github.com/Tusharjain-19)
-- **Live Portfolio**: [tusharjain.com](#) *(Update with actual domain)*
+- **Live Portfolio**: [tusharjain.in](https://tusharjain.in)
 
 ***
 *Designed and built by Tushar Jain.*
