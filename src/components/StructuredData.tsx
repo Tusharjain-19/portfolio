@@ -13,7 +13,7 @@ export default function StructuredData({ data }: StructuredDataProps) {
     "name": "Tushar Jain",
     "givenName": "Tushar",
     "familyName": "Jain",
-    "alternateName": ["tusharjain", "Tushar Jain BMSCE", "Tushar Jain Bengaluru"],
+    "alternateName": ["tusharjain", "Tushar Jain BMSCE", "Tushar Jain Bengaluru", "Tushar Jain Jaipur", "Tushar Jain India", "Tushar Jain Rajasthan"],
     "jobTitle": PORTFOLIO.profile.role,
     "url": "https://tusharjain.in",
     "image": "https://tusharjain.in/pic2.jpeg",

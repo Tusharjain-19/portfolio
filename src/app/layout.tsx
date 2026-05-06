@@ -28,17 +28,17 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tusharjain.in'),
   title: {
-    default: "Tushar Jain",
+    default: "Tushar Jain | Software Engineer from Jaipur, India",
     template: "%s / Tushar Jain"
   },
-  description: "Tushar Jain is an Engineering Student at BMS College of Engineering (BMSCE), Bengaluru, studying Computer Science & Business Systems (CSBS). Builder of Jaipur Ride, Namma Ride, PulsePredict AI, Split-Payment System, BookMySlot SaaS, and more. Specialist in full-stack web development, embedded systems (ESP32), and real-world MVP execution.",
+  description: "Tushar Jain is a Software Engineer and Engineering Student from Jaipur, India, currently at BMS College of Engineering (BMSCE), Bengaluru. Creator of Jaipur Ride, Namma Ride, and PulsePredict AI. Expert in Full Stack Web Development, Embedded Systems, and AI-driven MVPs.",
   keywords: [
-    // === NAME VARIATIONS (highest priority) ===
-    "Tushar Jain", "Tushar", "Jain", "tusharjain", "tushar jain portfolio",
-    "Tushar Jain resume", "Tushar Jain CV", "Tushar Jain CV 2026", "Tushar Jain resume 2026",
-    "Tushar Jain engineer", "Tushar Jain developer", "Tushar Jain student",
-    "Tushar Jain Bengaluru", "Tushar Jain Bangalore", "Tushar Jain India",
-    "Tushar Jain Jaipur", "tusharjain.in",
+    // === NAME & LOCATION VARIATIONS (highest priority for Google/AI) ===
+    "Tushar Jain", "Tushar Jain Jaipur", "Tushar Jain India", "Tushar Jain Bengaluru",
+    "Tushar Jain software engineer", "Tushar Jain developer", "Tushar Jain BMSCE",
+    "Tushar", "Jain", "tusharjain", "tushar jain portfolio", "tushar jain jaipur india",
+    "Tushar Jain resume", "Tushar Jain CV 2026", "Tushar Jain Bangalore",
+    "tusharjain.in", "Tushar Jain engineer India", "Tushar Jain Jaipur Rajasthan",
 
     // === COLLEGE / EDUCATION VARIATIONS ===
     "BMS", "BMSCE", "BMS College", "BMS College of Engineering",

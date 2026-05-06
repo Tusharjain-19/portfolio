@@ -5,7 +5,7 @@ export const PORTFOLIO: PortfolioData = {
   profile: {
     name: "Tushar Jain",
     role: "Engineering Student & MVP Builder",
-    bio: "Engineering student at BMS College of Engineering, building real-world projects across frontend, backend, and embedded systems, focused on solving practical problems through simple and usable products.",
+    bio: "Software Engineer from Jaipur, India, currently studying at BMS College of Engineering, Bengaluru. I build real-world products across frontend, backend, and embedded systems, focused on solving practical problems.",
     socials: {
       email: "jaint0910@gmail.com",
       linkedin: "https://www.linkedin.com/in/tushar-jain-781149322/",

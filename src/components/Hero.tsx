@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
-  const bioWords = "Engineering student at BMS College of Engineering, building real-world projects across frontend, backend, and embedded systems, focused on solving practical problems through simple and usable products.".split(" ");
+  const bioWords = "Software Engineer from Jaipur, India, and engineering student at BMS College of Engineering, building real-world projects across frontend, backend, and embedded systems.".split(" ");
 
   return (
     <section className="relative w-full flex flex-col overflow-hidden pt-32 pb-10">
