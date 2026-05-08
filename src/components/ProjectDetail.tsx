@@ -258,7 +258,7 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                 <div className="w-full bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl overflow-hidden shadow-sm">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img 
-                        src={project.imageUrl} 
+                        src={project.detailImageUrl || project.imageUrl} 
                         alt={`${project.title} screenshot`} 
                         className="w-full h-auto object-cover"
                     />

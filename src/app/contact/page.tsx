@@ -20,32 +20,30 @@ export default function ContactPage() {
            }}
       />
 
-      <div className="px-4 sm:px-6 md:px-10 pt-24 sm:pt-32 pb-16 sm:pb-24 max-w-3xl mx-auto w-full relative z-10">
+      <div className="px-6 sm:px-10 pt-24 sm:pt-32 pb-16 sm:pb-24 max-w-3xl mx-auto w-full relative z-10">
         
         {/* PAGE TITLE */}
-        <div className="mb-12 text-center sm:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 font-heading text-[var(--text-primary)] tracking-tight">
+        <div className="mb-16 text-center sm:text-left">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 font-heading text-[var(--text-primary)] tracking-tighter">
             Connect
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-[var(--text-secondary)] font-light max-w-xl leading-relaxed">
+          <p className="text-xl sm:text-2xl text-[var(--text-secondary)] font-light max-w-xl leading-relaxed mx-auto sm:mx-0">
               Open to engineering internships, embedded systems discussions, and building the future.
           </p>
         </div>
 
         {/* FLOATING GLASS PANEL */}
-        <div className="w-full space-y-4 mb-12 bg-[var(--bg-secondary)]/30 backdrop-blur-xl border border-[var(--border-color)] p-6 sm:p-10 rounded-3xl shadow-2xl relative overflow-hidden group">
-            {/* Glowing border effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-
+        <div className="w-full space-y-4 mb-16 bg-[var(--bg-secondary)]/30 backdrop-blur-xl border border-[var(--border-color)] p-6 sm:p-12 rounded-[2rem] sm:rounded-[3rem] shadow-2xl relative overflow-hidden group">
             {/* EMAIL */}
             <a 
                 href={`mailto:${PORTFOLIO.profile.socials.email}`}
-                className="block w-full p-5 sm:p-8 bg-[var(--bg-primary)]/50 border border-[var(--border-color)] rounded-2xl hover:border-[var(--accent)] transition-all duration-300 relative overflow-hidden"
+                className="block w-full p-6 sm:p-10 bg-[var(--bg-primary)]/50 border border-[var(--border-color)] rounded-3xl hover:border-[var(--accent)] transition-all duration-300 relative overflow-hidden group/item"
             >
-                <span className="block text-[10px] font-mono text-[var(--text-muted)] uppercase tracking-[0.2em] mb-3">Electronic Mail</span>
-                <span className="text-base sm:text-2xl md:text-3xl font-heading text-[var(--text-primary)] break-words leading-tight">
+                <span className="block text-[10px] font-mono text-[var(--text-muted)] uppercase tracking-[0.3em] mb-4 opacity-70 group-hover/item:text-[var(--accent)] transition-colors">Electronic Mail</span>
+                <span className="text-lg sm:text-2xl md:text-3xl font-heading text-[var(--text-primary)] break-all sm:break-words leading-tight block">
                   {PORTFOLIO.profile.socials.email}
                 </span>
+                <ArrowUpRight className="absolute top-6 right-6 w-5 h-5 text-[var(--accent)] opacity-0 group-hover/item:opacity-100 transition-all transform translate-y-2 group-hover/item:translate-y-0" />
             </a>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -54,11 +52,11 @@ export default function ContactPage() {
                     href={PORTFOLIO.profile.socials.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full p-5 sm:p-6 bg-[var(--bg-primary)]/50 border border-[var(--border-color)] rounded-2xl hover:border-[var(--accent)] transition-all duration-300"
+                    className="block w-full p-6 sm:p-8 bg-[var(--bg-primary)]/50 border border-[var(--border-color)] rounded-3xl hover:border-[var(--accent)] transition-all duration-300 group/item"
                 >
-                    <span className="block text-[10px] font-mono text-[var(--text-muted)] uppercase tracking-[0.2em] mb-3">Network</span>
-                    <span className="flex items-center gap-2 text-base sm:text-lg font-heading font-bold text-[var(--text-primary)]">
-                      LinkedIn <ArrowUpRight className="w-4 h-4 text-[var(--accent)]" />
+                    <span className="block text-[10px] font-mono text-[var(--text-muted)] uppercase tracking-[0.3em] mb-4 opacity-70 group-hover/item:text-[var(--accent)] transition-colors">Network</span>
+                    <span className="flex items-center justify-between gap-2 text-xl font-heading font-bold text-[var(--text-primary)]">
+                      LinkedIn <ArrowUpRight className="w-5 h-5 text-[var(--accent)]" />
                     </span>
                 </a>
 
@@ -67,33 +65,35 @@ export default function ContactPage() {
                     href={PORTFOLIO.profile.socials.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full p-5 sm:p-6 bg-[var(--bg-primary)]/50 border border-[var(--border-color)] rounded-2xl hover:border-[var(--accent)] transition-all duration-300"
+                    className="block w-full p-6 sm:p-8 bg-[var(--bg-primary)]/50 border border-[var(--border-color)] rounded-3xl hover:border-[var(--accent)] transition-all duration-300 group/item"
                 >
-                    <span className="block text-[10px] font-mono text-[var(--text-muted)] uppercase tracking-[0.2em] mb-3">Code</span>
-                    <span className="flex items-center gap-2 text-base sm:text-lg font-heading font-bold text-[var(--text-primary)]">
-                      GitHub <ArrowUpRight className="w-4 h-4 text-[var(--accent)]" />
+                    <span className="block text-[10px] font-mono text-[var(--text-muted)] uppercase tracking-[0.3em] mb-4 opacity-70 group-hover/item:text-[var(--accent)] transition-colors">Code</span>
+                    <span className="flex items-center justify-between gap-2 text-xl font-heading font-bold text-[var(--text-primary)]">
+                      GitHub <ArrowUpRight className="w-5 h-5 text-[var(--accent)]" />
                     </span>
                 </a>
             </div>
         </div>
 
         {/* SECTION 3 - RESUME */}
-        <div className="mb-12 flex justify-center sm:justify-start">
+        <div className="mb-20 flex justify-center sm:justify-start">
              <a 
                 href={PORTFOLIO.profile.resumeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-[var(--text-primary)] text-[var(--bg-primary)] font-bold font-heading tracking-wide rounded-full hover:scale-105 hover:shadow-[0_0_20px_var(--accent)] transition-all duration-300 text-sm sm:text-base"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 bg-[var(--text-primary)] text-[var(--bg-primary)] font-bold font-heading tracking-wide rounded-full hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)] transition-all duration-300"
              >
-                <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                <svg className="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                 <span>Download Artifact (Resume)</span>
              </a>
         </div>
 
         {/* SECTION 4 - LOCATION */}
-        <div className="text-center sm:text-left text-[var(--text-muted)] font-mono text-xs uppercase tracking-[0.2em] relative inline-block">
-            Based in Bengaluru, India
-            <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-2 h-2 bg-[var(--accent)] rounded-full animate-ping" />
+        <div className="w-full flex justify-center sm:justify-start">
+            <div className="text-[var(--text-muted)] font-mono text-xs uppercase tracking-[0.3em] relative inline-flex items-center gap-4">
+                <span className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse shadow-[0_0_8px_var(--accent)]" />
+                Based in Bengaluru, India
+            </div>
         </div>
 
       </div>

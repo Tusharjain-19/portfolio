@@ -28,10 +28,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tusharjain.in'),
   title: {
-    default: "Tushar Jain | Software Engineer from Jaipur, India",
+    default: "Tushar Jain | Engineering Student at BMSCE",
     template: "%s / Tushar Jain"
   },
-  description: "Tushar Jain is a Software Engineer and Engineering Student from Jaipur, India, currently at BMS College of Engineering (BMSCE), Bengaluru. Creator of Jaipur Ride, Namma Ride, and PulsePredict AI. Expert in Full Stack Web Development, Embedded Systems, and AI-driven MVPs.",
+  description: "Tushar Jain is an Engineering Student at BMS College of Engineering (BMSCE), Bengaluru, building real-world AI, software, and embedded systems with a focus on products that impact everyday life.",
   keywords: [
     // === NAME & LOCATION VARIATIONS (highest priority for Google/AI) ===
     "Tushar Jain", "Tushar Jain Jaipur", "Tushar Jain India", "Tushar Jain Bengaluru",

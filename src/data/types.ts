@@ -12,6 +12,7 @@ export interface ProductProject {
   learnings: string[]; // Bullet points
   techStack: string[];
   imageUrl?: string;
+  detailImageUrl?: string;
   proofLinks?: {
     github?: string;
     demo?: string;

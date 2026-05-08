@@ -5,7 +5,7 @@ export const PORTFOLIO: PortfolioData = {
   profile: {
     name: "Tushar Jain",
     role: "Engineering Student & MVP Builder",
-    bio: "Software Engineer from Jaipur, India, currently studying at BMS College of Engineering, Bengaluru. I build real-world products across frontend, backend, and embedded systems, focused on solving practical problems.",
+    bio: "Engineering student at BMS College of Engineering building real-world AI, software, and embedded systems with a focus on products that impact everyday life.",
     socials: {
       email: "jaint0910@gmail.com",
       linkedin: "https://www.linkedin.com/in/tushar-jain-781149322/",
@@ -69,7 +69,8 @@ export const PORTFOLIO: PortfolioData = {
       id: "jaipur-ride",
       slug: "jaipur-ride",
       title: "Jaipur Ride (Metro)",
-      imageUrl: "/jaipur ride.png",
+      imageUrl: "/jaipur-ride-poster.png",
+      detailImageUrl: "/jaipur-ride.png",
       tagline: "Public Utility / Smart Transport",
       oneLineSummary: "Centralized platform simplifying Jaipur Metro navigation. Available on Google Play Store with 100+ downloads in 10 days of launch.",
       ideaOrigin: "Observing the fragmentation in how people in Jaipur access metro and bus timings, often relying on scattered WhatsApp rumors or word of mouth.",
