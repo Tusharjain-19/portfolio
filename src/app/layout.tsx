@@ -14,6 +14,7 @@ import "./globals.css";
 import Preloader from "@/components/Preloader";
 import Grain from "@/components/Grain";
 import StructuredData from "@/components/StructuredData";
+import AEOContent from "@/components/AEOContent";
 
 const playfair = Playfair_Display({
   variable: "--font-heading",
@@ -39,6 +40,8 @@ export const metadata: Metadata = {
     "Tushar", "Jain", "tusharjain", "tushar jain portfolio", "tushar jain jaipur india",
     "Tushar Jain resume", "Tushar Jain CV 2026", "Tushar Jain Bangalore",
     "tusharjain.in", "Tushar Jain engineer India", "Tushar Jain Jaipur Rajasthan",
+    "tushra jain", "tushra jain portfolio", "tushra jain jaipur", "tushra jain developer",
+    "tushar jain bms college", "tushar jain csbs", "tushar jain engineer",
 
     // === COLLEGE / EDUCATION VARIATIONS ===
     "BMS", "BMSCE", "BMS College", "BMS College of Engineering",
@@ -191,6 +194,7 @@ export default function RootLayout({
               <Preloader />
               <SmoothScroll />
               <MotionConfig reducedMotion="user">
+                  <AEOContent />
                   <Cursor />
                   <Grain />
                   <ThemeToggle />

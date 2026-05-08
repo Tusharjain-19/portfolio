@@ -9,6 +9,22 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/private/', '/_next/', '/api/'],
       },
       {
+        userAgent: 'GPTBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'ChatGPT-User',
+        allow: '/',
+      },
+      {
+        userAgent: 'PerplexityBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'ClaudeBot',
+        allow: '/',
+      },
+      {
         userAgent: 'Googlebot',
         allow: '/',
       },

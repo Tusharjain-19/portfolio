@@ -13,7 +13,11 @@ export default function StructuredData({ data }: StructuredDataProps) {
     "name": "Tushar Jain",
     "givenName": "Tushar",
     "familyName": "Jain",
-    "alternateName": ["tusharjain", "Tushar Jain BMSCE", "Tushar Jain Bengaluru", "Tushar Jain Jaipur", "Tushar Jain India", "Tushar Jain Rajasthan"],
+    "alternateName": [
+      "tusharjain", "Tushar Jain BMSCE", "Tushar Jain Bengaluru", "Tushar Jain Jaipur", 
+      "Tushar Jain India", "Tushar Jain Rajasthan", "tushra jain", "Tushra Jain",
+      "Tushar J", "Jain Tushar", "tushar-jain"
+    ],
     "jobTitle": PORTFOLIO.profile.role,
     "url": "https://tusharjain.in",
     "image": "https://tusharjain.in/pic2.jpeg",
@@ -81,6 +85,38 @@ export default function StructuredData({ data }: StructuredDataProps) {
     "dateModified": new Date().toISOString().split('T')[0],
   };
 
+  // Breadcrumb schema — helps Google show the path in search results
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://tusharjain.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://tusharjain.in/projects"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "About",
+        "item": "https://tusharjain.in/about"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Contact",
+        "item": "https://tusharjain.in/contact"
+      }
+    ]
+  };
+
   // If custom data is passed (for project/research pages), render that alongside defaults
   if (data) {
     return (
@@ -97,7 +133,7 @@ export default function StructuredData({ data }: StructuredDataProps) {
     );
   }
 
-  // Default: render Person + Website + ProfilePage schemas
+  // Default: render Person + Website + ProfilePage + Breadcrumb schemas
   return (
     <>
       <script
@@ -111,6 +147,10 @@ export default function StructuredData({ data }: StructuredDataProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profileData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
       />
     </>
   );

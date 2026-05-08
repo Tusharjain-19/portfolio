@@ -2,6 +2,9 @@
   "name": "potfolio",
   "version": "0.1.0",
   "private": true,
+  "description": "Professional Engineering Portfolio of Tushar Jain, student at BMSCE Bengaluru. Features projects like Jaipur Ride, Namma Ride, and PulsePredict AI.",
+  "keywords": ["Tushar Jain", "Tushra Jain", "BMSCE", "Engineering Portfolio", "Jaipur Ride"],
+  "author": "Tushar Jain",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
