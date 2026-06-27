@@ -39,7 +39,7 @@ export default function AboutPage() {
             <h2 className="text-sm font-mono text-[var(--accent)] mb-4 uppercase tracking-[0.2em]">Chapter I. The Concept</h2>
             <div className="space-y-6 text-lg sm:text-xl text-[var(--text-secondary)] leading-relaxed font-light">
                 <p>
-                    I am an engineering student at BMS College of Engineering, Bengaluru, building real-world AI, software, and embedded systems with a focus on products that impact everyday life. Beyond the classroom, I view engineering as a craft—a medium to solve friction in the real world.
+                    I am an engineering student at BMS College of Engineering, Bengaluru, building real-world AI, software, and embedded systems with a focus on products that impact everyday life. Beyond the classroom, I view engineering as a craft - a medium to solve friction in the real world.
                 </p>
                 <p>
                     My work spans frontend aesthetics, backend logic, and embedded systems hardware. I don&apos;t just write code; I build tools that people actually use.

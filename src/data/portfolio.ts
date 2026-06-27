@@ -1,11 +1,10 @@
-
 import { PortfolioData } from './types';
 
 export const PORTFOLIO: PortfolioData = {
   profile: {
     name: "Tushar Jain",
     role: "Engineering Student & MVP Builder",
-    bio: "Engineering student at BMS College of Engineering building real-world AI, software, and embedded systems with a focus on products that impact everyday life.",
+    bio: "I am an engineering student at BMS College of Engineering. I love building practical software and hardware projects that solve real, everyday problems for people.",
     socials: {
       email: "jaint0910@gmail.com",
       linkedin: "https://www.linkedin.com/in/tushar-jain-781149322/",
@@ -40,8 +39,8 @@ export const PORTFOLIO: PortfolioData = {
       slug: "dual-uuv-system",
       title: "A Conceptual Framework for a Human-Supervised Dual-UUV System for Autonomous Maritime Surveillance",
       researchType: "Independent Research (Conceptual + Systems Design)",
-      problemContext: "Traditional maritime surveillance often lacks the flexibility to ethically differentiate between threats in real-time without immediate human presence.",
-      systemArchitectureSummary: "Proposed a split-architecture system: one passive UUV for stealthy detection and a separate active UUV for response, both gated by a mandatory human-in-the-loop control protocol.",
+      problemContext: "Traditional sea surveillance systems are not flexible enough to safely tell apart real threats in real-time, especially without a human present.",
+      systemArchitectureSummary: "I designed a split system: one quiet submarine for sneaky detection and a separate active one for checking things out, both controlled by a strict human approval step.",
       coreTechnicalAreas: [
         "Unmanned Underwater Vehicles (UUV)",
         "Passive Acoustic Detection",
@@ -49,16 +48,16 @@ export const PORTFOLIO: PortfolioData = {
         "Human-in-the-loop Control",
       ],
       keyContributions: [
-        "Designed system architecture separating detection and response into two specialized platforms.",
-        "Defined detection, localization using Extended Kalman Filters (EKF), and underwater communication frameworks.",
-        "Proposed a strict ethical compliance model requiring human authorization for any active response.",
-        "Theoretical performance analysis of sensor fusion combining IMU, pressure sensing, and acoustics.",
+        "Designed a system that splits detection and inspection tasks between two specialized vehicles.",
+        "Created guidelines for locating targets using filters and underwater signal sharing.",
+        "Set up an ethical safety rule requiring active human approval before taking any action.",
+        "Calculated how combining sensors like compasses and acoustics helps keep tracking accurate.",
       ],
-      limitationsAndEthics: "This is a strictly theoretical framework. No physical prototype was built, and the system is designed explicitly for non-lethal, surveillance-only applications with human oversight.",
+      limitationsAndEthics: "This is a purely theoretical design. I did not build a physical submarine, and the system is strictly meant for safe, surveillance-only tasks under human supervision.",
       learnings: [
-        "Deepened understanding of autonomous navigation and sensor fusion challenges underwater.",
-        "Learned to design systems with ethical constraints as a core architectural requirement.",
-        "Studied underwater acoustic communication limitations (bandwidth/latency).",
+        "Learned how underwater navigation and combining sensor data works in tough environments.",
+        "Practiced designing systems with strict safety and ethical rules from the very start.",
+        "Studied how sound travels underwater and its limits in sending data.",
       ],
       paperLink: "/Dual-UUVSystemResearch.pdf",
       researchGateLink: "https://www.researchgate.net/publication/397870338_A_Conceptual_Framework_for_a_Human_Supervised_Dual-UUV_System_Enabling_Autonomous_Maritime_Surveillance",
@@ -72,23 +71,23 @@ export const PORTFOLIO: PortfolioData = {
       imageUrl: "/jaipur-ride-poster.png",
       detailImageUrl: "/jaipur-ride.png",
       tagline: "Public Utility / Smart Transport",
-      oneLineSummary: "Centralized platform simplifying Jaipur Metro navigation. Available on Google Play Store with 100+ downloads in 10 days of launch.",
-      ideaOrigin: "Observing the fragmentation in how people in Jaipur access metro and bus timings, often relying on scattered WhatsApp rumors or word of mouth.",
+      oneLineSummary: "A unified, offline-first transit platform that simplifies navigation for the Jaipur Metro, serving over 500+ active commuters on the Google Play Store.",
+      ideaOrigin: "I noticed that people in Jaipur had a really hard time finding correct metro and bus timings, often relying on rumors, random Google searches, or scattered WhatsApp messages.",
       problemStatement: [
-        "Transport info scattered across Google searches and WhatsApp",
-        "Lack of a single, clean interface for route exploration",
-        "Language and inquiry barriers for new commuters"
+        "Metro timing info was messy and scattered all over the place.",
+        "There was no single, clean app to check routes quickly.",
+        "New travelers found it hard to figure out interchanges and ticket rates."
       ],
       solutionOverview: [
-        "Built a unified platform for routes and timings",
-        "Focused on data accessibility through clean information architecture",
-        "Deployed for real-world access with mobile-first responsiveness"
+        "Built a simple, single app for all routes and timings.",
+        "Focused on making the layout clean and super easy to read on the go.",
+        "Made sure the app works offline so commuters can use it inside tunnels."
       ],
-      hardestTechnicalChallenge: "Designing a data structure that can handle varying transport schedules and route nodes while keeping the frontend lightweight and friction-free for users on the move.",
+      hardestTechnicalChallenge: "Creating a quick data structure that stores all routes and timings locally on the phone, keeping the app lightweight and fast even on cheap smartphones with poor network signals.",
       learnings: [
-        "Structuring complex datasets into simple UI",
-        "Real-world user flow design and optimization",
-        "Building for utility over ornamentation"
+        "How to turn messy schedules and route grids into a clean, simple layout.",
+        "How to design smooth user flows for people on the move.",
+        "Building for real utility and help rather than just adding fancy, useless features."
       ],
       techStack: ["React.js", "JavaScript", "HTML & CSS", "Vercel"],
       proofLinks: {
@@ -103,23 +102,23 @@ export const PORTFOLIO: PortfolioData = {
       title: "NotesCSBS",
       imageUrl: "/notescsbs.png",
       tagline: "Productivity / Resource Hub",
-      oneLineSummary: "Centralized student resource platform built to kill the chaos of scattered study notes.",
-      ideaOrigin: "My personal frustration with chasing notes across WhatsApp groups and broken Google Drive links during exam season.",
+      oneLineSummary: "A clean study resource platform built to save students from the chaos of scattered notes.",
+      ideaOrigin: "My personal frustration with wasting time searching for notes across messy WhatsApp groups and broken Google Drive links right before exams.",
       problemStatement: [
-        "Academic materials fragmented across too many platforms",
-        "Wasted time searching instead of studying",
-        "No structured repository for BSCS student notes"
+        "Study materials were scattered across different groups and links.",
+        "Students wasted valuable study time just trying to find files.",
+        "There was no single repository for CSBS department study guides."
       ],
       solutionOverview: [
-        "Created a single source of truth for resources",
-        "Integrated Supabase for reliable storage and fast access",
-        "Optimized navigation for speed and clarity under pressure"
+        "Created a single, reliable hub where students can find all study files.",
+        "Used Supabase to store documents and keep access super fast.",
+        "Designed the UI to be clean and easy to navigate under exam stress."
       ],
-      hardestTechnicalChallenge: "Managing high-volume document access and structured storage using Supabase while ensuring the UI remains snappy even with heavy content loads.",
+      hardestTechnicalChallenge: "Managing high-volume document downloads and storage while keeping the website fast and responsive when many students access it at the same time.",
       learnings: [
-        "Directly solving user pain points with software",
-        "Designing from the user's perspective (high stress/low time)",
-        "Integrating third-party storage backends (Supabase)"
+        "Directly solving student frustrations using simple web software.",
+        "Designing from the user's perspective (high stress, very little time).",
+        "Integrating cloud storage backends like Supabase cleanly."
       ],
       techStack: ["Next.js", "Supabase", "React.js", "JavaScript", "Vercel"],
       proofLinks: {
@@ -131,25 +130,26 @@ export const PORTFOLIO: PortfolioData = {
       slug: "vital-health-tech",
       title: "PulsePredict (Vital Health Tech)",
       imageUrl: "/pulsepredit.png",
-      tagline: "Co Founder & Tech Lead | Aug 2025 – Jan 2026",
-      oneLineSummary: "Pitched at JIC Accelerator 7.0. A sub-INR 6000 wearable health monitoring MVP for elderly care.",
-      ideaOrigin: "Identified a critical gap in India's geriatric care market: fall detection and vitals monitoring devices priced above ₹10,000 excluded the mass market. Conceptualized a sub-INR 6000 solution targeting 140M+ elderly Indians.",
+      detailImageUrl: "/pulsepredict_architecture.png",
+      tagline: "Co Founder & Tech Lead | Aug 2025 - Jan 2026",
+      oneLineSummary: "Pitched at JIC Accelerator 7.0. A sub-INR 6000 wearable health tracking device for elderly care.",
+      ideaOrigin: "My co-founder and I realized that proper health and fall trackers are way too expensive (often over ₹10,000) for average Indian families. We wanted to build a simple, reliable health watch under ₹6,000 that normal people can afford for their parents.",
       problemStatement: [
-        "Fall detection & vitals monitors priced >₹10,000 exclude mass market",
-        "Lack of affordable, continuous monitoring for 140M+ elderly Indians",
-        "False positives in existing low-cost fall detection systems"
+        "Vitals monitors and fall trackers cost over ₹10,000, excluding normal families.",
+        "Elderly people living alone do not have cheap, continuous health tracking.",
+        "Existing low-cost devices trigger too many fake fall alerts."
       ],
       solutionOverview: [
-        "Architected an ESP32 + MPU6050 hardware stack for vitals and motion",
-        "Wrote BLE/Serial firmware and built the companion mobile app & public website",
-        "Validated the business model against 3 direct competitors at JIC Accelerator 7.0",
-        "Designed architecture for future integration with ABDM (National Digital Health Mission)"
+        "Designed a smart hardware device using an ESP32 microchip and motion sensors.",
+        "Wrote low-level code for sharing data via Bluetooth and built a companion mobile dashboard.",
+        "Presented the product to mentors at the JIC Accelerator 7.0 and refined the business model.",
+        "Planned the data setup to match future national digital health standards."
       ],
-      hardestTechnicalChallenge: "Solving critical false-positive challenges in fall detection by fine-tuning motion thresholds through iterative user testing, alongside managing BLE stack memory on the ESP32.",
+      hardestTechnicalChallenge: "Stopping false alarms in fall detection by testing and fine-tuning the sensor math on real people, while keeping the Bluetooth code light enough to run on a tiny microchip.",
       learnings: [
-        "Securing feedback from industry experts shapes product roadmap and pricing",
-        "Iterative user testing is vital for hardware threshold tuning",
-        "Designing architecture for national standards (ABDM) ensures scalability"
+        "Getting feedback from startup mentors helped us refine our features and pricing.",
+        "Hands-on user testing is absolutely necessary to calibrate sensor thresholds.",
+        "Building software that follows national health standards ensures long-term scale."
       ],
       techStack: ["ESP32", "C/C++", "MPU6050", "BLE", "Mobile App Dev", "System Architecture"],
       proofLinks: {
@@ -163,27 +163,26 @@ export const PORTFOLIO: PortfolioData = {
       title: "BookMySlot",
       imageUrl: "/bookmyslot.png",
       tagline: "Reservation & Operations System",
-      oneLineSummary: "Ultra-low-cost B2B SaaS helping small businesses manage reservations and operations in real-time through a simple interface.",
-      ideaOrigin: "I observed how small businesses (restaurants, clinics) still run on paper, WhatsApp, phone calls, and human memory. Waiters shout table numbers, patients wait blindly without slot clarity, and owners have zero real-time visibility. They don't need fancy tech; they need clarity, control, and real-time sync.",
+      oneLineSummary: "A low-cost reservation SaaS helping small businesses manage client bookings in real-time.",
+      ideaOrigin: "I saw that local restaurants and clinics still run on paper diaries, phone calls, and memory. Waiters mix up table bookings, patients wait hours without knowing their slot status, and owners have no clear view. They don't need fancy enterprise software; they just need a simple, real-time booking sheet.",
       problemStatement: [
-        "Reservations -> double booking and confusion",
-        "Staff sync -> admin ≠ staff ≠ front desk",
-        "Customers -> no trust, long waits, no confirmation",
-        "Owners -> zero visibility, zero control over operations"
+        "Paper diaries lead to double-bookings and booking confusion.",
+        "Front desk staff, servers, and owners are not in sync.",
+        "Customers wait blindly without booking confirmations.",
+        "Owners have no easy way to check how their daily business is doing."
       ],
       solutionOverview: [
-        "Built a SYSTEM, not just one app, verticalized for restaurants (BookMyDine) and clinics (BookMyClinic)",
-        "Web for customers (reservation websites)",
-        "Admin panels for owners (full control)",
-        "Dedicated staff apps where required (Waiter App for live table/order sync)",
-        "Same core backend logic, different vertical-specific frontends"
+        "Built a modular system customized for food dining (BookMyDine) and medical clinics (BookMyClinic).",
+        "Created booking pages for customers to reserve slots online.",
+        "Designed dashboards for owners and live screens for staff to track tables/patients.",
+        "Used a single backend logic with simple layouts tailored for each business type."
       ],
-      hardestTechnicalChallenge: "Designing a reusable architecture that handles real-time sync (Supabase) across admin panels, staff apps, and customer-facing websites while keeping it ultra-simple for non-tech business owners.",
+      hardestTechnicalChallenge: "Making sure the booking data syncs instantly (using Supabase) across customer sites, staff apps, and owner screens without lag, while keeping the app simple for non-tech owners.",
       learnings: [
-        "Small businesses need clarity, not features",
-        "Vertical-specific UX beats one-size-fits-all SaaS",
-        "Real-time sync is critical for operational trust",
-        "Building for Indian reality means low-cost, mobile-first, staff-friendly"
+        "Small businesses need clear, simple layouts, not complex features.",
+        "Customizing the design for specific businesses works better than a general tool.",
+        "Instant database sync is key to building trust with staff.",
+        "Building for local realities means making things low-cost and mobile-friendly."
       ],
       techStack: ["HTML/CSS/JS", "Supabase (Auth + Real-time DB)", "Vercel", "Google Sheets API"],
       proofLinks: {
@@ -197,23 +196,23 @@ export const PORTFOLIO: PortfolioData = {
       title: "Namma Ride",
       imageUrl: "/nammaride.png",
       tagline: "Public Utility / UX",
-      oneLineSummary: "Bengaluru Metro journey planner with clear instructions in 3 languages. Soon available on Google Play Store.",
-      ideaOrigin: "Many metro users, especially first-time and non-English speakers, struggle to understand routes and interchanges.",
+      oneLineSummary: "A clean Bengaluru Metro route planner with clear instructions in Kannada, English, and Hindi.",
+      ideaOrigin: "Many metro riders, especially first-time travelers and non-English speakers, struggle to understand map routes and where to change trains.",
       problemStatement: [
-        "Confusing metro journey planning",
-        "Language barriers in public transport apps",
-        "Overloaded UIs that overwhelm elderly users"
+        "Confusing and complicated route planning tools.",
+        "Lack of local language support in travel apps.",
+        "Overloaded screens that overwhelm elderly passengers."
       ],
       solutionOverview: [
-        "Designed a step-by-step journey flow",
-        "Added language support: English, Hindi, Kannada",
-        "Kept the UI minimal and mobile-first"
+        "Designed a very clean, step-by-step route selector.",
+        "Added full language support for Kannada, Hindi, and English.",
+        "Kept the screens clean and mobile-friendly."
       ],
-      hardestTechnicalChallenge: "Managing multilingual state and responsive UI layouts without a heavy framework, keeping the app extremely lightweight for spotty network conditions.",
+      hardestTechnicalChallenge: "Managing language switching and layout updates instantly without using heavy frameworks, keeping the app fast under poor network connections.",
       learnings: [
-        "Accessibility starts with language",
-        "Simple UI takes more thought than complex UI",
-        "Public-utility apps must prioritize clarity"
+        "True accessibility starts by speaking the user's language.",
+        "Making a clean, simple layout takes more thought than making a complex one.",
+        "Public transit helpers must prioritize speed and ease of use above all else."
       ],
       techStack: ["HTML", "CSS", "Vanilla JavaScript"],
       proofLinks: {
@@ -226,22 +225,23 @@ export const PORTFOLIO: PortfolioData = {
       slug: "indigo-inflight",
       title: "Indigo In-Flight (Air-Stream)",
       imageUrl: "/indigo_project.png",
+      detailImageUrl: "/indigo_inflight_architecture.png",
       tagline: "Systems / Web",
-      oneLineSummary: "Offline-first in-flight entertainment web system.",
-      ideaOrigin: "I wanted to understand how airlines stream content without internet access.",
+      oneLineSummary: "An offline content streaming web page built for airplane entertainment systems.",
+      ideaOrigin: "I was curious about how airlines stream movies and music directly to passenger devices without internet access.",
       problemStatement: [
-        "No internet availability during flights",
-        "Need for reliable local content delivery"
+        "No internet availability for passengers during flight hours.",
+        "Need to stream media files reliably from a local server on the plane."
       ],
       solutionOverview: [
-        "Built a fully offline-capable frontend",
-        "Designed UI assuming local network constraints",
-        "Focused on reliability over features"
+        "Built a web page that runs entirely without internet access.",
+        "Designed a responsive layout suited for local server limits.",
+        "Focused on reliability and fast loading over fancy graphics."
       ],
-      hardestTechnicalChallenge: "Simulating and testing the 'air-gapped' constraint during development and ensuring assets loaded reliably without external CDNs.",
+      hardestTechnicalChallenge: "Testing the offline setup during coding, and making sure all video files load reliably without calling external web networks.",
       learnings: [
-        "Offline systems require different UX assumptions",
-        "Reliability matters more than features in constrained environments"
+        "Offline web pages require completely different layout assumptions.",
+        "Reliability and fast load times matter much more than features when offline."
       ],
       techStack: ["HTML", "CSS", "JavaScript", "Offline-first architecture"],
       proofLinks: {
@@ -252,25 +252,27 @@ export const PORTFOLIO: PortfolioData = {
       id: "air-guitar",
       slug: "air-guitar",
       title: "Air Guitar",
+      imageUrl: "/air_guitar_architecture.png",
+      detailImageUrl: "/air_guitar_architecture.png",
       tagline: "Systems / Music",
-      oneLineSummary: "Gesture-controlled virtual guitar using MPU6050 and Karplus-Strong sound synthesis.",
-      ideaOrigin: "I wanted to bridge the gap between physical motion and digital sound synthesis without using pre-recorded samples, making it feel more like a real instrument.",
+      oneLineSummary: "A gestural virtual instrument that turns hand movements in the air into acoustic guitar sounds.",
+      ideaOrigin: "I wanted to make a fun instrument that translates hand movements in the air into actual guitar sounds in real-time, using a motion sensor and code instead of just playing pre-recorded audio files.",
       problemStatement: [
-        "Digital instruments often feel disconnected from physical strumming",
-        "High latency in gesture-based audio",
-        "Need for realistic timbre without large audio libraries"
+        "Digital instruments often feel fake and disconnected from physical strumming.",
+        "Hand gesture tools have too much delay between movement and sound.",
+        "Synthesizing realistic guitar sounds usually requires heavy software libraries."
       ],
       solutionOverview: [
-        "Used MPU6050 (IMU) to track wrist tilt for string selection and flicking for strumming",
-        "Developed a Python audio engine using the Karplus-Strong Algorithm to synthesize strings in real-time",
-        "Implemented low-latency Serial communication (115200 baud) between Arduino and Python",
-        "Applied velocity-sensitive logic based on acceleration magnitude"
+        "Used a motion sensor (MPU6050) on a glove to track wrist tilt for chord picking and flicking for strumming.",
+        "Wrote a Python audio script using the Karplus-Strong formula to synthesize string acoustics on the fly.",
+        "Set up a fast, low-delay connection (115200 baud) to stream data from the sensor to the laptop.",
+        "Added code to make the sound louder or softer based on how hard the user strums."
       ],
-      hardestTechnicalChallenge: "Implementing the Karplus-Strong algorithm in a real-time thread-safe audio callback while maintaining sub-10ms latency for a responsive 'strum' feel.",
+      hardestTechnicalChallenge: "Running the sound synthesis formulas in real-time without glitching the audio, keeping the delay under 10 milliseconds so it feels like playing a real instrument.",
       learnings: [
-        "Sound can be simulated as a physical system (buffers and averaging)",
-        "Thread locking is critical when mixing audio dynamically",
-        "Serial data jitter can be mitigated with calibration and delta-based checks"
+        "How to model real physical systems (like a vibrating string) using code buffer averages.",
+        "Managing multiple threads is key when mixing sounds dynamically.",
+        "How to filter out sensor jitter using calibration and movement checks."
       ],
       techStack: ["Python", "Arduino", "MPU6050", "NumPy", "Karplus-Strong Synthesis", "Serial Communication"],
       proofLinks: {
@@ -282,27 +284,29 @@ export const PORTFOLIO: PortfolioData = {
       id: "split-payment",
       slug: "split-payment",
       title: "Split-Payment System",
+      imageUrl: "/split_payment_architecture.png",
+      detailImageUrl: "/split_payment_architecture.png",
       tagline: "FinTech | Payments | System Design",
-      oneLineSummary: "Built a concept-level split-payment system enabling multi-source transactions (UPI + Card) with failure-safe logic and Razorpay test-mode integration.",
-      ideaOrigin: "I designed and implemented a concept-level split-payment system that enables users to complete a single transaction using multiple payment methods (for example: part via UPI and part via Card).",
+      oneLineSummary: "A concept payment system that safely splits a single bill across multiple sources like UPI and Cards.",
+      ideaOrigin: "I wanted to solve the everyday problem where you want to buy something online but want to pay using two different methods, like paying half with your UPI account and the rest using your credit card, and making sure the system safely rolls back if one fails.",
       problemStatement: [
-        "Traditional payment systems process one payment method per transaction.",
-        "Users often want to combine payment sources (e.g., UPI + Card) or use partial balances.",
-        "Retrying failed payments often leads to double deductions or partial success states."
+        "Standard checkouts only let you select a single payment method.",
+        "Users cannot combine partial balances (like using a card and UPI together).",
+        "Retrying failed split transactions can easily lead to double charges or partial orders."
       ],
       solutionOverview: [
-        "Multi-source payment flow logic (UPI + Card simulation)",
-        "Razorpay Test Mode integration for payment gateway simulation",
-        "Conditional execution to prevent partial payment capture",
-        "Retry-safe transaction handling logic",
-        "Failure detection and rollback simulation"
+        "Created logic to divide a single purchase amount into multiple streams (UPI + Card).",
+        "Integrated Razorpay test mode to simulate real payment status.",
+        "Wrote checks to prevent capturing one payment if the other stream fails.",
+        "Built retry safety checks to ensure consistency.",
+        "Simulated rollback flows if the checkout is cancelled midway."
       ],
-      hardestTechnicalChallenge: "Maintaining transaction atomicity across multiple distributed payment sources. Specifically, ensuring no partial charges occur if one source fails, and managing retry logic to prevent duplicate deductions while keeping state integrity.",
+      hardestTechnicalChallenge: "Making sure the transaction is fully complete or fully rolled back. If one payment goes through but the other fails, the system must refund the charge instantly to avoid partial orders and duplicate deductions.",
       learnings: [
-        "Distributed transaction management and atomicity",
-        "Handling failure states and rollback simulations in fintech flows",
-        "Integrating payment gateways for complex multi-source logic",
-        "Designing for system reliability and retry-safety"
+        "How to manage transactions across different payment services safely.",
+        "Handling error screens and simulation rollbacks in fintech checkouts.",
+        "Integrating payment APIs to handle complex multi-source logic.",
+        "Designing systems to be retry-safe so reloading a page doesn't cause duplicate charges."
       ],
       techStack: ["JavaScript", "Node.js", "Razorpay (Test Mode)", "REST API"],
       proofLinks: {
@@ -313,10 +317,6 @@ export const PORTFOLIO: PortfolioData = {
   ],
 };
 
-// Re-export old constants for backward compatibility if needed, 
-// mapping them to the new structure found in PORTFOLIO.
-// This prevents breaking the current UI while we wait for the UI refactor step.
-
 export const PROFILE = PORTFOLIO.profile;
 export const EDUCATION = PORTFOLIO.education;
 export const SKILLS = PORTFOLIO.skills;
@@ -325,7 +325,7 @@ export const PROJECTS = PORTFOLIO.projects.map(p => ({
     id: p.id,
     name: p.title,
     tagline: p.tagline,
-    description: p.oneLineSummary, // mapping summary to description for old card
+    description: p.oneLineSummary,
     challenge: p.hardestTechnicalChallenge,
     tech: p.techStack
 }));
@@ -334,7 +334,7 @@ export const RESEARCH = PORTFOLIO.research.map(r => ({
     id: r.id,
     title: r.title,
     type: r.researchType,
-    role: "Sole Author", // Hardcoded from context
+    role: "Sole Author",
     contributions: r.keyContributions,
     technical_areas: r.coreTechnicalAreas,
     note: r.limitationsAndEthics

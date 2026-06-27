@@ -5,7 +5,7 @@ interface StructuredDataProps {
 }
 
 export default function StructuredData({ data }: StructuredDataProps) {
-  // Primary Person schema — the most important for name searches
+  // Primary Person schema  -  the most important for name searches
   const personData = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -58,13 +58,13 @@ export default function StructuredData({ data }: StructuredDataProps) {
     }
   };
 
-  // Website schema — helps with sitelinks in search results
+  // Website schema  -  helps with sitelinks in search results
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://tusharjain.in/#website",
     "url": "https://tusharjain.in",
-    "name": "Tushar Jain — Engineering Portfolio",
+    "name": "Tushar Jain  -  Engineering Portfolio",
     "alternateName": ["tusharjain.in", "Tushar Jain Portfolio", "Tushar Jain BMSCE Portfolio"],
     "description": "Portfolio of Tushar Jain, Engineering Student at BMS College of Engineering (BMSCE), Bengaluru.",
     "publisher": {
@@ -73,7 +73,7 @@ export default function StructuredData({ data }: StructuredDataProps) {
     "inLanguage": "en-IN",
   };
 
-  // ProfilePage schema — tells Google this is an authoritative profile
+  // ProfilePage schema  -  tells Google this is an authoritative profile
   const profileData = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
@@ -85,7 +85,7 @@ export default function StructuredData({ data }: StructuredDataProps) {
     "dateModified": new Date().toISOString().split('T')[0],
   };
 
-  // Breadcrumb schema — helps Google show the path in search results
+  // Breadcrumb schema  -  helps Google show the path in search results
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

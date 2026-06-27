@@ -37,11 +37,11 @@ export async function generateMetadata({
       canonical: `https://tusharjain.in/work/${project.slug}`,
     },
     openGraph: {
-      title: `${project.title} — Tushar Jain`,
+      title: `${project.title}  -  Tushar Jain`,
       description: project.oneLineSummary,
       type: 'article',
       url: `https://tusharjain.in/work/${project.slug}`,
-      siteName: 'Tushar Jain — Engineering Portfolio',
+      siteName: 'Tushar Jain  -  Engineering Portfolio',
       authors: ['Tushar Jain'],
       images: [
         {
@@ -54,7 +54,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${project.title} — Tushar Jain`,
+      title: `${project.title}  -  Tushar Jain`,
       description: project.oneLineSummary,
     },
   };

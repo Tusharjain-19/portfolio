@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   // ============================================
-  // CORE PAGES — Highest crawl priority
+  // CORE PAGES  -  Highest crawl priority
   // ============================================
   const coreRoutes: MetadataRoute.Sitemap = [
     {
@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // ============================================
-  // PROJECT PAGES — Each project gets indexed
+  // PROJECT PAGES  -  Each project gets indexed
   // ============================================
   const projectRoutes: MetadataRoute.Sitemap = PORTFOLIO.projects.map((project) => ({
     url: `${baseUrl}/work/${project.slug}`,
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // ============================================
-  // RESEARCH PAGES — Academic content
+  // RESEARCH PAGES  -  Academic content
   // ============================================
   const researchRoutes: MetadataRoute.Sitemap = PORTFOLIO.research.map((item) => ({
     url: `${baseUrl}/research/${item.slug}`,
@@ -56,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // ============================================
-  // STATIC ASSETS — Resume, Research PDFs
+  // STATIC ASSETS  -  Resume, Research PDFs
   // ============================================
   const assetRoutes: MetadataRoute.Sitemap = [
     {
@@ -64,6 +64,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/llms.txt`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/Dual-UUVSystemResearch.pdf`,

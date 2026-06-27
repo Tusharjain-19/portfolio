@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { PORTFOLIO } from '@/data/portfolio';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const NAV_ITEMS = [
@@ -17,30 +16,32 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const [hash, setHash] = useState('');
+  const [hash, setHash] = useState(() => typeof window !== 'undefined' ? window.location.hash : '');
+
+  // Reset menu open state directly during render when route changes (standard React pattern)
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setIsOpen(false);
+  }
 
   useEffect(() => {
-    setHash(window.location.hash);
     const handleHashChange = () => setHash(window.location.hash);
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
-
   return (
     <>
       <header className="fixed top-2 sm:top-3 md:top-4 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 md:px-6 pointer-events-none">
-        <div className="w-auto inline-flex bg-[var(--bg-primary)]/80 backdrop-blur-xl border border-[var(--border-color)] rounded-full px-5 sm:px-8 md:px-10 h-12 sm:h-14 md:h-[60px] items-center justify-between pointer-events-auto shadow-2xl transition-all duration-500 gap-6 md:gap-12">
+        <div className="w-auto inline-flex bg-white/5 dark:bg-black/10 backdrop-blur-2xl border border-white/10 dark:border-white/5 rounded-full px-5 sm:px-8 md:px-10 h-12 sm:h-14 md:h-[60px] items-center justify-between pointer-events-auto shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] transition-all duration-500 gap-6 md:gap-12">
           
           {/* LOGO */}
           <Link 
             href="/" 
-            className="flex items-center gap-1 font-bold text-sm sm:text-lg md:text-xl text-[var(--text-primary)] hover:opacity-70 transition-opacity z-50 shrink-0"
+            className="flex items-center gap-1 font-bold text-sm sm:text-lg md:text-xl text-(--text-primary) hover:opacity-70 transition-opacity z-50 shrink-0"
           >
-            <span className="font-heading italic font-normal tracking-tight truncate max-w-[100px] sm:max-w-none">tushar jain</span>
+            <span className="font-heading italic font-normal tracking-tight truncate max-w-[120px] sm:max-w-none pr-2">tushar jain</span>
             <span className="font-heading tracking-tighter">.</span>
           </Link>
 
@@ -57,8 +58,8 @@ export default function Navbar() {
                     href={item.href}
                     className={`px-3 lg:px-4 py-1.5 rounded-full text-[10px] lg:text-xs font-medium uppercase tracking-widest font-mono transition-all duration-300 ${
                       isActive
-                        ? 'bg-[var(--accent)] text-[var(--bg-primary)]' 
-                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]'
+                        ? 'bg-(--accent) text-(--bg-primary)' 
+                        : 'text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-secondary)'
                     }`}
                   >
                     {item.label}
@@ -69,7 +70,7 @@ export default function Navbar() {
 
           {/* MOBILE MENU TOGGLE */}
           <button 
-            className="md:hidden text-[var(--text-secondary)] hover:text-[var(--text-primary)] z-50 p-2 -mr-2 shrink-0 transition-colors"
+            className="md:hidden text-(--text-secondary) hover:text-(--text-primary) z-50 p-2 -mr-2 shrink-0 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
@@ -90,7 +91,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-x-3 top-20 z-40 bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-3xl flex flex-col items-center justify-center gap-4 md:hidden p-8 shadow-2xl"
+            className="fixed inset-x-3 top-20 z-40 bg-(--bg-primary) border border-(--border-color) rounded-3xl flex flex-col items-center justify-center gap-4 md:hidden p-8 shadow-2xl"
           >
             {NAV_ITEMS.map((item, i) => {
               const isActive = item.href === '/'
@@ -109,8 +110,8 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className={`block w-full text-center py-4 px-6 rounded-2xl text-lg font-heading tracking-widest transition-all ${
                       isActive 
-                        ? 'bg-[var(--accent)] text-[var(--bg-primary)]' 
-                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]'
+                        ? 'bg-(--accent) text-(--bg-primary)' 
+                        : 'text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-secondary)'
                     }`}
                   >
                     {item.label}

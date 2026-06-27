@@ -42,6 +42,25 @@ export const metadata: Metadata = {
     "tusharjain.in", "Tushar Jain engineer India", "Tushar Jain Jaipur Rajasthan",
     "tushra jain", "tushra jain portfolio", "tushra jain jaipur", "tushra jain developer",
     "tushar jain bms college", "tushar jain csbs", "tushar jain engineer",
+    "tushar dausa", "tushar jain dausa", "tushar jain jaipur", "tushar jaipur", 
+    "tushar rajasathan", "tushar jain rajasthan", "tushar jain bengalore", 
+    "tushar bengalore", "tushar jain bengaluru", "tushar bengaluru", 
+    "tushar jain resmune", "tushar jain cv", "tushar resume", "tushar cv",
+    "tushar jain resume pdf", "tushar jain portfolio 2026", "tushar jain projects",
+    "tushar jain contact", "tushar jain email", "tushar jain git", "tushar jain github",
+    "tushar jain linkedin", "tushar jain bmsce student", "tushar jain csbs student",
+    "tushar jain embedded engineer", "tushar jain full stack developer", "tushar jain mvp builder",
+    "tushar jain software engineer jaipur", "tushar jain software engineer bengaluru",
+    "tushar jain software engineer Bangalore", "tushar jain dausa rajasthan", "tushar dausa rajasthan",
+    "tushar jain jaipur rajasthan", "tushar jaipur rajasthan", "tushar jain bmsce portfolio",
+    "tushar bmsce portfolio", "tushar jain csbs portfolio", "tushar csbs portfolio",
+    "tushar jain notes", "tushar jain resume 2026", "tushar jain cv pdf",
+    "tushar jain resume docx", "tushar jain cv docx", "tushar jain resume download",
+    "tushar jain cv download", "tushar jain projects list", "tushar jain jaipur ride",
+    "tushar jain namma ride", "tushar jain pulsepredict", "tushar jain bookmyslot",
+    "tushar jain air guitar", "tushar jain split payment", "tushar jain uuv research",
+    "tushar jain underwater vehicle", "tushar jain research gate", "tushar jain publications",
+    "tushar jain profile", "tushar jain bio", "tushar jain contact details", "tushar jain email address",
 
     // === COLLEGE / EDUCATION VARIATIONS ===
     "BMS", "BMSCE", "BMS College", "BMS College of Engineering",
@@ -127,16 +146,16 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Tushar Jain | Engineering Portfolio — BMSCE, Bengaluru",
-    description: "Engineering student at BMS College of Engineering (BMSCE) building real-world MVPs — Jaipur Ride, Namma Ride, PulsePredict AI, Split-Payment System & more.",
+    title: "Tushar Jain | Engineering Portfolio  -  BMSCE, Bengaluru",
+    description: "Engineering student at BMS College of Engineering (BMSCE) building real-world MVPs  -  Jaipur Ride, Namma Ride, PulsePredict AI, Split-Payment System & more.",
     url: 'https://tusharjain.in',
-    siteName: 'Tushar Jain — Engineering Portfolio',
+    siteName: 'Tushar Jain  -  Engineering Portfolio',
     images: [
       {
         url: '/pic2.jpeg',
         width: 800,
         height: 600,
-        alt: 'Tushar Jain — Engineering Student at BMSCE, Bengaluru',
+        alt: 'Tushar Jain  -  Engineering Student at BMSCE, Bengaluru',
       },
     ],
     locale: 'en_IN',
@@ -144,7 +163,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Tushar Jain | Engineering Portfolio — BMSCE, Bengaluru",
+    title: "Tushar Jain | Engineering Portfolio  -  BMSCE, Bengaluru",
     description: "Engineering student building real MVPs: Jaipur Ride, Namma Ride, PulsePredict AI & more. BMSCE CSBS 2028.",
     images: ['/pic2.jpeg'],
   },
@@ -186,7 +205,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${playfair.variable} ${inter.variable} antialiased bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500 font-body overflow-x-hidden w-full max-w-[100vw]`}
+        className={`${playfair.variable} ${inter.variable} antialiased bg-(--bg-primary) text-(--text-primary) transition-colors duration-500 font-body overflow-x-hidden w-full max-w-[100vw]`}
       >
         <ThemeProvider>
           <StructuredData />
