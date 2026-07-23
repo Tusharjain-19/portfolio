@@ -16,22 +16,81 @@ export const PORTFOLIO: PortfolioData = {
   education: {
     degree: "B.E. Computer Science & Business Systems (CSBS)",
     college: "BMS College of Engineering, Bengaluru",
-    year: "1st Year (Ongoing)",
+    year: "2nd Year (Ongoing)",
     graduation: "2028",
   },
   skills: [
+    "JavaScript",
+    "TypeScript",
+    "C/C++",
+    "Python",
+    "SQL",
     "HTML",
     "CSS",
-    "JavaScript",
-    "C++",
-    "DSA",
     "React",
     "Next.js",
+    "Vite",
+    "Node.js",
+    "Express",
     "Tailwind CSS",
-    "ESP32 (C/C++)",
-    "Sensor Integration (I2C/UART)",
-    "BLE Communication",
-    "MVP System Design",
+    "Supabase",
+    "Firebase",
+    "MySQL",
+    "REST APIs",
+    "Razorpay API",
+    "Google Sheets API",
+    "ESP32",
+    "Arduino",
+    "BLE",
+    "Git",
+    "GitHub",
+    "Vercel",
+    "Figma",
+  ],
+  skillsGrouped: {
+    "Languages": ["JavaScript", "TypeScript", "C/C++", "Python", "SQL", "HTML", "CSS"],
+    "Frameworks": ["React", "Next.js", "Vite", "Node.js", "Express", "Tailwind CSS"],
+    "Backend & Databases": ["Supabase (PostgreSQL)", "Firebase", "MySQL", "REST APIs", "Razorpay API", "Google Sheets API"],
+    "Embedded & IoT": ["ESP32", "Arduino", "MPU6050", "MAX30102", "BLE", "I2C/SPI/UART"],
+    "Developer Tools": ["Git", "GitHub", "Vercel", "Netlify", "VS Code", "Figma", "Postman", "Arduino IDE"],
+  },
+  certifications: [
+    {
+      title: "Investment Risk Management",
+      issuer: "Coursera",
+      verifyUrl: "https://www.coursera.org/account/accomplishments/verify/MWIVK1DVGR6J",
+      verifyCode: "MWIVK1DVGR6J",
+      skillsGained: ["Financial Risk Management", "Asset Valuation", "Quantitative Risk Analysis", "Financial Modeling"]
+    },
+    {
+      title: "Business Analysis & Process Management",
+      issuer: "Coursera",
+      verifyUrl: "https://www.coursera.org/account/accomplishments/verify/76W901BZ2HPB",
+      verifyCode: "76W901BZ2HPB",
+      skillsGained: ["Process Modeling", "Requirements Engineering", "Operational Strategy", "System Analysis"]
+    },
+    {
+      title: "Web Development Internship Certificate",
+      issuer: "3Skill Training",
+      verifyUrl: "#",
+      verifyCode: "2025",
+      skillsGained: ["Full-Stack Web Development", "HTML5 & CSS3", "Responsive UI/UX design"]
+    }
+  ],
+  hackathons: [
+    {
+      title: "Conference 2.0 Hackathon",
+      project: "Safe Route",
+      achievement: "Top 10 Finalist out of 500+ teams",
+      description: "Selected among 500+ participating teams during a national hackathon for designing an AI-powered safer route planning solution.",
+      imageUrl: "/hackthon june 2026.jpeg"
+    },
+    {
+      title: "JIC Accelerator 7.0",
+      project: "Pulse Predict",
+      achievement: "Pitched Hardware & Software MVP",
+      description: "Presented Pulse Predict (Vital Health Tech), a low-cost embedded health-tech wearable for elderly safety and remote monitoring."
+    }
   ],
   research: [
     {
@@ -71,7 +130,7 @@ export const PORTFOLIO: PortfolioData = {
       imageUrl: "/jaipur-ride-poster.png",
       detailImageUrl: "/jaipur-ride.png",
       tagline: "Public Utility / Smart Transport",
-      oneLineSummary: "A unified, offline-first transit platform that simplifies navigation for the Jaipur Metro, serving over 500+ active commuters on the Google Play Store.",
+      oneLineSummary: "A public production application optimized for low-connectivity environments, serving 1,000+ Google Play Store downloads and 250+ Monthly Active Users with route analytics.",
       ideaOrigin: "I noticed that people in Jaipur had a really hard time finding correct metro and bus timings, often relying on rumors, random Google searches, or scattered WhatsApp messages.",
       problemStatement: [
         "Metro timing info was messy and scattered all over the place.",
@@ -79,9 +138,9 @@ export const PORTFOLIO: PortfolioData = {
         "New travelers found it hard to figure out interchanges and ticket rates."
       ],
       solutionOverview: [
-        "Built a simple, single app for all routes and timings.",
-        "Focused on making the layout clean and super easy to read on the go.",
-        "Made sure the app works offline so commuters can use it inside tunnels."
+        "Built a public production transit planner specifically for real commuters.",
+        "Implemented client-side BFS pathfinding on static station graphs, optimized for low-connectivity environments.",
+        "Incorporated real-world feedback from 1,000+ users to refine interface speed and schedule accuracy."
       ],
       hardestTechnicalChallenge: "Creating a quick data structure that stores all routes and timings locally on the phone, keeping the app lightweight and fast even on cheap smartphones with poor network signals.",
       learnings: [
@@ -101,8 +160,8 @@ export const PORTFOLIO: PortfolioData = {
       slug: "notescsbs",
       title: "NotesCSBS",
       imageUrl: "/notescsbs.png",
-      tagline: "Productivity / Resource Hub",
-      oneLineSummary: "A clean study resource platform built to save students from the chaos of scattered notes.",
+      tagline: "Productivity / Full-Stack Platform",
+      oneLineSummary: "A full-stack academic platform with Google Search Console metrics including 500+ organic clicks and a 16% click-through rate.",
       ideaOrigin: "My personal frustration with wasting time searching for notes across messy WhatsApp groups and broken Google Drive links right before exams.",
       problemStatement: [
         "Study materials were scattered across different groups and links.",
@@ -110,9 +169,10 @@ export const PORTFOLIO: PortfolioData = {
         "There was no single repository for CSBS department study guides."
       ],
       solutionOverview: [
-        "Created a single, reliable hub where students can find all study files.",
-        "Used Supabase to store documents and keep access super fast.",
-        "Designed the UI to be clean and easy to navigate under exam stress."
+        "Developed a centralized full-stack academic platform featuring a component-based React frontend.",
+        "Integrated Supabase Authentication and a SQL-backed PostgreSQL database for secure document management.",
+        "Designed an Admin Dashboard and implemented a robust Google Drive integration for scalable content management.",
+        "Optimized SEO metrics resulting in 500+ organic clicks, 3K+ impressions, 16% CTR, and an average Google search position of 4.7."
       ],
       hardestTechnicalChallenge: "Managing high-volume document downloads and storage while keeping the website fast and responsive when many students access it at the same time.",
       learnings: [
@@ -120,7 +180,7 @@ export const PORTFOLIO: PortfolioData = {
         "Designing from the user's perspective (high stress, very little time).",
         "Integrating cloud storage backends like Supabase cleanly."
       ],
-      techStack: ["Next.js", "Supabase", "React.js", "JavaScript", "Vercel"],
+      techStack: ["React", "JavaScript", "Supabase", "SQL", "Google Drive API", "HTML5", "CSS3", "Vercel"],
       proofLinks: {
         demo: "https://notescsbs.vercel.app/",
       }
@@ -320,6 +380,9 @@ export const PORTFOLIO: PortfolioData = {
 export const PROFILE = PORTFOLIO.profile;
 export const EDUCATION = PORTFOLIO.education;
 export const SKILLS = PORTFOLIO.skills;
+export const SKILLS_GROUPED = PORTFOLIO.skillsGrouped;
+export const CERTIFICATIONS = PORTFOLIO.certifications;
+export const HACKATHONS = PORTFOLIO.hackathons;
 
 export const PROJECTS = PORTFOLIO.projects.map(p => ({
     id: p.id,

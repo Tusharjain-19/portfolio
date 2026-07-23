@@ -36,6 +36,22 @@ export interface ResearchProject {
   researchGateLink?: string;
 }
 
+export interface Certification {
+  title: string;
+  issuer: string;
+  verifyUrl: string;
+  verifyCode: string;
+  skillsGained?: string[];
+}
+
+export interface Hackathon {
+  title: string;
+  project: string;
+  achievement: string;
+  description?: string;
+  imageUrl?: string;
+}
+
 export interface PortfolioData {
   profile: {
     name: string;
@@ -58,4 +74,7 @@ export interface PortfolioData {
   research: ResearchProject[];
   projects: ProductProject[];
   skills: string[];
+  skillsGrouped: Record<string, string[]>;
+  certifications: Certification[];
+  hackathons: Hackathon[];
 }

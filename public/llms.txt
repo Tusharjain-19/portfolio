@@ -16,7 +16,7 @@ Tushar Jain is an Engineering Student, software developer, system designer, and 
 ## Core Projects & Portfolios
 
 ### 1. Jaipur Ride (Metro Transit Solution)
-- **Description**: A unified, offline-first transit platform that simplifies navigation for the Jaipur Metro, serving over 500+ active commuters on the Google Play Store.
+- **Description**: A unified, offline-first transit platform for the Jaipur Metro with 1,000+ Google Play Store downloads and 250+ monthly active users.
 - **Tech Stack**: React.js, JavaScript, HTML & CSS, Vercel
 - **Demo**: https://jaipurride.vercel.app/
 - **GitHub**: https://github.com/Tusharjain-19/jaipur-ride

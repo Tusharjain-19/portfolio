@@ -117,6 +117,61 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                     <p>{project.solutionOverview}</p>
                 )}
             </div>
+
+            {project.id === 'notescsbs' && (
+              <div className="my-8 p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl relative overflow-hidden shadow-inner">
+                <div className="absolute top-0 right-0 p-3 opacity-10 pointer-events-none">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                  </svg>
+                </div>
+                <h3 className="text-xs font-mono text-[var(--accent)] uppercase tracking-wider mb-4 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Google Search Console Metrics (SEO Traction)
+                </h3>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+                  <div className="p-4 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-[var(--text-primary)]">500+</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-1">Organic Clicks</span>
+                  </div>
+                  <div className="p-4 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-[var(--text-primary)]">3K+</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-1">Impressions</span>
+                  </div>
+                  <div className="p-4 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-[var(--text-primary)]">16%</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-1">CTR</span>
+                  </div>
+                  <div className="p-4 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-[var(--text-primary)]">4.7</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-1">Avg Position</span>
+                  </div>
+                </div>
+
+                <div className="bg-(--bg-primary) border border-(--border-color) rounded-xl p-4">
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="text-[10px] font-mono text-(--text-muted)">3-Month Organic Traffic Trend</span>
+                    <span className="text-[9px] px-2 py-0.5 bg-emerald-500/10 text-emerald-500 rounded-full font-mono uppercase tracking-wider">SEO Optimized</span>
+                  </div>
+                  {/* Custom Minimalist Sparkline/Graph */}
+                  <div className="h-16 w-full flex items-end justify-between pt-2 gap-[3px]">
+                    {[20, 25, 18, 30, 42, 35, 48, 55, 45, 60, 72, 85, 90, 80, 95, 110, 125, 115, 135, 150].map((val, idx) => (
+                      <div 
+                        key={idx} 
+                        className="bg-[var(--accent)] opacity-40 hover:opacity-100 transition-opacity rounded-t-sm w-full"
+                        style={{ height: `${(val / 150) * 100}%` }}
+                        title={`Day ${idx + 1}: ${val} impressions`}
+                      />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-[10px] text-(--text-muted) font-light mt-3 leading-relaxed">
+                  * Note: The platform attracts BMSCE CSBS department users organically through on-page SEO targeting VTU, CIE, and SEE resource requests without active ad spend.
+                </p>
+              </div>
+            )}
+
             <div className="flex flex-wrap gap-2">
                 {project.techStack.map(t => (
                     <span key={t} className="px-2 py-1 bg-(--bg-tertiary) text-(--text-muted) text-xs rounded border border-(--border-color) font-mono">

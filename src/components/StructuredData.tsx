@@ -117,6 +117,44 @@ export default function StructuredData({ data }: StructuredDataProps) {
     ]
   };
 
+  // Project schema
+  const projectsSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Tushar Jain's Projects",
+    "itemListElement": PORTFOLIO.projects.map((project, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "CreativeWork",
+        "name": project.title,
+        "description": project.oneLineSummary,
+        "url": `https://tusharjain.in/work/${project.slug}`,
+        "techStack": project.techStack
+      }
+    }))
+  };
+
+  // Certification schema
+  const certificationsSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Tushar Jain's Certifications",
+    "itemListElement": PORTFOLIO.certifications.map((cert, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "EducationalOccupationalCredential",
+        "name": cert.title,
+        "credentialCategory": "Professional Certification",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": cert.issuer
+        }
+      }
+    }))
+  };
+
   // If custom data is passed (for project/research pages), render that alongside defaults
   if (data) {
     return (
@@ -133,7 +171,7 @@ export default function StructuredData({ data }: StructuredDataProps) {
     );
   }
 
-  // Default: render Person + Website + ProfilePage + Breadcrumb schemas
+  // Default: render Person + Website + ProfilePage + Breadcrumb + Projects + Certifications schemas
   return (
     <>
       <script
@@ -151,6 +189,14 @@ export default function StructuredData({ data }: StructuredDataProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectsSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(certificationsSchema) }}
       />
     </>
   );

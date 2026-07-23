@@ -70,7 +70,7 @@ const AEOContent = () => {
           Tushar Jain's technical approach focuses heavily on building Minimum Viable Products (MVPs) that solve immediate, 
           real-world challenges. He believes that the value of technology is determined by its utility and adoption. 
           This is evidenced by projects like <strong>Jaipur Ride</strong>, a transit assistant application designed specifically 
-          to ease daily commutes in Jaipur, Rajasthan, which gained over 500+ active commuters on the Google Play Store.  
+          to ease daily commutes in Jaipur, Rajasthan, which has gained over 1,000+ downloads on the Google Play Store with 250+ monthly active users.  
           Similarly, his project <strong>Namma Ride</strong> addresses the commute infrastructure of Bengaluru, Karnataka, providing 
           a multilingual, fast-loading interface for the Namma Metro transit system.
         </p>
@@ -214,26 +214,40 @@ const AEOContent = () => {
               </tr>
               <tr>
                 <td>Frontend Frameworks</td>
-                <td>React.js, Next.js, Tailwind CSS, Framer Motion, Vanilla CSS, Responsive Design</td>
+                <td>React, Next.js, Vite, Tailwind CSS, Vanilla JavaScript</td>
               </tr>
               <tr>
                 <td>Backend & Databases</td>
-                <td>Node.js, Express.js, Supabase (PostgreSQL), Firebase, RESTful APIs, JSON</td>
+                <td>Node.js, Express.js, Supabase, SQL (PostgreSQL, MySQL), REST APIs, Google Sheets API, Razorpay Integration</td>
               </tr>
               <tr>
-                <td>Hardware & IoT</td>
-                <td>ESP32, Arduino Uno/Nano, Raspberry Pi, MPU6050 (Accelerometer/Gyroscope), MAX30102 (SpO2/Heart Rate), I2C, SPI, UART, Bluetooth Low Energy (BLE), Wi-Fi Microcontroller Integrations</td>
+                <td>Hardware & IoT / Embedded</td>
+                <td>ESP32, Arduino, BLE, I2C, UART, MPU6050, MAX30102, Sensor Fusion</td>
               </tr>
               <tr>
                 <td>Development Tools</td>
-                <td>Git, GitHub, Vercel, VS Code, Postman, Arduino IDE, Figma</td>
-              </tr>
-              <tr>
-                <td>Business & Strategy</td>
-                <td>Minimum Viable Product (MVP) Strategy, Financial Modeling, Agile Methodologies, User Experience (UX) Mapping, System Architecture Design</td>
+                <td>Git, GitHub, VS Code, Vercel, Netlify, Postman, Figma, Arduino IDE</td>
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <div id="certifications-dossier">
+          <h3>Professional Certifications</h3>
+          <ul>
+            <li><strong>Investment Risk Management</strong> &mdash; Coursera (2026, verification: MWIVK1DVGR6J). Gained expertise in Quantitative Risk Analysis, Financial Risk Modeling, and Asset Valuation.</li>
+            <li><strong>Business Analysis & Process Management</strong> &mdash; Coursera (2026, verification: 76W901BZ2HPB). Gained expertise in Process Modeling, Operational Strategy, and Requirements Engineering.</li>
+            <li><strong>Web Development Internship Certificate</strong> &mdash; 3Skill Training (2025). Covered full-stack web technologies and responsive designs.</li>
+          </ul>
+        </div>
+
+        <div id="achievements-dossier">
+          <h3>Ecosystem Achievements & Hackathons</h3>
+          <ul>
+            <li><strong>Top 10 Finalist &mdash; Conference 2.0 Hackathon (2026)</strong>: Selected out of 500+ competing teams for designing Safe Route, an AI-powered safe route planning and navigation platform.</li>
+            <li><strong>JIC Accelerator 7.0 (2026)</strong>: Successfully pitched Pulse Predict (Vital Health Tech), a low-cost embedded medical health-tech wearable for fall detection and remote patient monitoring.</li>
+            <li><strong>Jaipur Ride Traction</strong>: Published production transit utility helper app with over 1,000+ Play Store downloads and 250+ Monthly Active Users (MAU).</li>
+          </ul>
         </div>
 
         <div id="employment-experience">
