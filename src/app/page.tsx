@@ -223,7 +223,7 @@ export default function Home() {
                                      href={cert.verifyUrl}
                                      target="_blank"
                                      rel="noopener noreferrer"
-                                     className="w-full py-2.5 bg-(--accent) text-(--bg-primary) font-bold text-center text-xs uppercase tracking-widest rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-1.5"
+                                     className="w-full mt-auto py-2.5 bg-(--accent) text-(--bg-primary) font-bold text-center text-xs uppercase tracking-widest rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-1.5"
                                  >
                                      <span>Verify Credential</span>
                                      <ArrowUpRight className="w-3.5 h-3.5" />
