@@ -4,12 +4,12 @@ import { ArrowLeft } from '@/components/Icons';
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-[var(--bg-primary)] text-[var(--text-primary)] px-6">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-(--bg-primary) text-(--text-primary) px-6">
       <h1 className="text-6xl md:text-8xl font-bold mb-4">404</h1>
-      <p className="text-xl text-[var(--text-muted)] mb-8">Page not found</p>
+      <p className="text-xl text-(--text-muted) mb-8">Page not found</p>
       <Link 
         href="/" 
-        className="flex items-center gap-2 px-6 py-3 bg-[var(--text-primary)] text-[var(--bg-primary)] font-bold rounded hover:opacity-90 transition-opacity w-fit mx-auto"
+        className="flex items-center gap-2 px-6 py-3 bg-(--text-primary) text-(--bg-primary) font-bold rounded hover:opacity-90 transition-opacity w-fit mx-auto"
       >
         <ArrowLeft className="w-4 h-4" /> Back to Home
       </Link>

@@ -59,7 +59,7 @@ export default function ResearchDetail({ research }: { research: ResearchProject
                     <img 
                         src="/uuv_research_architecture.png" 
                         alt="Dual-UUV Communication &amp; Command Flow Diagram" 
-                        className="max-h-[350px] w-auto object-contain mx-auto rounded-lg transition-transform duration-500 hover:scale-[1.015]"
+                        className="max-h-87.5 w-auto object-contain mx-auto rounded-lg transition-transform duration-500 hover:scale-[1.015]"
                     />
                 </div>
             </section>

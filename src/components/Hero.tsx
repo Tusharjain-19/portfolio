@@ -18,7 +18,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="text-4xl sm:text-5xl md:text-6xl font-bold font-body text-[var(--text-primary)] tracking-tight"
+                className="text-4xl sm:text-5xl md:text-6xl font-bold font-body text-(--text-primary) tracking-tight"
             >
                 Tushar Jain.
             </motion.h1>
@@ -30,7 +30,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 + (i * 0.015) }}
-                        className="text-lg sm:text-xl md:text-2xl font-body font-normal text-[var(--text-secondary)] leading-loose"
+                        className="text-lg sm:text-xl md:text-2xl font-body font-normal text-(--text-secondary) leading-loose"
                     >
                         {word}
                     </motion.span>
@@ -47,8 +47,8 @@ export default function Hero() {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="group flex flex-col items-center gap-3 hover:opacity-70 transition-opacity"
             >
-                <span className="text-xs font-mono text-[var(--text-muted)] tracking-widest uppercase">Contact</span>
-                <span className="text-lg sm:text-xl font-medium font-body text-[var(--text-primary)] underline decoration-[var(--border-color)] underline-offset-8">Email Me</span>
+                <span className="text-xs font-mono text-(--text-muted) tracking-widest uppercase">Contact</span>
+                <span className="text-lg sm:text-xl font-medium font-body text-(--text-primary) underline decoration-(--border-color) underline-offset-8">Email Me</span>
             </motion.a>
             
             <motion.a 
@@ -60,8 +60,8 @@ export default function Hero() {
                 transition={{ duration: 0.6, delay: 0.9 }}
                 className="group flex flex-col items-center gap-3 hover:opacity-70 transition-opacity"
             >
-                <span className="text-xs font-mono text-[var(--text-muted)] tracking-widest uppercase">Network</span>
-                <span className="text-lg sm:text-xl font-medium font-body text-[var(--text-primary)] underline decoration-[var(--border-color)] underline-offset-8">LinkedIn</span>
+                <span className="text-xs font-mono text-(--text-muted) tracking-widest uppercase">Network</span>
+                <span className="text-lg sm:text-xl font-medium font-body text-(--text-primary) underline decoration-(--border-color) underline-offset-8">LinkedIn</span>
             </motion.a>
         </div>
 

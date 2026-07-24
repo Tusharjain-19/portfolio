@@ -10,7 +10,7 @@ interface MarqueeProps {
 
 export default function Marquee({ items, direction = 'left', speed = 20 }: MarqueeProps) {
   return (
-    <div className="w-full overflow-hidden bg-[var(--bg-primary)] border-y border-[var(--border-color)] py-12 relative select-none">
+    <div className="w-full overflow-hidden bg-(--bg-primary) border-y border-(--border-color) py-12 relative select-none">
        {/* Gradient masks for smooth edge fade */}
        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: `linear-gradient(to right, var(--bg-primary), transparent)` }}></div>
        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: `linear-gradient(to left, var(--bg-primary), transparent)` }}></div>

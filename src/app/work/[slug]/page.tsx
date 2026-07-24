@@ -86,7 +86,7 @@ export default async function ProjectPage({
   };
 
   return (
-    <main className="theme-jodhpur min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] selection:bg-[var(--accent)] selection:text-[var(--bg-primary)] transition-colors duration-500 font-body relative overflow-x-hidden">
+    <main className="theme-jodhpur min-h-screen bg-(--bg-primary) text-(--text-primary) selection:bg-(--accent) selection:text-(--bg-primary) transition-colors duration-500 font-body relative overflow-x-hidden">
         <StructuredData data={projectData as Record<string, unknown>} />
         
         {/* Background Ceramic Geometry */}
@@ -98,7 +98,7 @@ export default async function ProjectPage({
         />
 
         
-        <div className="max-w-4xl mx-auto sm:border-x border-[var(--border-color)] min-h-screen bg-[var(--bg-primary)] relative z-10 shadow-2xl py-12 sm:py-20 px-4 sm:px-10">
+        <div className="max-w-4xl mx-auto sm:border-x border-(--border-color) min-h-screen bg-(--bg-primary) relative z-10 shadow-2xl py-12 sm:py-20 px-4 sm:px-10">
             <ProjectDetail project={project} />
         </div>
     </main>

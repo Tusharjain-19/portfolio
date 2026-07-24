@@ -18,8 +18,8 @@ export default function SoundToggle() {
   // Default to dark theme styling during SSR
   const themeClasses = mounted
     ? (isEnabled 
-        ? 'bg-[var(--bg-secondary)]/80 border-[var(--accent)] text-[var(--text-primary)]' 
-        : 'bg-[var(--bg-secondary)]/80 border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--text-muted)] hover:text-[var(--text-secondary)]')
+        ? 'bg-(--bg-secondary)/80 border-(--accent) text-(--text-primary)' 
+        : 'bg-(--bg-secondary)/80 border-(--border-color) text-(--text-muted) hover:border-(--text-muted) hover:text-(--text-secondary)')
     : 'bg-neutral-900/80 border-neutral-800 text-neutral-500';
 
   return (

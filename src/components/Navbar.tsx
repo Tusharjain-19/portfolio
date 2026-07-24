@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-2 sm:top-3 md:top-4 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 md:px-6 pointer-events-none">
-        <div className="w-auto inline-flex bg-white/5 dark:bg-black/10 backdrop-blur-2xl border border-white/10 dark:border-white/5 rounded-full px-5 sm:px-8 md:px-10 h-12 sm:h-14 md:h-[60px] items-center justify-between pointer-events-auto shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] transition-all duration-500 gap-6 md:gap-12">
+        <div className="w-auto inline-flex bg-white/5 dark:bg-black/10 backdrop-blur-2xl border border-white/10 dark:border-white/5 rounded-full px-5 sm:px-8 md:px-10 h-12 sm:h-14 md:h-15 items-center justify-between pointer-events-auto shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] transition-all duration-500 gap-6 md:gap-12">
           
           {/* LOGO */}
           <Link 

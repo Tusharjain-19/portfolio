@@ -70,7 +70,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
           <motion.div 
             ref={contentRef}
             data-lenis-prevent
-            className="relative w-full max-w-4xl overflow-y-auto overscroll-contain bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-lg shadow-2xl no-scrollbar"
+            className="relative w-full max-w-4xl overflow-y-auto overscroll-contain bg-(--bg-primary) border border-(--border-color) rounded-lg shadow-2xl no-scrollbar"
             layoutId="modal-content"
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
              {/* Close Button - Floats nicely */}
             <button 
                 onClick={onDismiss}
-                className="absolute top-6 right-6 z-20 w-8 h-8 flex items-center justify-center bg-[var(--text-primary)]/10 text-[var(--text-primary)] rounded-full hover:bg-[var(--text-primary)]/20 transition-all backdrop-blur-md"
+                className="absolute top-6 right-6 z-20 w-8 h-8 flex items-center justify-center bg-(--text-primary)/10 text-(--text-primary) rounded-full hover:bg-(--text-primary)/20 transition-all backdrop-blur-md"
                 data-cursor-text="CLOSE"
             >
                 ✕

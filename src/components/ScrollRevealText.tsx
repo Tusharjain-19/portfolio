@@ -22,7 +22,7 @@ export default function ScrollRevealText() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-6xl md:text-8xl font-bold font-heading text-[var(--text-primary)]"
+          className="text-4xl sm:text-6xl md:text-8xl font-bold font-heading text-(--text-primary)"
         >
           Tushar Jain.
         </motion.h2>
@@ -40,7 +40,7 @@ export default function ScrollRevealText() {
               <motion.span 
                 key={i} 
                 style={{ opacity }}
-                className="text-2xl sm:text-4xl md:text-5xl font-light text-[var(--text-primary)] leading-tight"
+                className="text-2xl sm:text-4xl md:text-5xl font-light text-(--text-primary) leading-tight"
               >
                 {word}
               </motion.span>
@@ -57,7 +57,7 @@ export default function ScrollRevealText() {
         >
           <a 
             href="mailto:tushar.jain2022@bmsce.ac.in" 
-            className="text-lg sm:text-xl font-mono uppercase tracking-widest text-[var(--text-primary)] hover:opacity-50 underline decoration-[var(--border-color)] underline-offset-8 transition-all"
+            className="text-lg sm:text-xl font-mono uppercase tracking-widest text-(--text-primary) hover:opacity-50 underline decoration-(--border-color) underline-offset-8 transition-all"
           >
             Email Me
           </a>
@@ -65,7 +65,7 @@ export default function ScrollRevealText() {
             href="https://linkedin.com/in/tushar-jain-in" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-lg sm:text-xl font-mono uppercase tracking-widest text-[var(--text-primary)] hover:opacity-50 underline decoration-[var(--border-color)] underline-offset-8 transition-all"
+            className="text-lg sm:text-xl font-mono uppercase tracking-widest text-(--text-primary) hover:opacity-50 underline decoration-(--border-color) underline-offset-8 transition-all"
           >
             LinkedIn
           </a>

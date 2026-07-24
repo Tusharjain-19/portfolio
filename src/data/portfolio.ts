@@ -72,7 +72,7 @@ export const PORTFOLIO: PortfolioData = {
     {
       title: "Web Development Internship Certificate",
       issuer: "3Skill Training",
-      verifyUrl: "#",
+      verifyUrl: "/Certificate_INTERN260467_Tushar_Jain.pdf",
       verifyCode: "2025",
       skillsGained: ["Full-Stack Web Development", "HTML5 & CSS3", "Responsive UI/UX design"]
     }

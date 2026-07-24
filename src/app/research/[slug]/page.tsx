@@ -85,7 +85,7 @@ export default async function ResearchPage({
   };
 
   return (
-    <main className="theme-udaipur min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] selection:bg-[var(--accent)] selection:text-[var(--bg-primary)] transition-colors duration-500 font-body relative">
+    <main className="theme-udaipur min-h-screen bg-(--bg-primary) text-(--text-primary) selection:bg-(--accent) selection:text-(--bg-primary) transition-colors duration-500 font-body relative">
         <StructuredData data={researchData as Record<string, unknown>} />
         
         {/* Dot Grid Background */}
