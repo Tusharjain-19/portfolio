@@ -2,9 +2,17 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Lenis from 'lenis';
 
 export default function SmoothScroll() {
+  const pathname = usePathname();
+
+  // Scroll to top immediately on route change
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+  }, [pathname]);
+
   useEffect(() => {
     // Accessibility: Respect reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -42,3 +50,4 @@ export default function SmoothScroll() {
 
   return null;
 }
+
