@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowUpRight, Github } from '@/components/Icons';
 import Link from 'next/link';
 
@@ -47,20 +47,17 @@ export default function MobileDetoxDetail() {
   const [activeChart, setActiveChart] = useState<'sqi' | 'age' | 'dist'>('sqi');
 
   return (
-    <article className="min-h-screen text-(--text-primary) pb-20 selection:bg-blue-500/20 selection:text-blue-500">
+    <article className="min-h-screen text-(--text-primary) pb-20 selection:bg-(--accent)/20 selection:text-(--text-primary)">
       
       {/* HEADER SECTION */}
       <header className="relative py-16 md:py-24 border-b border-(--border-color) overflow-hidden">
-        {/* Soft Blue Radial Glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[280px] bg-blue-500/10 blur-[130px] rounded-full pointer-events-none" />
-        
         <div className="max-w-4xl mx-auto px-4 relative z-10 text-center md:text-left">
-          <Link href="/#research" className="inline-flex items-center gap-1.5 text-xs font-mono text-(--text-muted) hover:text-blue-500 transition-colors mb-8 uppercase tracking-widest">
+          <Link href="/#research" className="inline-flex items-center gap-1.5 text-xs font-mono text-(--text-muted) hover:text-(--text-primary) transition-colors mb-8 uppercase tracking-widest">
             <ArrowLeft className="w-3.5 h-3.5" /> Back to Research
           </Link>
           
-          <div className="mb-4 inline-block px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full backdrop-blur-sm">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 font-semibold">
+          <div className="mb-4 inline-block px-3 py-1 bg-(--bg-secondary) border border-(--border-color) rounded-full">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-(--text-muted) font-semibold">
               Statistical Data Analysis • Research Project • Data Science
             </span>
           </div>
@@ -77,7 +74,7 @@ export default function MobileDetoxDetail() {
               href="/Statistical_Data_Analysis_Report_final (1).pdf" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 group text-sm shadow-lg shadow-blue-600/20"
+              className="px-6 py-3 bg-(--text-primary) text-(--bg-primary) font-semibold rounded-lg hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 group text-sm shadow-md"
             >
               <span>View Report (PDF)</span>
               <ArrowUpRight className="w-4 h-4" />
@@ -99,32 +96,32 @@ export default function MobileDetoxDetail() {
         
         {/* OVERVIEW & PROBLEM STATEMENT */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl backdrop-blur-md space-y-4">
-            <span className="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest block">Project Background</span>
+          <div className="p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl space-y-4">
+            <span className="text-xs font-mono text-(--text-muted) uppercase tracking-widest block">Project Background</span>
             <h3 className="text-xl font-bold text-(--text-primary) tracking-tight">Academic Overview</h3>
             <p className="text-sm text-(--text-secondary) font-light leading-relaxed">
-              This project was completed as part of the <span className="text-(--text-primary) font-medium">Statistical Modeling for Business Systems</span> course at <span className="text-blue-600 dark:text-blue-400 font-medium">BMS College of Engineering</span>. 
+              This project was completed as part of the <span className="text-(--text-primary) font-medium">Statistical Modeling for Business Systems</span> course at <span className="text-(--text-primary) font-medium">BMS College of Engineering</span>. 
               The study collected and analyzed primary survey responses to determine whether practicing mobile detox before sleep leads to measurably better sleep quality.
             </p>
           </div>
 
-          <div className="p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl backdrop-blur-md space-y-4">
-            <span className="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest block">Research Question</span>
+          <div className="p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl space-y-4">
+            <span className="text-xs font-mono text-(--text-muted) uppercase tracking-widest block">Research Question</span>
             <h3 className="text-xl font-bold text-(--text-primary) tracking-tight">Core Problem Statement</h3>
-            <div className="p-4 bg-blue-500/10 border-l-2 border-blue-500 rounded-r text-sm text-(--text-secondary) italic leading-relaxed">
+            <div className="p-4 bg-(--bg-primary) border-l-2 border-(--text-primary) rounded-r text-sm text-(--text-secondary) italic leading-relaxed">
               "Does reducing mobile phone usage before sleep significantly improve overall sleep quality?"
             </div>
             <ul className="text-xs text-(--text-muted) space-y-1.5 pt-2">
               <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-(--text-primary)" />
                 Study the relationship between mobile detox and sleep.
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-(--text-primary)" />
                 Construct a weighted Sleep Quality Index (SQI).
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-(--text-primary)" />
                 Perform Independent Two-Sample t-Test.
               </li>
             </ul>
@@ -134,7 +131,7 @@ export default function MobileDetoxDetail() {
         {/* INTERACTIVE STATS CARDS */}
         <section className="space-y-6">
           <div>
-            <h2 className="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-2">Key Metrics</h2>
+            <h2 className="text-xs font-mono text-(--text-muted) uppercase tracking-widest mb-2">Key Metrics</h2>
             <h3 className="text-2xl sm:text-3xl font-bold text-(--text-primary) tracking-tight">Interactive Statistics Dashboard</h3>
           </div>
 
@@ -143,13 +140,13 @@ export default function MobileDetoxDetail() {
               <motion.div
                 key={idx}
                 whileHover={{ y: -3 }}
-                className="p-5 bg-(--bg-secondary) border border-(--border-color) hover:border-blue-500/40 rounded-xl flex flex-col justify-between transition-all group"
+                className="p-5 bg-(--bg-secondary) border border-(--border-color) hover:border-(--accent) rounded-xl flex flex-col justify-between transition-all group"
               >
                 <div>
                   <span className="text-[10px] font-mono text-(--text-muted) uppercase tracking-wider block mb-1">{stat.label}</span>
-                  <span className="text-xl sm:text-2xl font-bold font-mono text-(--text-primary) group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{stat.val}</span>
+                  <span className="text-xl sm:text-2xl font-bold font-mono text-(--text-primary) group-hover:text-(--accent) transition-colors">{stat.val}</span>
                 </div>
-                <span className="text-[9px] font-mono text-blue-600 dark:text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded-full w-fit mt-3">
+                <span className="text-[9px] font-mono text-(--text-muted) bg-(--bg-primary) border border-(--border-color) px-2 py-0.5 rounded-full w-fit mt-3">
                   {stat.highlight}
                 </span>
               </motion.div>
@@ -161,14 +158,14 @@ export default function MobileDetoxDetail() {
         <section className="space-y-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
             <div>
-              <h2 className="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-2">Data Visualizations</h2>
+              <h2 className="text-xs font-mono text-(--text-muted) uppercase tracking-widest mb-2">Data Visualizations</h2>
               <h3 className="text-2xl sm:text-3xl font-bold text-(--text-primary) tracking-tight">Comparative Analytics</h3>
             </div>
             <div className="flex gap-2 shrink-0">
               <button
                 onClick={() => setActiveChart('sqi')}
                 className={`px-3 py-1.5 rounded-lg border text-xs font-mono transition-all cursor-pointer ${
-                  activeChart === 'sqi' ? 'bg-blue-500/20 border-blue-500/40 text-blue-600 dark:text-blue-400' : 'bg-(--bg-secondary) border-(--border-color) text-(--text-muted) hover:text-(--text-primary)'
+                  activeChart === 'sqi' ? 'bg-(--accent) text-(--bg-primary) font-bold' : 'bg-(--bg-secondary) border-(--border-color) text-(--text-muted) hover:text-(--text-primary)'
                 }`}
               >
                 SQI Comparison
@@ -176,7 +173,7 @@ export default function MobileDetoxDetail() {
               <button
                 onClick={() => setActiveChart('age')}
                 className={`px-3 py-1.5 rounded-lg border text-xs font-mono transition-all cursor-pointer ${
-                  activeChart === 'age' ? 'bg-blue-500/20 border-blue-500/40 text-blue-600 dark:text-blue-400' : 'bg-(--bg-secondary) border-(--border-color) text-(--text-muted) hover:text-(--text-primary)'
+                  activeChart === 'age' ? 'bg-(--accent) text-(--bg-primary) font-bold' : 'bg-(--bg-secondary) border-(--border-color) text-(--text-muted) hover:text-(--text-primary)'
                 }`}
               >
                 Group Ratio
@@ -184,7 +181,7 @@ export default function MobileDetoxDetail() {
               <button
                 onClick={() => setActiveChart('dist')}
                 className={`px-3 py-1.5 rounded-lg border text-xs font-mono transition-all cursor-pointer ${
-                  activeChart === 'dist' ? 'bg-blue-500/20 border-blue-500/40 text-blue-600 dark:text-blue-400' : 'bg-(--bg-secondary) border-(--border-color) text-(--text-muted) hover:text-(--text-primary)'
+                  activeChart === 'dist' ? 'bg-(--accent) text-(--bg-primary) font-bold' : 'bg-(--bg-secondary) border-(--border-color) text-(--text-muted) hover:text-(--text-primary)'
                 }`}
               >
                 Sleep Rating
@@ -192,10 +189,10 @@ export default function MobileDetoxDetail() {
             </div>
           </div>
 
-          <div className="bg-(--bg-secondary) border border-(--border-color) rounded-2xl p-6 shadow-2xl relative">
-            <div className="px-4 py-3 bg-(--bg-primary)/40 border-b border-(--border-color) flex justify-between items-center mb-6 rounded-lg">
+          <div className="bg-(--bg-secondary) border border-(--border-color) rounded-2xl p-6 shadow-xl relative">
+            <div className="px-4 py-3 bg-(--bg-primary)/50 border-b border-(--border-color) flex justify-between items-center mb-6 rounded-lg">
               <span className="text-xs font-mono text-(--text-muted)">Primary Survey Sample (N = 22)</span>
-              <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400">● Hypothesis Test Validated</span>
+              <span className="text-xs font-mono text-(--text-primary) font-semibold">● Hypothesis Test Validated</span>
             </div>
 
             <div className="min-h-[220px] flex items-center justify-center">
@@ -203,7 +200,7 @@ export default function MobileDetoxDetail() {
                 <div className="w-full space-y-6 max-w-lg mx-auto">
                   <div className="space-y-2">
                     <div className="flex justify-between text-xs font-mono">
-                      <span className="text-blue-600 dark:text-blue-400 font-bold">Detox Group (n = 5)</span>
+                      <span className="text-(--text-primary) font-bold">Detox Group (n = 5)</span>
                       <span className="text-(--text-primary) font-bold">Mean SQI: 6.92 / 10</span>
                     </div>
                     <div className="h-6 w-full bg-(--bg-primary) rounded-lg overflow-hidden p-1 border border-(--border-color)">
@@ -211,7 +208,7 @@ export default function MobileDetoxDetail() {
                         initial={{ width: 0 }}
                         animate={{ width: "69.2%" }}
                         transition={{ duration: 0.8 }}
-                        className="h-full bg-gradient-to-r from-blue-600 to-sky-400 rounded-md"
+                        className="h-full bg-(--text-primary) rounded-md"
                       />
                     </div>
                   </div>
@@ -226,13 +223,13 @@ export default function MobileDetoxDetail() {
                         initial={{ width: 0 }}
                         animate={{ width: "51.1%" }}
                         transition={{ duration: 0.8, delay: 0.1 }}
-                        className="h-full bg-neutral-400 dark:bg-neutral-600 rounded-md"
+                        className="h-full bg-(--border-color) rounded-md"
                       />
                     </div>
                   </div>
 
-                  <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg text-center">
-                    <span className="text-xs font-mono text-blue-600 dark:text-blue-300 font-medium">
+                  <div className="p-3 bg-(--bg-primary) border border-(--border-color) rounded-lg text-center">
+                    <span className="text-xs font-mono text-(--text-primary) font-medium">
                       Difference: +1.81 SQI Points (+35.4% improvement in sleep quality)
                     </span>
                   </div>
@@ -241,16 +238,16 @@ export default function MobileDetoxDetail() {
 
               {activeChart === 'age' && (
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-8 w-full py-4">
-                  <div className="relative w-36 h-36 rounded-full border-8 border-(--border-color) flex items-center justify-center bg-blue-500/10 shadow-inner">
+                  <div className="relative w-36 h-36 rounded-full border-8 border-(--border-color) flex items-center justify-center bg-(--bg-primary) shadow-inner">
                     <span className="text-xl font-bold font-mono text-(--text-primary)">N = 22</span>
                   </div>
                   <div className="space-y-3 font-mono text-xs">
                     <div className="flex items-center gap-3">
-                      <span className="w-3 h-3 rounded bg-blue-500" />
+                      <span className="w-3 h-3 rounded bg-(--text-primary)" />
                       <span className="text-(--text-primary)">Detox Group: 5 (22.7%)</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="w-3 h-3 rounded bg-neutral-400 dark:bg-neutral-700" />
+                      <span className="w-3 h-3 rounded bg-(--border-color)" />
                       <span className="text-(--text-muted)">Non-Detox Group: 17 (77.3%)</span>
                     </div>
                     <p className="text-[10px] text-(--text-muted) max-w-xs pt-2">
@@ -268,9 +265,9 @@ export default function MobileDetoxDetail() {
                     { label: "Disruptions", detox: "0.8/night", control: "2.3/night" },
                     { label: "Morning Alert", detox: "8.2", control: "5.1" }
                   ].map((m, i) => (
-                    <div key={i} className="p-3 bg-(--bg-primary)/40 border border-(--border-color) rounded-xl space-y-1">
+                    <div key={i} className="p-3 bg-(--bg-primary) border border-(--border-color) rounded-xl space-y-1">
                       <span className="text-[10px] font-mono text-(--text-muted) block uppercase">{m.label}</span>
-                      <span className="text-xs font-mono text-blue-600 dark:text-blue-400 font-bold block">Detox: {m.detox}</span>
+                      <span className="text-xs font-mono text-(--text-primary) font-bold block">Detox: {m.detox}</span>
                       <span className="text-[10px] font-mono text-(--text-muted) block">Control: {m.control}</span>
                     </div>
                   ))}
@@ -283,18 +280,18 @@ export default function MobileDetoxDetail() {
         {/* WORKFLOW TIMELINE */}
         <section className="space-y-8">
           <div>
-            <h2 className="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-2">Process</h2>
+            <h2 className="text-xs font-mono text-(--text-muted) uppercase tracking-widest mb-2">Process</h2>
             <h3 className="text-2xl sm:text-3xl font-bold text-(--text-primary) tracking-tight">Research Workflow Timeline</h3>
           </div>
 
           <div className="relative border-l border-(--border-color) ml-4 pl-6 space-y-8">
             {TIMELINE_STEPS.map((item, idx) => (
               <div key={idx} className="relative group">
-                <span className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-(--bg-primary) border-2 border-blue-500 flex items-center justify-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                <span className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-(--bg-primary) border-2 border-(--border-color) flex items-center justify-center">
+                  <span className="w-1.5 h-1.5 rounded-full bg-(--text-primary)" />
                 </span>
-                <span className="text-[10px] font-mono text-blue-600 dark:text-blue-400 font-bold">STEP {item.step}</span>
-                <h4 className="text-base font-bold text-(--text-primary) group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{item.title}</h4>
+                <span className="text-[10px] font-mono text-(--text-muted) font-bold">STEP {item.step}</span>
+                <h4 className="text-base font-bold text-(--text-primary) group-hover:text-(--accent) transition-colors">{item.title}</h4>
                 <p className="text-xs text-(--text-secondary) font-light mt-1 max-w-xl">{item.desc}</p>
               </div>
             ))}
@@ -302,9 +299,9 @@ export default function MobileDetoxDetail() {
         </section>
 
         {/* KEY FINDINGS BANNER */}
-        <section className="p-8 bg-gradient-to-r from-blue-500/10 via-(--bg-secondary) to-(--bg-secondary) border border-blue-500/30 rounded-2xl shadow-xl space-y-4">
-          <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
-            <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
+        <section className="p-8 bg-(--bg-secondary) border border-(--border-color) rounded-2xl shadow-lg space-y-4">
+          <div className="flex items-center gap-2 text-(--text-primary)">
+            <span className="w-2.5 h-2.5 rounded-full bg-(--text-primary) animate-pulse" />
             <span className="text-xs font-mono uppercase tracking-widest font-bold">Key Statistical Result</span>
           </div>
           <h3 className="text-xl sm:text-2xl font-bold text-(--text-primary) leading-tight">
@@ -312,19 +309,19 @@ export default function MobileDetoxDetail() {
           </h3>
           <p className="text-sm text-(--text-secondary) font-light leading-relaxed">
             Participants practicing mobile detox displayed a significantly higher average Sleep Quality Index than the non-detox group (6.92 vs 5.11). 
-            With a calculated <span className="font-mono text-blue-600 dark:text-blue-400 font-bold">t-statistic of 3.18</span> and <span className="font-mono text-blue-600 dark:text-blue-400 font-bold">20 degrees of freedom</span>, 
-            the statistical test successfully rejected the null hypothesis at <span className="font-mono text-emerald-600 dark:text-emerald-400 font-bold">10%, 5%, and 1% significance levels</span>.
+            With a calculated <span className="font-mono text-(--text-primary) font-bold">t-statistic of 3.18</span> and <span className="font-mono text-(--text-primary) font-bold">20 degrees of freedom</span>, 
+            the statistical test successfully rejected the null hypothesis at <span className="font-mono text-(--text-primary) font-bold">10%, 5%, and 1% significance levels</span>.
           </p>
         </section>
 
         {/* CONTRIBUTIONS & TOOLS */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl space-y-4">
-            <h3 className="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest">My Contributions</h3>
+            <h3 className="text-xs font-mono text-(--text-muted) uppercase tracking-widest">My Contributions</h3>
             <ul className="space-y-2.5 text-xs text-(--text-secondary) font-light">
               {CONTRIBUTIONS.map((c, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-0.5">✓</span>
+                  <span className="text-(--text-primary) mt-0.5">✓</span>
                   <span>{c}</span>
                 </li>
               ))}
@@ -333,7 +330,7 @@ export default function MobileDetoxDetail() {
 
           <div className="p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl space-y-6">
             <div>
-              <h3 className="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-3">Tools & Techniques</h3>
+              <h3 className="text-xs font-mono text-(--text-muted) uppercase tracking-widest mb-3">Tools & Techniques</h3>
               <div className="flex flex-wrap gap-2">
                 {TECH_TOOLS.map((t, i) => (
                   <span key={i} className="px-2.5 py-1 bg-(--bg-primary) border border-(--border-color) text-(--text-secondary) text-xs font-mono rounded-md">
@@ -344,10 +341,10 @@ export default function MobileDetoxDetail() {
             </div>
 
             <div>
-              <h3 className="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-3">Learning Outcomes</h3>
+              <h3 className="text-xs font-mono text-(--text-muted) uppercase tracking-widest mb-3">Learning Outcomes</h3>
               <div className="flex flex-wrap gap-2">
                 {LEARNING_OUTCOMES.map((l, i) => (
-                  <span key={i} className="px-2.5 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-mono rounded-md">
+                  <span key={i} className="px-2.5 py-1 bg-(--bg-primary) border border-(--border-color) text-(--text-secondary) text-xs font-mono rounded-md">
                     {l}
                   </span>
                 ))}
