@@ -8,6 +8,9 @@ import Link from 'next/link';
 import StructuredData from '@/components/StructuredData';
 import { Metadata } from 'next';
 
+import RestaurantOSDetail from '@/components/projects/RestaurantOSDetail';
+import FlightDeckDetail from '@/components/projects/FlightDeckDetail';
+
 // Generate static params for all projects
 export async function generateStaticParams() {
   return PORTFOLIO.projects.map((project) => ({
@@ -99,7 +102,13 @@ export default async function ProjectPage({
 
         
         <div className="max-w-4xl mx-auto sm:border-x border-(--border-color) min-h-screen bg-(--bg-primary) relative z-10 shadow-2xl py-12 sm:py-20 px-4 sm:px-10">
-            <ProjectDetail project={project} />
+            {slug === 'restaurant-os' ? (
+              <RestaurantOSDetail />
+            ) : slug === 'flight-deck' ? (
+              <FlightDeckDetail />
+            ) : (
+              <ProjectDetail project={project} />
+            )}
         </div>
     </main>
   );

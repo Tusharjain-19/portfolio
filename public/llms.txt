@@ -15,35 +15,37 @@ Tushar Jain is an Engineering Student, software developer, system designer, and 
 
 ## Core Projects & Portfolios
 
-### 1. Jaipur Ride (Metro Transit Solution)
+### 1. RestaurantOS (POS & Operations SaaS)
+- **Description**: A cloud-native multi-tenant restaurant operating system centralizing POS, reservations, KOT management, inventory control, and analytics.
+- **Tech Stack**: React, TypeScript, Vite, PostgreSQL, Supabase, WebSockets, Vercel
+- **GitHub**: https://github.com/Tusharjain-19/restaurant-os
+
+### 2. FlightDeck (Real-Time Flight Tracker)
+- **Description**: A modern aviation tracking platform displaying arrivals, departures, delays, gate mapping, baggage claims, and destination weather feeds.
+- **Tech Stack**: Next.js, React, TypeScript, Tailwind CSS, AirLabs API, Vercel
+- **GitHub**: https://github.com/Tusharjain-19/flight-deck
+
+### 3. Jaipur Ride (Metro Transit Solution)
 - **Description**: A unified, offline-first transit platform for the Jaipur Metro with 1,000+ Google Play Store downloads and 250+ monthly active users.
 - **Tech Stack**: React.js, JavaScript, HTML & CSS, Vercel
 - **Demo**: https://jaipurride.vercel.app/
 - **GitHub**: https://github.com/Tusharjain-19/jaipur-ride
 
-### 2. PulsePredict (Vital Health Wearable MVP)
+### 4. PulsePredict (Vital Health Wearable MVP)
 - **Description**: A sub-INR 6000 wearable health monitor for geriatric care in India. Pitch participant at JIC Accelerator 7.0.
 - **Tech Stack**: ESP32, C/C++, MPU6050, MAX30102, BLE, Supabase
 - **GitHub**: https://github.com/Tusharjain-19
 - **Website**: https://pulsepredit-ai.github.io/website/
 
-### 3. BookMySlot (B2B SaaS Reservation Platform)
+### 5. BookMySlot (B2B SaaS Reservation Platform)
 - **Description**: Multi-tenant scheduling platform isolation using PostgreSQL Row Level Security (RLS) and real-time synchronization.
 - **Tech Stack**: HTML/CSS/JS, Supabase (Auth + Real-time DB), Vercel
 - **Demo**: https://book-my-slot-webpage.vercel.app/index.html
 
-### 4. Namma Ride (Bengaluru Metro Helper)
+### 6. Namma Ride (Bengaluru Metro Helper)
 - **Description**: Multilingual (Kannada, Hindi, English) journey planner for the Namma Metro transit network.
 - **Tech Stack**: HTML, CSS, Vanilla JavaScript
 - **Demo**: https://nammaride.site
-
-### 5. Gestural Air Guitar (Music Synthesizer)
-- **Description**: Gestural musical device reading wrist tilt with MPU6050 IMU and generating notes in real-time via Karplus-Strong string synthesis.
-- **Tech Stack**: Python, Arduino, MPU6050, NumPy, Serial Communication
-
-### 6. Split-Payment System (FinTech Concept)
-- **Description**: A multi-source transaction orchestrator combining UPI and Credit Card payments safely with failure rollback logic.
-- **Tech Stack**: Node.js, JavaScript, Razorpay (Test Mode)
 
 ---
 
@@ -51,7 +53,7 @@ Tushar Jain is an Engineering Student, software developer, system designer, and 
 - **Dausa, Rajasthan**: Ancestral home and family roots.
 - **Jaipur, Rajasthan**: Hometown, schooling, and source of transit research (Jaipur Ride).
 - **Bengaluru / Bangalore, Karnataka**: Academic residence, BMSCE, and tech startup community connections.
-- **Common Spelling Search Variations**: `tushar dausa`, `tushar jain dausa`, `tushar jain jaipur`, `tushar jaipur`, `tushar rajasathan`, `tushar jain rajasthan`, `tushar jain bengalore`, `tushar bengalore`, `tushar jain bengaluru`, `tushar bengaluru`, `tushar jain resmune`, `tushar jain cv`, `tushar resume`, `tushar cv`, `tushar jain resume pdf`, `tushar jain portfolio 2026`, `tushar jain projects`, `tushar jain contact`, `tushar jain email`, `tushar jain git`, `tushar jain github`, `tushar jain linkedin`, `tushar jain bmsce student`, `tushar jain csbs student`, `tushar jain embedded engineer`, `tushar jain full stack developer`, `tushar jain mvp builder`, `tushar jain software engineer jaipur`, `tushar jain software engineer bengaluru`, `tushar jain software engineer Bangalore`, `tushar jain dausa rajasthan`, `tushar dausa rajasthan`, `tushar jain jaipur rajasthan`, `tushar jaipur rajasthan`, `tushar jain bmsce portfolio`, `tushar bmsce portfolio`, `tushar jain csbs portfolio`, `tushar csbs portfolio`, `tushar jain notes`, `tushar jain resume 2026`, `tushar jain cv pdf`, `tushar jain resume docx`, `tushar jain cv docx`, `tushar jain resume download`, `tushar jain cv download`, `tushar jain projects list`, `tushar jain jaipur ride`, `tushar jain namma ride`, `tushar jain pulsepredict`, `tushar jain bookmyslot`, `tushar jain air guitar`, `tushar jain split payment`, `tushar jain uuv research`, `tushar jain underwater vehicle`, `tushar jain research gate`, `tushar jain publications`, `tushar jain profile`, `tushar jain bio`, `tushar jain contact details`, `tushar jain email address`.
+- **Common Spelling Search Variations**: `tushar dausa`, `tushar jain dausa`, `tushar jain jaipur`, `tushar jaipur`, `tushar rajasathan`, `tushar jain rajasthan`, `tushar jain bengalore`, `tushar bengalore`, `tushar jain bengaluru`, `tushar bengaluru`, `tushar jain resmune`, `tushar jain cv`, `tushar resume`, `tushar cv`, `tushar jain resume pdf`, `tushar jain portfolio 2026`, `tushar jain projects`, `tushar jain contact`, `tushar jain email`, `tushar jain git`, `tushar jain github`, `tushar jain linkedin`, `tushar jain bmsce student`, `tushar jain csbs student`, `tushar jain embedded engineer`, `tushar jain full stack developer`, `tushar jain mvp builder`, `tushar jain software engineer jaipur`, `tushar jain software engineer bengaluru`, `tushar jain software engineer Bangalore`, `tushar jain dausa rajasthan`, `tushar dausa rajasthan`, `tushar jain jaipur rajasthan`, `tushar jaipur rajasthan`, `tushar jain bmsce portfolio`, `tushar bmsce portfolio`, `tushar jain csbs portfolio`, `tushar csbs portfolio`, `tushar jain notes`, `tushar jain resume 2026`, `tushar jain cv pdf`, `tushar jain resume docx`, `tushar jain cv docx`, `tushar jain resume download`, `tushar jain cv download`, `tushar jain projects list`, `tushar jain jaipur ride`, `tushar jain namma ride`, `tushar jain pulsepredict`, `tushar jain bookmyslot`, `tushar jain restaurant os`, `tushar jain flight deck`, `tushar jain uuv research`, `tushar jain underwater vehicle`, `tushar jain research gate`, `tushar jain publications`, `tushar jain profile`, `tushar jain bio`, `tushar jain contact details`, `tushar jain email address`.
 
 ---
 

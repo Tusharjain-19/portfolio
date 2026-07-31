@@ -34,7 +34,7 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                         rel="noopener noreferrer" 
                         className="px-4 sm:px-6 py-2.5 sm:py-3 bg-(--text-primary) text-(--bg-primary) font-bold rounded-lg hover:scale-105 transition-all flex items-center gap-2 group text-sm sm:text-base"
                     >
-                        <span>{project.id === 'split-payment' ? 'View Code' : 'GitHub'}</span>
+                        <span>GitHub</span>
                         <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </a>
                  )}
@@ -45,7 +45,7 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                          rel="noopener noreferrer" 
                          className="px-4 sm:px-6 py-2.5 sm:py-3 border border-(--border-color) text-(--text-primary) font-bold rounded-lg hover:bg-(--bg-tertiary) hover:scale-105 transition-all flex items-center gap-2 group text-sm sm:text-base"
                      >
-                         <span>{project.id === 'split-payment' ? 'Read Post' : 'LinkedIn'}</span>
+                         <span>LinkedIn</span>
                          <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                      </a>
                  )}
@@ -192,22 +192,99 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
          {/* SECTION 6 - DEMO / PROOF / VISUALS */}
          <section className="flex flex-col items-center w-full">
             <h2 className="text-xs sm:text-sm font-mono text-(--text-muted) mb-3 sm:mb-4 uppercase tracking-widest self-start">
-                {['split-payment', 'vital-health-tech', 'air-guitar', 'indigo-inflight'].includes(project.id) ? 'System Architecture Diagram' : 'Project Demo / Interface'}
+                {['vital-health-tech', 'indigo-inflight'].includes(project.id) ? 'System Architecture Diagram' : 'Project Demo / Interface'}
             </h2>
-            {project.imageUrl ? (
-                <div className="w-full max-w-xl mx-auto bg-(--bg-secondary) border border-(--border-color) rounded-xl overflow-hidden shadow-md flex justify-center items-center p-3 dark:bg-white/2">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img 
-                        src={project.detailImageUrl || project.imageUrl} 
-                        alt={`${project.title} architecture or screenshot`} 
-                        className="max-h-95 w-auto object-contain mx-auto rounded-lg transition-transform duration-500 hover:scale-[1.015]"
-                    />
+             {project.id === 'vital-health-tech' ? (
+                <div className="w-full bg-neutral-950 border border-neutral-900 rounded-xl p-6 flex justify-center items-center overflow-x-auto no-scrollbar shadow-inner">
+                  <svg width="600" height="220" viewBox="0 0 600 220" fill="none" className="min-w-[500px] select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+                    <defs>
+                      <marker id="arr-g" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 2 L 6 5 L 0 8 z" fill="#3f3f46" />
+                      </marker>
+                    </defs>
+                    <path d="M 120 110 L 170 110" stroke="#27272a" strokeWidth="1" markerEnd="url(#arr-g)" />
+                    <path d="M 290 110 L 340 110" stroke="#27272a" strokeWidth="1" markerEnd="url(#arr-g)" />
+                    <path d="M 440 110 L 490 110" stroke="#27272a" strokeWidth="1" strokeDasharray="2 2" markerEnd="url(#arr-g)" />
+
+                    <g>
+                      <rect x="10" y="75" width="110" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="22" y="98" fill="#f4f4f5" fontWeight="600" fontSize="10">Sensors</text>
+                      <text x="22" y="112" fill="#a1a1aa" fontSize="8">MPU6050 (I2C)</text>
+                      <text x="22" y="124" fill="#71717a" fontSize="8">MAX30102 (SpO2)</text>
+                    </g>
+                    <g>
+                      <rect x="170" y="75" width="120" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="182" y="98" fill="#f4f4f5" fontWeight="600" fontSize="10">ESP32 Firmware</text>
+                      <text x="182" y="112" fill="#a1a1aa" fontSize="8">FreeRTOS C++ task</text>
+                      <text x="182" y="124" fill="#71717a" fontSize="8">Fall Threshold Filter</text>
+                    </g>
+                    <g>
+                      <rect x="340" y="75" width="100" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="352" y="98" fill="#f4f4f5" fontWeight="600" fontSize="10">Mobile Client</text>
+                      <text x="352" y="112" fill="#a1a1aa" fontSize="8">BLE Sync App</text>
+                      <text x="352" y="124" fill="#71717a" fontSize="8">GPS Coordinates</text>
+                    </g>
+                    <g>
+                      <rect x="490" y="75" width="100" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="502" y="98" fill="#f4f4f5" fontWeight="600" fontSize="10">Supabase DB</text>
+                      <text x="502" y="112" fill="#a1a1aa" fontSize="8">Cloud Telemetry</text>
+                      <text x="502" y="124" fill="#71717a" fontSize="8">Emergency Sync</text>
+                      <circle cx="574" cy="93" r="3" fill="#dc2626" />
+                    </g>
+                  </svg>
                 </div>
-            ) : (
-                <div className="w-full aspect-video max-w-xl mx-auto bg-(--bg-secondary) border border-(--border-color) rounded-xl flex items-center justify-center text-(--text-muted) font-mono text-xs sm:text-sm px-4 text-center shadow-sm">
-                    [ Architecture Diagram / Visuals to be added ]
+             ) : project.id === 'indigo-inflight' ? (
+                <div className="w-full bg-neutral-950 border border-neutral-900 rounded-xl p-6 flex justify-center items-center overflow-x-auto no-scrollbar shadow-inner">
+                  <svg width="600" height="220" viewBox="0 0 600 220" fill="none" className="min-w-[500px] select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+                    <defs>
+                      <marker id="arr-g" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 2 L 6 5 L 0 8 z" fill="#3f3f46" />
+                      </marker>
+                    </defs>
+                    <path d="M 130 110 L 180 110" stroke="#27272a" strokeWidth="1" markerEnd="url(#arr-g)" />
+                    <path d="M 300 110 L 350 110" stroke="#27272a" strokeWidth="1" markerEnd="url(#arr-g)" />
+                    <path d="M 460 110 L 510 110" stroke="#27272a" strokeWidth="1" strokeDasharray="2 2" markerEnd="url(#arr-g)" />
+
+                    <g>
+                      <rect x="10" y="75" width="120" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="22" y="98" fill="#f4f4f5" fontWeight="600" fontSize="10">Local Plane Server</text>
+                      <text x="22" y="112" fill="#a1a1aa" fontSize="8">Offline Media Assets</text>
+                      <text x="22" y="124" fill="#71717a" fontSize="8">Docker / Node.js</text>
+                    </g>
+                    <g>
+                      <rect x="180" y="75" width="120" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="192" y="98" fill="#f4f4f5" fontWeight="600" fontSize="10">Wi-Fi Router AP</text>
+                      <text x="192" y="112" fill="#a1a1aa" fontSize="8">Cabin WLAN network</text>
+                      <text x="192" y="124" fill="#71717a" fontSize="8">No External Link</text>
+                    </g>
+                    <g>
+                      <rect x="350" y="75" width="110" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="362" y="98" fill="#f4f4f5" fontWeight="600" fontSize="10">Passenger Browser</text>
+                      <text x="362" y="112" fill="#a1a1aa" fontSize="8">WLAN Streaming Page</text>
+                      <text x="362" y="124" fill="#71717a" fontSize="8">HTML5 Video Player</text>
+                    </g>
+                    <g>
+                      <rect x="510" y="75" width="80" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="522" y="98" fill="#f4f4f5" fontWeight="600" fontSize="10">Offline Cache</text>
+                      <text x="522" y="112" fill="#a1a1aa" fontSize="8">PWA Storage</text>
+                      <circle cx="574" cy="93" r="3" fill="#d97706" />
+                    </g>
+                  </svg>
                 </div>
-            )}
+             ) : project.imageUrl ? (
+                 <div className="w-full max-w-xl mx-auto bg-(--bg-secondary) border border-(--border-color) rounded-xl overflow-hidden shadow-md flex justify-center items-center p-3 dark:bg-white/2">
+                     {/* eslint-disable-next-line @next/next/no-img-element */}
+                     <img 
+                         src={project.detailImageUrl || project.imageUrl} 
+                         alt={`${project.title} architecture or screenshot`} 
+                         className="max-h-95 w-auto object-contain mx-auto rounded-lg transition-transform duration-500 hover:scale-[1.015]"
+                     />
+                 </div>
+             ) : (
+                 <div className="w-full aspect-video max-w-xl mx-auto bg-(--bg-secondary) border border-(--border-color) rounded-xl flex items-center justify-center text-(--text-muted) font-mono text-xs sm:text-sm px-4 text-center shadow-sm">
+                     [ Architecture Diagram / Visuals to be added ]
+                 </div>
+             )}
          </section>
 
          {/* SECTION 7 - LEARNINGS */}

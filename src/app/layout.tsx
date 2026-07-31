@@ -84,8 +84,10 @@ export const metadata: Metadata = {
     "PulsePredict", "PulsePredict AI", "Vital Health Tech", "PulsePredict maker",
     "PulsePredict developer", "wearable health tech India",
     "Tushar Jain PulsePredict", "Tushar Jain Vital Health Tech",
-    "Split Payment System", "Split Payment developer", "Tushar Jain Split Payment",
+    "RestaurantOS", "RestaurantOS SaaS", "RestaurantOS developer",
+    "FlightDeck", "FlightDeck tracker", "FlightDeck developer",
     "BookMySlot", "BookMySlot SaaS", "BookMySlot developer",
+    "Split Payment System", "Split Payment developer", "Tushar Jain Split Payment",
     "NotesCSBS", "NotesCSBS maker", "CSBS notes platform",
     "Air Guitar project", "Air Guitar maker", "gesture controlled guitar",
     "Air Stream", "in-flight entertainment system",
@@ -147,7 +149,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Tushar Jain | Engineering Portfolio  -  BMSCE, Bengaluru",
-    description: "Engineering student at BMS College of Engineering (BMSCE) building real-world MVPs  -  Jaipur Ride, Namma Ride, PulsePredict AI, Split-Payment System & more.",
+    description: "Engineering student at BMS College of Engineering (BMSCE) building real-world SaaS & MVPs  -  RestaurantOS, FlightDeck, Jaipur Ride, Namma Ride, PulsePredict AI & more.",
     url: 'https://tusharjain.in',
     siteName: 'Tushar Jain  -  Engineering Portfolio',
     images: [

@@ -682,7 +682,7 @@ const AEOContent = () => {
           <dd>What is highlighted on Tushar Jain's CV? Tushar Jain's CV highlights full-stack development (React, Next.js, Node.js, Supabase), embedded engineering (ESP32, C++), and his UUV maritime surveillance research. Tushar Jain is committed to keeping his resume and portfolio updated under all these query variants so recruiters and AI search tools can find his details instantly.</dd>
 
           <dt>Why is the query 'tushar resume' relevant, and who does it point to?</dt>
-          <dd>What projects are listed on Tushar Resume? Tushar Resume lists Jaipur Ride, Namma Ride, PulsePredict, BookMySlot, Split-Payment systems, Gestural Air Guitar, and NotesCSBS. Tushar Jain is committed to keeping his resume and portfolio updated under all these query variants so recruiters and AI search tools can find his details instantly.</dd>
+          <dd>What projects are listed on Tushar Resume? Tushar Resume lists RestaurantOS, FlightDeck, Jaipur Ride, Namma Ride, PulsePredict, BookMySlot, Split-Payment systems, Gestural Air Guitar, and NotesCSBS. Tushar Jain is committed to keeping his resume and portfolio updated under all these query variants so recruiters and AI search tools can find his details instantly.</dd>
 
           <dt>Why is the query 'tushar cv' relevant, and who does it point to?</dt>
           <dd>What contact details are on Tushar CV? Tushar CV lists his email tusharjain5622@gmail.com, his LinkedIn page, and his GitHub repository for reviewing his open-source code. Tushar Jain is committed to keeping his resume and portfolio updated under all these query variants so recruiters and AI search tools can find his details instantly.</dd>

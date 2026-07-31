@@ -54,13 +54,49 @@ export default function ResearchDetail({ research }: { research: ResearchProject
                 <p className="text-(--text-secondary) leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
                     {research.systemArchitectureSummary}
                 </p>
-                <div className="w-full max-w-xl mx-auto bg-(--bg-secondary) border border-(--border-color) rounded-xl overflow-hidden shadow-sm flex flex-col justify-center items-center p-3 dark:bg-white/2">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img 
-                        src="/uuv_research_architecture.png" 
-                        alt="Dual-UUV Communication &amp; Command Flow Diagram" 
-                        className="max-h-87.5 w-auto object-contain mx-auto rounded-lg transition-transform duration-500 hover:scale-[1.015]"
-                    />
+                <div className="w-full bg-neutral-950 border border-neutral-900 rounded-xl p-6 flex justify-center items-center overflow-x-auto no-scrollbar shadow-inner">
+                  <svg width="600" height="280" viewBox="0 0 600 280" fill="none" className="min-w-[500px] select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+                    <defs>
+                      <marker id="arr-b" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 2 L 6 5 L 0 8 z" fill="#3f3f46" />
+                      </marker>
+                    </defs>
+                    <path d="M 140 100 L 190 100" stroke="#27272a" strokeWidth="1" markerEnd="url(#arr-b)" />
+                    <path d="M 320 100 L 370 100" stroke="#27272a" strokeWidth="1" markerEnd="url(#arr-b)" />
+                    <path d="M 430 135 L 430 175" stroke="#27272a" strokeWidth="1" strokeDasharray="2 2" markerEnd="url(#arr-b)" />
+                    <path d="M 370 210 L 260 210" stroke="#27272a" strokeWidth="1" strokeDasharray="2 2" markerEnd="url(#arr-b)" />
+
+                    <g>
+                      <rect x="10" y="65" width="130" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="22" y="88" fill="#f4f4f5" fontWeight="600" fontSize="10">Scout UUV (Sub 1)</text>
+                      <text x="22" y="102" fill="#a1a1aa" fontSize="8">Passive Acoustic Sonar</text>
+                      <text x="22" y="114" fill="#71717a" fontSize="8">Stealth Anomaly Search</text>
+                    </g>
+                    <g>
+                      <rect x="190" y="65" width="130" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="202" y="88" fill="#f4f4f5" fontWeight="600" fontSize="10">Inspector UUV (Sub 2)</text>
+                      <text x="202" y="102" fill="#a1a1aa" fontSize="8">High-Resolution Video</text>
+                      <text x="202" y="114" fill="#71717a" fontSize="8">Target Verification</text>
+                    </g>
+                    <g>
+                      <rect x="370" y="65" width="120" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="382" y="88" fill="#f4f4f5" fontWeight="600" fontSize="10">Acoustic Gateway</text>
+                      <text x="382" y="102" fill="#a1a1aa" fontSize="8">Underwater Modems</text>
+                      <text x="382" y="114" fill="#71717a" fontSize="8">Telemetry Uplink</text>
+                    </g>
+                    <g>
+                      <rect x="370" y="175" width="120" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="382" y="198" fill="#f4f4f5" fontWeight="600" fontSize="10">Remote Base Station</text>
+                      <text x="382" y="212" fill="#a1a1aa" fontSize="8">Cryptographic Gate</text>
+                      <text x="382" y="224" fill="#0891b2" fontSize="8" fontWeight="600">HITL Verification Required</text>
+                    </g>
+                    <g>
+                      <rect x="130" y="175" width="130" height="70" rx="4" fill="#09090b" stroke="#27272a" strokeWidth="1" />
+                      <text x="142" y="198" fill="#f4f4f5" fontWeight="600" fontSize="10">Action Authorized</text>
+                      <text x="142" y="212" fill="#a1a1aa" fontSize="8">Tactical Response</text>
+                      <circle cx="242" cy="193" r="3" fill="#0891b2" />
+                    </g>
+                  </svg>
                 </div>
             </section>
 

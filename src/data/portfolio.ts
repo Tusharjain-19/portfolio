@@ -309,6 +309,67 @@ export const PORTFOLIO: PortfolioData = {
       }
     },
     {
+      id: "restaurant-os",
+      slug: "restaurant-os",
+      title: "RestaurantOS",
+      imageUrl: "/restaurant_os.png",
+      tagline: "SaaS | POS | Operations & Billing",
+      oneLineSummary: "A cloud-native operating system that centralizes restaurant operations, including POS, reservations, table management, inventory, billing, and live analytical metrics into a single multi-tenant platform.",
+      ideaOrigin: "I noticed that local restaurants struggle to coordinate booking sheets, tables, inventory count, and instant billing, often using multiple disconnected apps or paper logs.",
+      problemStatement: [
+        "Fragmented operations across POS, reservations, and inventory led to billing delays and stock mismatches.",
+        "Lack of centralized real-time synchronization between front-of-house staff, kitchen staff, and management.",
+        "Inability for small-to-medium restaurant groups to handle multiple branches under a unified SaaS framework safely."
+      ],
+      solutionOverview: [
+        "Built a multi-tenant operating system architecture to coordinate point-of-sale operations, live kitchen ticket routing, and reservations.",
+        "Designed a database schema isolating client branch transactions using PostgreSQL Row Level Security (RLS).",
+        "Integrated real-time database subscription sync to keep front staff, kitchen monitors, and analytics dashboards aligned instantaneously."
+      ],
+      hardestTechnicalChallenge: "Implementing bulletproof PostgreSQL Row Level Security (RLS) policies and tenancy scopes alongside multi-client real-time synchronization under high table order concurrency without data leakage.",
+      learnings: [
+        "Structuring deep relational SQL schemas with triggers, stored procedures, and secure isolation policies.",
+        "Synchronizing heavy real-time state machines across distributed user interfaces (POS, KOT, and Admin Dashboard).",
+        "Designing for operational resilience during transient offline phases in busy kitchen environments."
+      ],
+      techStack: ["React", "TypeScript", "Vite", "PostgreSQL", "Supabase", "SQL", "WebSockets", "Vercel"],
+      proofLinks: {
+        demo: "https://restaurant-os-rouge.vercel.app/dashboard",
+        github: "https://github.com/Tusharjain-19/restaurantOS"
+      }
+    },
+    {
+      id: "flight-deck",
+      slug: "flight-deck",
+      title: "FlightDeck",
+      imageUrl: "/flight_deck.png",
+      tagline: "Aviation | Real-Time Systems",
+      oneLineSummary: "A modern real-time flight tracking dashboard displaying arrivals, departures, delays, terminals, gates, baggage carousels, routes, and destination weather globally.",
+      ideaOrigin: "I wanted to build a unified, high-performance aviation control panel that makes global flight tracking, delays, and destination metrics searchable without bloat.",
+      problemStatement: [
+        "Flight information screens at airports are local, while web tracking sites are bloated with ads and tracking scripts.",
+        "Airlines scatter baggage belt and gate updates across separate notifications or proprietary apps.",
+        "No single minimal page connects flight routes with destination weather details efficiently."
+      ],
+      solutionOverview: [
+        "Built a real-time tracking interface using Next.js Route Handlers to integrate the AirLabs live aviation API feeds.",
+        "Implemented an optimized search filter allowing passengers to trace flight paths, delays, gates, and terminals in milliseconds.",
+        "Connected live destination weather conditions directly to flight timeline trackers to provide immediate situational context."
+      ],
+      hardestTechnicalChallenge: "Orchestrating live flight state polling and optimizing external API query caching to prevent rate-limit exhaustion while maintaining instant search responses across dynamic flight databases.",
+      learnings: [
+        "Designing highly reusable React dashboard panels and optimizing API query boundaries.",
+        "Configuring server-side REST API route handlers to balance external data feeds securely.",
+        "Designing intuitive timeline UIs that display flight status progressions (departed, boarding, delayed, landed) responsively."
+      ],
+      techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "AirLabs API", "REST APIs", "Vercel"],
+      proofLinks: {
+        demo: "https://flightdeck-track.vercel.app/",
+        github: "https://github.com/Tusharjain-19/FlightDeck",
+        linkedin: "https://www.linkedin.com/posts/tushar-jain-781149322_flightdeck-buildinpublic-webdevelopment-activity-7464891820997718018-DEPB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFGI8REBvtlyRzZqGv1yWOpicAgg8Rv2pZA"
+      }
+    },
+    {
       id: "air-guitar",
       slug: "air-guitar",
       title: "Air Guitar",
