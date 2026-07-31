@@ -118,6 +118,12 @@ export default function Home() {
                     </ScrollReveal>
                 ))}
             </div>
+
+            <div className="mt-12 text-center relative z-10">
+                <Link href="/research" className="inline-block px-8 py-4 bg-(--bg-secondary) border border-(--border-color) text-(--text-primary) font-bold rounded-full hover:bg-(--text-primary) hover:text-(--bg-primary) transition-all duration-500 shadow-lg tracking-wide text-xs font-mono uppercase">
+                    View All Research Projects →
+                </Link>
+            </div>
         </section>
 
         {/* ACHIEVEMENTS SECTION */}

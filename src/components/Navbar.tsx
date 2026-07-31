@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Research', href: '/research/dual-uuv-system' },
+  { label: 'Research', href: '/research' },
   { label: 'Credentials', href: '/credentials' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
