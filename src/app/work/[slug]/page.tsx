@@ -10,6 +10,7 @@ import { Metadata } from 'next';
 
 import RestaurantOSDetail from '@/components/projects/RestaurantOSDetail';
 import FlightDeckDetail from '@/components/projects/FlightDeckDetail';
+import MobileDetoxDetail from '@/components/projects/MobileDetoxDetail';
 
 // Generate static params for all projects
 export async function generateStaticParams() {
@@ -106,6 +107,8 @@ export default async function ProjectPage({
               <RestaurantOSDetail />
             ) : slug === 'flight-deck' ? (
               <FlightDeckDetail />
+            ) : slug === 'mobile-detox-sleep-quality' ? (
+              <MobileDetoxDetail />
             ) : (
               <ProjectDetail project={project} />
             )}

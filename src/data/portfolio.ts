@@ -121,6 +121,33 @@ export const PORTFOLIO: PortfolioData = {
       paperLink: "/Dual-UUVSystemResearch.pdf",
       researchGateLink: "https://www.researchgate.net/publication/397870338_A_Conceptual_Framework_for_a_Human_Supervised_Dual-UUV_System_Enabling_Autonomous_Maritime_Surveillance",
     },
+    {
+      id: "mobile-detox-sleep-quality",
+      slug: "mobile-detox-sleep-quality",
+      title: "Does Mobile Detox Improve Sleep Quality?",
+      researchType: "Statistical Data Analysis • Research Project • Data Science",
+      problemContext: "Investigating whether reducing mobile phone usage before sleep significantly improves overall sleep quality through primary survey data and hypothesis testing.",
+      systemArchitectureSummary: "Constructed a multi-variable weighted Sleep Quality Index (SQI) and executed Independent Two-Sample t-Tests comparing detox vs non-detox student cohorts.",
+      coreTechnicalAreas: [
+        "Statistical Modeling",
+        "Hypothesis Testing (t-Test)",
+        "Feature Engineering (SQI)",
+        "Data Preprocessing & Cleaning",
+      ],
+      keyContributions: [
+        "Collected primary survey dataset of 22 respondents under BMSCE statistical modeling course.",
+        "Formulated custom weighted Sleep Quality Index (SQI) algorithm.",
+        "Executed Independent Two-Sample t-Test proving statistical significance (p < 0.01, t = 3.18, df = 20).",
+        "Formatted publication-ready analytical report and statistical documentation."
+      ],
+      limitationsAndEthics: "Primary survey scope limited to 22 student respondents; further longitudinal tracking is recommended for wider population generalization.",
+      learnings: [
+        "Designing structured survey data collection mechanisms.",
+        "Conducting parametric hypothesis testing and error boundary analysis.",
+        "Engineered index metrics combining multiple survey dimensions."
+      ],
+      paperLink: "/Statistical_Data_Analysis_Report_final (1).pdf"
+    }
   ],
   projects: [
     {
@@ -367,6 +394,35 @@ export const PORTFOLIO: PortfolioData = {
         demo: "https://flightdeck-track.vercel.app/",
         github: "https://github.com/Tusharjain-19/FlightDeck",
         linkedin: "https://www.linkedin.com/posts/tushar-jain-781149322_flightdeck-buildinpublic-webdevelopment-activity-7464891820997718018-DEPB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFGI8REBvtlyRzZqGv1yWOpicAgg8Rv2pZA"
+      }
+    },
+    {
+      id: "mobile-detox-sleep-quality",
+      slug: "mobile-detox-sleep-quality",
+      title: "Does Mobile Detox Improve Sleep Quality?",
+      tagline: "Statistical Data Analysis • Research Project",
+      oneLineSummary: "A statistical research project investigating the relationship between mobile detox practices and sleep quality using primary survey data, custom index construction, descriptive statistics, and hypothesis testing.",
+      ideaOrigin: "This study was conducted to investigate whether reducing mobile device usage prior to sleep yields statistically significant improvements in sleep quality metrics.",
+      problemStatement: [
+        "Widespread night-time mobile phone usage negatively impacts sleep duration, latency, and perceived restfulness.",
+        "Lack of empirical student survey data quantified into structured sleep quality indices.",
+        "Unverified assumptions regarding the efficacy of pre-sleep mobile detox habits."
+      ],
+      solutionOverview: [
+        "Collected primary survey responses across 22 participants and performed thorough data cleaning.",
+        "Constructed a multi-variable weighted Sleep Quality Index (SQI) formula to quantify restfulness.",
+        "Executed an Independent Two-Sample t-Test proving statistically significant SQI improvements in detox subjects."
+      ],
+      hardestTechnicalChallenge: "Engineered a normalized weighted Sleep Quality Index (SQI) balancing non-linear categorical survey variables while ensuring mathematical validity during parametric t-test evaluations.",
+      learnings: [
+        "Formulating hypothesis tests and interpreting critical t-values and p-values accurately.",
+        "Constructing custom indexes from multidimensional survey parameters.",
+        "Communicating complex statistical findings using clean visual dashboards."
+      ],
+      techStack: ["Google Forms", "Excel Data Engine", "Statistical Modeling", "Hypothesis Testing", "Data Cleaning", "Data Visualization"],
+      proofLinks: {
+        demo: "/Statistical_Data_Analysis_Report_final (1).pdf",
+        github: "https://github.com/Tusharjain-19"
       }
     },
     {

@@ -107,13 +107,15 @@ export default function RestaurantOSDetail() {
               <span>Live Demo</span>
               <ArrowUpRight className="w-4 h-4" />
             </a>
-            <button 
-              onClick={() => setIsReportOpen(true)}
+            <a 
+              href="/Project_DBMS_pdf.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               className="px-6 py-3 bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white font-semibold rounded-lg hover:bg-neutral-800 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 text-sm cursor-pointer"
             >
-              <span>Project Report</span>
+              <span>Project Report (PDF)</span>
               <ArrowUpRight className="w-4 h-4 text-emerald-400" />
-            </button>
+            </a>
             <a 
               href="https://github.com/Tusharjain-19/restaurant-os" 
               target="_blank" 
