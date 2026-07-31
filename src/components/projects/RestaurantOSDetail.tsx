@@ -74,26 +74,26 @@ export default function RestaurantOSDetail() {
   };
 
   return (
-    <article className="min-h-screen text-neutral-200 pb-20 selection:bg-emerald-500/20 selection:text-emerald-400">
+    <article className="min-h-screen text-(--text-primary) pb-20 selection:bg-emerald-500/20 selection:text-emerald-400">
       
       {/* HEADER SECTION */}
-      <header className="relative py-16 md:py-24 border-b border-neutral-900 overflow-hidden">
+      <header className="relative py-16 md:py-24 border-b border-(--border-color) overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="max-w-4xl mx-auto px-4 relative z-10 text-center md:text-left">
-          <Link href="/projects" className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-500 hover:text-emerald-400 transition-colors mb-8 uppercase tracking-widest">
+          <Link href="/projects" className="inline-flex items-center gap-1.5 text-xs font-mono text-(--text-muted) hover:text-emerald-400 transition-colors mb-8 uppercase tracking-widest">
             <ArrowLeft className="w-3.5 h-3.5" /> Back to Archives
           </Link>
           
-          <div className="mb-4 inline-block px-3 py-1 bg-emerald-950/20 border border-emerald-900/40 rounded-full">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400">
+          <div className="mb-4 inline-block px-3 py-1 bg-emerald-500/10 border border-emerald-500/30 rounded-full">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-semibold">
               Flagship SaaS Product
             </span>
           </div>
-          <h1 className="text-4xl sm:text-6xl font-extrabold mb-6 tracking-tight leading-none text-white font-heading">
+          <h1 className="text-4xl sm:text-6xl font-extrabold mb-6 tracking-tight leading-none text-(--text-primary) font-heading">
             RestaurantOS
           </h1>
-          <p className="text-lg sm:text-xl text-neutral-400 font-light leading-relaxed max-w-2xl">
+          <p className="text-lg sm:text-xl text-(--text-secondary) font-light leading-relaxed max-w-2xl">
             Cloud-Native Multi-Tenant Restaurant Management SaaS. Centralizing POS, live table states, inventory tracking, RLS security, and instant WebSockets.
           </p>
           
