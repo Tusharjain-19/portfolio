@@ -397,35 +397,6 @@ export const PORTFOLIO: PortfolioData = {
       }
     },
     {
-      id: "mobile-detox-sleep-quality",
-      slug: "mobile-detox-sleep-quality",
-      title: "Does Mobile Detox Improve Sleep Quality?",
-      tagline: "Statistical Data Analysis • Research Project",
-      oneLineSummary: "A statistical research project investigating the relationship between mobile detox practices and sleep quality using primary survey data, custom index construction, descriptive statistics, and hypothesis testing.",
-      ideaOrigin: "This study was conducted to investigate whether reducing mobile device usage prior to sleep yields statistically significant improvements in sleep quality metrics.",
-      problemStatement: [
-        "Widespread night-time mobile phone usage negatively impacts sleep duration, latency, and perceived restfulness.",
-        "Lack of empirical student survey data quantified into structured sleep quality indices.",
-        "Unverified assumptions regarding the efficacy of pre-sleep mobile detox habits."
-      ],
-      solutionOverview: [
-        "Collected primary survey responses across 22 participants and performed thorough data cleaning.",
-        "Constructed a multi-variable weighted Sleep Quality Index (SQI) formula to quantify restfulness.",
-        "Executed an Independent Two-Sample t-Test proving statistically significant SQI improvements in detox subjects."
-      ],
-      hardestTechnicalChallenge: "Engineered a normalized weighted Sleep Quality Index (SQI) balancing non-linear categorical survey variables while ensuring mathematical validity during parametric t-test evaluations.",
-      learnings: [
-        "Formulating hypothesis tests and interpreting critical t-values and p-values accurately.",
-        "Constructing custom indexes from multidimensional survey parameters.",
-        "Communicating complex statistical findings using clean visual dashboards."
-      ],
-      techStack: ["Google Forms", "Excel Data Engine", "Statistical Modeling", "Hypothesis Testing", "Data Cleaning", "Data Visualization"],
-      proofLinks: {
-        demo: "/Statistical_Data_Analysis_Report_final (1).pdf",
-        github: "https://github.com/Tusharjain-19"
-      }
-    },
-    {
       id: "air-guitar",
       slug: "air-guitar",
       title: "Air Guitar",

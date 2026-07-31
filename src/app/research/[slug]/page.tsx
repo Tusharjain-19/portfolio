@@ -3,6 +3,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import { PORTFOLIO } from '@/data/portfolio';
 import ResearchDetail from '@/components/ResearchDetail';
+import MobileDetoxDetail from '@/components/projects/MobileDetoxDetail';
 import Link from 'next/link';
 
 import StructuredData from '@/components/StructuredData';
@@ -99,7 +100,11 @@ export default async function ResearchPage({
         
         <div className="px-4 sm:px-6 md:px-10 lg:px-16 relative z-10">
             <div className="max-w-4xl mx-auto py-12 sm:py-20">
-                <ResearchDetail research={research} />
+                {slug === 'mobile-detox-sleep-quality' ? (
+                  <MobileDetoxDetail />
+                ) : (
+                  <ResearchDetail research={research} />
+                )}
             </div>
         </div>
     </main>

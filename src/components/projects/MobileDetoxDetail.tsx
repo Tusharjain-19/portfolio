@@ -56,8 +56,8 @@ export default function MobileDetoxDetail() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[280px] bg-blue-600/10 blur-[130px] rounded-full pointer-events-none" />
         
         <div className="max-w-4xl mx-auto px-4 relative z-10 text-center md:text-left">
-          <Link href="/projects" className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-500 hover:text-blue-400 transition-colors mb-8 uppercase tracking-widest">
-            <ArrowLeft className="w-3.5 h-3.5" /> Back to Archives
+          <Link href="/#research" className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-500 hover:text-blue-400 transition-colors mb-8 uppercase tracking-widest">
+            <ArrowLeft className="w-3.5 h-3.5" /> Back to Research
           </Link>
           
           <div className="mb-4 inline-block px-3 py-1 bg-blue-950/30 border border-blue-800/40 rounded-full backdrop-blur-sm">
