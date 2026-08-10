@@ -19,33 +19,12 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
   const [isEnabled, setIsEnabled] = useState(false);
   // Refs for audio contexts/oscillators to avoid re-renders
   const audioCtxRef = useRef<AudioContext | null>(null);
-  const toggleAudioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     // Check local storage on mount
     const saved = localStorage.getItem('sound-enabled');
     // eslint-disable-next-line react-hooks/exhaustive-deps
     if (saved === 'true') setIsEnabled(true);
-    
-    // Pre-load light mode toggle sound
-    toggleAudioRef.current = new Audio('/sound (2).mp3');
-  }, []);
-
-  const playToggleSound = useCallback(() => {
-    try {
-      if (toggleAudioRef.current) {
-        toggleAudioRef.current.currentTime = 0;
-        toggleAudioRef.current.play().catch(() => {
-          const audio = new Audio('/sound (2).mp3');
-          audio.play().catch(() => {});
-        });
-      } else {
-        const audio = new Audio('/sound (2).mp3');
-        audio.play().catch(() => {});
-      }
-    } catch (e) {
-      console.error(e);
-    }
   }, []);
 
   const initAudio = useCallback(() => {
@@ -57,6 +36,31 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
       }
     }
   }, []);
+
+  const playToggleSound = useCallback(() => {
+    if (!audioCtxRef.current) initAudio();
+    const ctx = audioCtxRef.current;
+    if (!ctx) return;
+    
+    if (ctx.state === 'suspended') ctx.resume();
+
+    // Crisp zero-latency mechanical tick sound
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(1200, ctx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(300, ctx.currentTime + 0.015);
+
+    gain.gain.setValueAtTime(0.2, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.015);
+
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + 0.015);
+  }, [initAudio]);
 
   const toggleSound = () => {
     const newState = !isEnabled;
