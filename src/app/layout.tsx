@@ -204,7 +204,7 @@ export default function RootLayout({
   modal: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="light" data-theme="light">
       <body
         suppressHydrationWarning
         className={`${playfair.variable} ${inter.variable} antialiased bg-(--bg-primary) text-(--text-primary) transition-colors duration-500 font-body overflow-x-hidden w-full max-w-[100vw]`}
