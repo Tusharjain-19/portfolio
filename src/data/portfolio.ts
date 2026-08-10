@@ -79,6 +79,13 @@ export const PORTFOLIO: PortfolioData = {
   ],
   hackathons: [
     {
+      title: "Frontend Wars 2026",
+      project: "Frontend Arena",
+      achievement: "Finalist — Frontend Wars 2026",
+      description: "Qualified as a Finalist in Frontend Wars 2026 organized by Frontend Arena for designing and delivering innovative frontend web solutions.",
+      imageUrl: "/Tushar-Jain-FA-L6UMTXXG.png"
+    },
+    {
       title: "Conference 2.0 Hackathon",
       project: "Safe Route",
       achievement: "Top 10 Finalist out of 500+ teams",

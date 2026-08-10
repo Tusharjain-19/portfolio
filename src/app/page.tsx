@@ -138,7 +138,7 @@ export default function Home() {
                  </p>
              </ScrollReveal>
 
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 relative z-10">
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 relative z-10">
                  {PORTFOLIO.hackathons.map((item, idx) => (
                      <ScrollReveal key={idx} className="group">
                          <div className="flex flex-col h-full p-6 sm:p-10 bg-(--bg-secondary)/40 border border-(--border-color) hover:border-(--accent) rounded-2xl transition-all duration-500 hover:shadow-xl relative overflow-hidden">
