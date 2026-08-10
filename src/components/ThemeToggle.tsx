@@ -29,12 +29,10 @@ function ChainLink({ isDark, isOdd }: { isDark: boolean, isOdd: boolean }) {
 }
 
 export default function ThemeToggle() {
-  const { playSound, playChainSound, playToggleSound } = useSound();
+  const { playSound, playToggleSound } = useSound();
   const { theme, toggleTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const isDark = theme === 'dark';
-
-  const lastSoundTime = useRef(0);
 
   const knobX = useMotionValue(0);
   const knobY = useMotionValue((NUM_LINKS - 1) * LINK_LENGTH);
@@ -90,7 +88,7 @@ export default function ThemeToggle() {
     const pullForce = tension * 0.8; // Force exerted by chain on the switch
     const springForce = -topAnchorY.current * 0.3; // Spring inside the housing pulling up
     
-    topAnchorVy.current = (topAnchorVy.current + pullForce + springForce) * 0.8; // Damping
+    topAnchorVy.current = (topAnchorVy.current + pullForce + springForce) * 0.7; // Heavy Damping for stability
     topAnchorY.current += topAnchorVy.current;
     
     // Limit how far the switch can be pulled down
@@ -108,9 +106,7 @@ export default function ThemeToggle() {
         switchTriggered.current = false;
     }
 
-    let maxVel = 0;
-
-    // 2. Verlet integration for chain links
+    // 2. Verlet integration for chain links (Rigid Damping & Restoring Force)
     for(let i=1; i<NUM_LINKS; i++) {
         if (i === NUM_LINKS - 1 && isDragging.current) {
             points[i].x = knobX.get();
@@ -119,20 +115,22 @@ export default function ThemeToggle() {
         }
         
         const p = points[i];
-        const vx = (p.x - p.oldX) * 0.98; // Friction/Air resistance
-        const vy = (p.y - p.oldY) * 0.98;
+        const vx = (p.x - p.oldX) * 0.70; // Heavy lateral damping to prevent horizontal oscillation
+        const vy = (p.y - p.oldY) * 0.75; // Heavy vertical damping for rigid feel
         
-        const vel = Math.sqrt(vx*vx + vy*vy);
-        if (vel > maxVel) maxVel = vel;
-
         p.oldX = p.x;
         p.oldY = p.y;
         p.x += vx;
         p.y += vy + 1.5; // Gravity
+
+        // Center restoring force for rigid vertical alignment when released
+        if (!isDragging.current) {
+            p.x *= 0.70;
+        }
     }
 
-    // 3. Constraints relaxation for rigidity
-    for(let iter=0; iter<15; iter++) {
+    // 3. Constraints relaxation for maximum rigidity (25 passes)
+    for(let iter=0; iter<25; iter++) {
         for(let i=0; i<NUM_LINKS - 1; i++) {
             const p1 = points[i];
             const p2 = points[i+1];
@@ -158,28 +156,12 @@ export default function ThemeToggle() {
         }
     }
 
-    // Trigger chain rattle sound based on movement
-    if (maxVel > 1.5) {
-        const now = Date.now();
-        // The faster it moves, the more frequent the clinks can be
-        const throttleDelay = Math.max(50, 200 - (maxVel * 10)); 
-        if (now - lastSoundTime.current > throttleDelay) {
-            if (playChainSound) {
-                playChainSound(maxVel);
-            }
-            lastSoundTime.current = now;
-        }
-    }
-
     // 4. Update DOM elements
     for(let i=0; i<NUM_LINKS - 1; i++) { // Render all links except knob
         const el = linkRefs.current[i];
         if (el) {
-            // Compute rotation to point to next link
             const p1 = points[i];
             const p2 = points[i+1];
-            // default angle 0 means pointing down. 
-            // atan2(y, x) is 90 deg when pointing down.
             const angle = Math.atan2(p2.y - p1.y, p2.x - p1.x) * (180 / Math.PI) - 90;
             
             el.style.transform = `translate3d(${p1.x}px, ${p1.y}px, 0) rotate(${angle}deg)`;
@@ -192,7 +174,6 @@ export default function ThemeToggle() {
         const pPrev = points[NUM_LINKS - 2];
         const angle = Math.atan2(pLast.y - pPrev.y, pLast.x - pPrev.x) * (180 / Math.PI) - 90;
         
-        // The knob wrapper is already translated by Framer Motion, so we only rotate it
         knobRef.current.style.transform = `rotate(${angle}deg)`;
         
         // Sync framer motion values if not dragging
@@ -266,8 +247,8 @@ export default function ThemeToggle() {
             }}
             drag
             dragMomentum={false}
-            dragConstraints={{ top: 0, bottom: 250, left: -100, right: 100 }}
-            dragElastic={0.05}
+            dragConstraints={{ top: 0, bottom: 150, left: -30, right: 30 }}
+            dragElastic={0.02}
             onDragStart={() => { isDragging.current = true; }}
             onDragEnd={() => { isDragging.current = false; }}
         >
