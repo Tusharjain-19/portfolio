@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { PORTFOLIO } from '@/data/portfolio';
 
 export default function ScrollRevealText() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -56,13 +57,13 @@ export default function ScrollRevealText() {
           className="flex flex-wrap gap-8 mt-8"
         >
           <a 
-            href="mailto:tushar.jain2022@bmsce.ac.in" 
+            href={`mailto:${PORTFOLIO.profile.socials.email}`} 
             className="text-lg sm:text-xl font-mono uppercase tracking-widest text-(--text-primary) hover:opacity-50 underline decoration-(--border-color) underline-offset-8 transition-all"
           >
             Email Me
           </a>
           <a 
-            href="https://linkedin.com/in/tushar-jain-in" 
+            href={PORTFOLIO.profile.socials.linkedin} 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-lg sm:text-xl font-mono uppercase tracking-widest text-(--text-primary) hover:opacity-50 underline decoration-(--border-color) underline-offset-8 transition-all"

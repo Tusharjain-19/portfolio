@@ -10,6 +10,7 @@ interface SoundContextType {
   toggleSound: () => void;
   playSound: (type: SoundType) => void;
   playChainSound: (intensity: number) => void;
+  playToggleSound: () => void;
 }
 
 const SoundContext = createContext<SoundContextType | undefined>(undefined);
@@ -18,12 +19,33 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
   const [isEnabled, setIsEnabled] = useState(false);
   // Refs for audio contexts/oscillators to avoid re-renders
   const audioCtxRef = useRef<AudioContext | null>(null);
+  const toggleAudioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     // Check local storage on mount
     const saved = localStorage.getItem('sound-enabled');
     // eslint-disable-next-line react-hooks/exhaustive-deps
     if (saved === 'true') setIsEnabled(true);
+    
+    // Pre-load light mode toggle sound
+    toggleAudioRef.current = new Audio('/sound (2).mp3');
+  }, []);
+
+  const playToggleSound = useCallback(() => {
+    try {
+      if (toggleAudioRef.current) {
+        toggleAudioRef.current.currentTime = 0;
+        toggleAudioRef.current.play().catch(() => {
+          const audio = new Audio('/sound (2).mp3');
+          audio.play().catch(() => {});
+        });
+      } else {
+        const audio = new Audio('/sound (2).mp3');
+        audio.play().catch(() => {});
+      }
+    } catch (e) {
+      console.error(e);
+    }
   }, []);
 
   const initAudio = useCallback(() => {
@@ -126,7 +148,7 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
   }, [isEnabled, initAudio]);
 
   return (
-    <SoundContext.Provider value={{ isEnabled, toggleSound, playSound, playChainSound }}>
+    <SoundContext.Provider value={{ isEnabled, toggleSound, playSound, playChainSound, playToggleSound }}>
       {children}
     </SoundContext.Provider>
   );

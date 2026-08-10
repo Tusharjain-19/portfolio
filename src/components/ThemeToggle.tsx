@@ -29,7 +29,7 @@ function ChainLink({ isDark, isOdd }: { isDark: boolean, isOdd: boolean }) {
 }
 
 export default function ThemeToggle() {
-  const { playSound, playChainSound } = useSound();
+  const { playSound, playChainSound, playToggleSound } = useSound();
   const { theme, toggleTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const isDark = theme === 'dark';
@@ -61,6 +61,7 @@ export default function ThemeToggle() {
   const handleToggle = useCallback(() => {
     toggleTheme();
     playSound('click');
+    playToggleSound();
     
     // Add a flash effect manually to body
     const flash = document.createElement('div');
@@ -77,7 +78,7 @@ export default function ThemeToggle() {
     void flash.offsetWidth;
     flash.style.opacity = '0';
     setTimeout(() => flash.remove(), 400);
-  }, [isDark, playSound, toggleTheme]);
+  }, [isDark, playSound, playToggleSound, toggleTheme]);
 
   useAnimationFrame(() => {
     // 1. Simulate switch spring at the top

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { PORTFOLIO } from '@/data/portfolio';
 
 export default function Hero() {
   const bioWords = "Engineering student at BMS College of Engineering building real-world AI, software, and embedded systems with a focus on products that impact everyday life.".split(" ");
@@ -41,7 +42,7 @@ export default function Hero() {
         {/* Action Links */}
         <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-12 sm:gap-24 pt-4">
             <motion.a 
-                href="mailto:tushar.jain2022@bmsce.ac.in" 
+                href={`mailto:${PORTFOLIO.profile.socials.email}`} 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -52,7 +53,7 @@ export default function Hero() {
             </motion.a>
             
             <motion.a 
-                href="https://linkedin.com/in/tushar-jain-in" 
+                href={PORTFOLIO.profile.socials.linkedin} 
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 10 }}
