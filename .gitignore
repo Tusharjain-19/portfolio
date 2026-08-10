@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# skill & prompt files
+premium-web-design-skill.md
+
+# resume generator & html build files
+*_html.pdf
+*_HTML.pdf
+*.html
+!Tushar_Jain_Resume.pdf
+
