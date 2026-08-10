@@ -46,6 +46,9 @@ premium-web-design-skill.md
 # resume generator & html build files
 *_html.pdf
 *_HTML.pdf
+*Resume_html.pdf
 *.html
+*_CV.docx
+*_CV.pdf
 !Tushar_Jain_Resume.pdf
 
