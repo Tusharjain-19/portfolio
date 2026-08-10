@@ -25,13 +25,13 @@ export default function ProjectsPage() {
         {/* PAGE TITLE */}
         <header className="border-b-2 border-(--border-color) pb-8 sm:pb-12 text-center sm:text-left">
             <Link href="/" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono text-(--text-muted) hover:text-(--accent) transition-colors mb-6 uppercase tracking-widest">
-                <ArrowLeft className="w-4 h-4" /> Return to Home
+                <ArrowLeft className="w-4 h-4" /> Back to Home
             </Link>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 tracking-tight font-heading text-(--text-primary)">
-              Engineering Archives
+              All Projects
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-(--text-secondary) font-light max-w-3xl">
-                A showcase of technical mastery and real-world execution.
+                A collection of full-stack web apps, hardware prototypes, and tools I&apos;ve built.
             </p>
         </header>
 

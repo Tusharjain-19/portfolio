@@ -20,15 +20,15 @@ export default function Home() {
 
       <div className="relative z-10 px-4 sm:px-6 md:px-10 lg:px-16 max-w-7xl mx-auto space-y-16 sm:space-y-24 pb-12 sm:pb-16">
         
-        {/* PROJECTS SECTION - Pichwai Layout */}
+        {/* PROJECTS SECTION */}
         <section id="projects" className="scroll-mt-32">
            <ScrollReveal className="text-center mb-16 sm:mb-24">
              <div className="w-16 h-1 bg-(--accent) mx-auto mb-6 opacity-80" />
              <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-heading mb-6 tracking-tight text-(--text-primary)">
-               Engineering Archives
+               Featured Projects
              </h2>
              <p className="text-xl sm:text-2xl text-(--text-secondary) font-light max-w-2xl mx-auto">
-               Technical mastery meets real-world utility.
+               Real apps and tools I&apos;ve built to solve everyday problems.
              </p>
            </ScrollReveal>
 
@@ -63,7 +63,7 @@ export default function Home() {
                             {project.oneLineSummary}
                         </p>
                         <Link href={`/work/${project.slug}`} className="inline-flex items-center gap-2 mt-4 text-(--accent) font-medium font-mono uppercase tracking-widest hover:tracking-[0.3em] transition-all duration-300">
-                            Explore Artifact <ArrowUpRight className="w-5 h-5" />
+                            View Project <ArrowUpRight className="w-5 h-5" />
                         </Link>
                     </div>
                 </ScrollReveal>
@@ -72,23 +72,23 @@ export default function Home() {
            
            <div className="mt-20 text-center">
                <Link href="/projects" className="inline-block px-10 py-5 bg-(--bg-secondary) border border-(--border-color) text-(--text-primary) font-bold rounded-full hover:bg-(--text-primary) hover:text-(--bg-primary) transition-all duration-500 shadow-xl tracking-wide">
-                   View All Archives
+                   View All Projects
                </Link>
            </div>
         </section>
 
-        {/* RESEARCH SECTION - Udaipur Hint */}
+        {/* RESEARCH SECTION */}
         <section id="research" className="scroll-mt-32 relative">
-            {/* Udaipur Water Reflection Hint */}
+            {/* Water Reflection Hint */}
             <div className="absolute inset-0 bg-linear-to-b from-transparent via-(--accent)/5 to-transparent pointer-events-none opacity-50" />
             
             <ScrollReveal className="text-center mb-10 sm:mb-16 relative z-10">
                 <div className="w-1 h-12 bg-(--accent) mx-auto mb-6 opacity-80" />
                 <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-heading mb-4 tracking-tight text-(--text-primary)">
-                    Intellectual Pursuits
+                    Research & Papers
                 </h2>
                 <p className="text-xl sm:text-2xl text-(--text-secondary) font-light max-w-2xl mx-auto">
-                    Deep dives into conceptual architecture and research.
+                    In-depth technical research and engineering studies.
                 </p>
             </ScrollReveal>
 
@@ -112,7 +112,7 @@ export default function Home() {
                                 {paper.problemContext}
                             </p>
                             <div className="mt-6 sm:mt-8 flex items-center text-(--accent) font-medium font-mono uppercase tracking-widest text-[10px] sm:text-xs">
-                                Read Abstract <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                Read Paper <ArrowUpRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </div>
                         </Link>
                     </ScrollReveal>
@@ -121,7 +121,7 @@ export default function Home() {
 
             <div className="mt-12 text-center relative z-10">
                 <Link href="/research" className="inline-block px-8 py-4 bg-(--bg-secondary) border border-(--border-color) text-(--text-primary) font-bold rounded-full hover:bg-(--text-primary) hover:text-(--bg-primary) transition-all duration-500 shadow-lg tracking-wide text-xs font-mono uppercase">
-                    View All Research Projects →
+                    View All Research Papers →
                 </Link>
             </div>
         </section>
@@ -134,7 +134,7 @@ export default function Home() {
                      Achievements
                  </h2>
                  <p className="text-xl sm:text-2xl text-(--text-secondary) font-light max-w-2xl mx-auto">
-                     Honors, competitive milestones, and ecosystem validation.
+                     Hackathon wins, awards, and recognitions.
                  </p>
              </ScrollReveal>
 
@@ -180,10 +180,10 @@ export default function Home() {
              <ScrollReveal className="text-center mb-10 sm:mb-16">
                  <div className="w-16 h-1 bg-(--accent) mx-auto mb-6 opacity-80" />
                  <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-heading mb-4 tracking-tight text-(--text-primary)">
-                     Professional Credentials
+                     Certifications
                  </h2>
                  <p className="text-xl sm:text-2xl text-(--text-secondary) font-light max-w-2xl mx-auto">
-                     Verified specializations and industry training.
+                     Verified courses and skill certificates.
                  </p>
              </ScrollReveal>
 
@@ -199,7 +199,7 @@ export default function Home() {
                                      </div>
                                      <div>
                                          <span className="block text-xs font-bold text-(--text-primary)">{cert.issuer}</span>
-                                         <span className="block text-[9px] font-mono text-(--text-muted) uppercase">2026 Edition</span>
+                                         <span className="block text-[9px] font-mono text-(--text-muted) uppercase">Verified Certificate</span>
                                      </div>
                                  </div>
                                  <span className="px-2 py-0.5 border border-emerald-500/30 bg-emerald-500/10 text-emerald-500 text-[9px] font-mono uppercase tracking-wider rounded-full">
@@ -231,7 +231,7 @@ export default function Home() {
                                      rel="noopener noreferrer"
                                      className="w-full mt-auto py-2.5 bg-(--accent) text-(--bg-primary) font-bold text-center text-xs uppercase tracking-widest rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-1.5"
                                  >
-                                     <span>Verify Credential</span>
+                                     <span>Verify Certificate</span>
                                      <ArrowUpRight className="w-3.5 h-3.5" />
                                  </a>
                              )}

@@ -26,10 +26,10 @@ export default function ContactPage() {
         {/* PAGE TITLE */}
         <div className="mb-16 text-center sm:text-left">
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 font-heading text-(--text-primary) tracking-tighter">
-            Connect
+            Get in Touch
           </h1>
           <p className="text-xl sm:text-2xl text-(--text-secondary) font-light max-w-xl leading-relaxed mx-auto sm:mx-0">
-              Open to engineering internships, embedded systems discussions, and building the future.
+              Open to engineering internships, software projects, and tech collaborations.
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export default function ContactPage() {
                 href={`mailto:${PORTFOLIO.profile.socials.email}`}
                 className="block w-full p-6 sm:p-10 bg-(--bg-primary)/50 border border-(--border-color) rounded-3xl hover:border-(--accent) transition-all duration-300 relative overflow-hidden group/item"
             >
-                <span className="block text-[10px] font-mono text-(--text-muted) uppercase tracking-[0.3em] mb-4 opacity-70 group-hover/item:text-(--accent) transition-colors">Electronic Mail</span>
+                <span className="block text-[10px] font-mono text-(--text-muted) uppercase tracking-[0.3em] mb-4 opacity-70 group-hover/item:text-(--accent) transition-colors">Email</span>
                 <span className="text-lg sm:text-2xl md:text-3xl font-heading text-(--text-primary) break-all sm:wrap-break-word leading-tight block">
                   {PORTFOLIO.profile.socials.email}
                 </span>
@@ -55,7 +55,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="block w-full p-6 sm:p-8 bg-(--bg-primary)/50 border border-(--border-color) rounded-3xl hover:border-(--accent) transition-all duration-300 group/item"
                 >
-                    <span className="block text-[10px] font-mono text-(--text-muted) uppercase tracking-[0.3em] mb-4 opacity-70 group-hover/item:text-(--accent) transition-colors">Network</span>
+                    <span className="block text-[10px] font-mono text-(--text-muted) uppercase tracking-[0.3em] mb-4 opacity-70 group-hover/item:text-(--accent) transition-colors">LinkedIn</span>
                     <span className="flex items-center justify-between gap-2 text-xl font-heading font-bold text-(--text-primary)">
                       LinkedIn <ArrowUpRight className="w-5 h-5 text-(--accent)" />
                     </span>
@@ -68,7 +68,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="block w-full p-6 sm:p-8 bg-(--bg-primary)/50 border border-(--border-color) rounded-3xl hover:border-(--accent) transition-all duration-300 group/item"
                 >
-                    <span className="block text-[10px] font-mono text-(--text-muted) uppercase tracking-[0.3em] mb-4 opacity-70 group-hover/item:text-(--accent) transition-colors">Code</span>
+                    <span className="block text-[10px] font-mono text-(--text-muted) uppercase tracking-[0.3em] mb-4 opacity-70 group-hover/item:text-(--accent) transition-colors">GitHub</span>
                     <span className="flex items-center justify-between gap-2 text-xl font-heading font-bold text-(--text-primary)">
                       GitHub <ArrowUpRight className="w-5 h-5 text-(--accent)" />
                     </span>

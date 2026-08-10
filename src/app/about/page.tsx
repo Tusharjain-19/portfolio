@@ -23,83 +23,83 @@ export default function AboutPage() {
 
       <div className="relative z-10 px-4 sm:px-6 md:px-10 lg:px-16 pt-24 sm:pt-32 pb-16 sm:pb-24 max-w-4xl mx-auto space-y-16 sm:space-y-24">
         
-        {/* PAGE TITLE - Chapter 0 */}
+        {/* PAGE TITLE */}
         <header className="text-center space-y-6 sm:space-y-8 pb-10 border-b border-(--border-color)">
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold font-heading text-(--text-primary) tracking-tight">
               The Journey
             </h1>
             <p className="text-xl sm:text-2xl text-(--text-secondary) font-light max-w-2xl mx-auto">
-                A narrative of engineering, curiosity, and the art of building.
+                My background, experience, and why I love building things.
             </p>
         </header>
 
-        {/* CHAPTER 1 - The Concept */}
+        {/* SECTION 1 - About Me */}
         <ScrollReveal className="relative pl-6 sm:pl-12 border-l border-(--accent-muted)">
             <div className="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-(--accent)" />
-            <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">Chapter I. The Concept</h2>
+            <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">01. About Me</h2>
             <div className="space-y-6 text-lg sm:text-xl text-(--text-secondary) leading-relaxed font-light">
                 <p>
-                    I am an engineering student at BMS College of Engineering, Bengaluru, building real-world AI, software, and embedded systems with a focus on products that impact everyday life. Beyond the classroom, I view engineering as a craft - a medium to solve friction in the real world.
+                    I am a Computer Science & Business Systems student at BMS College of Engineering, Bengaluru. I build software, web applications, and embedded hardware designed to solve practical problems for real people.
                 </p>
                 <p>
-                    My work spans frontend aesthetics, backend logic, and embedded systems hardware. I don&apos;t just write code; I build tools that people actually use.
+                    My work spans clean frontend UIs, backend API logic, and hardware microcontrollers. I focus on building straightforward tools that people can easily use.
                 </p>
             </div>
         </ScrollReveal>
 
-        {/* CHAPTER 2 - Solving Friction */}
+        {/* SECTION 2 - Solving Real Problems */}
         <ScrollReveal className="relative pl-6 sm:pl-12 border-l border-(--accent-muted)">
              <div className="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-(--accent)" />
-             <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">Chapter II. Solving Friction</h2>
+             <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">02. Solving Real Problems</h2>
              <div className="space-y-6 text-lg sm:text-xl text-(--text-secondary) leading-relaxed font-light">
                 <p>
-                    Every project I&apos;ve built was born out of frustration. <strong>NotesCSBS</strong> was created to untangle the chaos of scattered study materials. <strong>Jaipur Ride</strong> was built because navigating public transport shouldn&apos;t require decoding ten different WhatsApp messages.
+                    Every project I&apos;ve built was created to solve a real headache. <strong>NotesCSBS</strong> was built to organize scattered college study notes. <strong>Jaipur Ride</strong> was made so commuters don&apos;t have to decipher confusing messages to catch the metro.
                 </p>
                 <p>
-                    I believe in <em>MVP First</em>. Build the core mechanism. Test it. Break it. Refine it. Let the user&apos;s need dictate the architecture, not the other way around.
+                    I believe in getting working prototypes into users&apos; hands quickly—build the core app, test it with real users, fix what breaks, and refine it based on real feedback.
                 </p>
              </div>
         </ScrollReveal>
 
-        {/* CHAPTER 3 - Hardware & Health */}
+        {/* SECTION 3 - Hardware & Health */}
         <ScrollReveal className="relative pl-6 sm:pl-12 border-l border-(--accent-muted)">
              <div className="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-(--accent)" />
-             <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">Chapter III. The Physical Realm</h2>
+             <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">03. Hardware & Health Tech</h2>
              <div className="space-y-6 text-lg sm:text-xl text-(--text-secondary) leading-relaxed font-light">
                 <p>
-                    Software is infinite, but hardware grounds you in reality. Working on <strong>PulsePredict</strong> (Vital Health Tech) taught me the constraints of the physical world.
+                    Software is great, but combining it with hardware creates tangible impact. Working on <strong>PulsePredict</strong> (Vital Health Tech) taught me how software connects with real-world sensors.
                 </p>
                 <p>
-                    Building a sub-INR 6000 wearable for elderly care meant fighting with BLE stacks, tuning IMU sensor thresholds to prevent false fall detections, and understanding the true cost of making technology accessible to 140 million Indians.
+                    Building an affordable wearable for elderly safety meant tuning motion sensors to prevent fake fall alerts and making reliable tech accessible to everyday families.
                 </p>
              </div>
         </ScrollReveal>
 
-        {/* CHAPTER 4 - The Craft */}
+        {/* SECTION 4 - How I Work */}
         <ScrollReveal className="relative pl-6 sm:pl-12 border-l border-(--accent-muted)">
              <div className="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-(--accent)" />
-             <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">Chapter IV. The Craft</h2>
+             <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">04. How I Work</h2>
              <ul className="grid sm:grid-cols-2 gap-8 text-(--text-secondary) font-light mt-8">
                 <li className="p-6 border border-(--border-color) bg-(--bg-secondary) rounded-2xl hover:border-(--accent) transition-colors">
                     <strong className="block text-(--text-primary) font-heading text-2xl mb-2">Simplicity</strong>
-                    Clear UI over complex dashboards. If it needs a manual, it&apos;s broken.
+                    Clean interfaces that work intuitively without needing an instruction manual.
                 </li>
                 <li className="p-6 border border-(--border-color) bg-(--bg-secondary) rounded-2xl hover:border-(--accent) transition-colors">
-                    <strong className="block text-(--text-primary) font-heading text-2xl mb-2">Systems</strong>
-                    Data structures to hardware interrupts, I care about the whole vertical slice.
+                    <strong className="block text-(--text-primary) font-heading text-2xl mb-2">End-to-End</strong>
+                    From database tables down to hardware microchips, I build the complete solution.
                 </li>
              </ul>
         </ScrollReveal>
 
-        {/* EPILOGUE - CTA */}
+        {/* CTA */}
         <ScrollReveal className="pt-16 border-t border-(--border-color) text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold font-heading mb-8 text-(--text-primary)">The story continues.</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold font-heading mb-8 text-(--text-primary)">Let&apos;s build something together.</h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <Link href="/projects" className="px-8 py-4 bg-(--accent) text-(--bg-primary) font-bold rounded-full hover:scale-105 transition-transform tracking-wide">
-                    View the Archives
+                    View Projects
                 </Link>
                  <a href={`mailto:${PORTFOLIO.profile.socials.email}`} className="px-8 py-4 border border-(--accent) text-(--accent) font-bold rounded-full hover:bg-(--accent) hover:text-(--bg-primary) transition-all tracking-wide">
-                    Start a Dialogue
+                    Send Me an Email
                 </a>
             </div>
         </ScrollReveal>

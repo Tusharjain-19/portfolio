@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { PORTFOLIO } from '@/data/portfolio';
 
 export default function Hero() {
-  const bioWords = "Engineering student at BMS College of Engineering building real-world AI, software, and embedded systems with a focus on products that impact everyday life.".split(" ");
+  const bioWords = "Computer Science student at BMSCE building software, web apps, and hardware that solve real everyday problems.".split(" ");
 
   return (
     <section className="relative w-full flex flex-col overflow-hidden pt-32 pb-10">
@@ -61,7 +61,7 @@ export default function Hero() {
                 transition={{ duration: 0.6, delay: 0.9 }}
                 className="group flex flex-col items-center gap-3 hover:opacity-70 transition-opacity"
             >
-                <span className="text-xs font-mono text-(--text-muted) tracking-widest uppercase">Network</span>
+                <span className="text-xs font-mono text-(--text-muted) tracking-widest uppercase">Connect</span>
                 <span className="text-lg sm:text-xl font-medium font-body text-(--text-primary) underline decoration-(--border-color) underline-offset-8">LinkedIn</span>
             </motion.a>
         </div>

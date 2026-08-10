@@ -30,14 +30,14 @@ export default function ResearchHubPage() {
           </Link>
           <div className="inline-block px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full">
             <span className="text-[10px] font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 font-semibold">
-              Research & Academic Publications
+              Research & Papers
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight font-heading text-(--text-primary)">
-            Research Index
+            Research Papers
           </h1>
           <p className="text-base sm:text-xl text-(--text-secondary) font-light max-w-2xl leading-relaxed">
-            Explorations across autonomous robotics, human-in-the-loop systems design, statistical data science, and empirical hypothesis testing.
+            Independent research papers, statistical analysis, and engineering system designs.
           </p>
         </header>
 
