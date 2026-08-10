@@ -88,7 +88,7 @@ export default function ThemeToggle() {
     const pullForce = tension * 0.8; // Force exerted by chain on the switch
     const springForce = -topAnchorY.current * 0.3; // Spring inside the housing pulling up
     
-    topAnchorVy.current = (topAnchorVy.current + pullForce + springForce) * 0.7; // Heavy Damping for stability
+    topAnchorVy.current = (topAnchorVy.current + pullForce + springForce) * 0.8; // Damping
     topAnchorY.current += topAnchorVy.current;
     
     // Limit how far the switch can be pulled down
@@ -106,7 +106,7 @@ export default function ThemeToggle() {
         switchTriggered.current = false;
     }
 
-    // 2. Verlet integration for chain links (Rigid Damping & Restoring Force)
+    // 2. Verlet integration for chain links
     for(let i=1; i<NUM_LINKS; i++) {
         if (i === NUM_LINKS - 1 && isDragging.current) {
             points[i].x = knobX.get();
@@ -115,22 +115,17 @@ export default function ThemeToggle() {
         }
         
         const p = points[i];
-        const vx = (p.x - p.oldX) * 0.70; // Heavy lateral damping to prevent horizontal oscillation
-        const vy = (p.y - p.oldY) * 0.75; // Heavy vertical damping for rigid feel
+        const vx = (p.x - p.oldX) * 0.98; // Friction/Air resistance
+        const vy = (p.y - p.oldY) * 0.98;
         
         p.oldX = p.x;
         p.oldY = p.y;
         p.x += vx;
         p.y += vy + 1.5; // Gravity
-
-        // Center restoring force for rigid vertical alignment when released
-        if (!isDragging.current) {
-            p.x *= 0.70;
-        }
     }
 
-    // 3. Constraints relaxation for maximum rigidity (25 passes)
-    for(let iter=0; iter<25; iter++) {
+    // 3. Constraints relaxation for rigidity
+    for(let iter=0; iter<15; iter++) {
         for(let i=0; i<NUM_LINKS - 1; i++) {
             const p1 = points[i];
             const p2 = points[i+1];
@@ -247,8 +242,8 @@ export default function ThemeToggle() {
             }}
             drag
             dragMomentum={false}
-            dragConstraints={{ top: 0, bottom: 150, left: -30, right: 30 }}
-            dragElastic={0.02}
+            dragConstraints={{ top: 0, bottom: 250, left: -100, right: 100 }}
+            dragElastic={0.05}
             onDragStart={() => { isDragging.current = true; }}
             onDragEnd={() => { isDragging.current = false; }}
         >
