@@ -15,6 +15,7 @@ import Preloader from "@/components/Preloader";
 import Grain from "@/components/Grain";
 import StructuredData from "@/components/StructuredData";
 import AEOContent from "@/components/AEOContent";
+import { Analytics } from "@vercel/analytics/next";
 
 const playfair = Playfair_Display({
   variable: "--font-heading",
@@ -228,6 +229,7 @@ export default function RootLayout({
                   <Footer />
               </MotionConfig>
           </SoundProvider>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
