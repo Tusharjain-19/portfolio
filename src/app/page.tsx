@@ -194,9 +194,15 @@ export default function Home() {
                              {/* Badge */}
                              <div className="flex justify-between items-start mb-6">
                                  <div className="flex items-center gap-2">
-                                     <div className="w-8 h-8 rounded-full bg-(--accent) text-(--bg-primary) flex items-center justify-center font-bold text-xs">
-                                         {cert.issuer === 'Coursera' ? 'C' : 'I'}
-                                     </div>
+                                     {cert.issuer === 'Coursera' ? (
+                                         <img src="/coursera_logo.png" alt="Coursera Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
+                                     ) : cert.issuer === '3Skill Training' ? (
+                                         <img src="/3skill_logo.png" alt="3Skill Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
+                                     ) : (
+                                         <div className="w-8 h-8 rounded-full bg-(--accent) text-(--bg-primary) flex items-center justify-center font-bold text-xs shrink-0">
+                                             {cert.issuer.charAt(0)}
+                                         </div>
+                                     )}
                                      <div>
                                          <span className="block text-xs font-bold text-(--text-primary)">{cert.issuer}</span>
                                          <span className="block text-[9px] font-mono text-(--text-muted) uppercase">Verified Certificate</span>

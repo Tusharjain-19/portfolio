@@ -112,16 +112,16 @@ export default function CredentialsPage() {
              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                  {PORTFOLIO.certifications.map((cert, idx) => (
                      <ScrollReveal key={idx}>
-                         <div className="flex flex-col h-full p-6 bg-(--bg-secondary)/40 border border-(--border-color) hover:border-(--accent) rounded-2xl transition-all duration-500 hover:shadow-xl relative">
+                          <div className="flex flex-col h-full p-6 bg-(--bg-secondary)/40 border border-(--border-color) hover:border-(--accent) rounded-2xl transition-all duration-500 hover:shadow-xl relative">
                               {/* Badge */}
                               <div className="flex justify-between items-start mb-6">
                                   <div className="flex items-center gap-2">
                                       {cert.issuer === 'Coursera' ? (
-                                          <img src="/coursera_logo.png" alt="Coursera Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5" />
+                                          <img src="/coursera_logo.png" alt="Coursera Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
                                       ) : cert.issuer === '3Skill Training' ? (
-                                          <img src="/3skill_logo.png" alt="3Skill Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5" />
+                                          <img src="/3skill_logo.png" alt="3Skill Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
                                       ) : (
-                                          <div className="w-8 h-8 rounded-full bg-(--accent) text-(--bg-primary) flex items-center justify-center font-bold text-xs">
+                                          <div className="w-8 h-8 rounded-full bg-(--accent) text-(--bg-primary) flex items-center justify-center font-bold text-xs shrink-0">
                                               {cert.issuer.charAt(0)}
                                           </div>
                                       )}
@@ -130,7 +130,7 @@ export default function CredentialsPage() {
                                           <span className="block text-[9px] font-mono text-(--text-muted) uppercase">Verified Credential</span>
                                       </div>
                                   </div>
-                                 <span className="px-2 py-0.5 border border-emerald-500/30 bg-emerald-500/10 text-emerald-500 text-[9px] font-mono uppercase tracking-wider rounded-full">
+                                  <span className="px-2 py-0.5 border border-emerald-500/30 bg-emerald-500/10 text-emerald-500 text-[9px] font-mono uppercase tracking-wider rounded-full">
                                      Active
                                  </span>
                              </div>
