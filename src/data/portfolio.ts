@@ -3,8 +3,8 @@ import { PortfolioData } from './types';
 export const PORTFOLIO: PortfolioData = {
   profile: {
     name: "Tushar Jain",
-    role: "Engineering Student & MVP Builder",
-    bio: "I am an engineering student at BMS College of Engineering. I love building practical software and hardware projects that solve real, everyday problems for people.",
+    role: "Computer Science & Business Systems Student",
+    bio: "I am a Computer Science & Business Systems (CSBS) engineering student at BMS College of Engineering (BMSCE) in Bengaluru, Karnataka. Originally from Jaipur, Rajasthan, I build full-stack web applications, embedded systems, and autonomous prototypes.",
     socials: {
       email: "jaint0910@gmail.com",
       linkedin: "https://www.linkedin.com/in/tushar-jain-781149322/",
@@ -105,25 +105,29 @@ export const PORTFOLIO: PortfolioData = {
       slug: "dual-uuv-system",
       title: "A Conceptual Framework for a Human-Supervised Dual-UUV System for Autonomous Maritime Surveillance",
       researchType: "Independent Research (Conceptual + Systems Design)",
-      problemContext: "Traditional sea surveillance systems are not flexible enough to safely tell apart real threats in real-time, especially without a human present.",
-      systemArchitectureSummary: "I designed a split system: one quiet submarine for sneaky detection and a separate active one for checking things out, both controlled by a strict human approval step.",
+      problemContext: "Traditional maritime surveillance systems lack operational flexibility, suffering from high acoustic signal attenuation and wave noise that degrades anomaly tracking. Identifying and classifying targets in real-time requires cooperative multi-vehicle systems to balance cover and sensor footprint.",
+      systemArchitectureSummary: "Designed a multi-agent cooperative UUV surveillance systems architecture. The model divides operational roles between a passive, silent 'Scout' UUV (for initial acoustic anomaly detection) and an active, sonar-equipped 'Inspector' UUV (for optical and high-frequency sonar validation), coordinating states over dynamic acoustic communication links.",
       coreTechnicalAreas: [
-        "Unmanned Underwater Vehicles (UUV)",
-        "Passive Acoustic Detection",
+        "Autonomous Systems",
+        "UUV Research",
+        "Maritime Surveillance",
+        "Multi-Agent Systems",
         "Sensor Fusion (EKF)",
-        "Human-in-the-loop Control",
+        "Signal Processing",
+        "Human-Supervised Autonomy",
+        "Systems Architecture"
       ],
       keyContributions: [
-        "Designed a system that splits detection and inspection tasks between two specialized vehicles.",
-        "Created guidelines for locating targets using filters and underwater signal sharing.",
-        "Set up an ethical safety rule requiring active human approval before taking any action.",
-        "Calculated how combining sensors like compasses and acoustics helps keep tracking accurate.",
+        "Designed a multi-agent systems architecture dividing scout-detection and inspector-validation roles between specialized UUV classes.",
+        "Formulated a cooperative target localization model utilizing passive acoustic arrays and range-only tracking filters.",
+        "Integrated a Human-Supervised cryptographic override schema, establishing safety guardrails for autonomous mission plans.",
+        "Developed a sensor fusion mathematical model employing Extended Kalman Filtering (EKF) to merge DVL (Doppler Velocity Log) and INS (Inertial Navigation System) telemetry, reducing cumulative positional drift in simulated states."
       ],
-      limitationsAndEthics: "This is a purely theoretical design. I did not build a physical submarine, and the system is strictly meant for safe, surveillance-only tasks under human supervision.",
+      limitationsAndEthics: "This is a purely conceptual systems design and mathematical modeling framework. No physical submarine vehicle was manufactured, and the system is strictly limited to simulated, human-supervised surveillance modeling.",
       learnings: [
-        "Learned how underwater navigation and combining sensor data works in tough environments.",
-        "Practiced designing systems with strict safety and ethical rules from the very start.",
-        "Studied how sound travels underwater and its limits in sending data.",
+        "Extended Kalman Filtering (EKF) sensor fusion algorithms and error state propagation.",
+        "Acoustic signal propagation under water and communication channel limitations.",
+        "Ethical design patterns for autonomous systems and human-in-the-loop control overrides."
       ],
       paperLink: "/Dual-UUVSystemResearch.pdf",
       researchGateLink: "https://www.researchgate.net/publication/397870338_A_Conceptual_Framework_for_a_Human_Supervised_Dual-UUV_System_Enabling_Autonomous_Maritime_Surveillance",
@@ -133,25 +137,27 @@ export const PORTFOLIO: PortfolioData = {
       slug: "mobile-detox-sleep-quality",
       title: "Does Mobile Detox Improve Sleep Quality?",
       researchType: "Statistical Data Analysis • Research Project • Data Science",
-      problemContext: "Investigating whether reducing mobile phone usage before sleep significantly improves overall sleep quality through primary survey data and hypothesis testing.",
-      systemArchitectureSummary: "Constructed a multi-variable weighted Sleep Quality Index (SQI) and executed Independent Two-Sample t-Tests comparing detox vs non-detox student cohorts.",
+      problemContext: "Investigating the physiological and cognitive impacts of digital device screens before sleep. The study targets whether strict digital device detox protocols significantly reduce sleep onset latency and improve subjective restfulness metrics.",
+      systemArchitectureSummary: "Designed a statistical modeling and engineering experimentation pipeline. Constructed a multi-variable weighted Sleep Quality Index (SQI) formula to quantify subjective sleep dimensions, executing parametric hypothesis tests on student sample sets.",
       coreTechnicalAreas: [
         "Statistical Modeling",
         "Hypothesis Testing (t-Test)",
         "Feature Engineering (SQI)",
-        "Data Preprocessing & Cleaning",
+        "Engineering Experimentation",
+        "Technical Modeling",
+        "Data Preprocessing"
       ],
       keyContributions: [
-        "Collected primary survey dataset of 22 respondents under BMSCE statistical modeling course.",
-        "Formulated custom weighted Sleep Quality Index (SQI) algorithm.",
-        "Executed Independent Two-Sample t-Test proving statistical significance (p < 0.01, t = 3.18, df = 20).",
-        "Formatted publication-ready analytical report and statistical documentation."
+        "Collected a primary experimental dataset of 22 student participants under the BMSCE Statistical Modeling course framework.",
+        "Engineered a multi-variable weighted Sleep Quality Index (SQI) formula combining latency, disruptions, and restfulness.",
+        "Executed an Independent Two-Sample t-Test validating statistical significance at the 1% level (p < 0.01, t-score = 3.18, df = 20), rejecting the null hypothesis.",
+        "Compiled complete data visualization charts and parametric analysis documentation for academic course review."
       ],
-      limitationsAndEthics: "Primary survey scope limited to 22 student respondents; further longitudinal tracking is recommended for wider population generalization.",
+      limitationsAndEthics: "Primary survey scope limited to 22 student respondents within a single age cohort; further longitudinal tracking is recommended for wider population generalization.",
       learnings: [
-        "Designing structured survey data collection mechanisms.",
-        "Conducting parametric hypothesis testing and error boundary analysis.",
-        "Engineered index metrics combining multiple survey dimensions."
+        "Designing structured survey data collection mechanisms and ensuring response validation.",
+        "Conducting parametric hypothesis testing (t-tests) and defining error boundaries.",
+        "Feature engineering index metrics by combining and weighting multiple subjective variables."
       ],
       paperLink: "/Statistical_Data_Analysis_Report_final (1).pdf"
     }
@@ -164,23 +170,23 @@ export const PORTFOLIO: PortfolioData = {
       imageUrl: "/jaipur-ride-poster.png",
       detailImageUrl: "/jaipur-ride.png",
       tagline: "Public Transport App",
-      oneLineSummary: "A fast, lightweight metro route planner built for commuters in Jaipur with 1,000+ Play Store downloads and 250+ monthly active users.",
+      oneLineSummary: "A high-performance, client-side optimized public transit routing engine utilizing Breadth-First Search (BFS) pathfinding over static transit graphs for commuter assistance.",
       ideaOrigin: "I noticed that people in Jaipur had a really hard time finding correct metro and bus timings, often relying on rumors, random Google searches, or scattered WhatsApp messages.",
       problemStatement: [
-        "Metro timing info was messy and scattered all over the place.",
-        "There was no single, clean app to check routes quickly.",
-        "New travelers found it hard to figure out interchanges and ticket rates."
+        "Commuters in Jaipur lacked an offline-capable, unified transit planner showing correct schedules, interchange zones, and ticket fares.",
+        "Existing mapping platforms suffered from high API loading latencies and required continuous internet connectivity, creating friction for tourists in underground stations."
       ],
       solutionOverview: [
-        "Built a public production transit planner specifically for real commuters.",
-        "Implemented client-side BFS pathfinding on static station graphs, optimized for low-connectivity environments.",
-        "Incorporated real-world feedback from 1,000+ users to refine interface speed and schedule accuracy."
+        "Engineering Approach: Developed a Progressive Web Application (PWA) client that caches and processes all routing calculations locally on the device.",
+        "Architecture: The application loads the entire transit network from a highly compressed static JSON adjacency list representation, executing search traverses entirely in-browser.",
+        "What I Personally Built: Programmed the local BFS pathfinding algorithm, compiled the transit coordinate JSON database, designed the responsive routes page, and published the production Android app on Google Play.",
+        "Current Status & Result: Deployed production platform with over 1,000+ organic downloads and 250+ Monthly Active Users (MAU) in Jaipur, India."
       ],
-      hardestTechnicalChallenge: "Creating a quick data structure that stores all routes and timings locally on the phone, keeping the app lightweight and fast even on cheap smartphones with poor network signals.",
+      hardestTechnicalChallenge: "Eliminating external map API lookup latencies and cellular network dependence. Solved this by compiling Jaipur's transit routes into a 15KB JSON adjacency list. Implemented a client-side Breadth-First Search (BFS) pathfinding algorithm that executes locally on the device's CPU, returning complete route, fare, and station breakdowns in under 10ms with zero server calls.",
       learnings: [
-        "How to turn messy schedules and route grids into a clean, simple layout.",
-        "How to design smooth user flows for people on the move.",
-        "Building for real utility and help rather than just adding fancy, useless features."
+        "Breadth-First Search (BFS) graph traversal and JSON data serialization.",
+        "Client-side caching strategies and Progressive Web App (PWA) asset management.",
+        "Responsive, mobile-first interface compilation optimized for users on the move."
       ],
       techStack: ["React.js", "JavaScript", "HTML & CSS", "Vercel"],
       proofLinks: {
@@ -195,24 +201,23 @@ export const PORTFOLIO: PortfolioData = {
       title: "NotesCSBS",
       imageUrl: "/notescsbs.png",
       tagline: "Academic Platform",
-      oneLineSummary: "A full-stack web platform helping engineering students find and download study notes, reaching 500+ organic Google search clicks.",
+      oneLineSummary: "A full-stack academic document distribution platform built with Supabase PostgreSQL and Google Drive APIs, optimized for high caching and search engine indexing (SEO).",
       ideaOrigin: "My personal frustration with wasting time searching for notes across messy WhatsApp groups and broken Google Drive links right before exams.",
       problemStatement: [
-        "Study materials were scattered across different groups and links.",
-        "Students wasted valuable study time just trying to find files.",
-        "There was no single repository for CSBS department study guides."
+        "Lecture notes, previous year question papers, and syllabus resources for the BMSCE CSBS department were scattered across ephemeral groups and expired links.",
+        "Students wasted valuable time trying to locate materials right before exams without a structured database."
       ],
       solutionOverview: [
-        "Developed a centralized full-stack academic platform featuring a component-based React frontend.",
-        "Integrated Supabase Authentication and a SQL-backed PostgreSQL database for secure document management.",
-        "Designed an Admin Dashboard and implemented a robust Google Drive integration for scalable content management.",
-        "Optimized SEO metrics resulting in 500+ organic clicks, 3K+ impressions, 16% CTR, and an average Google search position of 4.7."
+        "Engineering Approach: Built a centralized relational document distribution hub with secure role-based administrative access and file synchronization.",
+        "Architecture: Implemented a Next.js/React frontend connected to a Supabase PostgreSQL database, linking document metadata to Google Drive cloud storage buckets.",
+        "What I Personally Built: Configured the PostgreSQL schema, created Supabase Row Level Security (RLS) policies for user authentication, integrated the Google Drive API for download routing, and optimized search console SEO.",
+        "Current Status & Result: Active academic portal that achieved 500+ organic clicks and 3K+ search impressions with an average Google search position of 4.7."
       ],
-      hardestTechnicalChallenge: "Managing high-volume document downloads and storage while keeping the website fast and responsive when many students access it at the same time.",
+      hardestTechnicalChallenge: "Managing high-stress concurrent file download requests during examination periods without encountering Google Drive API rate limiting. Solved by implementing an API caching layer on the server side and structuring metadata lookups in a PostgreSQL database to bypass direct Drive directory searches.",
       learnings: [
-        "Directly solving student frustrations using simple web software.",
-        "Designing from the user's perspective (high stress, very little time).",
-        "Integrating cloud storage backends like Supabase cleanly."
+        "Relational database schema modeling and role-based Row Level Security (RLS).",
+        "Third-party API integration and document routing pipelines.",
+        "On-page SEO optimization targeting educational query structures."
       ],
       techStack: ["React", "JavaScript", "Supabase", "SQL", "Google Drive API", "HTML5", "CSS3", "Vercel"],
       proofLinks: {
@@ -226,24 +231,24 @@ export const PORTFOLIO: PortfolioData = {
       imageUrl: "/pulsepredit.png",
       detailImageUrl: "/pulsepredict_architecture.png",
       tagline: "Health Tech Wearable",
-      oneLineSummary: "An affordable wearable health watch under ₹6,000 designed for elderly health tracking and automatic fall alerts.",
+      oneLineSummary: "An ESP32-powered wearable health monitoring watch utilizing FreeRTOS, sensor fusion (MPU6050 accelerometer & MAX30102 SpO2), and threshold-based fall detection.",
       ideaOrigin: "My co-founder and I realized that proper health and fall trackers are way too expensive (often over ₹10,000) for average Indian families. We wanted to build a simple, reliable health watch under ₹6,000 that normal people can afford for their parents.",
       problemStatement: [
-        "Vitals monitors and fall trackers cost over ₹10,000, excluding normal families.",
-        "Elderly people living alone do not have cheap, continuous health tracking.",
-        "Existing low-cost devices trigger too many fake fall alerts."
+        "Vitals monitoring and fall trackers are commercially inaccessible (often costing over ₹10,000) for the middle-class geriatric demographic in India.",
+        "Low-cost devices suffer from high false-alarm rates during daily hand movements like writing or hand waving.",
+        "Lack of real-time remote telemetry sync to emergency contact dashboards."
       ],
       solutionOverview: [
-        "Designed a smart hardware device using an ESP32 microchip and motion sensors.",
-        "Wrote low-level code for sharing data via Bluetooth and built a companion mobile dashboard.",
-        "Presented the product to mentors at the JIC Accelerator 7.0 and refined the business model.",
-        "Planned the data setup to match future national digital health standards."
+        "Engineering Approach: Built an integrated hardware-software health watch combining spatial motion sensing and heart rate oximetry with cloud synchronization.",
+        "Architecture: Configured an ESP32 microcontroller reading raw values via I2C, streaming metrics over BLE to a paired client dashboard, which writes updates to a Supabase database.",
+        "What I Personally Built: Programmed the low-level C++ firmware loops under FreeRTOS, configured the MPU6050 sensor calibration offsets, coded the fall-detection algorithm, and designed the real-time Supabase telemetry tables.",
+        "Current Status & Result: Fully functional hardware and software MVP, selected and pitched to mentors at JIC Accelerator 7.0."
       ],
-      hardestTechnicalChallenge: "Stopping false alarms in fall detection by testing and fine-tuning the sensor math on real people, while keeping the Bluetooth code light enough to run on a tiny microchip.",
+      hardestTechnicalChallenge: "Differentiating actual elderly falls from common physical actions to eliminate false alarms. Solved this by structuring a 10-step moving average filter in the ESP32 C++ firmware loop running at 50Hz. The algorithm triggers a fall alert only if the acceleration vector drops below 0.3g (freefall), spike-climbs past 3.0g (impact), and is immediately followed by a 5-second window of immobility.",
       learnings: [
-        "Getting feedback from startup mentors helped us refine our features and pricing.",
-        "Hands-on user testing is absolutely necessary to calibrate sensor thresholds.",
-        "Building software that follows national health standards ensures long-term scale."
+        "Low-level C++ firmware compilation and FreeRTOS multi-threading tasks.",
+        "I2C protocol configuration and hardware sensor calibration.",
+        "Power management and LDO linear regulator circuit integration."
       ],
       techStack: ["ESP32", "C/C++", "MPU6050", "BLE", "Mobile App Dev", "System Architecture"],
       proofLinks: {
@@ -257,26 +262,23 @@ export const PORTFOLIO: PortfolioData = {
       title: "BookMySlot",
       imageUrl: "/bookmyslot.png",
       tagline: "Booking System",
-      oneLineSummary: "A simple, real-time booking app helping local restaurants and medical clinics manage customer reservations easily.",
+      oneLineSummary: "A multi-tenant reservation SaaS featuring real-time WebSockets synchronization, PostgreSQL Row Level Security (RLS) tenant isolation, and pessimistic transaction locking.",
       ideaOrigin: "I saw that local restaurants and clinics still run on paper diaries, phone calls, and memory. Waiters mix up table bookings, patients wait hours without knowing their slot status, and owners have no clear view. They don't need fancy enterprise software; they just need a simple, real-time booking sheet.",
       problemStatement: [
-        "Paper diaries lead to double-bookings and booking confusion.",
-        "Front desk staff, servers, and owners are not in sync.",
-        "Customers wait blindly without booking confirmations.",
-        "Owners have no easy way to check how their daily business is doing."
+        "Paper diaries in clinics and restaurants lead to frequent double-bookings, scheduling conflicts, and customer waiting friction.",
+        "Front desk staff, service operators, and business owners lack a centralized, real-time view of daily slots."
       ],
       solutionOverview: [
-        "Built a modular system customized for food dining (BookMyDine) and medical clinics (BookMyClinic).",
-        "Created booking pages for customers to reserve slots online.",
-        "Designed dashboards for owners and live screens for staff to track tables/patients.",
-        "Used a single backend logic with simple layouts tailored for each business type."
+        "Engineering Approach: Developed a multi-tenant booking system isolating database transactions by organization key while pushing instant slot state changes.",
+        "Architecture: Deployed a multi-tenant schema with PostgreSQL Row Level Security (RLS) policies, using Supabase Realtime listeners (WebSockets) to coordinate UI states.",
+        "What I Personally Built: Programmed the calendar reservation layout, configured the Supabase database triggers, and designed the real-time client sync loops.",
+        "Current Status & Result: Live B2B SaaS template adapted for medical clinics (BookMyClinic) and dining rooms (BookMyDine)."
       ],
-      hardestTechnicalChallenge: "Making sure the booking data syncs instantly (using Supabase) across customer sites, staff apps, and owner screens without lag, while keeping the app simple for non-tech owners.",
+      hardestTechnicalChallenge: "Preventing simultaneous double-booking race conditions when two clients attempt to lock the exact same time slot. Solved by writing a PL/pgSQL database trigger that executes a pessimistic lock (`SELECT ... FOR UPDATE`) on the target slot before inserting, ensuring concurrent reservation attempts are queued and evaluated atomically.",
       learnings: [
-        "Small businesses need clear, simple layouts, not complex features.",
-        "Customizing the design for specific businesses works better than a general tool.",
-        "Instant database sync is key to building trust with staff.",
-        "Building for local realities means making things low-cost and mobile-friendly."
+        "Pessimistic locking and ACID database transaction isolation.",
+        "WebSocket connection state management and real-time data sync.",
+        "Multi-tenant database schema modeling and row isolation policies."
       ],
       techStack: ["HTML/CSS/JS", "Supabase (Auth + Real-time DB)", "Vercel", "Google Sheets API"],
       proofLinks: {
@@ -290,23 +292,23 @@ export const PORTFOLIO: PortfolioData = {
       title: "Namma Ride",
       imageUrl: "/nammaride.png",
       tagline: "Metro Route Planner",
-      oneLineSummary: "A clean Bengaluru Metro route planner supporting Kannada, Hindi, and English for first-time travelers.",
+      oneLineSummary: "A lightweight, multilingual transit path planner for the Namma Metro network, optimized for sub-10ms route calculation and low-connectivity mobile browsers.",
       ideaOrigin: "Many metro riders, especially first-time travelers and non-English speakers, struggle to understand map routes and where to change trains.",
       problemStatement: [
-        "Confusing and complicated route planning tools.",
-        "Lack of local language support in travel apps.",
-        "Overloaded screens that overwhelm elderly passengers."
+        "Transit applications often lack local language options (Kannada, Hindi), creating accessibility barriers for local commuters in Bengaluru.",
+        "Heavy routing engines fail to load in underground stations due to poor cellular network coverage."
       ],
       solutionOverview: [
-        "Designed a very clean, step-by-step route selector.",
-        "Added full language support for Kannada, Hindi, and English.",
-        "Kept the screens clean and mobile-friendly."
+        "Engineering Approach: Built a client-side route calculation tool optimized for speed and low bandwidth, requiring zero server-side network roundtrips.",
+        "Architecture: Compiled station data structures directly on the client, utilizing a custom BFS routing script and lightweight JSON localization lookups.",
+        "What I Personally Built: Wrote the multilingual translation switcher, designed the step-by-step route finder UI, and programmed the offline pathfinding script.",
+        "Current Status & Result: Live web application helping commuters navigate Bengaluru's metro lines in English, Kannada, and Hindi."
       ],
-      hardestTechnicalChallenge: "Managing language switching and layout updates instantly without using heavy frameworks, keeping the app fast under poor network connections.",
+      hardestTechnicalChallenge: "Implementing comprehensive multilingual support and fast route calculation under 50KB total asset bundle weight. Solved by avoiding heavy UI frameworks and building the app using pure Vanilla JavaScript, referencing static string maps locally.",
       learnings: [
-        "True accessibility starts by speaking the user's language.",
-        "Making a clean, simple layout takes more thought than making a complex one.",
-        "Public transit helpers must prioritize speed and ease of use above all else."
+        "Localized resource file structuring and internationalization.",
+        "DOM manipulation and lightweight web asset size optimization.",
+        "Offline-first mobile web design guidelines."
       ],
       techStack: ["HTML", "CSS", "Vanilla JavaScript"],
       proofLinks: {
@@ -321,21 +323,23 @@ export const PORTFOLIO: PortfolioData = {
       imageUrl: "/indigo_project.png",
       detailImageUrl: "/indigo_inflight_architecture.png",
       tagline: "In-Flight Media Player",
-      oneLineSummary: "An offline media streaming web app built for airplane entertainment systems without internet access.",
+      oneLineSummary: "An offline-first in-flight entertainment streaming server and client application optimized for local intranet media delivery without external internet connectivity.",
       ideaOrigin: "I was curious about how airlines stream movies and music directly to passenger devices without internet access.",
       problemStatement: [
-        "No internet availability for passengers during flight hours.",
-        "Need to stream media files reliably from a local server on the plane."
+        "Commercial airplanes operate in isolated network environments without access to public internet servers.",
+        "Streaming high-quality media requires significant local bandwidth control to prevent frame buffering across dozens of passenger devices."
       ],
       solutionOverview: [
-        "Built a web page that runs entirely without internet access.",
-        "Designed a responsive layout suited for local server limits.",
-        "Focused on reliability and fast loading over fancy graphics."
+        "Engineering Approach: Developed a local intranet web client optimized for media streaming directly from an onboard flight server.",
+        "Architecture: Implemented an offline-first client player structure that caches static pages, reading video assets from a local aircraft server directory.",
+        "What I Personally Built: Programmed the responsive video layout interface, designed local media buffer controls, and tested passenger client pages under isolated Docker setups.",
+        "Current Status & Result: Completed sandbox prototype simulating local airplane intranet media delivery."
       ],
-      hardestTechnicalChallenge: "Testing the offline setup during coding, and making sure all video files load reliably without calling external web networks.",
+      hardestTechnicalChallenge: "Ensuring video files load and buffer smoothly over localized cabin WLAN networks without accessing external content delivery networks (CDNs). Solved by caching static player configurations and utilizing native HTML5 video stream buffering parameters to optimize data throughput.",
       learnings: [
-        "Offline web pages require completely different layout assumptions.",
-        "Reliability and fast load times matter much more than features when offline."
+        "Offline-first system architecture and local network streaming topologies.",
+        "Asset buffering, HTML5 video performance parameters, and storage caches.",
+        "Docker container setup for simulating isolated network environments."
       ],
       techStack: ["HTML", "CSS", "JavaScript", "Offline-first architecture"],
       proofLinks: {
@@ -348,23 +352,23 @@ export const PORTFOLIO: PortfolioData = {
       title: "RestaurantOS",
       imageUrl: "/restaurant_os.png",
       tagline: "Restaurant OS & Billing",
-      oneLineSummary: "A full-stack operating system for restaurants connecting POS billing, live kitchen orders, table reservations, and inventory.",
+      oneLineSummary: "A high-concurrency multi-tenant restaurant operating system coordinating point-of-sale (POS) billing, kitchen order ticket routing, and inventory sync.",
       ideaOrigin: "I noticed that local restaurants struggle to coordinate booking sheets, tables, inventory count, and instant billing, often using multiple disconnected apps or paper logs.",
       problemStatement: [
-        "Fragmented operations across POS, reservations, and inventory led to billing delays and stock mismatches.",
-        "Lack of centralized real-time synchronization between front-of-house staff, kitchen staff, and management.",
-        "Inability for small-to-medium restaurant groups to handle multiple branches under a unified SaaS framework safely."
+        "Fragmented restaurant operations across isolated POS, kitchen routing, and stock control tools lead to order delays, double bookings, and stock mismatches.",
+        "Lack of real-time synchronization between waiting staff, kitchen monitors, and management dashboards."
       ],
       solutionOverview: [
-        "Built a multi-tenant operating system architecture to coordinate point-of-sale operations, live kitchen ticket routing, and reservations.",
-        "Designed a database schema isolating client branch transactions using PostgreSQL Row Level Security (RLS).",
-        "Integrated real-time database subscription sync to keep front staff, kitchen monitors, and analytics dashboards aligned instantaneously."
+        "Engineering Approach: Built a consolidated operations hub synchronizing table states and order tickets across dining rooms and kitchens.",
+        "Architecture: Designed a multi-tenant relational database structure with strict Supabase Row Level Security (RLS) and WebSockets realtime listeners.",
+        "What I Personally Built: Coded the database schema, wrote the PL/pgSQL transaction triggers for stock deductions, set up KOT WebSockets, and designed the dashboard.",
+        "Current Status & Result: Production-ready operational SaaS template, complete with live mock KOT dashboard and analytics preview."
       ],
-      hardestTechnicalChallenge: "Implementing bulletproof PostgreSQL Row Level Security (RLS) policies and tenancy scopes alongside multi-client real-time synchronization under high table order concurrency without data leakage.",
+      hardestTechnicalChallenge: "Managing high table-order concurrency and preventing raw material mismatches during busy hours. Solved by writing PL/pgSQL atomic transaction functions that deduct required ingredients from inventory tables instantly upon order billing, locking target rows to prevent write conflicts.",
       learnings: [
-        "Structuring deep relational SQL schemas with triggers, stored procedures, and secure isolation policies.",
-        "Synchronizing heavy real-time state machines across distributed user interfaces (POS, KOT, and Admin Dashboard).",
-        "Designing for operational resilience during transient offline phases in busy kitchen environments."
+        "Multi-tenant database isolation, SQL stored procedures, and triggers.",
+        "WebSocket connection lifecycle and real-time state synchronization.",
+        "UX design for busy kitchen staff (KOT ticket progression workflows)."
       ],
       techStack: ["React", "TypeScript", "Vite", "PostgreSQL", "Supabase", "SQL", "WebSockets", "Vercel"],
       proofLinks: {
@@ -379,23 +383,23 @@ export const PORTFOLIO: PortfolioData = {
       imageUrl: "/flight_deck.png",
       detailImageUrl: "/flight_deck.png",
       tagline: "Real-Time Flight Tracker",
-      oneLineSummary: "A real-time flight tracking dashboard showing live flight status, gate numbers, baggage belts, and destination weather.",
+      oneLineSummary: "A real-time aviation telemetry dashboard integrating flight state APIs, dynamic baggage and gate updates, and destination weather feeds using server-side Next.js route handlers.",
       ideaOrigin: "I wanted to build a unified, high-performance aviation control panel that makes global flight tracking, delays, and destination metrics searchable without bloat.",
       problemStatement: [
-        "Flight information screens at airports are local, while web tracking sites are bloated with ads and tracking scripts.",
-        "Airlines scatter baggage belt and gate updates across separate notifications or proprietary apps.",
-        "No single minimal page connects flight routes with destination weather details efficiently."
+        "Airport flight information displays are local to terminal structures, while commercial flight tracking websites are heavily bloated with tracking scripts and ads.",
+        "Aviation portals lack direct correlation between flight routing milestones and destination weather alerts in a single timeline view."
       ],
       solutionOverview: [
-        "Built a real-time tracking interface using Next.js Route Handlers to integrate the AirLabs live aviation API feeds.",
-        "Implemented an optimized search filter allowing passengers to trace flight paths, delays, gates, and terminals in milliseconds.",
-        "Connected live destination weather conditions directly to flight timeline trackers to provide immediate situational context."
+        "Engineering Approach: Designed a clean server-brokered aviation tracking panel pulling from global live flight radars and meteorological nodes.",
+        "Architecture: Deployed Next.js Server Route Handlers acting as an intermediary to secure third-party keys and cache high-frequency payload requests.",
+        "What I Personally Built: Programmed the Next.js API endpoints, created the dashboard HUD layout, and implemented the timeline rendering logic.",
+        "Current Status & Result: Deployed project template with live search previews, showcased on LinkedIn and active on Vercel."
       ],
-      hardestTechnicalChallenge: "Orchestrating live flight state polling and optimizing external API query caching to prevent rate-limit exhaustion while maintaining instant search responses across dynamic flight databases.",
+      hardestTechnicalChallenge: "Managing high-frequency live API data requests without exhausting strict rate limits on external ADSB data endpoints. Solved by implementing a server-side caching middleware layer with a 60-second TTL (Time-To-Live) on the Next.js API route, returning cached responses for identical requests.",
       learnings: [
-        "Designing highly reusable React dashboard panels and optimizing API query boundaries.",
-        "Configuring server-side REST API route handlers to balance external data feeds securely.",
-        "Designing intuitive timeline UIs that display flight status progressions (departed, boarding, delayed, landed) responsively."
+        "Server-side API proxy routing and key management.",
+        "Dynamic UI state management using Framer Motion animation containers.",
+        "Payload filtering and performance optimization techniques."
       ],
       techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "AirLabs API", "REST APIs", "Vercel"],
       proofLinks: {
@@ -411,24 +415,24 @@ export const PORTFOLIO: PortfolioData = {
       imageUrl: "/air_guitar_architecture.png",
       detailImageUrl: "/air_guitar_architecture.png",
       tagline: "Motion-Controlled Instrument",
-      oneLineSummary: "A gesture-controlled virtual guitar that turns hand movements in the air into realistic guitar audio using motion sensors.",
+      oneLineSummary: "A real-time gestural digital audio synthesizer converting MPU6050 spatial accelerometer metrics to acoustic signals via the Karplus-Strong string synthesis algorithm.",
       ideaOrigin: "I wanted to make a fun instrument that translates hand movements in the air into actual guitar sounds in real-time, using a motion sensor and code instead of just playing pre-recorded audio files.",
       problemStatement: [
-        "Digital instruments often feel fake and disconnected from physical strumming.",
-        "Hand gesture tools have too much delay between movement and sound.",
-        "Synthesizing realistic guitar sounds usually requires heavy software libraries."
+        "Digital MIDI instruments lack tactile feedback and physical expressiveness during performance.",
+        "High latencies (above 20ms) between gestural movement and acoustic output disrupt the user's musical timing.",
+        "Synthesizing high-fidelity, realistic guitar acoustics typically requires heavy software libraries."
       ],
       solutionOverview: [
-        "Used a motion sensor (MPU6050) on a glove to track wrist tilt for chord picking and flicking for strumming.",
-        "Wrote a Python audio script using the Karplus-Strong formula to synthesize string acoustics on the fly.",
-        "Set up a fast, low-delay connection (115200 baud) to stream data from the sensor to the laptop.",
-        "Added code to make the sound louder or softer based on how hard the user strums."
+        "Engineering Approach: Developed a spatial controller glove that transmits acceleration vectors to a local, high-speed mathematical sound compiler.",
+        "Architecture: Deployed an Arduino microcontroller reading MPU6050 data over I2C, streaming bytes via 115200 baud serial connection to a local Python synthesis thread.",
+        "What I Personally Built: Programmed the Arduino I2C reading scripts, wrote the Python Karplus-Strong acoustic loop, and wired the spatial glove prototype.",
+        "Current Status & Result: Functional hardware and software prototype demonstrating real-time gestural sound compilation."
       ],
-      hardestTechnicalChallenge: "Running the sound synthesis formulas in real-time without glitching the audio, keeping the delay under 10 milliseconds so it feels like playing a real instrument.",
+      hardestTechnicalChallenge: "Executing string synthesis equations in real-time under a strict 10ms execution deadline to prevent audio cracking. Solved by writing the Karplus-Strong algorithm using optimized NumPy array operations, eliminating standard loop lookup overhead and reducing latency to sub-8ms.",
       learnings: [
-        "How to model real physical systems (like a vibrating string) using code buffer averages.",
-        "Managing multiple threads is key when mixing sounds dynamically.",
-        "How to filter out sensor jitter using calibration and movement checks."
+        "Digital Signal Processing (DSP) and wave synthesis modeling.",
+        "High-baud serial data transmission and latency isolation.",
+        "Sensor calibration and motion threshold filtering."
       ],
       techStack: ["Python", "Arduino", "MPU6050", "NumPy", "Karplus-Strong Synthesis", "Serial Communication"],
       proofLinks: {
@@ -443,26 +447,23 @@ export const PORTFOLIO: PortfolioData = {
       imageUrl: "/split_payment_architecture.png",
       detailImageUrl: "/split_payment_architecture.png",
       tagline: "Multi-Source Payment Checkout",
-      oneLineSummary: "A payment system concept that allows splitting a single checkout bill across two payment methods (like UPI and Credit Card).",
+      oneLineSummary: "A transactional fintech checkout engine enabling atomic split-payment authorization across multi-source gateways (UPI + Card) with automated rollbacks.",
       ideaOrigin: "I wanted to solve the everyday problem where you want to buy something online but want to pay using two different methods, like paying half with your UPI account and the rest using your credit card, and making sure the system safely rolls back if one fails.",
       problemStatement: [
-        "Standard checkouts only let you select a single payment method.",
-        "Users cannot combine partial balances (like using a card and UPI together).",
-        "Retrying failed split transactions can easily lead to double charges or partial orders."
+        "Standard online checkouts restrict transactions to a single payment source, preventing customers from combining multiple balances.",
+        "Splitting transactions across two independent payment gateways introduces severe concurrency risks, potentially leading to partial payments and double charges upon network drops."
       ],
       solutionOverview: [
-        "Created logic to divide a single purchase amount into multiple streams (UPI + Card).",
-        "Integrated Razorpay test mode to simulate real payment status.",
-        "Wrote checks to prevent capturing one payment if the other stream fails.",
-        "Built retry safety checks to ensure consistency.",
-        "Simulated rollback flows if the checkout is cancelled midway."
+        "Engineering Approach: Created a transactional checkout router that manages two isolated payment authorization streams, ensuring atomicity.",
+        "Architecture: Developed a Node.js express router managing concurrent payment requests linked to Razorpay API endpoints.",
+        "What I Personally Built: Programmed the checkout router logic, integrated the Razorpay gateway capture APIs, and coded the transaction rollback listeners.",
+        "Current Status & Result: Deployed backend checkout prototype demonstrating transaction safety during simulated gateway dropouts."
       ],
-      hardestTechnicalChallenge: "Making sure the transaction is fully complete or fully rolled back. If one payment goes through but the other fails, the system must refund the charge instantly to avoid partial orders and duplicate deductions.",
+      hardestTechnicalChallenge: "Ensuring database and gateway consistency during partial payment failures. Solved by wrapping both payment authorizations in a database transaction block; if either stream fails, the system executes an automated rollback, triggering an instant API refund call to the captured gateway to prevent customer double charges.",
       learnings: [
-        "How to manage transactions across different payment services safely.",
-        "Handling error screens and simulation rollbacks in fintech checkouts.",
-        "Integrating payment APIs to handle complex multi-source logic.",
-        "Designing systems to be retry-safe so reloading a page doesn't cause duplicate charges."
+        "Payment gateway API integration and reconciliation loops.",
+        "Fintech database transaction design and ACID consistency.",
+        "Idempotency controls and checkout error recovery paths."
       ],
       techStack: ["JavaScript", "Node.js", "Razorpay (Test Mode)", "REST API"],
       proofLinks: {

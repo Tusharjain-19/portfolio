@@ -30,10 +30,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tusharjain.in'),
   title: {
-    default: "Tushar Jain | Engineering Student at BMSCE",
+    default: "Tushar Jain | Software Engineer & Engineering Student",
     template: "%s / Tushar Jain"
   },
-  description: "Tushar Jain is an Engineering Student at BMS College of Engineering (BMSCE), Bengaluru, building real-world AI, software, and embedded systems with a focus on products that impact everyday life.",
+  description: "Tushar Jain is an engineering student at BMS College of Engineering (BMSCE) in Bengaluru, studying Computer Science and Business Systems (CSBS), who builds real-world software, full-stack applications, embedded systems, AI-enabled products, and engineering prototypes.",
   keywords: [
     // === NAME & LOCATION VARIATIONS (highest priority for Google/AI) ===
     "Tushar Jain", "Tushar Jain Jaipur", "Tushar Jain India", "Tushar Jain Bengaluru",
@@ -44,9 +44,8 @@ export const metadata: Metadata = {
     "tushra jain", "tushra jain portfolio", "tushra jain jaipur", "tushra jain developer",
     "tushar jain bms college", "tushar jain csbs", "tushar jain engineer",
     "tushar dausa", "tushar jain dausa", "tushar jain jaipur", "tushar jaipur", 
-    "tushar rajasathan", "tushar jain rajasthan", "tushar jain bengalore", 
-    "tushar bengalore", "tushar jain bengaluru", "tushar bengaluru", 
-    "tushar jain resmune", "tushar jain cv", "tushar resume", "tushar cv",
+    "tushar jain rajasthan", "tushar jain bengaluru", "tushar bengaluru", 
+    "tushar jain cv", "tushar resume", "tushar cv",
     "tushar jain resume pdf", "tushar jain portfolio 2026", "tushar jain projects",
     "tushar jain contact", "tushar jain email", "tushar jain git", "tushar jain github",
     "tushar jain linkedin", "tushar jain bmsce student", "tushar jain csbs student",
@@ -124,7 +123,13 @@ export const metadata: Metadata = {
     "Karplus Strong synthesis", "gesture controlled audio",
 
     // === PORTFOLIO / RESUME SEARCHES ===
-    "engineering portfolio 2026", "best student portfolio India",
+    "goated engineering portfolio", "best systems engineering portfolio",
+    "underwater robotics research paper", "cooperative UUV surveillance framework",
+    "ESP32 fall detection sensor fusion", "pessimistic locking real-time database",
+    "multi-tenant B2B SaaS architecture", "gesture-controlled synthesizer C++",
+    "high-performance developer portfolio", "exceptional student developer resume",
+    "independent systems robotics researcher", "creative developer portfolio",
+    "advanced physical computing showcase", "engineering portfolio 2026", "best student portfolio India",
     "software engineering student portfolio", "hardware engineering portfolio",
     "modern web portfolio Next.js", "interactive portfolio website",
     "engineering projects portfolio", "GitHub portfolio Tushar Jain",

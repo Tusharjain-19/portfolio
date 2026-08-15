@@ -33,9 +33,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: project.title,
-    description: `${project.oneLineSummary} Built by Tushar Jain, BMSCE student. Tech: ${project.techStack.slice(0, 4).join(', ')}.`,
-    keywords: [project.title, `${project.title} maker`, `${project.title} developer`, "Tushar Jain", "BMSCE", ...project.techStack],
+    title: `${project.title} - Software Engineering & IoT Project`,
+    description: `${project.oneLineSummary} Developed by Tushar Jain, CSBS engineering student at BMSCE, Bengaluru. Tech Stack: ${project.techStack.join(', ')}.`,
+    keywords: [project.title, `${project.title} maker`, `${project.title} developer`, "Tushar Jain", "BMSCE", "Bengaluru", ...project.techStack],
     alternates: {
       canonical: `https://tusharjain.in/work/${project.slug}`,
     },

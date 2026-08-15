@@ -4,8 +4,32 @@ import { PORTFOLIO } from '@/data/portfolio';
 import { ArrowLeft, ArrowUpRight } from '@/components/Icons';
 
 export const metadata = {
-  title: "Projects",
-  description: "Complete archive of engineering projects by Tushar Jain (BMSCE).",
+  title: "Software Engineering & IoT Projects | Tushar Jain",
+  description: "Browse a detailed showcase of software engineering, fullstack React/Next.js web apps, B2B SaaS, and ESP32 embedded systems/IoT projects built by Tushar Jain, BMSCE student in Bengaluru.",
+  alternates: {
+    canonical: "https://tusharjain.in/projects",
+  },
+  openGraph: {
+    title: "Software Engineering & IoT Projects | Tushar Jain",
+    description: "Browse a detailed showcase of software engineering, fullstack React/Next.js web apps, B2B SaaS, and ESP32 embedded systems/IoT projects built by Tushar Jain, BMSCE student in Bengaluru.",
+    url: "https://tusharjain.in/projects",
+    siteName: "Tushar Jain - Engineering Portfolio",
+    type: "website",
+    images: [
+      {
+        url: "/pic2.jpeg",
+        width: 800,
+        height: 600,
+        alt: "Tushar Jain - Projects Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Software Engineering & IoT Projects | Tushar Jain",
+    description: "Browse a detailed showcase of software engineering, fullstack React/Next.js web apps, B2B SaaS, and ESP32 embedded systems/IoT projects.",
+    images: ["/pic2.jpeg"],
+  },
 };
 
 export default function ProjectsPage() {

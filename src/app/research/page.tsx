@@ -5,8 +5,32 @@ import { ArrowUpRight, ArrowLeft } from '@/components/Icons';
 import Metadata from 'next';
 
 export const metadata = {
-  title: "Academic & Systems Research | Tushar Jain",
-  description: "Explore independent academic research, systems engineering frameworks, and statistical data science projects by Tushar Jain.",
+  title: "Systems Engineering Research & Data Science Papers | Tushar Jain",
+  description: "Explore academic research, cooperative autonomous vehicle systems, and statistical data science projects authored by Tushar Jain, CSBS student at BMSCE, Bengaluru.",
+  alternates: {
+    canonical: "https://tusharjain.in/research",
+  },
+  openGraph: {
+    title: "Systems Engineering Research & Data Science Papers | Tushar Jain",
+    description: "Explore academic research, cooperative autonomous vehicle systems, and statistical data science projects authored by Tushar Jain, CSBS student at BMSCE, Bengaluru.",
+    url: "https://tusharjain.in/research",
+    siteName: "Tushar Jain - Engineering Portfolio",
+    type: "website",
+    images: [
+      {
+        url: "/pic2.jpeg",
+        width: 800,
+        height: 600,
+        alt: "Academic and Systems Research",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Systems Engineering Research & Data Science Papers | Tushar Jain",
+    description: "Explore academic research, cooperative autonomous vehicle systems, and statistical data science projects authored by Tushar Jain, CSBS student at BMSCE, Bengaluru.",
+    images: ["/pic2.jpeg"],
+  },
 };
 
 export default function ResearchHubPage() {

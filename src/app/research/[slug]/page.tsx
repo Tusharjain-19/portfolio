@@ -31,9 +31,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: research.title,
-    description: `${research.systemArchitectureSummary} Independent research by Tushar Jain, BMSCE. Areas: ${research.coreTechnicalAreas.slice(0, 3).join(', ')}.`,
-    keywords: [research.title, "Tushar Jain research", "BMSCE research", ...research.coreTechnicalAreas],
+    title: `${research.title} | Systems Engineering Research`,
+    description: `${research.systemArchitectureSummary} Academic research by Tushar Jain, CSBS student at BMS College of Engineering (BMSCE), Bengaluru. Technical Areas: ${research.coreTechnicalAreas.join(', ')}.`,
+    keywords: [research.title, "Tushar Jain research", "BMSCE research", "Bengaluru", ...research.coreTechnicalAreas],
     alternates: {
       canonical: `https://tusharjain.in/research/${research.slug}`,
     },

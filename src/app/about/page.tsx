@@ -5,8 +5,32 @@ import { PORTFOLIO } from '@/data/portfolio';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata = {
-  title: "About",
-  description: "The story of Tushar Jain, engineering student and builder.",
+  title: "About Tushar Jain | Software Developer & Systems Engineer",
+  description: "Learn about Tushar Jain, a Computer Science & Business Systems student at BMS College of Engineering (BMSCE), Bengaluru. Discover his journey in full-stack web development, IoT, and building impact-driven products.",
+  alternates: {
+    canonical: "https://tusharjain.in/about",
+  },
+  openGraph: {
+    title: "About Tushar Jain | Software Developer & Systems Engineer",
+    description: "Learn about Tushar Jain, a Computer Science & Business Systems student at BMS College of Engineering (BMSCE), Bengaluru. Discover his journey in full-stack web development, IoT, and building impact-driven products.",
+    url: "https://tusharjain.in/about",
+    siteName: "Tushar Jain - Engineering Portfolio",
+    type: "profile",
+    images: [
+      {
+        url: "/pic2.jpeg",
+        width: 800,
+        height: 600,
+        alt: "Tushar Jain - BMSCE Bengaluru",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Tushar Jain | Software Developer & Systems Engineer",
+    description: "Learn about Tushar Jain, a Computer Science & Business Systems student at BMS College of Engineering (BMSCE), Bengaluru.",
+    images: ["/pic2.jpeg"],
+  },
 };
 
 export default function AboutPage() {
@@ -89,6 +113,20 @@ export default function AboutPage() {
                     From database tables down to hardware microchips, I build the complete solution.
                 </li>
              </ul>
+        </ScrollReveal>
+
+        {/* SECTION 5 - Research & Engineering Philosophy */}
+        <ScrollReveal className="relative pl-6 sm:pl-12 border-l border-(--accent-muted)">
+             <div className="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-(--accent)" />
+             <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">05. Engineering Principles</h2>
+             <div className="space-y-6 text-lg sm:text-xl text-(--text-secondary) leading-relaxed font-light">
+                <p>
+                    My engineering philosophy focuses on building scalable software architectures, interactive developer portfolios, and advanced physical hardware systems. I specialize in designing fullstack web applications and SaaS platforms optimized with pessimistic transaction locks, composite index lookups, and real-time database subscriptions.
+                </p>
+                <p>
+                    In robotics and embedded systems engineering, my research investigates cooperative pathfinding, multi-agent autonomous underwater vehicle coordination, and sensor fusion navigation algorithms. Fusing data from Doppler Velocity Logs and Inertial Navigation Systems using Extended Kalman Filtering, I design robust, human-supervised control loops. By writing low-level microcontroller firmware under FreeRTOS, I build responsive physical instruments, gestural synthesizers, and health wearables that bridge the digital-physical divide.
+                </p>
+             </div>
         </ScrollReveal>
 
         {/* CTA */}

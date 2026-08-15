@@ -5,8 +5,32 @@ import { ArrowUpRight } from '@/components/Icons';
 import ResumeModal from '@/components/ResumeModal';
 
 export const metadata = {
-  title: "Contact",
-  description: "Get in touch with Tushar Jain for engineering internships, embedded systems projects, web development, or collaboration.",
+  title: "Contact & Hire Tushar Jain | Software Engineer Intern",
+  description: "Contact Tushar Jain, an engineering student at BMSCE Bengaluru, for software engineer internships, web app development, ESP32 IoT projects, or technical collaboration.",
+  alternates: {
+    canonical: "https://tusharjain.in/contact",
+  },
+  openGraph: {
+    title: "Contact & Hire Tushar Jain | Software Engineer Intern",
+    description: "Contact Tushar Jain, an engineering student at BMSCE Bengaluru, for software engineer internships, web app development, ESP32 IoT projects, or technical collaboration.",
+    url: "https://tusharjain.in/contact",
+    siteName: "Tushar Jain - Engineering Portfolio",
+    type: "website",
+    images: [
+      {
+        url: "/pic2.jpeg",
+        width: 800,
+        height: 600,
+        alt: "Contact Tushar Jain",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact & Hire Tushar Jain | Software Engineer Intern",
+    description: "Contact Tushar Jain, an engineering student at BMSCE Bengaluru, for software engineer internships, web app development, ESP32 IoT projects, or technical collaboration.",
+    images: ["/pic2.jpeg"],
+  },
 };
 
 export default function ContactPage() {

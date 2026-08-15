@@ -15,9 +15,29 @@ export default function StructuredData({ data }: StructuredDataProps) {
     "familyName": "Jain",
     "alternateName": [
       "tusharjain", "Tushar Jain BMSCE", "Tushar Jain Bengaluru", "Tushar Jain Jaipur", 
-      "Tushar Jain India", "Tushar Jain Rajasthan", "tushra jain", "Tushra Jain",
+      "Tushar Jain India", "Tushar Jain Rajasthan", 
       "Tushar J", "Jain Tushar", "tushar-jain"
     ],
+    "birthPlace": {
+      "@type": "Place",
+      "name": "Jaipur",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jaipur",
+        "addressRegion": "Rajasthan",
+        "addressCountry": "IN"
+      }
+    },
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Bengaluru",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      }
+    },
     "jobTitle": PORTFOLIO.profile.role,
     "url": "https://tusharjain.in",
     "image": "https://tusharjain.in/pic2.jpeg",
@@ -25,6 +45,7 @@ export default function StructuredData({ data }: StructuredDataProps) {
     "sameAs": [
       PORTFOLIO.profile.socials.linkedin,
       PORTFOLIO.profile.socials.github,
+      PORTFOLIO.profile.socials.twitter,
       "https://www.researchgate.net/profile/Tushar-Jain-135",
     ],
     "description": PORTFOLIO.profile.bio,

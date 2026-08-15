@@ -5,8 +5,32 @@ import ScrollReveal from '@/components/ScrollReveal';
 import { ArrowLeft, ArrowUpRight } from '@/components/Icons';
 
 export const metadata = {
-  title: "Credentials",
-  description: "Verified certifications, hackathons, and achievements of Tushar Jain.",
+  title: "Professional Credentials & Certifications | Tushar Jain",
+  description: "View the verified professional certifications, hackathon achievements, and academic credentials of Tushar Jain, studying Computer Science & Business Systems at BMSCE, Bengaluru.",
+  alternates: {
+    canonical: "https://tusharjain.in/credentials",
+  },
+  openGraph: {
+    title: "Professional Credentials & Certifications | Tushar Jain",
+    description: "View the verified professional certifications, hackathon achievements, and academic credentials of Tushar Jain, studying Computer Science & Business Systems at BMSCE, Bengaluru.",
+    url: "https://tusharjain.in/credentials",
+    siteName: "Tushar Jain - Engineering Portfolio",
+    type: "website",
+    images: [
+      {
+        url: "/pic2.jpeg",
+        width: 800,
+        height: 600,
+        alt: "Credentials and Achievements",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Professional Credentials & Certifications | Tushar Jain",
+    description: "View the verified professional certifications, hackathon achievements, and academic credentials of Tushar Jain, studying Computer Science & Business Systems at BMSCE, Bengaluru.",
+    images: ["/pic2.jpeg"],
+  },
 };
 
 export default function CredentialsPage() {
