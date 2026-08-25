@@ -38,7 +38,7 @@ export default function Footer() {
                 <Link href="/" className="font-bold text-3xl tracking-tight mb-8 inline-block group">
                     <span className="font-heading italic font-normal group-hover:text-(--accent) transition-colors">tushar jain</span> <span className="font-heading text-(--accent)">.</span>
                 </Link>
-                <p className="text-(--text-secondary) font-light text-base max-w-[240px] leading-relaxed italic opacity-80">
+                <p className="text-(--text-secondary) font-light text-base max-w-60 leading-relaxed italic opacity-80">
                     Bridging the gap between software engineering and hardware innovation.
                 </p>
             </div>
@@ -59,6 +59,7 @@ export default function Footer() {
             {/* Column 3: Navigate */}
             <div className="col-span-1 flex flex-col gap-5">
                 <h4 className="text-[10px] font-mono font-bold tracking-[0.3em] uppercase text-(--text-muted) mb-4 border-b border-(--border-color) pb-2 w-fit">Navigate</h4>
+                <Link href="/engineering" className="text-sm text-(--text-secondary) hover:text-(--text-primary) hover:translate-x-1 transition-all duration-300 w-fit">Engineering</Link>
                 <Link href="/about" className="text-sm text-(--text-secondary) hover:text-(--text-primary) hover:translate-x-1 transition-all duration-300 w-fit">Background</Link>
                 <Link href="/contact" className="text-sm text-(--text-secondary) hover:text-(--text-primary) hover:translate-x-1 transition-all duration-300 w-fit">Connect</Link>
                 <button onClick={scrollToTop} className="text-sm text-(--text-secondary) hover:text-(--text-primary) hover:translate-x-1 transition-all duration-300 w-fit flex items-center gap-2">

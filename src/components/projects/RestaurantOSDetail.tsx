@@ -33,7 +33,6 @@ export default function RestaurantOSDetail() {
   const [orders, setOrders] = useState<OrderItem[]>(INITIAL_ORDERS);
   const [activeTab, setActiveTab] = useState<'sales' | 'hours' | 'items'>('sales');
   const [selectedSqlTab, setSelectedSqlTab] = useState<'rls' | 'tx' | 'schema'>('rls');
-  const [isReportOpen, setIsReportOpen] = useState(false);
 
   const addSimulatedOrder = () => {
     const newId = `#KOT-${Math.floor(1000 + Math.random() * 9000)}`;
@@ -287,7 +286,7 @@ export default function RestaurantOSDetail() {
           </div>
 
           <div className="p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl flex justify-center items-center overflow-x-auto no-scrollbar">
-            <svg width="780" height="320" viewBox="0 0 780 320" fill="none" className="min-w-[700px] select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+            <svg width="780" height="320" viewBox="0 0 780 320" fill="none" className="min-w-175 select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
               <defs>
                 <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                   <path d="M 0 2 L 6 5 L 0 8 z" fill="var(--text-muted)" />
@@ -380,7 +379,7 @@ export default function RestaurantOSDetail() {
               ))}
             </div>
 
-            <div className="p-6 font-mono text-[11px] sm:text-xs text-(--text-secondary) leading-relaxed overflow-x-auto bg-(--bg-primary) max-h-[350px]">
+            <div className="p-6 font-mono text-[11px] sm:text-xs text-(--text-secondary) leading-relaxed overflow-x-auto bg-(--bg-primary) max-h-87.5">
               {selectedSqlTab === 'rls' && (
                 <pre>{`-- Enable Row Level Security (RLS) on transactions
 ALTER TABLE orders ENABLE ROW LEVEL SECURITY;

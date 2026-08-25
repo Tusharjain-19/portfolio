@@ -1,9 +1,11 @@
 'use client';
 
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useEffect, useState, useRef, useCallback, useSyncExternalStore } from 'react';
 import { motion, useMotionValue, useAnimationFrame } from 'framer-motion';
 import { useTheme } from '@/hooks/useTheme';
 import { useSound } from '@/hooks/useSound';
+
+const emptySubscribe = () => () => {};
 
 const NUM_LINKS = 12;
 const LINK_LENGTH = 16;
@@ -31,7 +33,11 @@ function ChainLink({ isDark, isOdd }: { isDark: boolean, isOdd: boolean }) {
 export default function ThemeToggle() {
   const { playSound, playToggleSound } = useSound();
   const { theme, toggleTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
   const isDark = theme === 'dark';
 
   const knobX = useMotionValue(0);
@@ -51,10 +57,6 @@ export default function ThemeToggle() {
 
   const topAnchorY = useRef(0);
   const topAnchorVy = useRef(0);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const handleToggle = useCallback(() => {
     toggleTheme();
@@ -308,7 +310,7 @@ export default function ThemeToggle() {
         </motion.div>
         
         {/* Pull hint text */}
-        <div className="absolute top-[220px] -left-16 pointer-events-none opacity-40 font-mono text-[9px] uppercase tracking-widest whitespace-nowrap rotate-[-90deg]">
+        <div className="absolute top-55 -left-16 pointer-events-none opacity-40 font-mono text-[9px] uppercase tracking-widest whitespace-nowrap -rotate-90">
              Pull to switch
         </div>
       </div>

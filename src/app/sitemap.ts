@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { PORTFOLIO } from '@/data/portfolio';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://tusharjain.in';
+  const baseUrl = 'https://www.tusharjain.in';
   const now = new Date();
 
   // ============================================
@@ -20,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/engineering`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.92,
     },
     {
       url: `${baseUrl}/research`,

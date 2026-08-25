@@ -43,12 +43,12 @@ export default function Home() {
                         <div className="absolute inset-0 bg-(--accent)/10 translate-x-4 translate-y-4 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
                         <div className="absolute inset-0 border border-(--accent)/30 -translate-x-4 -translate-y-4 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
                         
-                        <Link href={`/work/${project.slug}`} className="block relative z-10 rounded-xl overflow-hidden border-2 border-(--border-color) group-hover:border-(--accent) transition-colors duration-500 transform group-hover:rotate-y-[2deg] group-hover:rotate-x-[2deg]">
+                        <Link href={`/work/${project.slug}`} className="block relative z-10 rounded-xl overflow-hidden border-2 border-(--border-color) group-hover:border-(--accent) transition-colors duration-500 transform group-hover:rotate-y-2 group-hover:rotate-x-2">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img 
                                 src={project.imageUrl} 
-                                alt={project.title} 
-                                className="w-full aspect-[16/10] object-cover filter grayscale-30 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                                alt={`${project.title} - ${project.tagline} by Tushar Jain`} 
+                                className="w-full aspect-16/10 object-cover filter grayscale-30 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                             />
                         </Link>
                     </div>
@@ -63,7 +63,7 @@ export default function Home() {
                             {project.oneLineSummary}
                         </p>
                         <Link href={`/work/${project.slug}`} className="inline-flex items-center gap-2 mt-4 text-(--accent) font-medium font-mono uppercase tracking-widest hover:tracking-[0.3em] transition-all duration-300">
-                            View Project <ArrowUpRight className="w-5 h-5" />
+                            Explore {project.title} Case Study <ArrowUpRight className="w-5 h-5" />
                         </Link>
                     </div>
                 </ScrollReveal>
@@ -195,8 +195,10 @@ export default function Home() {
                              <div className="flex justify-between items-start mb-6">
                                  <div className="flex items-center gap-2">
                                      {cert.issuer === 'Coursera' ? (
+                                         /* eslint-disable-next-line @next/next/no-img-element */
                                          <img src="/coursera_logo.png" alt="Coursera Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
                                      ) : cert.issuer === '3Skill Training' ? (
+                                         /* eslint-disable-next-line @next/next/no-img-element */
                                          <img src="/3skill_logo.png" alt="3Skill Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
                                      ) : (
                                          <div className="w-8 h-8 rounded-full bg-(--accent) text-(--bg-primary) flex items-center justify-center font-bold text-xs shrink-0">

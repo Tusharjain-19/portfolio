@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { PORTFOLIO } from '@/data/portfolio';
 import ProjectDetail from '@/components/ProjectDetail';
-import Link from 'next/link';
 
 import StructuredData from '@/components/StructuredData';
 import { Metadata } from 'next';
@@ -37,14 +35,14 @@ export async function generateMetadata({
     description: `${project.oneLineSummary} Developed by Tushar Jain, CSBS engineering student at BMSCE, Bengaluru. Tech Stack: ${project.techStack.join(', ')}.`,
     keywords: [project.title, `${project.title} maker`, `${project.title} developer`, "Tushar Jain", "BMSCE", "Bengaluru", ...project.techStack],
     alternates: {
-      canonical: `https://tusharjain.in/work/${project.slug}`,
+      canonical: `https://www.tusharjain.in/work/${project.slug}`,
     },
     openGraph: {
-      title: `${project.title}  -  Tushar Jain`,
+      title: `${project.title} - Tushar Jain`,
       description: project.oneLineSummary,
       type: 'article',
-      url: `https://tusharjain.in/work/${project.slug}`,
-      siteName: 'Tushar Jain  -  Engineering Portfolio',
+      url: `https://www.tusharjain.in/work/${project.slug}`,
+      siteName: 'Tushar Jain - Engineering Portfolio',
       authors: ['Tushar Jain'],
       images: [
         {
@@ -57,7 +55,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${project.title}  -  Tushar Jain`,
+      title: `${project.title} - Tushar Jain`,
       description: project.oneLineSummary,
     },
   };
@@ -82,9 +80,10 @@ export default async function ProjectPage({
     "description": project.oneLineSummary,
     "author": {
       "@type": "Person",
-      "name": PORTFOLIO.profile.name
+      "name": PORTFOLIO.profile.name,
+      "url": "https://www.tusharjain.in"
     },
-    "url": `https://tusharjain.in/work/${project.slug}`,
+    "url": `https://www.tusharjain.in/work/${project.slug}`,
     "techStack": project.techStack
   };
 

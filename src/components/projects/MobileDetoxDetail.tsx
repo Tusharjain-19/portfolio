@@ -109,7 +109,7 @@ export default function MobileDetoxDetail() {
             <span className="text-xs font-mono text-(--text-muted) uppercase tracking-widest block">Research Question</span>
             <h3 className="text-xl font-bold text-(--text-primary) tracking-tight">Core Problem Statement</h3>
             <div className="p-4 bg-(--bg-primary) border-l-2 border-(--text-primary) rounded-r text-sm text-(--text-secondary) italic leading-relaxed">
-              "Does reducing mobile phone usage before sleep significantly improve overall sleep quality?"
+              &quot;Does reducing mobile phone usage before sleep significantly improve overall sleep quality?&quot;
             </div>
             <ul className="text-xs text-(--text-muted) space-y-1.5 pt-2">
               <li className="flex items-center gap-2">
@@ -195,7 +195,7 @@ export default function MobileDetoxDetail() {
               <span className="text-xs font-mono text-(--text-primary) font-semibold">● Hypothesis Test Validated</span>
             </div>
 
-            <div className="min-h-[220px] flex items-center justify-center">
+            <div className="min-h-55 flex items-center justify-center">
               {activeChart === 'sqi' && (
                 <div className="w-full space-y-6 max-w-lg mx-auto">
                   <div className="space-y-2">
@@ -287,7 +287,7 @@ export default function MobileDetoxDetail() {
           <div className="relative border-l border-(--border-color) ml-4 pl-6 space-y-8">
             {TIMELINE_STEPS.map((item, idx) => (
               <div key={idx} className="relative group">
-                <span className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-(--bg-primary) border-2 border-(--border-color) flex items-center justify-center">
+                <span className="absolute -left-7.75 top-1 w-4 h-4 rounded-full bg-(--bg-primary) border-2 border-(--border-color) flex items-center justify-center">
                   <span className="w-1.5 h-1.5 rounded-full bg-(--text-primary)" />
                 </span>
                 <span className="text-[10px] font-mono text-(--text-muted) font-bold">STEP {item.step}</span>
@@ -356,7 +356,7 @@ export default function MobileDetoxDetail() {
         {/* FOOTER QUOTE */}
         <footer className="py-12 border-t border-(--border-color) text-center space-y-3">
           <blockquote className="text-lg sm:text-xl font-serif italic text-(--text-secondary)">
-            "Good decisions are driven by data, not assumptions."
+            &quot;Good decisions are driven by data, not assumptions.&quot;
           </blockquote>
           <p className="text-xs font-mono text-(--text-muted) uppercase tracking-widest">
             Statistical Modeling • BMS College of Engineering

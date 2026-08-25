@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
+  { label: 'Engineering', href: '/engineering' },
   { label: 'Research', href: '/research', hasDropdown: true },
   { label: 'Credentials', href: '/credentials' },
   { label: 'About', href: '/about' },
@@ -59,7 +60,7 @@ export default function Navbar() {
             href="/" 
             className="flex items-center gap-1 font-bold text-sm sm:text-lg md:text-xl text-(--text-primary) hover:opacity-70 transition-opacity z-50 shrink-0"
           >
-            <span className="font-heading italic font-normal tracking-tight truncate max-w-[120px] sm:max-w-none pr-2">tushar jain</span>
+            <span className="font-heading italic font-normal tracking-tight truncate max-w-30 sm:max-w-none pr-2">tushar jain</span>
             <span className="font-heading tracking-tighter">.</span>
           </Link>
 

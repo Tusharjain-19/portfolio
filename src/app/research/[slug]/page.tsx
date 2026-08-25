@@ -35,14 +35,14 @@ export async function generateMetadata({
     description: `${research.systemArchitectureSummary} Academic research by Tushar Jain, CSBS student at BMS College of Engineering (BMSCE), Bengaluru. Technical Areas: ${research.coreTechnicalAreas.join(', ')}.`,
     keywords: [research.title, "Tushar Jain research", "BMSCE research", "Bengaluru", ...research.coreTechnicalAreas],
     alternates: {
-      canonical: `https://tusharjain.in/research/${research.slug}`,
+      canonical: `https://www.tusharjain.in/research/${research.slug}`,
     },
     openGraph: {
-      title: `${research.title}  -  Tushar Jain`,
+      title: `${research.title} - Tushar Jain`,
       description: research.systemArchitectureSummary,
       type: 'article',
-      url: `https://tusharjain.in/research/${research.slug}`,
-      siteName: 'Tushar Jain  -  Engineering Portfolio',
+      url: `https://www.tusharjain.in/research/${research.slug}`,
+      siteName: 'Tushar Jain - Engineering Portfolio',
       authors: ['Tushar Jain'],
       images: [
         {
@@ -55,7 +55,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${research.title}  -  Tushar Jain`,
+      title: `${research.title} - Tushar Jain`,
       description: research.systemArchitectureSummary,
     },
   };
@@ -80,9 +80,10 @@ export default async function ResearchPage({
     "description": research.systemArchitectureSummary,
     "author": {
       "@type": "Person",
-      "name": PORTFOLIO.profile.name
+      "name": PORTFOLIO.profile.name,
+      "url": "https://www.tusharjain.in"
     },
-    "url": `https://tusharjain.in/research/${research.slug}`
+    "url": `https://www.tusharjain.in/research/${research.slug}`
   };
 
   return (

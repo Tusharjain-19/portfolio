@@ -7,12 +7,12 @@ export const metadata = {
   title: "Software Engineering & IoT Projects | Tushar Jain",
   description: "Browse a detailed showcase of software engineering, fullstack React/Next.js web apps, B2B SaaS, and ESP32 embedded systems/IoT projects built by Tushar Jain, BMSCE student in Bengaluru.",
   alternates: {
-    canonical: "https://tusharjain.in/projects",
+    canonical: "https://www.tusharjain.in/projects",
   },
   openGraph: {
     title: "Software Engineering & IoT Projects | Tushar Jain",
     description: "Browse a detailed showcase of software engineering, fullstack React/Next.js web apps, B2B SaaS, and ESP32 embedded systems/IoT projects built by Tushar Jain, BMSCE student in Bengaluru.",
-    url: "https://tusharjain.in/projects",
+    url: "https://www.tusharjain.in/projects",
     siteName: "Tushar Jain - Engineering Portfolio",
     type: "website",
     images: [
@@ -75,17 +75,17 @@ export default function ProjectsPage() {
                         <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-(--accent) opacity-0 group-hover:opacity-100 transition-opacity" />
 
                         {project.imageUrl && (
-                            <div className="w-full aspect-[16/10] overflow-hidden border-b border-(--border-color) relative">
+                            <div className="w-full aspect-16/10 overflow-hidden border-b border-(--border-color) relative">
                                 <div className="absolute inset-0 bg-(--accent)/10 mix-blend-overlay group-hover:opacity-0 transition-opacity z-10" />
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img 
                                     src={project.imageUrl} 
-                                    alt={project.title} 
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter grayscale-[50%] group-hover:grayscale-0"
+                                    alt={`${project.title} - ${project.tagline} by Tushar Jain`} 
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter grayscale-50 group-hover:grayscale-0"
                                 />
                             </div>
                         )}
-                        <div className="p-6 sm:p-8 flex flex-col flex-1 relative z-20 bg-gradient-to-t from-(--bg-secondary) to-transparent">
+                        <div className="p-6 sm:p-8 flex flex-col flex-1 relative z-20 bg-linear-to-t from-(--bg-secondary) to-transparent">
                             <div className="flex justify-between items-start mb-4 gap-2">
                                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-heading text-(--text-primary) group-hover:text-(--accent) transition-colors leading-tight">
                                     {project.title}

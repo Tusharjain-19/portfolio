@@ -2,18 +2,17 @@ import React from 'react';
 import { PORTFOLIO } from '@/data/portfolio';
 import Link from 'next/link';
 import { ArrowUpRight, ArrowLeft } from '@/components/Icons';
-import Metadata from 'next';
 
 export const metadata = {
   title: "Systems Engineering Research & Data Science Papers | Tushar Jain",
   description: "Explore academic research, cooperative autonomous vehicle systems, and statistical data science projects authored by Tushar Jain, CSBS student at BMSCE, Bengaluru.",
   alternates: {
-    canonical: "https://tusharjain.in/research",
+    canonical: "https://www.tusharjain.in/research",
   },
   openGraph: {
     title: "Systems Engineering Research & Data Science Papers | Tushar Jain",
     description: "Explore academic research, cooperative autonomous vehicle systems, and statistical data science projects authored by Tushar Jain, CSBS student at BMSCE, Bengaluru.",
-    url: "https://tusharjain.in/research",
+    url: "https://www.tusharjain.in/research",
     siteName: "Tushar Jain - Engineering Portfolio",
     type: "website",
     images: [

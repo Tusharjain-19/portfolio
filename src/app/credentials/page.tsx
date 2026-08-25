@@ -8,12 +8,12 @@ export const metadata = {
   title: "Professional Credentials & Certifications | Tushar Jain",
   description: "View the verified professional certifications, hackathon achievements, and academic credentials of Tushar Jain, studying Computer Science & Business Systems at BMSCE, Bengaluru.",
   alternates: {
-    canonical: "https://tusharjain.in/credentials",
+    canonical: "https://www.tusharjain.in/credentials",
   },
   openGraph: {
-    title: "Professional Credentials & Certifications | Tushar Jain",
-    description: "View the verified professional certifications, hackathon achievements, and academic credentials of Tushar Jain, studying Computer Science & Business Systems at BMSCE, Bengaluru.",
-    url: "https://tusharjain.in/credentials",
+    title: "Verified Credentials & Certifications | Tushar Jain",
+    description: "Browse verified certifications in Investment Risk Management, Business Analysis, and Full-Stack Web Development earned by Tushar Jain.",
+    url: "https://www.tusharjain.in/credentials",
     siteName: "Tushar Jain - Engineering Portfolio",
     type: "website",
     images: [
@@ -117,8 +117,10 @@ export default function CredentialsPage() {
                               <div className="flex justify-between items-start mb-6">
                                   <div className="flex items-center gap-2">
                                       {cert.issuer === 'Coursera' ? (
+                                          /* eslint-disable-next-line @next/next/no-img-element */
                                           <img src="/coursera_logo.png" alt="Coursera Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
                                       ) : cert.issuer === '3Skill Training' ? (
+                                          /* eslint-disable-next-line @next/next/no-img-element */
                                           <img src="/3skill_logo.png" alt="3Skill Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
                                       ) : (
                                           <div className="w-8 h-8 rounded-full bg-(--accent) text-(--bg-primary) flex items-center justify-center font-bold text-xs shrink-0">

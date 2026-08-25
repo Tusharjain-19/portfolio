@@ -71,7 +71,7 @@ export default function Cursor() {
         }
       `}</style>
       
-      <div className="custom-cursor-layer pointer-events-none fixed inset-0 z-[99999] overflow-hidden">
+      <div className="custom-cursor-layer pointer-events-none fixed inset-0 z-99999 overflow-hidden">
         {/* Outer Follower Halo / Ring */}
         <motion.div
           className="fixed top-0 left-0 rounded-full border border-sky-400/50 bg-sky-500/10 backdrop-blur-[1px] flex items-center justify-center pointer-events-none shadow-[0_0_15px_rgba(56,189,248,0.25)]"

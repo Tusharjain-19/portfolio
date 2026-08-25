@@ -8,12 +8,12 @@ export const metadata = {
   title: "About Tushar Jain | Software Developer & Systems Engineer",
   description: "Learn about Tushar Jain, a Computer Science & Business Systems student at BMS College of Engineering (BMSCE), Bengaluru. Discover his journey in full-stack web development, IoT, and building impact-driven products.",
   alternates: {
-    canonical: "https://tusharjain.in/about",
+    canonical: "https://www.tusharjain.in/about",
   },
   openGraph: {
     title: "About Tushar Jain | Software Developer & Systems Engineer",
     description: "Learn about Tushar Jain, a Computer Science & Business Systems student at BMS College of Engineering (BMSCE), Bengaluru. Discover his journey in full-stack web development, IoT, and building impact-driven products.",
-    url: "https://tusharjain.in/about",
+    url: "https://www.tusharjain.in/about",
     siteName: "Tushar Jain - Engineering Portfolio",
     type: "profile",
     images: [
@@ -59,7 +59,7 @@ export default function AboutPage() {
 
         {/* SECTION 1 - About Me */}
         <ScrollReveal className="relative pl-6 sm:pl-12 border-l border-(--accent-muted)">
-            <div className="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-(--accent)" />
+            <div className="absolute -left-1.25 top-2 w-2 h-2 rounded-full bg-(--accent)" />
             <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">01. About Me</h2>
             <div className="space-y-6 text-lg sm:text-xl text-(--text-secondary) leading-relaxed font-light">
                 <p>
@@ -73,7 +73,7 @@ export default function AboutPage() {
 
         {/* SECTION 2 - Solving Real Problems */}
         <ScrollReveal className="relative pl-6 sm:pl-12 border-l border-(--accent-muted)">
-             <div className="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-(--accent)" />
+             <div className="absolute -left-1.25 top-2 w-2 h-2 rounded-full bg-(--accent)" />
              <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">02. Solving Real Problems</h2>
              <div className="space-y-6 text-lg sm:text-xl text-(--text-secondary) leading-relaxed font-light">
                 <p>
@@ -87,7 +87,7 @@ export default function AboutPage() {
 
         {/* SECTION 3 - Hardware & Health */}
         <ScrollReveal className="relative pl-6 sm:pl-12 border-l border-(--accent-muted)">
-             <div className="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-(--accent)" />
+             <div className="absolute -left-1.25 top-2 w-2 h-2 rounded-full bg-(--accent)" />
              <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">03. Hardware & Health Tech</h2>
              <div className="space-y-6 text-lg sm:text-xl text-(--text-secondary) leading-relaxed font-light">
                 <p>
@@ -101,7 +101,7 @@ export default function AboutPage() {
 
         {/* SECTION 4 - How I Work */}
         <ScrollReveal className="relative pl-6 sm:pl-12 border-l border-(--accent-muted)">
-             <div className="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-(--accent)" />
+             <div className="absolute -left-1.25 top-2 w-2 h-2 rounded-full bg-(--accent)" />
              <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">04. How I Work</h2>
              <ul className="grid sm:grid-cols-2 gap-8 text-(--text-secondary) font-light mt-8">
                 <li className="p-6 border border-(--border-color) bg-(--bg-secondary) rounded-2xl hover:border-(--accent) transition-colors">
@@ -117,7 +117,7 @@ export default function AboutPage() {
 
         {/* SECTION 5 - Research & Engineering Philosophy */}
         <ScrollReveal className="relative pl-6 sm:pl-12 border-l border-(--accent-muted)">
-             <div className="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-(--accent)" />
+             <div className="absolute -left-1.25 top-2 w-2 h-2 rounded-full bg-(--accent)" />
              <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">05. Engineering Principles</h2>
              <div className="space-y-6 text-lg sm:text-xl text-(--text-secondary) leading-relaxed font-light">
                 <p>

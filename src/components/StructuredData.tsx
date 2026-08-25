@@ -9,7 +9,7 @@ export default function StructuredData({ data }: StructuredDataProps) {
   const personData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://tusharjain.in/#person",
+    "@id": "https://www.tusharjain.in/#person",
     "name": "Tushar Jain",
     "givenName": "Tushar",
     "familyName": "Jain",
@@ -39,8 +39,8 @@ export default function StructuredData({ data }: StructuredDataProps) {
       }
     },
     "jobTitle": PORTFOLIO.profile.role,
-    "url": "https://tusharjain.in",
-    "image": "https://tusharjain.in/pic2.jpeg",
+    "url": "https://www.tusharjain.in",
+    "image": "https://www.tusharjain.in/pic2.jpeg",
     "email": `mailto:${PORTFOLIO.profile.socials.email}`,
     "sameAs": [
       PORTFOLIO.profile.socials.linkedin,
@@ -83,13 +83,13 @@ export default function StructuredData({ data }: StructuredDataProps) {
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://tusharjain.in/#website",
-    "url": "https://tusharjain.in",
-    "name": "Tushar Jain  -  Engineering Portfolio",
+    "@id": "https://www.tusharjain.in/#website",
+    "url": "https://www.tusharjain.in",
+    "name": "Tushar Jain - Engineering Portfolio",
     "alternateName": ["tusharjain.in", "Tushar Jain Portfolio", "Tushar Jain BMSCE Portfolio"],
     "description": "Portfolio of Tushar Jain, Engineering Student at BMS College of Engineering (BMSCE), Bengaluru.",
     "publisher": {
-      "@id": "https://tusharjain.in/#person"
+      "@id": "https://www.tusharjain.in/#person"
     },
     "inLanguage": "en-IN",
   };
@@ -98,9 +98,9 @@ export default function StructuredData({ data }: StructuredDataProps) {
   const profileData = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "@id": "https://tusharjain.in/#profilepage",
+    "@id": "https://www.tusharjain.in/#profilepage",
     "mainEntity": {
-      "@id": "https://tusharjain.in/#person"
+      "@id": "https://www.tusharjain.in/#person"
     },
     "dateCreated": "2025-01-01",
     "dateModified": new Date().toISOString().split('T')[0],
@@ -115,25 +115,31 @@ export default function StructuredData({ data }: StructuredDataProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://tusharjain.in"
+        "item": "https://www.tusharjain.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Projects",
-        "item": "https://tusharjain.in/projects"
+        "item": "https://www.tusharjain.in/projects"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "About",
-        "item": "https://tusharjain.in/about"
+        "name": "Engineering",
+        "item": "https://www.tusharjain.in/engineering"
       },
       {
         "@type": "ListItem",
         "position": 4,
+        "name": "About",
+        "item": "https://www.tusharjain.in/about"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
         "name": "Contact",
-        "item": "https://tusharjain.in/contact"
+        "item": "https://www.tusharjain.in/contact"
       }
     ]
   };
@@ -150,7 +156,7 @@ export default function StructuredData({ data }: StructuredDataProps) {
         "@type": "CreativeWork",
         "name": project.title,
         "description": project.oneLineSummary,
-        "url": `https://tusharjain.in/work/${project.slug}`,
+        "url": `https://www.tusharjain.in/work/${project.slug}`,
         "techStack": project.techStack
       }
     }))

@@ -33,7 +33,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://tusharjain.in/sitemap.xml',
-    host: 'https://tusharjain.in',
+    sitemap: 'https://www.tusharjain.in/sitemap.xml',
+    host: 'https://www.tusharjain.in',
   };
 }

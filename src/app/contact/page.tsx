@@ -8,12 +8,12 @@ export const metadata = {
   title: "Contact & Hire Tushar Jain | Software Engineer Intern",
   description: "Contact Tushar Jain, an engineering student at BMSCE Bengaluru, for software engineer internships, web app development, ESP32 IoT projects, or technical collaboration.",
   alternates: {
-    canonical: "https://tusharjain.in/contact",
+    canonical: "https://www.tusharjain.in/contact",
   },
   openGraph: {
-    title: "Contact & Hire Tushar Jain | Software Engineer Intern",
-    description: "Contact Tushar Jain, an engineering student at BMSCE Bengaluru, for software engineer internships, web app development, ESP32 IoT projects, or technical collaboration.",
-    url: "https://tusharjain.in/contact",
+    title: "Contact Tushar Jain | Software Engineering Student",
+    description: "Get in touch with Tushar Jain, Computer Science & Business Systems student at BMS College of Engineering (BMSCE), Bengaluru.",
+    url: "https://www.tusharjain.in/contact",
     siteName: "Tushar Jain - Engineering Portfolio",
     type: "website",
     images: [

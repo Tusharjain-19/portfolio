@@ -251,7 +251,7 @@ export default function FlightDeckDetail() {
                       
                       <div className="relative pl-6 space-y-6 border-l border-(--border-color)">
                         <div className="relative">
-                          <span className="absolute -left-[30px] top-1 w-4 h-4 rounded-full bg-(--bg-secondary) border-2 border-(--border-color) flex items-center justify-center">
+                          <span className="absolute -left-7.5 top-1 w-4 h-4 rounded-full bg-(--bg-secondary) border-2 border-(--border-color) flex items-center justify-center">
                             <span className="w-1.5 h-1.5 rounded-full bg-(--text-muted)"></span>
                           </span>
                           <span className="text-[10px] font-mono text-(--text-muted)">DEPARTURE</span>
@@ -260,7 +260,7 @@ export default function FlightDeckDetail() {
                         </div>
 
                         <div className="relative">
-                          <span className="absolute -left-[30px] top-1 w-4 h-4 rounded-full bg-(--bg-secondary) border-2 border-(--accent) flex items-center justify-center">
+                          <span className="absolute -left-7.5 top-1 w-4 h-4 rounded-full bg-(--bg-secondary) border-2 border-(--accent) flex items-center justify-center">
                             <span className="w-1.5 h-1.5 rounded-full bg-(--accent)"></span>
                           </span>
                           <span className="text-[10px] font-mono text-(--text-primary) font-medium">ARRIVAL INFO</span>
@@ -322,7 +322,7 @@ export default function FlightDeckDetail() {
           </div>
 
           <div className="p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl flex justify-center items-center overflow-x-auto no-scrollbar">
-            <svg width="780" height="240" viewBox="0 0 780 240" fill="none" className="min-w-[650px] select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+            <svg width="780" height="240" viewBox="0 0 780 240" fill="none" className="min-w-162.5 select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
               <defs>
                 <marker id="arr" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                   <path d="M 0 2 L 6 5 L 0 8 z" fill="var(--text-muted)" />
@@ -378,7 +378,7 @@ export default function FlightDeckDetail() {
               <span className="text-[10px] font-mono text-(--text-primary) px-2 py-0.5 bg-(--bg-primary) border border-(--border-color) rounded">Next.js API Handler</span>
             </div>
             
-            <div className="p-6 font-mono text-[11px] sm:text-xs text-(--text-secondary) leading-relaxed overflow-x-auto bg-(--bg-primary) max-h-[350px]">
+            <div className="p-6 font-mono text-[11px] sm:text-xs text-(--text-secondary) leading-relaxed overflow-x-auto bg-(--bg-primary) max-h-87.5">
               <pre>{`import { NextResponse } from 'next/server';
 
 let cachedData: any = null;
