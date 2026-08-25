@@ -1,4 +1,4 @@
-# Tushar Jain — Engineering & Software Portfolio
+# Tushar Jain - Engineering & Software Portfolio
 
 <div align="center">
 
@@ -8,7 +8,7 @@
   ![Tailwind CSS v4](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=for-the-badge&logo=tailwindcss)
   ![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=for-the-badge&logo=vercel)
 
-  <h3>Computer Science Student & Business System @ BMS College of Engineering (BMSCE), Bengaluru</h3>
+  <h3>Computer Science & Business System Student @ BMS College of Engineering (BMSCE), Bengaluru</h3>
 
   <p>Building high-impact web software, transit utilities, embedded health-tech MVPs, and systems architectures.</p>
 
