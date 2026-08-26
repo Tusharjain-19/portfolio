@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Cursor from "@/components/Cursor";
@@ -109,6 +110,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light" data-theme="light">
+      <head>
+        <Script
+          src="https://gstatic.com"
+          strategy="afterInteractive"
+        />
+      </head>
       <body
         suppressHydrationWarning
         className={`${playfair.variable} ${inter.variable} antialiased bg-(--bg-primary) text-(--text-primary) transition-colors duration-500 font-body overflow-x-hidden w-full max-w-[100vw]`}

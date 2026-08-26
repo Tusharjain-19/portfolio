@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { PORTFOLIO } from '@/data/portfolio';
 import { Github, LinkedIn, Twitter, Mail, ArrowUpRight } from './Icons';
 import ResumeModal from './ResumeModal';
+import PreferredSourceButton from './PreferredSourceButton';
 
 export default function Footer() {
   useEffect(() => {
@@ -87,6 +88,9 @@ export default function Footer() {
                         Full Résumé <ArrowUpRight className="w-3 h-3" />
                     </div>
                 </ResumeModal>
+                <div className="mt-2">
+                    <PreferredSourceButton siteUrl="https://www.tusharjain.in" />
+                </div>
             </div>
 
         </div>

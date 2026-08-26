@@ -3,6 +3,7 @@ import React from 'react';
 import { PORTFOLIO } from '@/data/portfolio';
 import { ArrowUpRight } from '@/components/Icons';
 import ResumeModal from '@/components/ResumeModal';
+import PreferredSourceButton from '@/components/PreferredSourceButton';
 
 export const metadata = {
   title: "Contact & Hire Tushar Jain | Software Engineer Intern",
@@ -108,6 +109,12 @@ export default function ContactPage() {
                    <span>View / Download Resume</span>
                 </div>
              </ResumeModal>
+        </div>
+
+        {/* SECTION 3.5 - GOOGLE PREFERRED SOURCE */}
+        <div className="mb-16 flex flex-col items-center sm:items-start">
+            <span className="text-[10px] font-mono text-(--text-muted) uppercase tracking-[0.3em] mb-3">Save Source</span>
+            <PreferredSourceButton siteUrl="https://www.tusharjain.in" />
         </div>
 
         {/* SECTION 4 - LOCATION */}
