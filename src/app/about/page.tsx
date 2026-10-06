@@ -80,7 +80,7 @@ export default function AboutPage() {
                     Every project I&apos;ve built was created to solve a real headache. <strong>NotesCSBS</strong> was built to organize scattered college study notes. <strong>Jaipur Ride</strong> was made so commuters don&apos;t have to decipher confusing messages to catch the metro.
                 </p>
                 <p>
-                    I believe in getting working prototypes into users&apos; hands quickly—build the core app, test it with real users, fix what breaks, and refine it based on real feedback.
+                    I believe in getting working prototypes into users&apos; hands quickly: build the core app, test it with real users, fix what breaks, and refine it based on real feedback.
                 </p>
              </div>
         </ScrollReveal>
@@ -104,11 +104,17 @@ export default function AboutPage() {
              <div className="absolute -left-1.25 top-2 w-2 h-2 rounded-full bg-(--accent)" />
              <h2 className="text-sm font-mono text-(--accent) mb-4 uppercase tracking-[0.2em]">04. How I Work</h2>
              <ul className="grid sm:grid-cols-2 gap-8 text-(--text-secondary) font-light mt-8">
-                <li className="p-6 border border-(--border-color) bg-(--bg-secondary) rounded-2xl hover:border-(--accent) transition-colors">
+                <li className="p-6 border border-(--border-color) bg-(--bg-secondary) rounded-2xl hover:border-(--accent) transition-colors relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                        01
+                    </div>
                     <strong className="block text-(--text-primary) font-heading text-2xl mb-2">Simplicity</strong>
                     Clean interfaces that work intuitively without needing an instruction manual.
                 </li>
-                <li className="p-6 border border-(--border-color) bg-(--bg-secondary) rounded-2xl hover:border-(--accent) transition-colors">
+                <li className="p-6 border border-(--border-color) bg-(--bg-secondary) rounded-2xl hover:border-(--accent) transition-colors relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                        02
+                    </div>
                     <strong className="block text-(--text-primary) font-heading text-2xl mb-2">End-to-End</strong>
                     From database tables down to hardware microchips, I build the complete solution.
                 </li>

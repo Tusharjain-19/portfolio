@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "Tushar Jain software engineer", "Tushar Jain developer", "Tushar Jain portfolio",
     "tusharjain.in", "Tushar Jain resume", "Tushar Jain CV", "BMS College of Engineering",
     "Computer Science and Business Systems", "CSBS BMSCE", "Jaipur Ride", "Namma Ride",
-    "PulsePredict AI", "NotesCSBS", "BookMySlot", "RestaurantOS", "FlightDeck",
+    "PulsePredict AI", "NotesCSBS", "Billing Pro POS", "RestaurantOS", "FlightDeck",
     "ESP32 developer", "React developer Bengaluru", "Next.js developer India"
   ],
   authors: [{ name: "Tushar Jain", url: "https://www.tusharjain.in" }],

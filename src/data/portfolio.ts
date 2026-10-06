@@ -30,6 +30,8 @@ export const PORTFOLIO: PortfolioData = {
     "React",
     "Next.js",
     "Vite",
+    "Capacitor",
+    "Dexie.js (IndexedDB)",
     "Node.js",
     "Express",
     "Tailwind CSS",
@@ -49,8 +51,8 @@ export const PORTFOLIO: PortfolioData = {
   ],
   skillsGrouped: {
     "Languages": ["JavaScript", "TypeScript", "C/C++", "Python", "SQL", "HTML", "CSS"],
-    "Frameworks": ["React", "Next.js", "Vite", "Node.js", "Express", "Tailwind CSS"],
-    "Backend & Databases": ["Supabase (PostgreSQL)", "Firebase", "MySQL", "REST APIs", "Razorpay API", "Google Sheets API"],
+    "Frameworks": ["React", "Next.js", "Vite", "Capacitor", "Node.js", "Express", "Tailwind CSS"],
+    "Backend & Databases": ["Dexie.js (IndexedDB)", "Supabase (PostgreSQL)", "Firebase", "MySQL", "REST APIs", "Razorpay API", "Google Sheets API"],
     "Embedded & IoT": ["ESP32", "Arduino", "MPU6050", "MAX30102", "BLE", "I2C/SPI/UART"],
     "Developer Tools": ["Git", "GitHub", "Vercel", "Netlify", "VS Code", "Figma", "Postman", "Arduino IDE"],
   },
@@ -71,6 +73,13 @@ export const PORTFOLIO: PortfolioData = {
     },
     {
       title: "Web Development Internship Certificate",
+      issuer: "InnoByte Services",
+      verifyUrl: "/Tushar Jain_internship_ InnoByte Services.pdf",
+      verifyCode: "IS/A1/R8453",
+      skillsGained: ["Web Development", "Frontend Engineering", "Production Workflows", "Team Collaboration"]
+    },
+    {
+      title: "Web Development Internship Certificate",
       issuer: "3Skill Training",
       verifyUrl: "/Certificate_INTERN260467_Tushar_Jain.pdf",
       verifyCode: "2025",
@@ -79,9 +88,17 @@ export const PORTFOLIO: PortfolioData = {
   ],
   hackathons: [
     {
+      title: "HackmatriX 2026",
+      project: "IEEE Computer Society (MITS Gwalior)",
+      achievement: "Grand Finalist: HackmatriX 2026",
+      description: "Selected for and successfully participated in the Grand Finale of HackmatriX 2026, a 24-hour national hackathon organized by the IEEE Computer Society at Madhav Institute of Technology & Science (MITS Gwalior).",
+      imageUrl: "/hackmatrix_certificate.png",
+      certificateUrl: "/Certificate_Tushar Jain_MITS-DU-202608-00357.pdf"
+    },
+    {
       title: "Frontend Wars 2026",
       project: "Frontend Arena",
-      achievement: "Finalist — Frontend Wars 2026",
+      achievement: "Finalist: Frontend Wars 2026",
       description: "Qualified as a Finalist in Frontend Wars 2026 organized by Frontend Arena for designing and delivering innovative frontend web solutions.",
       imageUrl: "/Tushar-Jain-FA-L6UMTXXG.png"
     },
@@ -170,7 +187,7 @@ export const PORTFOLIO: PortfolioData = {
       imageUrl: "/jaipur-ride-poster.png",
       detailImageUrl: "/jaipur-ride.png",
       tagline: "Public Transport App",
-      oneLineSummary: "A high-performance, client-side optimized public transit routing engine utilizing Breadth-First Search (BFS) pathfinding over static transit graphs for commuter assistance.",
+      oneLineSummary: "A high-performance public transit routing engine with 1,500+ Play Store downloads and 50,000+ website impressions, utilizing client-side Breadth-First Search (BFS) pathfinding over static transit graphs.",
       ideaOrigin: "I noticed that people in Jaipur had a really hard time finding correct metro and bus timings, often relying on rumors, random Google searches, or scattered WhatsApp messages.",
       problemStatement: [
         "Commuters in Jaipur lacked an offline-capable, unified transit planner showing correct schedules, interchange zones, and ticket fares.",
@@ -180,7 +197,7 @@ export const PORTFOLIO: PortfolioData = {
         "Engineering Approach: Developed a Progressive Web Application (PWA) client that caches and processes all routing calculations locally on the device.",
         "Architecture: The application loads the entire transit network from a highly compressed static JSON adjacency list representation, executing search traverses entirely in-browser.",
         "What I Personally Built: Programmed the local BFS pathfinding algorithm, compiled the transit coordinate JSON database, designed the responsive routes page, and published the production Android app on Google Play.",
-        "Current Status & Result: Deployed production platform with over 1,000+ organic downloads and 250+ Monthly Active Users (MAU) in Jaipur, India."
+        "Current Status & Result: Deployed production platform with over 1,500+ organic Android app downloads on Google Play, 50,000+ website impressions, and 250+ Monthly Active Users (MAU) in Jaipur, India."
       ],
       hardestTechnicalChallenge: "Eliminating external map API lookup latencies and cellular network dependence. Solved this by compiling Jaipur's transit routes into a 15KB JSON adjacency list. Implemented a client-side Breadth-First Search (BFS) pathfinding algorithm that executes locally on the device's CPU, returning complete route, fare, and station breakdowns in under 10ms with zero server calls.",
       learnings: [
@@ -211,7 +228,7 @@ export const PORTFOLIO: PortfolioData = {
         "Engineering Approach: Built a centralized relational document distribution hub with secure role-based administrative access and file synchronization.",
         "Architecture: Implemented a Next.js/React frontend connected to a Supabase PostgreSQL database, linking document metadata to Google Drive cloud storage buckets.",
         "What I Personally Built: Configured the PostgreSQL schema, created Supabase Row Level Security (RLS) policies for user authentication, integrated the Google Drive API for download routing, and optimized search console SEO.",
-        "Current Status & Result: Active academic portal that achieved 500+ organic clicks and 3K+ search impressions with an average Google search position of 4.7."
+        "Current Status & Result: Active academic portal that achieved 1.17K+ organic clicks and 9.75K+ search impressions with an average CTR of 12% and average Google search position of 4.9 across a 12-month period."
       ],
       hardestTechnicalChallenge: "Managing high-stress concurrent file download requests during examination periods without encountering Google Drive API rate limiting. Solved by implementing an API caching layer on the server side and structuring metadata lookups in a PostgreSQL database to bypass direct Drive directory searches.",
       learnings: [
@@ -257,33 +274,36 @@ export const PORTFOLIO: PortfolioData = {
       }
     },
     {
-      id: "bookmyslot",
-      slug: "bookmyslot",
-      title: "BookMySlot",
-      imageUrl: "/bookmyslot.png",
-      tagline: "Booking System",
-      oneLineSummary: "A multi-tenant reservation SaaS featuring real-time WebSockets synchronization, PostgreSQL Row Level Security (RLS) tenant isolation, and pessimistic transaction locking.",
-      ideaOrigin: "I saw that local restaurants and clinics still run on paper diaries, phone calls, and memory. Waiters mix up table bookings, patients wait hours without knowing their slot status, and owners have no clear view. They don't need fancy enterprise software; they just need a simple, real-time booking sheet.",
+      id: "billing-pos",
+      slug: "billing-pos",
+      title: "Billing Pro POS",
+      imageUrl: "/billing_pos.png",
+      detailImageUrl: "/billing_pos_dashboard.png",
+      videoUrl: "/billing_pos_demo.mp4",
+      tagline: "Offline-First POS & Restaurant System",
+      oneLineSummary: "An enterprise-grade, offline-first Point of Sale (POS) and restaurant billing platform featuring sub-10 second billing, ESC/POS Bluetooth & USB thermal printing, dynamic UPI Bharat QR generation, and Dexie.js IndexedDB storage.",
+      ideaOrigin: "I noticed that small restaurants, cafés, and food trucks struggle during rush hours with cloud-dependent POS systems. When internet drops, order punching halts, thermal printers disconnect, and billing freezes. I wanted to build a zero-cloud-dependency, high-speed POS that works 100% offline, communicates directly with hardware thermal receipt printers over Bluetooth/USB, and generates dynamic UPI payment QR codes instantly.",
       problemStatement: [
-        "Paper diaries in clinics and restaurants lead to frequent double-bookings, scheduling conflicts, and customer waiting friction.",
-        "Front desk staff, service operators, and business owners lack a centralized, real-time view of daily slots."
+        "Cloud-based POS systems fail during peak-hour network drops, resulting in lost sales, queue delays, and frozen counters.",
+        "Counter cashiers require sub-10-second order punching speed, which heavy cloud roundtrips and complex interfaces cannot sustain.",
+        "Integrating hardware thermal printers (58mm/80mm) and dynamic UPI QR code payments on mobile and tablet terminals typically requires expensive proprietary POS hardware."
       ],
       solutionOverview: [
-        "Engineering Approach: Developed a multi-tenant booking system isolating database transactions by organization key while pushing instant slot state changes.",
-        "Architecture: Deployed a multi-tenant schema with PostgreSQL Row Level Security (RLS) policies, using Supabase Realtime listeners (WebSockets) to coordinate UI states.",
-        "What I Personally Built: Programmed the calendar reservation layout, configured the Supabase database triggers, and designed the real-time client sync loops.",
-        "Current Status & Result: Live B2B SaaS template adapted for medical clinics (BookMyClinic) and dining rooms (BookMyDine)."
+        "Engineering Approach: Built a 100% offline-first POS architecture leveraging client-side IndexedDB persistence and native Capacitor hardware bridges.",
+        "Architecture: Developed using React 19, TypeScript, and Vite with Dexie.js IndexedDB for sub-millisecond local queries; integrated Capacitor 8 for native Android Bluetooth SPP/USB OTG thermal printing; and embedded SheetJS/jsPDF for offline sales reports.",
+        "What I Personally Built: Designed the dual-device responsive cashier station (mobile phone & tablet split-view), implemented the native ESC/POS thermal printer driver with 1-bit bitmap dithering, programmed dynamic UPI QR generation, and configured offline database backup/restore with master PIN security.",
+        "Current Status & Result: Production-ready offline POS platform supporting web and native Android APK deployment with sub-10 second billing and hardware printing."
       ],
-      hardestTechnicalChallenge: "Preventing simultaneous double-booking race conditions when two clients attempt to lock the exact same time slot. Solved by writing a PL/pgSQL database trigger that executes a pessimistic lock (`SELECT ... FOR UPDATE`) on the target slot before inserting, ensuring concurrent reservation attempts are queued and evaluated atomically.",
+      hardestTechnicalChallenge: "Implementing 100% offline-first POS operations with direct native ESC/POS thermal receipt printing over Bluetooth SPP & USB OTG. Solved by writing a client-side ESC/POS command compiler and HTML canvas rasterizer that translates receipt typography, restaurant logos, and UTF-8 characters into 1-bit dithered bitmap arrays, streaming raw command buffers directly to 58mm and 80mm thermal print heads without external print servers or cloud dependencies.",
       learnings: [
-        "Pessimistic locking and ACID database transaction isolation.",
-        "WebSocket connection state management and real-time data sync.",
-        "Multi-tenant database schema modeling and row isolation policies."
+        "Offline-first database architecture, schema migrations, and indexing using Dexie.js (IndexedDB).",
+        "ESC/POS byte-level protocol specifications, bitmap dithering algorithms, and thermal printer hardware control.",
+        "Capacitor JS native Android bridging, Bluetooth SPP socket streaming, and USB OTG communication.",
+        "High-speed POS UX design with 48px tactile touch targets, dual mobile/tablet viewports, and dynamic UPI QR payment settlement."
       ],
-      techStack: ["HTML/CSS/JS", "Supabase (Auth + Real-time DB)", "Vercel", "Google Sheets API"],
+      techStack: ["React 19", "TypeScript", "Vite", "Capacitor JS", "Dexie.js (IndexedDB)", "SheetJS", "jsPDF", "QRCode.js", "Android SDK"],
       proofLinks: {
-        demo: "https://book-my-slot-webpage.vercel.app/index.html",
-        github: "https://github.com/Tusharjain-19",
+        github: "https://github.com/Tusharjain-19/Billing-Pos",
       }
     },
     {
@@ -292,7 +312,7 @@ export const PORTFOLIO: PortfolioData = {
       title: "Namma Ride",
       imageUrl: "/nammaride.png",
       tagline: "Metro Route Planner",
-      oneLineSummary: "A lightweight, multilingual transit path planner for the Namma Metro network, optimized for sub-10ms route calculation and low-connectivity mobile browsers.",
+      oneLineSummary: "A lightweight, multilingual transit path planner for the Namma Metro network with 100+ Play Store downloads, optimized for sub-10ms route calculation and low-connectivity mobile browsers.",
       ideaOrigin: "Many metro riders, especially first-time travelers and non-English speakers, struggle to understand map routes and where to change trains.",
       problemStatement: [
         "Transit applications often lack local language options (Kannada, Hindi), creating accessibility barriers for local commuters in Bengaluru.",
@@ -302,7 +322,7 @@ export const PORTFOLIO: PortfolioData = {
         "Engineering Approach: Built a client-side route calculation tool optimized for speed and low bandwidth, requiring zero server-side network roundtrips.",
         "Architecture: Compiled station data structures directly on the client, utilizing a custom BFS routing script and lightweight JSON localization lookups.",
         "What I Personally Built: Wrote the multilingual translation switcher, designed the step-by-step route finder UI, and programmed the offline pathfinding script.",
-        "Current Status & Result: Live web application helping commuters navigate Bengaluru's metro lines in English, Kannada, and Hindi."
+        "Current Status & Result: Live on Google Play Store with 100+ downloads and active web users, helping commuters navigate Bengaluru's metro lines in English, Kannada, and Hindi."
       ],
       hardestTechnicalChallenge: "Implementing comprehensive multilingual support and fast route calculation under 50KB total asset bundle weight. Solved by avoiding heavy UI frameworks and building the app using pure Vanilla JavaScript, referencing static string maps locally.",
       learnings: [
@@ -314,6 +334,7 @@ export const PORTFOLIO: PortfolioData = {
       proofLinks: {
         demo: "https://nammaride.site",
         github: "https://github.com/Tusharjain-19/NammaRide",
+        playStore: "https://play.google.com/store/apps/details?id=site.nammaride.app",
       }
     },
     {

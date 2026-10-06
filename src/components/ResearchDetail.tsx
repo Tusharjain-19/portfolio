@@ -1,7 +1,7 @@
 import React from 'react';
 import { ResearchProject } from '@/data/types';
 import Link from 'next/link';
-import { Circle, ArrowUpRight, ArrowLeft } from '@/components/Icons';
+import { Circle, ArrowUpRight, ArrowLeft, Check } from '@/components/Icons';
 
 export default function ResearchDetail({ research }: { research: ResearchProject }) {
   return (
@@ -55,7 +55,7 @@ export default function ResearchDetail({ research }: { research: ResearchProject
                     {research.systemArchitectureSummary}
                 </p>
                 <div className="w-full bg-neutral-950 border border-neutral-900 rounded-xl p-6 flex justify-center items-center overflow-x-auto no-scrollbar shadow-inner">
-                  <svg width="600" height="280" viewBox="0 0 600 280" fill="none" className="min-w-[500px] select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+                  <svg width="600" height="280" viewBox="0 0 600 280" fill="none" className="min-w-125 select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
                     <defs>
                       <marker id="arr-b" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                         <path d="M 0 2 L 6 5 L 0 8 z" fill="#3f3f46" />
@@ -119,7 +119,7 @@ export default function ResearchDetail({ research }: { research: ResearchProject
                 <ul className="space-y-3 sm:space-y-4">
                     {research.keyContributions.map((item, idx) => (
                         <li key={idx} className="flex gap-3 sm:gap-4 items-start text-(--text-secondary)">
-                            <span className="text-green-500 mt-1.5 text-xs shrink-0">✓</span>
+                            <Check className="w-4 h-4 text-emerald-500 mt-1 shrink-0" />
                             <span className="leading-relaxed text-sm sm:text-base">{item}</span>
                         </li>
                     ))}

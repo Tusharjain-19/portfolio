@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowUpRight, Github } from '@/components/Icons';
+import { ArrowLeft, ArrowUpRight, Github, Check } from '@/components/Icons';
 import Link from 'next/link';
 
 const STATS = [
@@ -251,7 +251,7 @@ export default function MobileDetoxDetail() {
                       <span className="text-(--text-muted)">Non-Detox Group: 17 (77.3%)</span>
                     </div>
                     <p className="text-[10px] text-(--text-muted) max-w-xs pt-2">
-                      Age demographic primarily 18–22 undergraduate engineering students at BMSCE.
+                      Age demographic primarily 18-22 undergraduate engineering students at BMSCE.
                     </p>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ export default function MobileDetoxDetail() {
             <ul className="space-y-2.5 text-xs text-(--text-secondary) font-light">
               {CONTRIBUTIONS.map((c, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="text-(--text-primary) mt-0.5">✓</span>
+                  <Check className="w-3.5 h-3.5 text-(--accent) mt-0.5 shrink-0" />
                   <span>{c}</span>
                 </li>
               ))}

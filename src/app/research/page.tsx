@@ -72,6 +72,9 @@ export default function ResearchHubPage() {
               href={`/research/${item.slug}`}
               className="group flex flex-col justify-between p-8 bg-(--bg-secondary) border border-(--border-color) hover:border-blue-500/50 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-xl relative overflow-hidden"
             >
+              <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                0{idx + 1}
+              </div>
               <div className="space-y-4">
                 <div className="flex justify-between items-start gap-4">
                   <span className="text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 rounded-full font-semibold">

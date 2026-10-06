@@ -93,12 +93,15 @@ export default function Home() {
             </ScrollReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 relative z-10">
-                {PORTFOLIO.research.slice(0, 2).map((paper) => (
+                {PORTFOLIO.research.slice(0, 2).map((paper, idx) => (
                     <ScrollReveal key={paper.id} className="group h-full">
                         <Link 
                             href={`/research/${paper.slug}`}
                             className="flex flex-col h-full p-6 sm:p-10 md:p-12 bg-(--bg-primary)/40 backdrop-blur-md border border-(--border-color) hover:border-(--accent) rounded-2xl transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] relative overflow-hidden"
                         >
+                            <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                                0{idx + 1}
+                            </div>
                             {/* Water Ripple Hover Effect */}
                             <div className="absolute inset-0 bg-(--accent)/5 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out pointer-events-none" />
                             
@@ -139,7 +142,7 @@ export default function Home() {
              </ScrollReveal>
 
              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10 relative z-10">
-                 {PORTFOLIO.hackathons.map((item, idx) => (
+                 {PORTFOLIO.hackathons.slice(0, 3).map((item, idx) => (
                      <ScrollReveal key={idx} className="group">
                          <div className="flex flex-col h-full p-6 sm:p-10 bg-(--bg-secondary)/40 border border-(--border-color) hover:border-(--accent) rounded-2xl transition-all duration-500 hover:shadow-xl relative overflow-hidden">
                              <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
@@ -161,17 +164,34 @@ export default function Home() {
                              )}
                              {item.imageUrl && (
                                  <div className="mt-auto w-full border border-(--border-color) rounded-xl overflow-hidden shadow-md bg-(--bg-primary)">
-                                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                                     <img 
-                                         src={item.imageUrl} 
-                                         alt={`${item.project} Certificate`} 
-                                         className="w-full h-auto max-h-55 object-cover filter grayscale-20 group-hover:grayscale-0 transition-all duration-700" 
-                                     />
+                                     {item.certificateUrl ? (
+                                         <a href={item.certificateUrl} target="_blank" rel="noopener noreferrer" className="block relative group/link" title="View Full Certificate PDF">
+                                             {/* eslint-disable-next-line @next/next/no-img-element */}
+                                             <img 
+                                                 src={item.imageUrl} 
+                                                 alt={`${item.project} Certificate`} 
+                                                 className="w-full h-auto max-h-55 object-cover filter grayscale-20 group-hover:grayscale-0 transition-all duration-700" 
+                                             />
+                                         </a>
+                                     ) : (
+                                         /* eslint-disable-next-line @next/next/no-img-element */
+                                         <img 
+                                             src={item.imageUrl} 
+                                             alt={`${item.project} Certificate`} 
+                                             className="w-full h-auto max-h-55 object-cover filter grayscale-20 group-hover:grayscale-0 transition-all duration-700" 
+                                         />
+                                     )}
                                  </div>
                              )}
                          </div>
                      </ScrollReveal>
                   ))}
+              </div>
+
+              <div className="mt-12 text-center relative z-10">
+                  <Link href="/credentials" className="inline-block px-8 py-4 bg-(--bg-secondary) border border-(--border-color) text-(--text-primary) font-bold rounded-full hover:bg-(--text-primary) hover:text-(--bg-primary) transition-all duration-500 shadow-lg tracking-wide text-xs font-mono uppercase">
+                      View All Credentials &amp; Achievements →
+                  </Link>
               </div>
         </section>
 
@@ -187,16 +207,22 @@ export default function Home() {
                  </p>
              </ScrollReveal>
 
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
                  {PORTFOLIO.certifications.map((cert, idx) => (
                      <ScrollReveal key={idx}>
-                         <div className="flex flex-col h-full p-6 bg-(--bg-secondary)/40 border border-(--border-color) hover:border-(--accent) rounded-2xl transition-all duration-500 hover:shadow-xl relative">
+                         <div className="flex flex-col h-full p-6 bg-(--bg-secondary)/40 border border-(--border-color) hover:border-(--accent) rounded-2xl transition-all duration-500 hover:shadow-xl relative overflow-hidden">
+                             <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                                 0{idx + 1}
+                             </div>
                              {/* Badge */}
                              <div className="flex justify-between items-start mb-6">
                                  <div className="flex items-center gap-2">
                                      {cert.issuer === 'Coursera' ? (
                                          /* eslint-disable-next-line @next/next/no-img-element */
                                          <img src="/coursera_logo.png" alt="Coursera Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
+                                     ) : cert.issuer === 'InnoByte Services' ? (
+                                         /* eslint-disable-next-line @next/next/no-img-element */
+                                         <img src="/innobyte_logo.png" alt="InnoByte Services Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
                                      ) : cert.issuer === '3Skill Training' ? (
                                          /* eslint-disable-next-line @next/next/no-img-element */
                                          <img src="/3skill_logo.png" alt="3Skill Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />

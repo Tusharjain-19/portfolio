@@ -63,7 +63,8 @@ export default function StructuredData({ data }: StructuredDataProps) {
     "knowsAbout": [
       ...PORTFOLIO.skills,
       "RestaurantOS", "FlightDeck", "Jaipur Ride", "Namma Ride", "PulsePredict AI",
-      "BookMySlot SaaS", "NotesCSBS", "Embedded Systems",
+      "Billing Pro POS", "NotesCSBS", "Embedded Systems",
+      "Offline-First Systems", "Dexie.js", "Capacitor JS", "ESC/POS Printing",
       "Full Stack Development", "MVP Development", "ESP32", "Arduino",
       "React.js", "Next.js", "Node.js", "Supabase", "Vercel"
     ],

@@ -13,6 +13,7 @@ export interface ProductProject {
   techStack: string[];
   imageUrl?: string;
   detailImageUrl?: string;
+  videoUrl?: string;
   proofLinks?: {
     github?: string;
     demo?: string;
@@ -50,6 +51,7 @@ export interface Hackathon {
   achievement: string;
   description?: string;
   imageUrl?: string;
+  certificateUrl?: string;
 }
 
 export interface PortfolioData {

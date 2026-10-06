@@ -26,7 +26,7 @@ const MOCK_FLIGHTS: Record<string, MockFlight> = {
   "LH430": {
     flightNumber: "LH430",
     airline: "Lufthansa German Airlines",
-    route: "FRA ➔ ORD (Frankfurt to Chicago)",
+    route: "FRA -> ORD (Frankfurt to Chicago)",
     origin: "Frankfurt Am Main (FRA)",
     destination: "Chicago O'Hare Intl (ORD)",
     depTime: "10:45 AM CEST",
@@ -42,7 +42,7 @@ const MOCK_FLIGHTS: Record<string, MockFlight> = {
   "AI101": {
     flightNumber: "AI101",
     airline: "Air India",
-    route: "DEL ➔ JFK (New Delhi to New York)",
+    route: "DEL -> JFK (New Delhi to New York)",
     origin: "Indira Gandhi Intl (DEL)",
     destination: "John F. Kennedy Intl (JFK)",
     depTime: "02:20 AM IST",
@@ -58,7 +58,7 @@ const MOCK_FLIGHTS: Record<string, MockFlight> = {
   "EK564": {
     flightNumber: "EK564",
     airline: "Emirates",
-    route: "DXB ➔ BLR (Dubai to Bengaluru)",
+    route: "DXB -> BLR (Dubai to Bengaluru)",
     origin: "Dubai International (DXB)",
     destination: "Kempegowda Intl (BLR)",
     depTime: "03:40 AM GST",
@@ -74,7 +74,7 @@ const MOCK_FLIGHTS: Record<string, MockFlight> = {
   "SQ502": {
     flightNumber: "SQ502",
     airline: "Singapore Airlines",
-    route: "SIN ➔ BLR (Singapore to Bengaluru)",
+    route: "SIN -> BLR (Singapore to Bengaluru)",
     origin: "Singapore Changi (SIN)",
     destination: "Kempegowda Intl (BLR)",
     depTime: "08:05 PM SGT",

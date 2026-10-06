@@ -27,24 +27,24 @@ export default function SoundToggle() {
       onClick={toggleSound}
       className={`${baseClasses} ${themeClasses}`}
       aria-label={isEnabled ? "Mute sounds" : "Enable sounds"}
-      title="Better with sound 😉"
+      title="Sound effects toggle"
     >
       {/* Icon */}
       <div className="relative w-4 h-4 flex items-center justify-center">
          {isEnabled ? (
-             <div className="flex gap-[2px] items-center h-full">
-                 <div className="w-[2px] h-full bg-current animate-[sound-bar_1s_ease-in-out_infinite]" style={{ animationDelay: '0ms' }}></div>
-                 <div className="w-[2px] h-3/4 bg-current animate-[sound-bar_1s_ease-in-out_infinite]" style={{ animationDelay: '200ms' }}></div>
-                 <div className="w-[2px] h-1/2 bg-current animate-[sound-bar_1s_ease-in-out_infinite]" style={{ animationDelay: '400ms' }}></div>
+             <div className="flex gap-0.5 items-center h-full">
+                 <div className="w-0.5 h-full bg-current animate-[sound-bar_1s_ease-in-out_infinite]" style={{ animationDelay: '0ms' }}></div>
+                 <div className="w-0.5 h-3/4 bg-current animate-[sound-bar_1s_ease-in-out_infinite]" style={{ animationDelay: '200ms' }}></div>
+                 <div className="w-0.5 h-1/2 bg-current animate-[sound-bar_1s_ease-in-out_infinite]" style={{ animationDelay: '400ms' }}></div>
              </div>
          ) : (
-            <div className="w-[2px] h-full bg-current rotate-45 absolute"></div>
+            <div className="w-0.5 h-full bg-current rotate-45 absolute"></div>
          )}
       </div>
       
-      {/* Hinglish Label */}
+      {/* Label */}
       <span className="text-xs font-mono hidden sm:inline">
-        {isEnabled ? "Sound on 🔊" : "Thoda sound?"}
+        {isEnabled ? "Audio on" : "Audio off"}
       </span>
       
       <style jsx>{`

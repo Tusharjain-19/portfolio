@@ -72,24 +72,35 @@ export default function EngineeringPage() {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all">
+            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                01
+              </div>
               <h3 className="text-xl font-bold font-heading text-(--text-primary) mb-2">
-                Multi-Tenant B2B SaaS & Real-Time POS
+                Multi-Tenant B2B SaaS & Offline-First POS
               </h3>
               <p className="text-sm text-(--text-secondary) font-light leading-relaxed mb-4">
-                Engineered <strong className="text-(--text-primary)">RestaurantOS</strong> and <strong className="text-(--text-primary)">BookMySlot</strong> using React, TypeScript, and Supabase WebSockets. Implemented PL/pgSQL database triggers for atomic inventory deductions and pessimistic transaction locking (<code className="text-xs bg-(--bg-tertiary) px-1 rounded">SELECT ... FOR UPDATE</code>) to prevent booking race conditions.
+                Engineered <strong className="text-(--text-primary)">RestaurantOS</strong> and <strong className="text-(--text-primary)">Billing Pro POS</strong> using React 19, TypeScript, Dexie.js (IndexedDB), and Supabase. Implemented PL/pgSQL database triggers for atomic inventory deductions and native ESC/POS thermal receipt printing over Bluetooth SPP/USB OTG for zero-latency cashier counters.
               </p>
-              <Link href="/work/restaurant-os" className="inline-flex items-center gap-1.5 text-xs font-mono text-(--accent) uppercase tracking-wider font-bold">
-                Explore RestaurantOS <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
+              <div className="flex items-center gap-4">
+                <Link href="/work/billing-pos" className="inline-flex items-center gap-1.5 text-xs font-mono text-(--accent) uppercase tracking-wider font-bold">
+                  Billing Pro POS <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+                <Link href="/work/restaurant-os" className="inline-flex items-center gap-1.5 text-xs font-mono text-(--text-muted) hover:text-(--text-primary) uppercase tracking-wider font-bold">
+                  RestaurantOS <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
             </div>
 
-            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all">
+            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                02
+              </div>
               <h3 className="text-xl font-bold font-heading text-(--text-primary) mb-2">
                 Educational Data Distribution & SEO
               </h3>
               <p className="text-sm text-(--text-secondary) font-light leading-relaxed mb-4">
-                Built <strong className="text-(--text-primary)">NotesCSBS</strong>, a full-stack academic resource hub connecting Next.js with Supabase PostgreSQL and Google Drive APIs. Optimized metadata and document routes, driving over 500+ organic clicks and 3K+ Google search impressions.
+                Built <strong className="text-(--text-primary)">NotesCSBS</strong>, a full-stack academic resource hub connecting Next.js with Supabase PostgreSQL and Google Drive APIs. Optimized metadata and document routes, driving over 1.17K+ organic clicks and 9.75K+ Google search impressions with a 12% CTR.
               </p>
               <Link href="/work/notescsbs" className="inline-flex items-center gap-1.5 text-xs font-mono text-(--accent) uppercase tracking-wider font-bold">
                 Explore NotesCSBS <ArrowUpRight className="w-3.5 h-3.5" />
@@ -111,7 +122,10 @@ export default function EngineeringPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all">
+            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                01
+              </div>
               <h3 className="text-xl font-bold font-heading text-(--text-primary) mb-2">
                 Geriatric Fall Detection Wearable
               </h3>
@@ -123,7 +137,10 @@ export default function EngineeringPage() {
               </Link>
             </div>
 
-            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all">
+            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                02
+              </div>
               <h3 className="text-xl font-bold font-heading text-(--text-primary) mb-2">
                 Gestural Digital Audio Synthesizer
               </h3>
@@ -150,7 +167,10 @@ export default function EngineeringPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all">
+            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                01
+              </div>
               <h3 className="text-xl font-bold font-heading text-(--text-primary) mb-2">
                 Jaipur Metro Transit Planner
               </h3>
@@ -162,7 +182,10 @@ export default function EngineeringPage() {
               </Link>
             </div>
 
-            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all">
+            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                02
+              </div>
               <h3 className="text-xl font-bold font-heading text-(--text-primary) mb-2">
                 Bengaluru Multilingual Metro Assistant
               </h3>
@@ -189,7 +212,10 @@ export default function EngineeringPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all">
+            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                01
+              </div>
               <h3 className="text-xl font-bold font-heading text-(--text-primary) mb-2">
                 Dual-UUV Autonomous Maritime Surveillance
               </h3>
@@ -201,7 +227,10 @@ export default function EngineeringPage() {
               </Link>
             </div>
 
-            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all">
+            <div className="p-6 bg-(--bg-secondary)/40 border border-(--border-color) rounded-2xl hover:border-(--accent) transition-all relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                02
+              </div>
               <h3 className="text-xl font-bold font-heading text-(--text-primary) mb-2">
                 Mobile Detox & Sleep Quality Data Study
               </h3>

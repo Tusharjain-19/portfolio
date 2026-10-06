@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { PORTFOLIO } from '@/data/portfolio';
 import ScrollReveal from '@/components/ScrollReveal';
-import { ArrowLeft, ArrowUpRight } from '@/components/Icons';
+import { ArrowLeft, ArrowUpRight, Trophy, Award } from '@/components/Icons';
 
 export const metadata = {
   title: "Professional Credentials & Certifications | Tushar Jain",
@@ -63,7 +63,9 @@ export default function CredentialsPage() {
         {/* ACHIEVEMENTS SECTION */}
         <section className="space-y-8">
             <ScrollReveal>
-                <h2 className="text-sm font-mono text-(--accent) uppercase tracking-[0.2em] mb-4">🏆 Ecosystem Achievements</h2>
+                <h2 className="text-sm font-mono text-(--accent) uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                    <Trophy className="w-4 h-4" /> Ecosystem Achievements
+                </h2>
             </ScrollReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -88,13 +90,28 @@ export default function CredentialsPage() {
                                 </p>
                             )}
                             {item.imageUrl && (
-                                <div className="mt-auto w-full border border-(--border-color) rounded-xl overflow-hidden shadow-md bg-(--bg-primary)">
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img 
-                                        src={item.imageUrl} 
-                                        alt={`${item.project} Certificate`} 
-                                        className="w-full h-auto max-h-75 object-cover filter grayscale-20 group-hover:grayscale-0 transition-all duration-700" 
-                                    />
+                                <div className="mt-auto w-full border border-(--border-color) rounded-xl overflow-hidden shadow-md bg-(--bg-primary) relative">
+                                    {item.certificateUrl ? (
+                                        <a href={item.certificateUrl} target="_blank" rel="noopener noreferrer" className="block relative group/img" title="View Full Certificate PDF">
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                            <img 
+                                                src={item.imageUrl} 
+                                                alt={`${item.project} Certificate`} 
+                                                className="w-full h-auto max-h-75 object-cover filter grayscale-20 group-hover:grayscale-0 transition-all duration-700" 
+                                            />
+                                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white font-mono text-xs uppercase tracking-wider backdrop-blur-[2px]">
+                                                <span>View Full PDF</span>
+                                                <ArrowUpRight className="w-4 h-4" />
+                                            </div>
+                                        </a>
+                                    ) : (
+                                        /* eslint-disable-next-line @next/next/no-img-element */
+                                        <img 
+                                            src={item.imageUrl} 
+                                            alt={`${item.project} Certificate`} 
+                                            className="w-full h-auto max-h-75 object-cover filter grayscale-20 group-hover:grayscale-0 transition-all duration-700" 
+                                        />
+                                    )}
                                 </div>
                             )}
                         </div>
@@ -106,19 +123,27 @@ export default function CredentialsPage() {
         {/* CERTIFICATIONS SECTION */}
         <section className="space-y-8 pt-8 border-t border-(--border-color)">
              <ScrollReveal>
-                 <h2 className="text-sm font-mono text-(--accent) uppercase tracking-[0.2em] mb-4">📜 Professional Certifications</h2>
+                 <h2 className="text-sm font-mono text-(--accent) uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                     <Award className="w-4 h-4" /> Professional Certifications
+                 </h2>
              </ScrollReveal>
 
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                  {PORTFOLIO.certifications.map((cert, idx) => (
                      <ScrollReveal key={idx}>
-                          <div className="flex flex-col h-full p-6 bg-(--bg-secondary)/40 border border-(--border-color) hover:border-(--accent) rounded-2xl transition-all duration-500 hover:shadow-xl relative">
+                          <div className="flex flex-col h-full p-6 bg-(--bg-secondary)/40 border border-(--border-color) hover:border-(--accent) rounded-2xl transition-all duration-500 hover:shadow-xl relative overflow-hidden">
+                              <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none">
+                                  0{idx + 1}
+                              </div>
                               {/* Badge */}
                               <div className="flex justify-between items-start mb-6">
                                   <div className="flex items-center gap-2">
                                       {cert.issuer === 'Coursera' ? (
                                           /* eslint-disable-next-line @next/next/no-img-element */
                                           <img src="/coursera_logo.png" alt="Coursera Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
+                                      ) : cert.issuer === 'InnoByte Services' ? (
+                                          /* eslint-disable-next-line @next/next/no-img-element */
+                                          <img src="/innobyte_logo.png" alt="InnoByte Services Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />
                                       ) : cert.issuer === '3Skill Training' ? (
                                           /* eslint-disable-next-line @next/next/no-img-element */
                                           <img src="/3skill_logo.png" alt="3Skill Logo" className="w-8 h-8 rounded-full object-contain bg-white p-0.5 shrink-0" />

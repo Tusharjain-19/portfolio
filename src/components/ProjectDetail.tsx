@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ProductProject } from '@/data/types';
 import { PORTFOLIO } from '@/data/portfolio';
-import { ArrowUpRight, ArrowLeft, ArrowRight, Circle } from '@/components/Icons';
+import { ArrowUpRight, ArrowLeft, ArrowRight, Circle, Video, Check } from '@/components/Icons';
 
 export default function ProjectDetail({ project }: { project: ProductProject }) {
   // Find next/prev for navigation
@@ -118,57 +118,192 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                 )}
             </div>
 
+            {project.id === 'jaipur-ride' && (
+              <div className="my-8 p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl relative overflow-hidden shadow-inner">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-xs font-mono text-(--accent) uppercase tracking-wider flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Live Adoption & Traction Metrics
+                  </h3>
+                  <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 uppercase font-bold">
+                    Google Play Live
+                  </span>
+                </div>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">1.5K+</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">Play Store Downloads</span>
+                  </div>
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">50K+</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">Web Impressions</span>
+                  </div>
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">&lt;10ms</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">BFS Pathfinding</span>
+                  </div>
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">15KB</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">Transit Graph</span>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {project.id === 'namma-ride' && (
+              <div className="my-8 p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl relative overflow-hidden shadow-inner">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-xs font-mono text-(--accent) uppercase tracking-wider flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Commuter Accessibility & Play Store Adoption
+                  </h3>
+                  <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 uppercase font-bold">
+                    Google Play Live
+                  </span>
+                </div>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">100+</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">Play Store Downloads</span>
+                  </div>
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">3</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">Languages (KN/HI/EN)</span>
+                  </div>
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">&lt;50KB</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">Asset Bundle</span>
+                  </div>
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">100%</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">Offline-Ready</span>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {project.id === 'notescsbs' && (
               <div className="my-8 p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl relative overflow-hidden shadow-inner">
-                <div className="absolute top-0 right-0 p-3 opacity-10 pointer-events-none">
-                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                  </svg>
+                <div className="flex flex-wrap justify-between items-center gap-2 mb-4">
+                  <h3 className="text-xs font-mono text-(--accent) uppercase tracking-wider flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Search Performance Telemetry (Google Search Console)
+                  </h3>
+                  <div className="flex items-center gap-2 text-[10px] font-mono text-(--text-muted)">
+                    <span className="px-2 py-0.5 rounded bg-(--bg-tertiary) border border-(--border-color)">Search: Web (Text)</span>
+                    <span className="px-2 py-0.5 rounded bg-(--bg-tertiary) border border-(--border-color)">12-Month Period</span>
+                  </div>
                 </div>
-                <h3 className="text-xs font-mono text-(--accent) uppercase tracking-wider mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  Google Search Console Metrics (SEO Traction)
-                </h3>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-                  <div className="p-4 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
-                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-(--text-primary)">500+</span>
-                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-1">Organic Clicks</span>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6">
+                  <div className="p-4 bg-(--bg-primary) border border-blue-500/30 rounded-xl flex flex-col justify-center">
+                    <span className="text-[10px] sm:text-xs font-mono text-blue-500 uppercase tracking-wider mb-1 flex items-center gap-1">
+                      <Check className="w-3.5 h-3.5" /> Total Clicks
+                    </span>
+                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-(--text-primary)">1.17K</span>
+                    <span className="text-[10px] font-mono text-(--text-muted) mt-0.5">Organic student visits</span>
                   </div>
-                  <div className="p-4 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
-                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-(--text-primary)">3K+</span>
-                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-1">Impressions</span>
+
+                  <div className="p-4 bg-(--bg-primary) border border-purple-500/30 rounded-xl flex flex-col justify-center">
+                    <span className="text-[10px] sm:text-xs font-mono text-purple-500 uppercase tracking-wider mb-1 flex items-center gap-1">
+                      <Check className="w-3.5 h-3.5" /> Impressions
+                    </span>
+                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-(--text-primary)">9.75K</span>
+                    <span className="text-[10px] font-mono text-(--text-muted) mt-0.5">Search results views</span>
                   </div>
+
                   <div className="p-4 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
-                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-(--text-primary)">16%</span>
-                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-1">CTR</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mb-1">
+                      Average CTR
+                    </span>
+                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-(--text-primary)">12%</span>
+                    <span className="text-[10px] font-mono text-emerald-500 mt-0.5">High intent search</span>
                   </div>
+
                   <div className="p-4 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
-                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-(--text-primary)">4.7</span>
-                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mt-1">Avg Position</span>
+                    <span className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase tracking-wider mb-1">
+                      Avg Position
+                    </span>
+                    <span className="text-2xl sm:text-3xl font-black font-heading tracking-tight text-(--text-primary)">4.9</span>
+                    <span className="text-[10px] font-mono text-blue-400 mt-0.5">Top-5 Google rank</span>
                   </div>
                 </div>
 
                 <div className="bg-(--bg-primary) border border-(--border-color) rounded-xl p-4">
                   <div className="flex justify-between items-center mb-3">
-                    <span className="text-[10px] font-mono text-(--text-muted)">3-Month Organic Traffic Trend</span>
+                    <span className="text-[10px] font-mono text-(--text-muted) uppercase tracking-wider">Organic Search Growth Trend</span>
                     <span className="text-[9px] px-2 py-0.5 bg-emerald-500/10 text-emerald-500 rounded-full font-mono uppercase tracking-wider">SEO Optimized</span>
                   </div>
-                  {/* Custom Minimalist Sparkline/Graph */}
+                  {/* Clean Sparkline Traffic Trend */}
                   <div className="h-16 w-full flex items-end justify-between pt-2 gap-0.75">
-                    {[20, 25, 18, 30, 42, 35, 48, 55, 45, 60, 72, 85, 90, 80, 95, 110, 125, 115, 135, 150].map((val, idx) => (
+                    {[22, 28, 25, 34, 45, 38, 52, 60, 48, 65, 78, 90, 95, 88, 102, 118, 130, 122, 142, 155].map((val, idx) => (
                       <div 
                         key={idx} 
                         className="bg-(--accent) opacity-40 hover:opacity-100 transition-opacity rounded-t-sm w-full"
-                        style={{ height: `${(val / 150) * 100}%` }}
-                        title={`Day ${idx + 1}: ${val} impressions`}
+                        style={{ height: `${(val / 155) * 100}%` }}
+                        title={`Period segment ${idx + 1}: relative search volume index`}
                       />
                     ))}
                   </div>
                 </div>
+
                 <p className="text-[10px] text-(--text-muted) font-light mt-3 leading-relaxed">
-                  * Note: The platform attracts BMSCE CSBS department users organically through on-page SEO targeting VTU, CIE, and SEE resource requests without active ad spend.
+                  * Performance telemetry from Google Search Console over a 12-month period for academic engineering queries, syllabus keywords, and BMSCE CSBS department study material requests.
                 </p>
+              </div>
+            )}
+
+            {project.id === 'billing-pos' && (
+              <div className="my-8 p-6 bg-(--bg-secondary) border border-(--border-color) rounded-2xl relative overflow-hidden shadow-inner">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-xs font-mono text-(--accent) uppercase tracking-wider flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    POS Architecture & Hardware Integration
+                  </h3>
+                  <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20 uppercase font-bold">
+                    100% Offline-First
+                  </span>
+                </div>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">&lt;10s</span>
+                    <span className="text-[10px] font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">Punch Speed</span>
+                  </div>
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">58 / 80mm</span>
+                    <span className="text-[10px] font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">Thermal Print</span>
+                  </div>
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">0 MDR</span>
+                    <span className="text-[10px] font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">Dynamic UPI QR</span>
+                  </div>
+                  <div className="p-3.5 bg-(--bg-primary) border border-(--border-color) rounded-xl flex flex-col justify-center">
+                    <span className="text-xl sm:text-2xl font-black font-heading tracking-tight text-(--text-primary)">0ms</span>
+                    <span className="text-[10px] font-mono text-(--text-muted) uppercase tracking-wider mt-0.5">Cloud Lag</span>
+                  </div>
+                </div>
+
+                <div className="space-y-2 text-xs font-mono text-(--text-secondary) bg-(--bg-primary) border border-(--border-color) p-4 rounded-xl">
+                  <div className="flex items-center justify-between pb-2 border-b border-(--border-color)">
+                    <span className="text-(--text-muted)">Storage Engine:</span>
+                    <span className="text-(--text-primary) font-semibold">Dexie.js (IndexedDB) Persistent DB</span>
+                  </div>
+                  <div className="flex items-center justify-between py-1.5 border-b border-(--border-color)">
+                    <span className="text-(--text-muted)">Thermal Driver:</span>
+                    <span className="text-(--text-primary) font-semibold">ESC/POS (Bluetooth SPP & USB OTG)</span>
+                  </div>
+                  <div className="flex items-center justify-between py-1.5 border-b border-(--border-color)">
+                    <span className="text-(--text-muted)">Payment Bridge:</span>
+                    <span className="text-(--text-primary) font-semibold">Dynamic Bharat UPI QR Generator</span>
+                  </div>
+                  <div className="flex items-center justify-between pt-1">
+                    <span className="text-(--text-muted)">Reporting Engine:</span>
+                    <span className="text-(--text-primary) font-semibold">SheetJS (.xlsx) + jsPDF AutoTable</span>
+                  </div>
+                </div>
               </div>
             )}
 
@@ -196,7 +331,7 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
             </h2>
              {project.id === 'vital-health-tech' ? (
                 <div className="w-full bg-neutral-950 border border-neutral-900 rounded-xl p-6 flex justify-center items-center overflow-x-auto no-scrollbar shadow-inner">
-                  <svg width="600" height="220" viewBox="0 0 600 220" fill="none" className="min-w-[500px] select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+                  <svg width="600" height="220" viewBox="0 0 600 220" fill="none" className="min-w-125 select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
                     <defs>
                       <marker id="arr-g" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                         <path d="M 0 2 L 6 5 L 0 8 z" fill="#3f3f46" />
@@ -235,7 +370,7 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                 </div>
              ) : project.id === 'indigo-inflight' ? (
                 <div className="w-full bg-neutral-950 border border-neutral-900 rounded-xl p-6 flex justify-center items-center overflow-x-auto no-scrollbar shadow-inner">
-                  <svg width="600" height="220" viewBox="0 0 600 220" fill="none" className="min-w-[500px] select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
+                  <svg width="600" height="220" viewBox="0 0 600 220" fill="none" className="min-w-125 select-none text-[10px]" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
                     <defs>
                       <marker id="arr-g" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
                         <path d="M 0 2 L 6 5 L 0 8 z" fill="#3f3f46" />
@@ -270,6 +405,59 @@ export default function ProjectDetail({ project }: { project: ProductProject }) 
                       <circle cx="574" cy="93" r="3" fill="#d97706" />
                     </g>
                   </svg>
+                </div>
+             ) : project.id === 'billing-pos' ? (
+                <div className="w-full space-y-8">
+                  {/* Demo Video Player */}
+                  <div className="w-full bg-(--bg-secondary) border border-(--border-color) rounded-2xl overflow-hidden shadow-xl p-4 sm:p-6">
+                    <div className="flex justify-between items-center mb-3 px-1">
+                      <span className="text-xs sm:text-sm font-mono text-(--accent) uppercase tracking-wider font-semibold flex items-center gap-2">
+                        <Video className="w-4 h-4 text-(--accent)" /> Live Application Walkthrough & Video Demo
+                      </span>
+                      <span className="text-[10px] font-mono px-2.5 py-0.5 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded-full uppercase font-bold">
+                        Video MP4
+                      </span>
+                    </div>
+                    <div className="relative rounded-xl overflow-hidden border border-(--border-color) bg-black">
+                      <video 
+                        src={project.videoUrl || "/billing_pos_demo.mp4"} 
+                        controls 
+                        playsInline
+                        preload="metadata"
+                        poster="/billing_pos.png"
+                        className="w-full aspect-video max-h-115 object-contain mx-auto"
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <p className="text-xs text-(--text-muted) mt-3 font-light leading-relaxed px-1">
+                      Live walk-through demonstration: High-speed order punching, dish category navigation, live cart modifiers, ESC/POS thermal printing preview, and dashboard analytics.
+                    </p>
+                  </div>
+
+                  {/* Screenshots */}
+                  <div className="w-full bg-(--bg-secondary) border border-(--border-color) rounded-xl overflow-hidden shadow-md p-3">
+                    <div className="text-[11px] font-mono text-(--text-muted) uppercase tracking-wider mb-2 px-1">
+                      1. High-Speed POS Cashier Station (Dual-Pane Touch Grid)
+                    </div>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img 
+                        src="/billing_pos.png" 
+                        alt="Billing Pro POS Billing Screen" 
+                        className="w-full h-auto object-contain rounded-lg border border-(--border-color)"
+                    />
+                  </div>
+                  <div className="w-full bg-(--bg-secondary) border border-(--border-color) rounded-xl overflow-hidden shadow-md p-3">
+                    <div className="text-[11px] font-mono text-(--text-muted) uppercase tracking-wider mb-2 px-1">
+                      2. Real-Time Financial & Sales Analytics Dashboard
+                    </div>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img 
+                        src="/billing_pos_dashboard.png" 
+                        alt="Billing Pro POS Dashboard Screen" 
+                        className="w-full h-auto object-contain rounded-lg border border-(--border-color)"
+                    />
+                  </div>
                 </div>
              ) : project.imageUrl ? (
                  <div className="w-full max-w-xl mx-auto bg-(--bg-secondary) border border-(--border-color) rounded-xl overflow-hidden shadow-md flex justify-center items-center p-3 dark:bg-white/2">

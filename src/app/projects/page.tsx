@@ -62,12 +62,16 @@ export default function ProjectsPage() {
         {/* PROJECTS GRID */}
         <section>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 group/all">
-                {PORTFOLIO.projects.map((project) => (
+                {PORTFOLIO.projects.map((project, idx) => (
                     <Link 
                         key={project.id} 
                         href={`/work/${project.slug}`} 
                         className="group flex flex-col bg-(--bg-secondary)/40 backdrop-blur-md border border-(--border-color) hover:border-(--accent) transition-all duration-500 hover:shadow-2xl overflow-hidden relative"
                     >
+                        <div className="absolute top-0 right-0 p-4 opacity-5 font-mono text-7xl font-black select-none pointer-events-none z-20">
+                            {idx < 9 ? `0${idx + 1}` : idx + 1}
+                        </div>
+
                         {/* Ceramic Border Corner Accents */}
                         <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-(--accent) opacity-0 group-hover:opacity-100 transition-opacity" />
                         <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-(--accent) opacity-0 group-hover:opacity-100 transition-opacity" />

@@ -5,6 +5,7 @@ import React, { useEffect, useCallback, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSound } from '@/hooks/useSound';
 import { motion, AnimatePresence } from 'framer-motion';
+import { XIcon } from '@/components/Icons';
 
 export default function Modal({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -86,8 +87,9 @@ export default function Modal({ children }: { children: React.ReactNode }) {
                 onClick={onDismiss}
                 className="absolute top-6 right-6 z-20 w-8 h-8 flex items-center justify-center bg-(--text-primary)/10 text-(--text-primary) rounded-full hover:bg-(--text-primary)/20 transition-all backdrop-blur-md"
                 data-cursor-text="CLOSE"
+                aria-label="Close modal"
             >
-                ✕
+                <XIcon className="w-4 h-4" />
             </button>
             <div className="relative z-10">
               {children}
