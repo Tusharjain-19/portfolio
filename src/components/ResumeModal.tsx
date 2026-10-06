@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 export default function ResumeModal({ 
   children, 
@@ -11,17 +12,21 @@ export default function ResumeModal({
   resumeUrl: string 
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [showPreview, setShowPreview] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Reset states when closed
+  // Handle ESC key to close modal
   useEffect(() => {
-    if (!isOpen) {
-      setTimeout(() => {
-        setShowPreview(false);
-        setIsLoading(true);
-      }, 300);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
     }
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'unset';
+    };
   }, [isOpen]);
 
   return (
@@ -32,108 +37,107 @@ export default function ResumeModal({
 
       <AnimatePresence>
         {isOpen && (
-          <div className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6">
+          <div className="fixed inset-0 z-100 flex items-center justify-center p-2 sm:p-4 md:p-6">
+            {/* Backdrop */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              className="absolute inset-0 bg-black/80 backdrop-blur-md"
             />
             
+            {/* Modal Dialog (Full screen width & height) */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              initial={{ opacity: 0, scale: 0.98, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-4xl bg-() border border-() rounded-2xl shadow-2xl overflow-hidden flex flex-col"
-              style={{ maxHeight: '90vh', minHeight: showPreview ? '80vh' : 'auto' }}
+              exit={{ opacity: 0, scale: 0.98, y: 15 }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
+              className="relative w-full h-full max-w-6xl max-h-[96vh] bg-(--bg-primary) border border-(--border-color) rounded-2xl shadow-2xl overflow-hidden flex flex-col z-10"
             >
               {/* Header */}
-              <div className="flex items-center justify-between p-4 border-b border-() bg-()/50">
-                <h3 className="font-heading text-lg font-bold">Resume</h3>
-                <button 
-                  onClick={() => setIsOpen(false)}
-                  className="p-2 hover:bg-() rounded-full transition-colors"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                </button>
+              <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 border-b border-(--border-color) bg-(--bg-secondary)/90 backdrop-blur-sm">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-(--accent)/15 border border-(--accent)/30 flex items-center justify-center text-(--accent)">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-sm sm:text-base font-bold text-(--text-primary)">
+                      Tushar Jain - Resume
+                    </h3>
+                    <p className="text-[10px] sm:text-xs font-mono text-(--text-muted) uppercase">
+                      B.E. Computer Science & Business Systems
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <Link
+                    href="/resume"
+                    target="_blank"
+                    className="hidden sm:flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-(--text-primary) hover:text-(--accent) bg-(--bg-primary) hover:border-(--accent) border border-(--border-color) px-3 py-1.5 rounded-xl transition-all"
+                  >
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    <span>Full Page</span>
+                  </Link>
+
+                  <a 
+                    href={resumeUrl}
+                    download="Tushar_Jain_Resume.pdf"
+                    className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-(--bg-primary) bg-(--accent) hover:opacity-90 px-3.5 py-1.5 rounded-xl font-bold transition-all shadow-sm"
+                  >
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    <span>Download</span>
+                  </a>
+
+                  <button 
+                    onClick={() => setIsOpen(false)}
+                    aria-label="Close modal"
+                    className="p-1.5 text-(--text-muted) hover:text-(--text-primary) hover:bg-(--border-color)/40 rounded-xl transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
               </div>
 
-              {/* Content */}
-              <div className="flex-1 flex flex-col relative bg-() overflow-hidden">
-                {!showPreview ? (
-                  <div className="flex flex-col items-center justify-center p-10 sm:p-16 gap-6">
-                    <div className="w-16 h-16 rounded-full bg-()/10 flex items-center justify-center text-() mb-4">
-                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                    </div>
-                    <h2 className="text-2xl sm:text-3xl font-heading font-bold text-center">How would you like to view it?</h2>
-                    
-                    <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full max-w-md">
-                      <button 
-                        onClick={() => setShowPreview(true)}
-                        className="flex-1 py-4 px-6 bg-() border border-() rounded-xl font-bold font-mono text-sm uppercase tracking-wider hover:border-() hover:text-() transition-all"
-                      >
-                        Preview
-                      </button>
-                      <a 
-                        href={resumeUrl}
-                        download
-                        className="flex-1 py-4 px-6 bg-() text-() border border-() rounded-xl font-bold font-mono text-sm uppercase tracking-wider text-center hover:opacity-90 transition-all flex items-center justify-center gap-2"
-                      >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                        Download
-                      </a>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="w-full h-full flex-1 relative flex items-center justify-center min-h-125">
-                    {isLoading && (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center bg-() z-10">
-                        {/* Chrome Offline Dino Animation (CSS) */}
-                        <div className="relative w-75 h-25 border-b-2 border-() overflow-hidden">
-                            {/* Dino */}
-                            <div className="absolute bottom-0 left-5 w-10 h-11 bg-() animate-bounce" style={{
-                              clipPath: 'polygon(50% 0%, 100% 0, 100% 40%, 80% 40%, 80% 50%, 60% 50%, 60% 60%, 100% 60%, 100% 100%, 70% 100%, 70% 80%, 40% 80%, 40% 100%, 0 100%, 0 40%, 20% 40%, 20% 20%, 50% 20%)',
-                              animationDuration: '0.4s'
-                            }}></div>
-                            {/* Cactus (Obstacles moving) */}
-                            <div className="absolute bottom-0 w-6 h-8 bg-() animate-[slide_1.5s_linear_infinite]" style={{
-                              clipPath: 'polygon(40% 0, 60% 0, 60% 30%, 100% 30%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 50%, 0 50%, 0 20%, 40% 20%)',
-                              right: '-30px'
-                            }}></div>
-                            <div className="absolute bottom-0 w-8 h-10 bg-() animate-[slide_2s_linear_infinite_0.75s]" style={{
-                              clipPath: 'polygon(40% 0, 60% 0, 60% 30%, 100% 30%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 50%, 0 50%, 0 20%, 40% 20%)',
-                              right: '-30px'
-                            }}></div>
-                            {/* Cloud */}
-                            <div className="absolute top-5 w-12 h-4 bg-() opacity-30 animate-[slide_4s_linear_infinite]" style={{
-                              clipPath: 'ellipse(50% 50% at 50% 50%)',
-                              right: '-50px'
-                            }}></div>
-                        </div>
-                        
-                        <p className="mt-8 font-mono text-sm uppercase tracking-widest text-() animate-pulse">
-                          Loading Preview...
-                        </p>
-                        <style dangerouslySetInnerHTML={{__html: `
-                          @keyframes slide {
-                            0% { transform: translateX(300px); }
-                            100% { transform: translateX(-400px); }
-                          }
-                        `}} />
-                      </div>
-                    )}
-                    <iframe 
-                      src={`${resumeUrl}#toolbar=0`} 
-                      className={`w-full h-full min-h-[60vh] border-none transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-                      onLoad={() => {
-                        // Add a slight artificial delay so the animation is visible
-                        setTimeout(() => setIsLoading(false), 1500);
-                      }}
-                      title="Resume Preview"
-                    />
+              {/* Content Body */}
+              <div className="flex-1 w-full relative bg-neutral-900/40 overflow-hidden flex flex-col">
+                {isLoading && (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-(--bg-primary) z-10">
+                    <div className="w-10 h-10 border-2 border-(--accent)/30 border-t-(--accent) rounded-full animate-spin mb-4" />
+                    <p className="font-mono text-xs uppercase tracking-widest text-(--text-muted) animate-pulse">
+                      Rendering PDF Document...
+                    </p>
                   </div>
                 )}
+                
+                <iframe 
+                  src={`${resumeUrl}#view=FitH&toolbar=0&navpanes=0`} 
+                  className={`w-full h-full flex-1 border-none transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+                  onLoad={() => setIsLoading(false)}
+                  title="Tushar Jain Resume Preview"
+                />
+
+                {/* Mobile Floating Bar */}
+                <div className="sm:hidden p-2.5 bg-(--bg-secondary) border-t border-(--border-color) flex items-center justify-between">
+                  <span className="text-xs text-(--text-muted)">Having trouble viewing?</span>
+                  <a
+                    href={resumeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-mono text-(--accent) font-bold underline"
+                  >
+                    Open Full PDF
+                  </a>
+                </div>
               </div>
             </motion.div>
           </div>
