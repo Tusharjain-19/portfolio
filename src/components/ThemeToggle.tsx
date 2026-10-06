@@ -188,7 +188,7 @@ export default function ThemeToggle() {
   const knobHeight = 44;
 
   return (
-    <div className="flex fixed top-0 right-4 sm:right-8 md:right-16 lg:right-24 xl:right-32 z-50 flex-col items-center scale-[0.7] sm:scale-100 origin-top">
+    <div className="hidden md:flex fixed top-0 right-8 md:right-16 lg:right-24 xl:right-32 z-50 flex-col items-center origin-top">
       
       {/* Ceiling Mount - 3D bracket */}
       <div className="absolute top-0 z-20 flex justify-center w-full">
