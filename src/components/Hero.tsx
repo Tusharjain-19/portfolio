@@ -6,7 +6,7 @@ import { PORTFOLIO } from '@/data/portfolio';
 import { ArrowDown } from '@/components/Icons';
 
 export default function Hero() {
-  const bioWords = "Computer Science & Business Systems engineering student at BMSCE, Bengaluru, building fullstack web applications, SaaS MVPs, and embedded IoT hardware to solve real-world problems.".split(" ");
+  const bioWords = "CSBS engineer at BMSCE, Bengaluru. Building high-performance web platforms, production SaaS MVPs, and embedded IoT hardware that solve real-world problems.".split(" ");
 
   return (
     <section className="relative w-full min-h-[calc(100vh-4rem)] flex flex-col justify-between items-center overflow-hidden pt-12 pb-8">
