@@ -52,6 +52,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.tusharjain.in/',
   },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: "Tushar Jain | Computer Science & Software Engineering Student",
     description: "Computer Science & Business Systems engineering student at BMS College of Engineering (BMSCE), Bengaluru. Building Jaipur Ride, NammaRide, PulsePredict AI, RestaurantOS & more.",

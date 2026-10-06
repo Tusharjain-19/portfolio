@@ -74,26 +74,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // ============================================
-  // STATIC ASSETS  -  Resume, Research PDFs
+  // STATIC ASSETS  -  Resume, Research PDFs & Certs
   // ============================================
   const assetRoutes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/resume.pdf`,
       lastModified: now,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/Tushar_Jain_Resume.pdf`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/llms.txt`,
       lastModified: now,
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/Dual-UUVSystemResearch.pdf`,
       lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.5,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/Statistical_Data_Analysis_Report_final%20(1).pdf`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/Tushar%20Jain_internship_%20InnoByte%20Services.pdf`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/Certificate_Tushar%20Jain_MITS-DU-202608-00357.pdf`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/Certificate_INTERN260467_Tushar_Jain.pdf`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
   ];
 
